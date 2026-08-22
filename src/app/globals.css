@@ -1,0 +1,200 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-serif), "Playfair Display", Georgia, serif;
+  --font-serif: var(--font-serif), "Playfair Display", Georgia, serif;
+  --color-ring: var(--ring);
+  --color-border: var(--border);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-accent: var(--accent);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-card: var(--card);
+}
+
+:root {
+  /* PH Prescriptions brand — deep navy/teal palette derived from logo */
+  --color-navy: #1b3a6b;
+  --color-navy-dark: #122a52;
+  --color-navy-deep: #0c1f3d;
+  --color-teal: #0d9488;
+  --color-teal-light: #14b8a6;
+  --color-teal-soft: #e6f7f6;
+  --color-gold: #b8860b;
+  --color-gold-light: #d4a017;
+  --color-cream: #fafaf8;
+  --color-surface: #f4f7fb;
+  --color-ink: #0c1f3d;
+  --color-ink-soft: #4a5d7c;
+  --color-ink-mute: #8595af;
+  --color-border-soft: #dde6ef;
+  --color-border-strong: #c0cfe0;
+  --max-content: 1200px;
+
+  --background: #fafaf8;
+  --foreground: #0c1f3d;
+  --card: #ffffff;
+  --card-foreground: #0c1f3d;
+  --primary: #1b3a6b;
+  --primary-foreground: #ffffff;
+  --secondary: #f4f7fb;
+  --secondary-foreground: #1b3a6b;
+  --muted: #f4f7fb;
+  --muted-foreground: #8595af;
+  --accent: #0d9488;
+  --accent-foreground: #ffffff;
+  --border: #dde6ef;
+  --input: #dde6ef;
+  --ring: #1b3a6b;
+  --radius: 0rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+/* Utility classes */
+.container {
+  width: 100%;
+  max-width: var(--max-content);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 2rem;
+  }
+}
+
+/* Section spacing */
+section {
+  padding: 5rem 0;
+}
+
+@media (min-width: 768px) {
+  section {
+    padding: 6rem 0;
+  }
+}
+
+/* Button base */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  padding: 0.875rem 2rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-decoration: none;
+  border-radius: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: rgba(255,255,255,0.12);
+  transition: width 0.3s ease;
+}
+
+.btn:hover::after {
+  width: 100%;
+}
+
+.btn-primary {
+  background: var(--color-navy);
+  color: #fff;
+  border-color: var(--color-navy);
+}
+
+.btn-primary:hover {
+  background: var(--color-navy-dark);
+}
+
+.btn-teal {
+  background: var(--color-teal);
+  color: #fff;
+  border-color: var(--color-teal);
+}
+
+.btn-teal:hover {
+  background: #0b7a70;
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--color-navy);
+  border-color: var(--color-navy);
+}
+
+.btn-outline:hover {
+  background: var(--color-navy);
+  color: #fff;
+}
+
+.btn-white {
+  background: #fff;
+  color: var(--color-navy);
+  border-color: #fff;
+}
+
+.btn-white:hover {
+  background: var(--color-cream);
+}
+
+/* Focus rings */
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--color-teal);
+  outline-offset: 3px;
+}
+
+/* Smooth underline link */
+.link-underline {
+  text-decoration: none;
+  background-image: linear-gradient(var(--color-teal), var(--color-teal));
+  background-size: 0 2px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.25s ease;
+}
+
+.link-underline:hover {
+  background-size: 100% 2px;
+}
