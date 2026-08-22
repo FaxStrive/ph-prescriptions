@@ -13,7 +13,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div style={{ fontFamily: "var(--font-display)", color: "var(--color-ink)", fontSize: "1.375rem", marginBottom: "0.5rem" }}>
-              PH Prescriptions
+              pH Prescription
             </div>
             <p style={{ fontSize: "0.875rem", lineHeight: 1.7, marginBottom: "1.25rem" }}>
               WQA Certified water health systems since {BUSINESS.founded}. Made in USA. Serving all 50 states and international clients from Palm City, FL.
@@ -100,7 +100,7 @@ export default function Footer() {
 
         {/* Bottom */}
         <div style={{ borderTop: "1px solid var(--color-border-soft)", paddingTop: "1.5rem", display: "flex", flexWrap: "wrap", justifyContent: "space-between", gap: "0.75rem", fontSize: "0.8125rem" }}>
-          <span>&copy; {year} PH Prescriptions. All rights reserved. WQA Certified. Made in USA.</span>
+          <span>&copy; {year} pH Prescription. All rights reserved. WQA Certified. Made in USA.</span>
           <div style={{ display: "flex", gap: "1.5rem" }}>
             <Link href="/privacy" style={{ color: "var(--color-ink-mute)", textDecoration: "none" }}>Privacy Policy</Link>
             <Link href="/terms" style={{ color: "var(--color-ink-mute)", textDecoration: "none" }}>Terms</Link>

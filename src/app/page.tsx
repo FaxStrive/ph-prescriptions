@@ -287,7 +287,7 @@ function Pillars() {
       <div className="max-content">
         <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: "3rem", marginBottom: "4rem", maxWidth: "820px" }}>
           <div>
-            <span className="eyebrow" style={{ color: "var(--color-navy)" }}>Why PH Prescriptions</span>
+            <span className="eyebrow" style={{ color: "var(--color-navy)" }}>Why pH Prescription</span>
             <h2
               style={{
                 marginTop: "1rem",
@@ -629,7 +629,7 @@ function Doctors() {
               Endorsed by <span className="italic-accent" style={{ color: "var(--color-teal)" }}>leading physicians.</span>
             </h2>
             <p style={{ marginTop: "1rem", color: "var(--color-ink-soft)", fontSize: "1rem", lineHeight: 1.7 }}>
-              Seven doctors, dentists and researchers have put their names behind PH Prescriptions systems.
+              Seven doctors, dentists and researchers have put their names behind pH Prescription systems.
             </p>
           </div>
         </div>
@@ -745,7 +745,7 @@ function Testimonials() {
                   letterSpacing: "-0.005em",
                 }}
               >
-                “{t.text}”
+                &ldquo;{t.text}&rdquo;
               </p>
               <footer style={{ marginTop: "auto", display: "flex", flexDirection: "column", gap: "0.25rem" }}>
                 <cite

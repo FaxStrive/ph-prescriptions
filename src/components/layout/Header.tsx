@@ -432,7 +432,7 @@ export default function Header() {
                                     color: "var(--color-teal)",
                                   }}
                                 >
-                                  Explore →
+                                  Explore &rarr;
                                 </span>
                               </Link>
                             </li>
