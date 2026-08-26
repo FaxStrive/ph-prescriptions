@@ -22,7 +22,7 @@ const TESTIMONIALS = [
   {
     name: "Dr. Robert K.",
     location: "Stuart, FL",
-    text: "I recommend PH Prescriptions to my patients. The science behind their QuadVortex technology is sound and the results are measurable.",
+    text: "I recommend pH Prescription to my patients. The science behind their QuadVortex technology is sound and the results are measurable.",
   },
   {
     name: "James T.",
@@ -113,7 +113,7 @@ function Hero() {
               transition={{ duration: 0.9, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
               style={{ display: "block" }}
             >
-              Water that works
+              Water that works{" "}
             </motion.span>
             <motion.span
               initial={reduce ? false : { opacity: 0, y: 40 }}

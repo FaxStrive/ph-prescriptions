@@ -3,8 +3,8 @@ import Link from "next/link";
 import { BUSINESS } from "@/lib/business";
 
 export const metadata: Metadata = {
-  title: "FAQ | PH Prescriptions Water Systems",
-  description: "Answers to common questions about PH Prescriptions water filtration, alkaline water, molecular hydrogen, installation, warranty, and more.",
+  title: "FAQ | pH Prescription Water Systems",
+  description: "Answers to common questions about pH Prescription water filtration, alkaline water, molecular hydrogen, installation, warranty, and more.",
 };
 
 const FAQS = [
@@ -183,7 +183,7 @@ export default function FAQPage() {
             Frequently Asked Questions
           </h1>
           <p style={{ fontSize: "1.0625rem", color: "var(--color-ink-soft)", lineHeight: 1.75 }}>
-            Everything you need to know about PH Prescriptions water systems, technology, installation, and warranty.
+            Everything you need to know about pH Prescription water systems, technology, installation, and warranty.
           </p>
         </div>
       </section>
@@ -206,7 +206,7 @@ export default function FAQPage() {
                   gap: "1rem",
                 }}>
                   {faq.q}
-                  <span style={{ flexShrink: 0, color: "var(--color-teal)", fontSize: "1.25rem", fontFamily: "var(--font-sans)" }}>+</span>
+                  <span aria-hidden="true" style={{ flexShrink: 0, color: "var(--color-teal)", fontSize: "1.25rem", fontFamily: "var(--font-sans)" }}>+</span>
                 </summary>
                 <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.8, paddingBottom: "1.5rem", fontSize: "0.9375rem" }}>
                   {faq.a}
@@ -216,9 +216,9 @@ export default function FAQPage() {
           </div>
 
           <div style={{ marginTop: "3rem", background: "#fff", color: "var(--color-ink)", padding: "2.5rem", textAlign: "center" }}>
-            <h3 style={{ fontFamily: "var(--font-display)", fontSize: "1.5rem", marginBottom: "0.75rem" }}>
+            <h2 style={{ fontFamily: "var(--font-display)", fontSize: "1.5rem", marginBottom: "0.75rem" }}>
               Still have questions?
-            </h3>
+            </h2>
             <p style={{ color: "var(--color-ink-soft)", marginBottom: "1.5rem" }}>
               Our team is ready to answer. Call us or schedule a free consultation.
             </p>

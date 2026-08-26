@@ -3,8 +3,8 @@ import Link from "next/link";
 import { BUSINESS, DOCTORS } from "@/lib/business";
 
 export const metadata: Metadata = {
-  title: "Why PH Prescriptions? | Point of Difference",
-  description: "What separates PH Prescriptions from every other water filtration company. QuadVortex technology, lifetime warranty, WQA certified, Made in USA, 7+ doctor endorsements, and 40+ years of experience.",
+  title: "Why pH Prescription? | Point of Difference",
+  description: "What separates pH Prescription from every other water filtration company. QuadVortex technology, lifetime warranty, WQA certified, Made in USA, 7+ doctor endorsements, and 40+ years of experience.",
 };
 
 export default function PointOfDifferencePage() {
@@ -37,7 +37,7 @@ export default function PointOfDifferencePage() {
               letterSpacing: "-0.02em",
             }}
           >
-            Why PH Prescriptions
+            Why pH Prescription
           </h1>
           <p
             style={{
@@ -47,7 +47,7 @@ export default function PointOfDifferencePage() {
               maxWidth: "600px",
             }}
           >
-            There are hundreds of water filtration companies. Here is what separates PH Prescriptions from every other option on the market, and why the doctors and practitioners who endorse us stand behind that distinction.
+            There are hundreds of water filtration companies. Here is what separates pH Prescription from every other option on the market, and why the doctors and practitioners who endorse us stand behind that distinction.
           </p>
         </div>
       </section>
@@ -58,7 +58,7 @@ export default function PointOfDifferencePage() {
             {[
               {
                 heading: "QuadVortex Technology — Proprietary, Not Off-the-Shelf",
-                body: "Standard water filters only remove contaminants. Every major competitor stops there. PH Prescriptions systems do four things: filter up to 99% of contaminants, restructure water molecules at the vortex stage, restore alkaline pH through mineral re-introduction, and infuse therapeutic concentrations of molecular hydrogen. No other consumer-available system does all four. The QuadVortex process is proprietary and is not available under any other brand.",
+                body: "Standard water filters only remove contaminants. Every major competitor stops there. pH Prescription systems do four things: filter up to 99% of contaminants, restructure water molecules at the vortex stage, restore alkaline pH through mineral re-introduction, and infuse therapeutic concentrations of molecular hydrogen. No other consumer-available system does all four. The QuadVortex process is proprietary and is not available under any other brand.",
               },
               {
                 heading: "Non-Electric — No Power Required",
@@ -74,11 +74,11 @@ export default function PointOfDifferencePage() {
               },
               {
                 heading: "7+ Doctor Endorsements — Independent, Not Paid",
-                body: "The medical professionals who endorse PH Prescriptions are independent practitioners who evaluated our systems and concluded the science is sound. They are not paid spokespeople. They use our systems in their own practices and recommend them to patients.",
+                body: "The medical professionals who endorse pH Prescription are independent practitioners who evaluated our systems and concluded the science is sound. They are not paid spokespeople. They use our systems in their own practices and recommend them to patients.",
               },
               {
                 heading: "40+ Years of Experience, Family-Owned Since 2005",
-                body: `Leo Szymborski is a third-generation plumber with more than ${BUSINESS.yearsExperience} years in water systems. PH Prescriptions was founded in ${BUSINESS.founded} as a family business. Every client interacts with people who have been in this industry their whole lives, not a sales team hired to move product.`,
+                body: `Leo Szymborski is a third-generation plumber with more than ${BUSINESS.yearsExperience} years in water systems. pH Prescription was founded in ${BUSINESS.founded} as a family business. Every client interacts with people who have been in this industry their whole lives, not a sales team hired to move product.`,
               },
               {
                 heading: "Local, Reachable, Accountable",

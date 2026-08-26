@@ -3,9 +3,9 @@ import Link from "next/link";
 import { BUSINESS } from "@/lib/business";
 
 export const metadata: Metadata = {
-  title: "Lifetime Warranty | PH Prescriptions",
+  title: "Lifetime Warranty | pH Prescription",
   description:
-    "PH Prescriptions lifetime warranty — what is covered, how to register, and how to file a warranty claim. WQA Certified systems backed for life with licensed installation.",
+    "pH Prescription lifetime warranty — what is covered, how to register, and how to file a warranty claim. WQA Certified systems backed for life with licensed installation.",
 };
 
 export default function WarrantyPage() {
@@ -49,7 +49,7 @@ export default function WarrantyPage() {
               marginBottom: "2rem",
             }}
           >
-            Every PH Prescriptions system is backed by a lifetime warranty on manufacturing defects when installed by a licensed plumber. We build systems that last — and we stand behind them.
+            Every pH Prescription system is backed by a lifetime warranty on manufacturing defects when installed by a licensed plumber. We build systems that last — and we stand behind them.
           </p>
           <a
             href={`tel:${BUSINESS.phone}`}
@@ -271,7 +271,7 @@ export default function WarrantyPage() {
               fontSize: "0.9375rem",
             }}
           >
-            Replacement filters and maintenance kits are available directly from PH Prescriptions. Contact us to set up an annual service plan.
+            Replacement filters and maintenance kits are available directly from pH Prescription. Contact us to set up an annual service plan.
           </p>
           <div
             style={{

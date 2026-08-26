@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { BUSINESS } from "@/lib/business";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | PH Prescriptions",
-  description: "PH Prescriptions privacy policy — how we collect, use, and protect your personal information.",
+  title: "Privacy Policy | pH Prescription",
+  description: "pH Prescription privacy policy — how we collect, use, and protect your personal information.",
 };
 
 export default function PrivacyPage() {
@@ -35,7 +35,7 @@ export default function PrivacyPage() {
         {[
           {
             heading: "1. Who We Are",
-            body: `PH Prescriptions ("we," "us," or "our") is a water treatment company located at ${BUSINESS.address.full}. We operate the website phprescription.com. Questions about this policy may be directed to ${BUSINESS.email}.`,
+            body: `pH Prescription ("we," "us," or "our") is a water treatment company located at ${BUSINESS.address.full}. We operate the website phprescription.com. Questions about this policy may be directed to ${BUSINESS.email}.`,
           },
           {
             heading: "2. Information We Collect",
@@ -71,7 +71,7 @@ export default function PrivacyPage() {
           },
           {
             heading: "10. Contact Us",
-            body: `PH Prescriptions\n${BUSINESS.address.full}\nPhone: ${BUSINESS.phone}\nToll Free: ${BUSINESS.phoneTollFree}\nEmail: ${BUSINESS.email}`,
+            body: `pH Prescription\n${BUSINESS.address.full}\nPhone: ${BUSINESS.phone}\nToll Free: ${BUSINESS.phoneTollFree}\nEmail: ${BUSINESS.email}`,
           },
         ].map((section) => (
           <div key={section.heading} style={{ marginBottom: "2.5rem" }}>

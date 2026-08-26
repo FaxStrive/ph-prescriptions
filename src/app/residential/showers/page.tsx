@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-export const metadata: Metadata = { title: "Shower & Tub Water Systems | PH Prescriptions", description: "Aquapellis molecular hydrogen shower systems for residential use. Transdermal H2 therapy from every shower. Contact for pricing." };
+export const metadata: Metadata = { title: "Shower & Tub Water Systems | pH Prescription", description: "Aquapellis molecular hydrogen shower systems for residential use. Transdermal H2 therapy from every shower. Contact for pricing." };
 export default function ShowersPage() {
   return (<>
     <section style={{ background: "#fff", color: "var(--color-ink)", padding: "5rem 0 4rem" }}>

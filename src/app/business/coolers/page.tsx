@@ -3,7 +3,7 @@ import Link from "next/link";
 import { BUSINESS, PRODUCTS } from "@/lib/business";
 
 export const metadata: Metadata = {
-  title: "Commercial Water Coolers | PH Prescriptions",
+  title: "Commercial Water Coolers | pH Prescription",
   description:
     "Alkaline, hydrogen-infused commercial water coolers with paddle-touch dispensing. Hot/cold. Made in USA. From $2,613.60. Lifetime warranty with licensed installation.",
 };
@@ -286,7 +286,7 @@ export default function CoolersPage() {
                 accent: "var(--color-ink-mute)",
               },
               {
-                label: "PH Prescriptions Cooler",
+                label: "pH Prescription Cooler",
                 items: [
                   "One-time purchase, owned outright",
                   "QuadVortex inline filtration",

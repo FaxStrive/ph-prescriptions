@@ -4,7 +4,7 @@ import Link from "next/link";
 import { PRODUCTS_ALL } from "@/lib/business";
 
 export const metadata: Metadata = {
-  title: "All Products | PH Prescriptions Water Systems",
+  title: "All Products | pH Prescription Water Systems",
   description:
     "Complete product catalogue: 46 water filtration systems, filters, and accessories. WQA Certified, Made in USA. Drinking systems, whole-home systems, UV disinfection, shower filters, and more.",
 };

@@ -3,8 +3,8 @@ import Link from "next/link";
 import { DOCTORS, BUSINESS } from "@/lib/business";
 
 export const metadata: Metadata = {
-  title: "Doctor Endorsements | PH Prescriptions",
-  description: "7+ leading physicians, dentists, and researchers endorse PH Prescriptions water systems, including authors and board-certified specialists.",
+  title: "Doctor Endorsements | pH Prescription",
+  description: "7+ leading physicians, dentists, and researchers endorse pH Prescription water systems, including authors and board-certified specialists.",
 };
 
 export default function DoctorsPage() {
@@ -17,7 +17,7 @@ export default function DoctorsPage() {
             Endorsed by Leading Physicians
           </h1>
           <p style={{ fontSize: "1.0625rem", color: "var(--color-ink-soft)", lineHeight: 1.75 }}>
-            7+ doctors, dentists, surgeons, and researchers have reviewed and endorsed PH Prescriptions water systems. Their endorsements represent independent professional judgment, not paid sponsorship.
+            7+ doctors, dentists, surgeons, and researchers have reviewed and endorsed pH Prescription water systems. Their endorsements represent independent professional judgment, not paid sponsorship.
           </p>
         </div>
       </section>
@@ -39,10 +39,10 @@ export default function DoctorsPage() {
               What the Science Says
             </h2>
             <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.8, marginBottom: "1.25rem" }}>
-              The physicians who endorse PH Prescriptions systems do so because the underlying science is sound. Alkaline water, molecular hydrogen, and clean mineral-balanced water have been subjects of legitimate peer-reviewed research. Our systems are built around that research.
+              The physicians who endorse pH Prescription systems do so because the underlying science is sound. Alkaline water, molecular hydrogen, and clean mineral-balanced water have been subjects of legitimate peer-reviewed research. Our systems are built around that research.
             </p>
             <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.8, marginBottom: "2rem" }}>
-              Books like &ldquo;Whole Body Dentistry&rdquo; by Dr. Mark Breiner and &ldquo;Healing is Voltage&rdquo; by Dr. Jerry Tennant have brought water science into mainstream clinical conversation. PH Prescriptions systems are engineered to meet the standards these researchers describe.
+              Books like &ldquo;Whole Body Dentistry&rdquo; by Dr. Mark Breiner and &ldquo;Healing is Voltage&rdquo; by Dr. Jerry Tennant have brought water science into mainstream clinical conversation. pH Prescription systems are engineered to meet the standards these researchers describe.
             </p>
             <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", justifyContent: "center" }}>
               <Link href="/technology" className="btn btn-primary">Learn About Our Technology</Link>

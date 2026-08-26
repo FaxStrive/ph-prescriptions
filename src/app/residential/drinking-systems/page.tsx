@@ -3,7 +3,7 @@ import Link from "next/link";
 import { BUSINESS } from "@/lib/business";
 
 export const metadata: Metadata = {
-  title: "Residential Drinking Water Systems | PH Prescriptions",
+  title: "Residential Drinking Water Systems | pH Prescription",
   description: "Under-sink reverse osmosis and QuadVortex drinking water systems. Removes up to 99% of contaminants, adds alkalinity, remineralizes, and infuses molecular hydrogen. From $985.",
 };
 

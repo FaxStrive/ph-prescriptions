@@ -3,9 +3,9 @@ import Link from "next/link";
 import { BUSINESS } from "@/lib/business";
 
 export const metadata: Metadata = {
-  title: "Restaurant & Hospitality Water Solutions | PH Prescriptions",
+  title: "Restaurant & Hospitality Water Solutions | pH Prescription",
   description:
-    "First-class water systems for restaurants, resorts, banquet facilities, spas, wellness centers, and offices. BluPura Italian design with PH Prescriptions' proprietary filtration. From 5 to 300 people. Lease and finance available.",
+    "First-class water systems for restaurants, resorts, banquet facilities, spas, wellness centers, and offices. BluPura Italian design with pH Prescription' proprietary filtration. From 5 to 300 people. Lease and finance available.",
 };
 
 const COUNTERTOP_MODELS = [
@@ -55,7 +55,7 @@ const WATER_OPTIONS = [
   },
   {
     label: "Mezzo",
-    desc: "Finely filtered water infused with molecular hydrogen. The same wellness-grade water found in PH Prescriptions residential systems.",
+    desc: "Finely filtered water infused with molecular hydrogen. The same wellness-grade water found in pH Prescription residential systems.",
   },
 ];
 
@@ -76,7 +76,7 @@ export default function RestaurantHospitalityPage() {
     "@type": "Service",
     name: "Restaurant & Hospitality Water Systems",
     description:
-      "First-class water dispensing systems for restaurants, resorts, spas, and hospitality venues. BluPura Italian design with PH Prescriptions proprietary filtration. Configurable from 5 to 300 people.",
+      "First-class water dispensing systems for restaurants, resorts, spas, and hospitality venues. BluPura Italian design with pH Prescription proprietary filtration. Configurable from 5 to 300 people.",
     provider: {
       "@type": "LocalBusiness",
       name: BUSINESS.name,
@@ -280,7 +280,7 @@ export default function RestaurantHospitalityPage() {
                   letterSpacing: "-0.02em",
                 }}
               >
-                Italian Design. PH Prescriptions Filtration.
+                Italian Design. pH Prescription Filtration.
               </h2>
               <p
                 style={{
@@ -292,7 +292,7 @@ export default function RestaurantHospitalityPage() {
                 All BluPura products are 100% designed and manufactured in Italy. Using materials of the highest quality guarantees excellent durability and performance levels that are not only functional and ergonomic, but stylish and modern in design.
               </p>
               <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.8 }}>
-                Each unit pairs BluPura's hardware with PH Prescriptions' proprietary filtration systems, delivering the same water quality that our residential and medical clients depend on. Your guests experience it as premium-tasting water, served with the precision your establishment demands.
+                Each unit pairs BluPura's hardware with pH Prescription' proprietary filtration systems, delivering the same water quality that our residential and medical clients depend on. Your guests experience it as premium-tasting water, served with the precision your establishment demands.
               </p>
             </div>
             <div

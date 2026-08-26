@@ -3,8 +3,8 @@ import Link from "next/link";
 import { BUSINESS } from "@/lib/business";
 
 export const metadata: Metadata = {
-  title: "About Leo Szymborski | Founder of PH Prescriptions",
-  description: "Leo Szymborski founded PH Prescriptions in 2005. A third-generation plumber with 40+ years of water system experience, Leo authored H2O: Health 2 Overcome.",
+  title: "About Leo Szymborski | Founder of pH Prescription",
+  description: "Leo Szymborski founded pH Prescription in 2005. A third-generation plumber with 40+ years of water system experience, Leo authored H2O: Health 2 Overcome.",
 };
 
 export default function AboutLeoPage() {
@@ -17,7 +17,7 @@ export default function AboutLeoPage() {
             Leo Szymborski
           </h1>
           <p style={{ fontSize: "1.0625rem", color: "var(--color-ink-soft)", lineHeight: 1.75 }}>
-            Third-generation plumber. {BUSINESS.yearsExperience} years in water systems. Author. Founder of PH Prescriptions.
+            Third-generation plumber. {BUSINESS.yearsExperience} years in water systems. Author. Founder of pH Prescription.
           </p>
         </div>
       </section>
@@ -32,13 +32,13 @@ export default function AboutLeoPage() {
               Leo Szymborski grew up in the plumbing trade. As a third-generation plumber, he spent decades on job sites learning exactly what travels through the pipes that supply the water we drink, bathe in, and cook with. What he discovered was not reassuring.
             </p>
             <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.85, fontSize: "1.0625rem", marginBottom: "1.25rem" }}>
-              In 2005, Leo founded PH Prescriptions in Palm City, Florida, with a single mission: to create water systems that go beyond filtration and actually restore water to its healthiest natural state. Over {BUSINESS.yearsExperience} years, he developed the proprietary QuadVortex technology that filters, alkalizes, remineralizes, and infuses molecular hydrogen into every drop.
+              In 2005, Leo founded pH Prescription in Palm City, Florida, with a single mission: to create water systems that go beyond filtration and actually restore water to its healthiest natural state. Over {BUSINESS.yearsExperience} years, he developed the proprietary QuadVortex technology that filters, alkalizes, remineralizes, and infuses molecular hydrogen into every drop.
             </p>
             <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.85, fontSize: "1.0625rem", marginBottom: "1.25rem" }}>
-              Leo has since built a 10,000 square foot manufacturing facility in Palm City, FL, and grown PH Prescriptions into a nationally recognized brand serving all 50 states. Every system bears the WQA certification and the Made in USA designation he is proud of.
+              Leo has since built a 10,000 square foot manufacturing facility in Palm City, FL, and grown pH Prescription into a nationally recognized brand serving all 50 states. Every system bears the WQA certification and the Made in USA designation he is proud of.
             </p>
             <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.85, fontSize: "1.0625rem", marginBottom: "2rem" }}>
-              His work gained the attention of leading physicians and researchers - including authors, surgeons, and molecular medicine scientists - who now endorse PH Prescriptions systems to their own patients and clients.
+              His work gained the attention of leading physicians and researchers - including authors, surgeons, and molecular medicine scientists - who now endorse pH Prescription systems to their own patients and clients.
             </p>
 
             <div style={{ background: "#fff", color: "var(--color-ink)", padding: "2.5rem", marginBottom: "2rem" }}>
@@ -49,7 +49,7 @@ export default function AboutLeoPage() {
                 &ldquo;H2O: Health 2 Overcome&rdquo;
               </h3>
               <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.75, fontSize: "0.9375rem" }}>
-                Leo documented his journey and the science behind water health in his book H2O: Health 2 Overcome. Available through PH Prescriptions - contact us to learn more.
+                Leo documented his journey and the science behind water health in his book H2O: Health 2 Overcome. Available through pH Prescription - contact us to learn more.
               </p>
             </div>
 

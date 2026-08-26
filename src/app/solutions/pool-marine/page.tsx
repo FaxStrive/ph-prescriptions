@@ -3,7 +3,7 @@ import Link from "next/link";
 import { BUSINESS } from "@/lib/business";
 
 export const metadata: Metadata = {
-  title: "Pool & Marine/RV Water Solutions | PH Prescriptions",
+  title: "Pool & Marine/RV Water Solutions | pH Prescription",
   description: "Pool water treatment and marine/RV water systems. In partnership with Exceptional Water Systems, bringing QuadVortex technology to pools, boats, and recreational vehicles.",
 };
 
@@ -48,7 +48,7 @@ export default function PoolMarinePage() {
               marginBottom: "2rem",
             }}
           >
-            Clean, structured water everywhere you need it. PH Prescriptions partners with Exceptional Water Systems to bring advanced water treatment to pools, boats, and recreational vehicles.
+            Clean, structured water everywhere you need it. pH Prescription partners with Exceptional Water Systems to bring advanced water treatment to pools, boats, and recreational vehicles.
           </p>
           <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
             <a href={`tel:${BUSINESS.phoneTollFree}`} className="btn btn-primary">
@@ -89,7 +89,7 @@ export default function PoolMarinePage() {
                 Pool Water Treatment
               </h2>
               <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.8, marginBottom: "1rem" }}>
-                In partnership with Exceptional Water Systems, PH Prescriptions offers pool water treatment solutions that go beyond standard chlorination. Our systems reduce chemical dependency, improve water clarity, and create a pool environment that is gentler on eyes, skin, and swimwear.
+                In partnership with Exceptional Water Systems, pH Prescription offers pool water treatment solutions that go beyond standard chlorination. Our systems reduce chemical dependency, improve water clarity, and create a pool environment that is gentler on eyes, skin, and swimwear.
               </p>
               <ul
                 style={{
@@ -212,7 +212,7 @@ export default function PoolMarinePage() {
                 Exceptional Water Systems
               </h3>
               <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.75, fontSize: "0.9375rem" }}>
-                PH Prescriptions partners with Exceptional Water Systems to deliver pool and specialty water solutions. Together, we bring the same commitment to true water quality from the home into every environment where water matters.
+                pH Prescription partners with Exceptional Water Systems to deliver pool and specialty water solutions. Together, we bring the same commitment to true water quality from the home into every environment where water matters.
               </p>
             </div>
           </div>

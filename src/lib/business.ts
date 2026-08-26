@@ -1,5 +1,5 @@
 export const BUSINESS = {
-  name: "PH Prescriptions",
+  name: "pH Prescription",
   tagline: "Water That Works for Your Health",
   phone: "772-220-8789",
   phoneTollFree: "888-728-2783",

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { BUSINESS } from "@/lib/business";
 
 export const metadata: Metadata = {
-  title: "Medical-Grade Water — Precision Filtration for Clinical Excellence | PH Prescriptions",
+  title: "Medical-Grade Water — Precision Filtration for Clinical Excellence | pH Prescription",
   description:
     "Medical-grade water systems for dialysis centers, dental practices, medical imaging facilities, and sterile-prep environments. WQA-certified, NSF/ANSI 58 and 42. Serving medical facilities across all 50 states.",
 };
@@ -55,7 +55,7 @@ const WHO_FOR = [
 const FAQS = [
   {
     q: "Do your systems meet AAMI water quality standards for dialysis?",
-    a: "Our multi-stage RO systems with UV sterilization are configured to meet AAMI TIR11 and ANSI/AAMI RD52 water purity requirements for hemodialysis. Each installation is assessed against the facility's specific compliance requirements, and we provide documentation for regulatory review.",
+    a: "Each installation is assessed against the facility's specific compliance requirements, and we provide documentation for regulatory review.",
   },
   {
     q: "What flow rates are available for medical applications?",
@@ -331,7 +331,7 @@ export default function MedicalPage() {
                   }}
                 >
                   {faq.q}
-                  <span style={{ flexShrink: 0, color: "var(--color-teal)", fontSize: "1.25rem", fontFamily: "var(--font-sans)" }}>+</span>
+                  <span aria-hidden="true" style={{ flexShrink: 0, color: "var(--color-teal)", fontSize: "1.25rem", fontFamily: "var(--font-sans)" }}>+</span>
                 </summary>
                 <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.8, paddingBottom: "1.5rem", fontSize: "0.9375rem" }}>{faq.a}</p>
               </details>

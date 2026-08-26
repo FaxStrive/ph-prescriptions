@@ -3,7 +3,7 @@ import Link from "next/link";
 import { BUSINESS } from "@/lib/business";
 
 export const metadata: Metadata = {
-  title: "Pool and Spa Water — Advanced Filtration Beyond Chlorine | PH Prescriptions",
+  title: "Pool and Spa Water — Advanced Filtration Beyond Chlorine | pH Prescription",
   description:
     "Advanced pool and spa water treatment systems. Reduce chlorine demand 25-40% while improving water clarity and guest comfort. Integrates with existing pool circulation systems.",
 };
@@ -162,7 +162,7 @@ export default function PoolPage() {
       <section style={{ background: "var(--color-navy)", color: "#fff", padding: "2rem 0" }}>
         <div className="container">
           <div style={{ display: "flex", gap: "2.5rem", flexWrap: "wrap", alignItems: "center", justifyContent: "center" }}>
-            {["WQA Certified", "Made in USA", "40+ Years in Water Systems", "Residential and Commercial", "Integrates with Existing Equipment"].map((item) => (
+            {["WQA Certified", "Made in USA", "Founder with 40+ Years in Water Treatment", "Residential and Commercial", "Integrates with Existing Equipment"].map((item) => (
               <span
                 key={item}
                 style={{
@@ -289,7 +289,7 @@ export default function PoolPage() {
                   }}
                 >
                   {faq.q}
-                  <span style={{ flexShrink: 0, color: "var(--color-teal)", fontSize: "1.25rem", fontFamily: "var(--font-sans)" }}>+</span>
+                  <span aria-hidden="true" style={{ flexShrink: 0, color: "var(--color-teal)", fontSize: "1.25rem", fontFamily: "var(--font-sans)" }}>+</span>
                 </summary>
                 <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.8, paddingBottom: "1.5rem", fontSize: "0.9375rem" }}>{faq.a}</p>
               </details>

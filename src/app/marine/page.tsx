@@ -3,7 +3,7 @@ import Link from "next/link";
 import { BUSINESS } from "@/lib/business";
 
 export const metadata: Metadata = {
-  title: "Marine and RV Water — Saltwater and Brackish Filtration | PH Prescriptions",
+  title: "Marine and RV Water — Saltwater and Brackish Filtration | pH Prescription",
   description:
     "Compact, low-power marine and RV water filtration systems for saltwater and brackish environments. Reduces TDS, controls corrosion and scaling. Designed for vessels and mobile platforms.",
 };

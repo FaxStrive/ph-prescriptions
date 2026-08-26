@@ -3,7 +3,7 @@ import Link from "next/link";
 import { BUSINESS } from "@/lib/business";
 
 export const metadata: Metadata = {
-  title: "Restaurant & Hospitality Water Systems | PH Prescriptions",
+  title: "Restaurant & Hospitality Water Systems | pH Prescription",
   description:
     "Commercial water treatment for restaurants, hotels, and hospitality. Protect equipment, improve beverage taste, and deliver a premium guest experience with WQA Certified systems.",
 };
@@ -19,7 +19,7 @@ const BENEFITS = [
   },
   {
     title: "Guest Experience",
-    body: "Offer filtered, alkaline water at the table. Hotels, spas, and resorts use PH Prescriptions to provide a premium water experience that guests notice and remember.",
+    body: "Offer filtered, alkaline water at the table. Hotels, spas, and resorts use pH Prescription to provide a premium water experience that guests notice and remember.",
   },
   {
     title: "Operational Savings",
@@ -79,7 +79,7 @@ export default function RestaurantPage() {
               marginBottom: "2rem",
             }}
           >
-            Water quality is a kitchen variable most operators overlook. PH Prescriptions delivers WQA Certified commercial systems that protect equipment, improve every dish and beverage, and give your guests the water quality they deserve.
+            Water quality is a kitchen variable most operators overlook. pH Prescription delivers WQA Certified commercial systems that protect equipment, improve every dish and beverage, and give your guests the water quality they deserve.
           </p>
           <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
             <Link

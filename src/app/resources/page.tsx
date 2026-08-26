@@ -3,8 +3,8 @@ import Link from "next/link";
 import { BUSINESS } from "@/lib/business";
 
 export const metadata: Metadata = {
-  title: "Resources | PH Prescriptions Water Systems",
-  description: "White papers, hydration science, educational videos, warranty information, and support documentation for PH Prescriptions water systems.",
+  title: "Resources | pH Prescription Water Systems",
+  description: "White papers, hydration science, educational videos, warranty information, and support documentation for pH Prescription water systems.",
 };
 
 const VIDEOS = [
@@ -38,7 +38,7 @@ const VIDEOS = [
 const RESOURCE_SECTIONS = [
   {
     title: "White Papers",
-    description: "Technical documentation on molecular hydrogen, QuadVortex filtration methodology, water restructuring science, and mineral repletion.",
+    description: "Technical documentation on molecular hydrogen therapy, QuadVortex filtration technology, mineral repletion, and alkaline pH research available upon request.",
     items: [
       "Molecular Hydrogen: Peer-Reviewed Research Summary",
       "QuadVortex Technology: Filtration, Restructuring, and H2 Infusion",
@@ -51,7 +51,7 @@ const RESOURCE_SECTIONS = [
   },
   {
     title: "Hydration Science & Technology",
-    description: "The science behind what PH Prescriptions systems do and why it matters for human health.",
+    description: "The science behind what pH Prescription systems do and why it matters for human health.",
     items: [
       "How molecular hydrogen reaches cells and mitochondria",
       "The four-stage QuadVortex process explained",
@@ -72,7 +72,7 @@ const RESOURCE_SECTIONS = [
   },
   {
     title: "Warranty Information",
-    description: "Every PH Prescriptions system comes with a lifetime warranty when installed by a licensed plumber.",
+    description: "Every pH Prescription system is backed by our warranty program when installed by a licensed plumber. Contact us for full warranty details.",
     items: [
       "Lifetime warranty coverage with licensed plumber installation",
       "What is covered and what voids the warranty",
@@ -85,7 +85,7 @@ const RESOURCE_SECTIONS = [
   },
   {
     title: "Support Documentation",
-    description: "Installation manuals, maintenance guides, and troubleshooting support for PH Prescriptions systems.",
+    description: "Installation manuals, maintenance guides, and troubleshooting support for pH Prescription systems.",
     items: [
       "Installation manuals (available per model)",
       "Maintenance schedules and filter replacement guides",
@@ -138,7 +138,7 @@ export default function ResourcesPage() {
               maxWidth: "600px",
             }}
           >
-            White papers, hydration science, educational videos, warranty terms, and support documentation for PH Prescriptions clients and partners.
+            White papers, hydration science, educational videos, warranty terms, and support documentation for pH Prescription clients and partners.
           </p>
         </div>
       </section>
@@ -231,6 +231,7 @@ export default function ResourcesPage() {
                       href={section.action.href}
                       target="_blank"
                       rel="noopener noreferrer"
+                      aria-label={`${section.action.label}, opens in a new tab`}
                       style={{
                         color: "var(--color-teal)",
                         textDecoration: "none",

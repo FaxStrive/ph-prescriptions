@@ -4,7 +4,7 @@ import Link from "next/link";
 import { BUSINESS } from "@/lib/business";
 
 export const metadata: Metadata = {
-  title: "H2O: Health 2 Overcome | PH Prescriptions",
+  title: "H2O: Health 2 Overcome | pH Prescription",
   description:
     "Leo Szymborski's #1 Amazon Best Seller memoir on how water quality transformed his health. The science behind hydrogen therapy, mineral balance, and true water healing.",
 };
@@ -32,7 +32,7 @@ export default function BookPage() {
       url: BUSINESS.url,
     },
     description:
-      "Third-generation plumber turned water health advocate. Founder of PH Prescriptions. 40+ years in water systems. WQA Certified water specialist.",
+      "Third-generation plumber turned water health advocate. Founder of pH Prescription. 40+ years in water systems. WQA Certified water specialist.",
     knowsAbout: [
       "Water Quality",
       "Molecular Hydrogen Therapy",
@@ -126,7 +126,7 @@ export default function BookPage() {
                   marginBottom: "0.75rem",
                 }}
               >
-                PH Prescriptions Book
+                pH Prescription Book
               </div>
               <h1
                 style={{
@@ -148,7 +148,7 @@ export default function BookPage() {
                   marginBottom: "2rem",
                 }}
               >
-                The memoir of Leo Szymborski, founder of PH Prescriptions. Illness, trauma, loss, learning disabilities, and the drive to rise above and thrive. Water changed his life. This book explains how and why.
+                The memoir of Leo Szymborski, founder of pH Prescription. Illness, trauma, loss, learning disabilities, and the drive to rise above and thrive. Water changed his life. This book explains how and why.
               </p>
               <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
                 <a
@@ -248,7 +248,7 @@ export default function BookPage() {
                   marginBottom: "1rem",
                 }}
               >
-                What he discovered transformed his health and ultimately became the foundation of PH Prescriptions. H2O: Health 2 Overcome tells that story and shares the science that convinced a skeptical tradesman turned water health advocate.
+                What he discovered transformed his health and ultimately became the foundation of pH Prescription. H2O: Health 2 Overcome tells that story and shares the science that convinced a skeptical tradesman turned water health advocate.
               </p>
               <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.8 }}>
                 The book is not a sales pitch. It is a personal account backed by the research Leo spent years studying, the doctors who validated it, and the clients whose lives changed after they changed their water.
@@ -291,7 +291,7 @@ export default function BookPage() {
                   marginBottom: "1rem",
                 }}
               >
-                Third-generation plumber. Founder of PH Prescriptions. 40+ years in water systems and installation. WQA Certified water specialist. Health advocate and researcher.
+                Third-generation plumber. Founder of pH Prescription. 40+ years in water systems and installation. WQA Certified water specialist. Health advocate and researcher.
               </p>
               <p
                 style={{
@@ -300,7 +300,7 @@ export default function BookPage() {
                   fontSize: "0.9375rem",
                 }}
               >
-                Leo founded PH Prescriptions in {BUSINESS.founded} after witnessing how water quality directly affected the health of his clients, his family, and himself. He has since built relationships with medical doctors, researchers, and integrative health practitioners who endorse the science his systems are built on.
+                Leo founded pH Prescription in {BUSINESS.founded} after witnessing how water quality directly affected the health of his clients, his family, and himself. He has since built relationships with medical doctors, researchers, and integrative health practitioners who endorse the science his systems are built on.
               </p>
               <div
                 style={{
@@ -696,7 +696,7 @@ export default function BookPage() {
               marginBottom: "1.75rem",
             }}
           >
-            The claims in the book are not Leo's alone. Seven physicians and researchers have reviewed the technology and science behind PH Prescriptions and added their professional endorsement.
+            The claims in the book are not Leo's alone. Seven physicians and researchers have reviewed the technology and science behind pH Prescription and added their professional endorsement.
           </p>
           <Link
             href="/experts"

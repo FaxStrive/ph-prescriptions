@@ -37,16 +37,16 @@ export default function Footer() {
 
           {/* Residential */}
           <div>
-            <h4 style={{ color: "var(--color-ink)", fontSize: "0.8125rem", fontFamily: "var(--font-sans)", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "1rem" }}>Residential</h4>
-            <nav style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+            <h3 style={{ color: "var(--color-ink)", fontSize: "0.8125rem", fontFamily: "var(--font-sans)", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "1rem" }}>Residential</h3>
+            <nav aria-label="Footer" style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
               {[
-                ["Drinking Systems", "/residential/drinking-systems"],
-                ["Total Home Systems", "/residential/total-home"],
-                ["Showers & Tubs", "/residential/showers"],
-                ["UV Enhancements", "/residential/uv"],
-                ["Aquapellis", "/aquapellis"],
-              ].map(([label, href]) => (
-                <Link key={href} href={href} style={{ color: "var(--color-ink-mute)", textDecoration: "none", fontSize: "0.875rem", transition: "color 0.2s" }}
+                ["Drinking Systems", "/residential/drinking-systems", "Residential Drinking Systems"],
+                ["Total Home Systems", "/residential/total-home", ""],
+                ["Showers & Tubs", "/residential/showers", ""],
+                ["UV Enhancements", "/residential/uv", ""],
+                ["Aquapellis", "/aquapellis", ""],
+              ].map(([label, href, ariaLabel]) => (
+                <Link key={href} href={href} aria-label={ariaLabel || undefined} style={{ color: "var(--color-ink-mute)", textDecoration: "none", fontSize: "0.875rem", transition: "color 0.2s" }}
                   onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = "var(--color-teal)")}
                   onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = "var(--color-ink-mute)")}>
                   {label}
@@ -57,15 +57,15 @@ export default function Footer() {
 
           {/* Business */}
           <div>
-            <h4 style={{ color: "var(--color-ink)", fontSize: "0.8125rem", fontFamily: "var(--font-sans)", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "1rem" }}>Business</h4>
-            <nav style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+            <h3 style={{ color: "var(--color-ink)", fontSize: "0.8125rem", fontFamily: "var(--font-sans)", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "1rem" }}>Business</h3>
+            <nav aria-label="Footer" style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
               {[
-                ["Restaurant & Hospitality", "/business/restaurant"],
-                ["Water Coolers", "/business/coolers"],
-                ["Drinking Systems", "/business/drinking-systems"],
-                ["Total Business", "/business/total"],
-              ].map(([label, href]) => (
-                <Link key={href} href={href} style={{ color: "var(--color-ink-mute)", textDecoration: "none", fontSize: "0.875rem", transition: "color 0.2s" }}
+                ["Restaurant & Hospitality", "/business/restaurant", ""],
+                ["Water Coolers", "/business/coolers", ""],
+                ["Drinking Systems", "/business/drinking-systems", "Business Drinking Systems"],
+                ["Total Business", "/business/total", ""],
+              ].map(([label, href, ariaLabel]) => (
+                <Link key={href} href={href} aria-label={ariaLabel || undefined} style={{ color: "var(--color-ink-mute)", textDecoration: "none", fontSize: "0.875rem", transition: "color 0.2s" }}
                   onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = "var(--color-teal)")}
                   onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = "var(--color-ink-mute)")}>
                   {label}
@@ -76,8 +76,8 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h4 style={{ color: "var(--color-ink)", fontSize: "0.8125rem", fontFamily: "var(--font-sans)", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "1rem" }}>Company</h4>
-            <nav style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+            <h3 style={{ color: "var(--color-ink)", fontSize: "0.8125rem", fontFamily: "var(--font-sans)", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "1rem" }}>Company</h3>
+            <nav aria-label="Footer" style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
               {[
                 ["Our Story", "/about"],
                 ["About Leo", "/about/leo"],

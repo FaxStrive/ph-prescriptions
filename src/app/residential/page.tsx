@@ -3,7 +3,7 @@ import Link from "next/link";
 import { BUSINESS } from "@/lib/business";
 
 export const metadata: Metadata = {
-  title: "Residential Water Systems | PH Prescriptions",
+  title: "Residential Water Systems | pH Prescription",
   description: "Residential drinking systems, whole-home water treatment, shower systems, and UV enhancements. WQA Certified, Made in USA, lifetime warranty.",
 };
 
