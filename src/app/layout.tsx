@@ -1,22 +1,15 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Plus_Jakarta_Sans } from "next/font/google";
+import { Open_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { BUSINESS } from "@/lib/business";
 
-const playfair = Playfair_Display({
+const openSans = Open_Sans({
   subsets: ["latin"],
-  variable: "--font-serif",
-  weight: ["400", "600", "700"],
+  variable: "--font-open-sans",
+  weight: ["300", "400", "500", "600", "700", "800"],
   style: ["normal", "italic"],
-  display: "swap",
-});
-
-const jakarta = Plus_Jakarta_Sans({
-  subsets: ["latin"],
-  variable: "--font-jakarta",
-  weight: ["300", "400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -43,7 +36,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${playfair.variable} ${jakarta.variable}`}>
+    <html lang="en" className={openSans.variable}>
       <body>
         <Header />
         <main style={{ paddingTop: "90px" }}>{children}</main>

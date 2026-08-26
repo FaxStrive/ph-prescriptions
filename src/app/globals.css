@@ -6,9 +6,9 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-serif), "Playfair Display", Georgia, serif;
-  --font-serif: var(--font-serif), "Playfair Display", Georgia, serif;
+  --font-sans: var(--font-open-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-open-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-open-sans), ui-sans-serif, system-ui, sans-serif;
   --color-ring: var(--ring);
   --color-border: var(--border);
   --color-primary: var(--primary);
@@ -20,40 +20,42 @@
 }
 
 :root {
-  /* PH Prescriptions brand — deep navy/teal palette derived from logo */
-  --color-navy: #1b3a6b;
-  --color-navy-dark: #122a52;
-  --color-navy-deep: #0c1f3d;
-  --color-teal: #0d9488;
-  --color-teal-light: #14b8a6;
-  --color-teal-soft: #e6f7f6;
-  --color-gold: #b8860b;
-  --color-gold-light: #d4a017;
-  --color-cream: #fafaf8;
-  --color-surface: #f4f7fb;
-  --color-ink: #0c1f3d;
-  --color-ink-soft: #4a5d7c;
-  --color-ink-mute: #8595af;
-  --color-border-soft: #dde6ef;
-  --color-border-strong: #c0cfe0;
+  /* PH Prescriptions brand — teal-blue primary + purple accent, sampled from phprescription.com */
+  /* Legacy --color-navy-* names are retained as tokens but now hold the teal-blue brand values,
+     so every existing page inherits the correct palette without page-level edits. */
+  --color-navy: #1F8CAF;
+  --color-navy-dark: #187692;
+  --color-navy-deep: #0F5A71;
+  --color-teal: #5A3C96;
+  --color-teal-light: #6B4CA8;
+  --color-teal-soft: #EDE7F6;
+  --color-gold: #5A3C96;
+  --color-gold-light: #7B5AB5;
+  --color-cream: #F0F9FF;
+  --color-surface: #F0F9FF;
+  --color-ink: #171717;
+  --color-ink-soft: #494C50;
+  --color-ink-mute: #6B7280;
+  --color-border-soft: #DDE6EF;
+  --color-border-strong: #C0CFE0;
   --max-content: 1200px;
 
-  --background: #fafaf8;
-  --foreground: #0c1f3d;
-  --card: #ffffff;
-  --card-foreground: #0c1f3d;
-  --primary: #1b3a6b;
-  --primary-foreground: #ffffff;
-  --secondary: #f4f7fb;
-  --secondary-foreground: #1b3a6b;
-  --muted: #f4f7fb;
-  --muted-foreground: #8595af;
-  --accent: #0d9488;
-  --accent-foreground: #ffffff;
-  --border: #dde6ef;
-  --input: #dde6ef;
-  --ring: #1b3a6b;
-  --radius: 0rem;
+  --background: #FFFFFF;
+  --foreground: #171717;
+  --card: #FFFFFF;
+  --card-foreground: #171717;
+  --primary: #1F8CAF;
+  --primary-foreground: #FFFFFF;
+  --secondary: #F0F9FF;
+  --secondary-foreground: #1F8CAF;
+  --muted: #F0F9FF;
+  --muted-foreground: #6B7280;
+  --accent: #5A3C96;
+  --accent-foreground: #FFFFFF;
+  --border: #DDE6EF;
+  --input: #DDE6EF;
+  --ring: #1F8CAF;
+  --radius: 0.25rem;
 }
 
 * {
@@ -155,7 +157,7 @@ section {
 }
 
 .btn-teal:hover {
-  background: #0b7a70;
+  background: #4A2E80;
 }
 
 .btn-outline {
