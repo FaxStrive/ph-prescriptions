@@ -228,19 +228,18 @@ function Hero() {
         </div>
       </motion.div>
 
-      {/* Stats bar pinned to hero bottom */}
+      {/* Stats bar — second flex child, pushed to bottom by space-between */}
       <motion.div
         initial={reduce ? false : { opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.9 }}
         style={{
-          position: "absolute",
-          bottom: 0,
-          left: 0,
-          right: 0,
-          background: "rgba(0,0,0,0.35)",
-          backdropFilter: "blur(8px)",
+          position: "relative",
+          zIndex: 2,
           borderTop: "1px solid rgba(255,255,255,0.12)",
+          background: "rgba(0,0,0,0.35)",
+          backdropFilter: "blur(12px)",
+          WebkitBackdropFilter: "blur(12px)",
         }}
       >
         <div
@@ -259,8 +258,8 @@ function Hero() {
                 style={{
                   fontFamily: "var(--font-display)",
                   fontWeight: 400,
-                  fontSize: "clamp(1.75rem, 3.5vw, 2.5rem)",
-                  color: "#fff",
+                  fontSize: "clamp(1.5rem, 3vw, 2.25rem)",
+                  color: "#B9E3EF",
                   lineHeight: 1,
                   letterSpacing: "-0.02em",
                 }}
@@ -272,9 +271,9 @@ function Hero() {
                   marginTop: "0.35rem",
                   fontFamily: "var(--font-mono)",
                   fontSize: "0.6rem",
-                  letterSpacing: "0.18em",
+                  letterSpacing: "0.2em",
                   textTransform: "uppercase",
-                  color: "rgba(255,255,255,0.6)",
+                  color: "rgba(255,255,255,0.55)",
                 }}
               >
                 {s.label}
