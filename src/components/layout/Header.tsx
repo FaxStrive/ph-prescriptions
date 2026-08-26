@@ -1,262 +1,570 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { BUSINESS } from "@/lib/business";
 
-const NAV = [
+type NavPanelItem = { label: string; href: string; description: string };
+type NavItem = {
+  label: string;
+  href: string;
+  panel?: { eyebrow: string; headline: string; items: NavPanelItem[] };
+};
+
+const NAV: NavItem[] = [
   {
-    label: "For Your Home",
+    label: "Residential",
     href: "/residential",
-    children: [
-      { label: "Drinking Systems", href: "/residential/drinking-systems" },
-      { label: "Total Home Systems", href: "/residential/total-home" },
-      { label: "Showers & Tubs", href: "/residential/showers" },
-      { label: "UV Enhancements", href: "/residential/uv" },
-    ],
+    panel: {
+      eyebrow: "For Your Home",
+      headline: "Every faucet, every glass, made pure.",
+      items: [
+        { label: "Drinking Systems", href: "/residential/drinking-systems", description: "Under-sink RO + hydrogen" },
+        { label: "Total Home Systems", href: "/residential/total-home", description: "Whole-house restructuring" },
+        { label: "Showers & Tubs", href: "/residential/showers", description: "Aquapellis skin & hair" },
+        { label: "UV Enhancements", href: "/residential/uv", description: "Advanced sterilization" },
+      ],
+    },
   },
   {
-    label: "For Your Business",
+    label: "Business",
     href: "/business",
-    children: [
-      { label: "Restaurant & Hospitality", href: "/business/restaurant" },
-      { label: "Water Coolers", href: "/business/coolers" },
-      { label: "Drinking Systems", href: "/business/drinking-systems" },
-      { label: "Total Home/Business", href: "/business/total" },
-    ],
+    panel: {
+      eyebrow: "For Your Business",
+      headline: "Commercial-grade water, wherever you serve.",
+      items: [
+        { label: "Restaurant & Hospitality", href: "/business/restaurant", description: "Food-service quality" },
+        { label: "Water Coolers", href: "/business/coolers", description: "Paddle-touch dispensing" },
+        { label: "Drinking Systems", href: "/business/drinking-systems", description: "Office & facility" },
+        { label: "Total Business Systems", href: "/business/total", description: "Whole-building" },
+      ],
+    },
   },
   { label: "Aquapellis", href: "/aquapellis" },
   { label: "Technology", href: "/technology" },
   {
     label: "About",
     href: "/about",
-    children: [
-      { label: "Our Story", href: "/about" },
-      { label: "About Leo", href: "/about/leo" },
-      { label: "Doctor Endorsements", href: "/about/doctors" },
-      { label: "Community Care", href: "/about/community" },
-    ],
+    panel: {
+      eyebrow: "Who & How",
+      headline: "Forty years of water science, made personal.",
+      items: [
+        { label: "Our Story", href: "/about", description: "Founded 2005 · Palm City FL" },
+        { label: "About Leo", href: "/about/leo", description: "Founder Leo Szymborski" },
+        { label: "Doctor Endorsements", href: "/about/doctors", description: "7+ physicians on record" },
+        { label: "Community Care", href: "/about/community", description: "How we give back" },
+      ],
+    },
   },
   {
-    label: "FAQ",
-    href: "/faq",
-    children: [
-      { label: "All FAQs", href: "/faq" },
-      { label: "Point of Difference", href: "/faq/point-of-difference" },
-    ],
-  },
-  {
-    label: "More",
+    label: "Resources",
     href: "/resources",
-    children: [
-      { label: "Resources", href: "/resources" },
-      { label: "Book: H2O", href: "/book" },
-      { label: "Nutraceuticals", href: "/nutraceuticals" },
-      { label: "Pool & Marine/RV", href: "/solutions/pool-marine" },
-      { label: "Affiliate Program", href: "/affiliate" },
-    ],
+    panel: {
+      eyebrow: "Learn More",
+      headline: "The library behind the systems.",
+      items: [
+        { label: "All Resources", href: "/resources", description: "Guides & articles" },
+        { label: "FAQ", href: "/faq", description: "Answers to common questions" },
+        { label: "The H2O Book", href: "/book", description: "Leo's water-health manual" },
+        { label: "Nutraceuticals", href: "/nutraceuticals", description: "Supplement line" },
+      ],
+    },
   },
   { label: "Contact", href: "/contact" },
 ];
 
 export default function Header() {
-  const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [openPanel, setOpenPanel] = useState<string | null>(null);
+  const pathname = usePathname();
 
   useEffect(() => {
-    const handler = () => setScrolled(window.scrollY > 40);
-    window.addEventListener("scroll", handler, { passive: true });
-    return () => window.removeEventListener("scroll", handler);
+    const onScroll = () => setScrolled(window.scrollY > 12);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    setMobileOpen(false);
+    setOpenPanel(null);
+  }, [pathname]);
+
+  useEffect(() => {
+    document.body.style.overflow = mobileOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileOpen]);
+
   return (
-    <header
-      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
-      style={{
-        background: scrolled ? "rgba(255,255,255,0.97)" : "#fff",
-        backdropFilter: scrolled ? "blur(12px)" : "none",
-        boxShadow: scrolled ? "0 2px 20px rgba(0,0,0,0.06)" : "none",
-        borderBottom: "1px solid var(--color-border-soft)",
-      }}
-    >
-      {/* Top bar */}
-      <div style={{ background: "var(--color-surface)", padding: "0.35rem 0", borderBottom: "1px solid var(--color-border-soft)" }}>
-        <div className="container" style={{ display: "flex", justifyContent: "flex-end", gap: "1.5rem", fontSize: "0.8125rem", color: "var(--color-ink-soft)" }}>
-          <a href={`tel:${BUSINESS.phone}`} style={{ color: "inherit", textDecoration: "none", display: "flex", alignItems: "center", gap: "0.375rem" }}>
-            <Phone size={12} /> {BUSINESS.phone}
-          </a>
-          <a href={`tel:${BUSINESS.phoneTollFree}`} style={{ color: "inherit", textDecoration: "none" }}>
-            Toll Free: {BUSINESS.phoneTollFree}
-          </a>
-          <a href={`mailto:${BUSINESS.email}`} style={{ color: "inherit", textDecoration: "none" }}>
-            {BUSINESS.email}
-          </a>
-        </div>
-      </div>
+    <>
+      {/* Desktop */}
+      <div
+        className="hidden lg:block"
+        style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          right: 0,
+          zIndex: 50,
+          background: "#fff",
+          borderBottom: scrolled
+            ? "1px solid var(--color-border-soft)"
+            : "1px solid transparent",
+          boxShadow: scrolled ? "0 1px 0 rgba(0,0,0,0.02)" : "none",
+          transition: "border-color 0.3s, box-shadow 0.3s",
+        }}
+      >
+        <div
+          className="max-content"
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            gap: "2.5rem",
+            height: "72px",
+          }}
+        >
+          <Link
+            href="/"
+            aria-label="PH Prescriptions home"
+            style={{ display: "flex", flexDirection: "column", lineHeight: 1.05, textDecoration: "none" }}
+          >
+            <span
+              style={{
+                fontFamily: "var(--font-display)",
+                color: "var(--color-navy)",
+                fontSize: "1.375rem",
+                fontWeight: 500,
+                letterSpacing: "-0.025em",
+              }}
+            >
+              PH Prescriptions
+            </span>
+            <span
+              style={{
+                color: "var(--color-teal)",
+                fontFamily: "var(--font-mono)",
+                fontSize: "0.6rem",
+                letterSpacing: "0.22em",
+                textTransform: "uppercase",
+                marginTop: "2px",
+              }}
+            >
+              Water Health &amp; Wellness
+            </span>
+          </Link>
 
-      {/* Main nav */}
-      <div className="container" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "1rem 1.5rem" }}>
-        <Link href="/" style={{ textDecoration: "none", display: "flex", flexDirection: "column", lineHeight: 1.1 }}>
-          <span style={{ fontFamily: "var(--font-display)", color: "var(--color-ink)", fontSize: "1.375rem", fontWeight: 400, letterSpacing: "-0.02em" }}>
-            PH Prescriptions
-          </span>
-          <span style={{ color: "var(--color-teal)", fontSize: "0.6875rem", letterSpacing: "0.12em", textTransform: "uppercase" }}>
-            Water Health &amp; Wellness
-          </span>
-        </Link>
-
-        {/* Desktop nav */}
-        <nav style={{ display: "flex", alignItems: "center", gap: "0.25rem" }} className="hidden lg:flex">
-          {NAV.map((item) =>
-            item.children ? (
-              <div
-                key={item.label}
-                style={{ position: "relative" }}
-                onMouseEnter={() => setActiveDropdown(item.label)}
-                onMouseLeave={() => setActiveDropdown(null)}
-              >
-                <button
-                  style={{
-                    background: "none",
-                    border: "none",
-                    color: activeDropdown === item.label ? "var(--color-navy)" : "var(--color-ink-soft)",
-                    fontSize: "0.875rem",
-                    fontWeight: 500,
-                    cursor: "pointer",
-                    padding: "0.5rem 0.75rem",
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "0.25rem",
-                    transition: "color 0.2s",
-                  }}
-                >
-                  {item.label} <ChevronDown size={13} />
-                </button>
-                {activeDropdown === item.label && (
-                  <div
-                    style={{
-                      position: "absolute",
-                      top: "100%",
-                      left: 0,
-                      background: "#fff",
-                      boxShadow: "0 8px 32px rgba(0,0,0,0.12)",
-                      minWidth: "200px",
-                      zIndex: 100,
-                    }}
-                  >
-                    {item.children.map((child) => (
-                      <Link
-                        key={child.href}
-                        href={child.href}
+          <nav>
+            <ul
+              style={{ display: "flex", alignItems: "center", gap: "1.75rem", listStyle: "none", margin: 0, padding: 0 }}
+              onMouseLeave={() => setOpenPanel(null)}
+            >
+              {NAV.map((item) => {
+                const active = openPanel === item.label || pathname.startsWith(item.href);
+                const isPanelOpen = openPanel === item.label;
+                return (
+                  <li key={item.label} style={{ position: "relative" }}>
+                    {item.panel ? (
+                      <button
+                        type="button"
+                        onMouseEnter={() => setOpenPanel(item.label)}
+                        onFocus={() => setOpenPanel(item.label)}
+                        onClick={() => setOpenPanel((p) => (p === item.label ? null : item.label))}
                         style={{
-                          display: "block",
-                          padding: "0.75rem 1.25rem",
-                          color: "var(--color-ink)",
-                          textDecoration: "none",
-                          fontSize: "0.875rem",
-                          borderBottom: "1px solid var(--color-border-soft)",
-                          transition: "background 0.15s, color 0.15s",
-                        }}
-                        onMouseEnter={(e) => {
-                          (e.currentTarget as HTMLElement).style.background = "var(--color-teal-soft)";
-                          (e.currentTarget as HTMLElement).style.color = "var(--color-teal)";
-                        }}
-                        onMouseLeave={(e) => {
-                          (e.currentTarget as HTMLElement).style.background = "";
-                          (e.currentTarget as HTMLElement).style.color = "var(--color-ink)";
+                          background: "transparent",
+                          border: "none",
+                          padding: "1.25rem 0",
+                          cursor: "pointer",
+                          fontFamily: "var(--font-sans)",
+                          fontSize: "0.8125rem",
+                          fontWeight: 500,
+                          letterSpacing: "0.04em",
+                          textTransform: "uppercase",
+                          color: active ? "var(--color-navy)" : "var(--color-ink-soft)",
+                          display: "inline-flex",
+                          alignItems: "center",
+                          gap: "0.375rem",
+                          transition: "color 0.2s",
+                          position: "relative",
                         }}
                       >
-                        {child.label}
+                        <span>{item.label}</span>
+                        <ChevronDown
+                          size={11}
+                          style={{
+                            transition: "transform 0.3s",
+                            transform: isPanelOpen ? "rotate(180deg)" : "rotate(0deg)",
+                          }}
+                        />
+                        <span
+                          style={{
+                            position: "absolute",
+                            left: 0,
+                            right: 0,
+                            bottom: "-1px",
+                            height: "2px",
+                            background: "var(--color-navy)",
+                            transform: isPanelOpen ? "scaleX(1)" : "scaleX(0)",
+                            transformOrigin: "left",
+                            transition: "transform 0.3s cubic-bezier(0.22,1,0.36,1)",
+                          }}
+                        />
+                      </button>
+                    ) : (
+                      <Link
+                        href={item.href}
+                        onMouseEnter={() => setOpenPanel(null)}
+                        style={{
+                          display: "inline-block",
+                          padding: "1.25rem 0",
+                          fontFamily: "var(--font-sans)",
+                          fontSize: "0.8125rem",
+                          fontWeight: 500,
+                          letterSpacing: "0.04em",
+                          textTransform: "uppercase",
+                          color: active ? "var(--color-navy)" : "var(--color-ink-soft)",
+                          textDecoration: "none",
+                          transition: "color 0.2s",
+                        }}
+                      >
+                        {item.label}
+                      </Link>
+                    )}
+                  </li>
+                );
+              })}
+            </ul>
+          </nav>
+
+          <div style={{ display: "flex", alignItems: "center", gap: "1.25rem" }}>
+            <a
+              href={`tel:${BUSINESS.phone}`}
+              className="tabular"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "0.375rem",
+                fontFamily: "var(--font-mono)",
+                fontSize: "0.75rem",
+                letterSpacing: "0.06em",
+                color: "var(--color-ink-soft)",
+                textDecoration: "none",
+              }}
+            >
+              <Phone size={12} /> {BUSINESS.phone}
+            </a>
+            <Link
+              href="/consultation"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                background: "var(--color-navy)",
+                color: "#fff",
+                padding: "0.625rem 1.375rem",
+                fontSize: "0.8125rem",
+                fontWeight: 600,
+                letterSpacing: "0.04em",
+                textDecoration: "none",
+                textTransform: "uppercase",
+                transition: "background 0.2s",
+              }}
+              onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.background = "var(--color-navy-dark)")}
+              onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.background = "var(--color-navy)")}
+            >
+              Free Consultation
+            </Link>
+          </div>
+        </div>
+
+        <AnimatePresence>
+          {openPanel && NAV.find((i) => i.label === openPanel)?.panel && (
+            <motion.div
+              key={openPanel}
+              initial={{ opacity: 0, y: -8 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -8 }}
+              transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
+              onMouseEnter={() => setOpenPanel(openPanel)}
+              onMouseLeave={() => setOpenPanel(null)}
+              style={{
+                position: "absolute",
+                left: 0,
+                right: 0,
+                top: "100%",
+                background: "#fff",
+                borderTop: "1px solid var(--color-border-soft)",
+                borderBottom: "1px solid var(--color-border-soft)",
+              }}
+            >
+              <div className="max-content" style={{ padding: "3rem 1.5rem" }}>
+                {(() => {
+                  const panel = NAV.find((i) => i.label === openPanel)?.panel;
+                  if (!panel) return null;
+                  return (
+                    <div style={{ display: "grid", gridTemplateColumns: "1fr 3fr", gap: "4rem" }}>
+                      <div>
+                        <span className="eyebrow" style={{ color: "var(--color-navy)" }}>{panel.eyebrow}</span>
+                        <h3
+                          style={{
+                            marginTop: "1.25rem",
+                            fontFamily: "var(--font-display)",
+                            fontWeight: 400,
+                            fontSize: "1.75rem",
+                            lineHeight: 1.15,
+                            letterSpacing: "-0.02em",
+                            color: "var(--color-ink)",
+                            maxWidth: "18ch",
+                          }}
+                        >
+                          {panel.headline}
+                        </h3>
+                      </div>
+                      <ul
+                        style={{
+                          display: "grid",
+                          gridTemplateColumns: "repeat(2, 1fr)",
+                          columnGap: "3rem",
+                          rowGap: "2rem",
+                          listStyle: "none",
+                          margin: 0,
+                          padding: 0,
+                        }}
+                      >
+                        {panel.items.map((it) => (
+                          <li key={it.href}>
+                            <Link
+                              href={it.href}
+                              onClick={() => setOpenPanel(null)}
+                              style={{ display: "block", textDecoration: "none" }}
+                            >
+                              <span
+                                style={{
+                                  display: "block",
+                                  fontFamily: "var(--font-mono)",
+                                  fontSize: "0.65rem",
+                                  letterSpacing: "0.18em",
+                                  textTransform: "uppercase",
+                                  color: "var(--color-ink-mute)",
+                                  marginBottom: "0.5rem",
+                                }}
+                              >
+                                {it.description}
+                              </span>
+                              <span
+                                style={{
+                                  display: "block",
+                                  fontFamily: "var(--font-display)",
+                                  fontWeight: 400,
+                                  fontSize: "1.375rem",
+                                  lineHeight: 1.2,
+                                  letterSpacing: "-0.015em",
+                                  color: "var(--color-ink)",
+                                }}
+                              >
+                                {it.label}
+                              </span>
+                              <span
+                                style={{
+                                  display: "inline-block",
+                                  marginTop: "0.5rem",
+                                  fontFamily: "var(--font-mono)",
+                                  fontSize: "0.7rem",
+                                  letterSpacing: "0.1em",
+                                  textTransform: "uppercase",
+                                  color: "var(--color-teal)",
+                                }}
+                              >
+                                Explore →
+                              </span>
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  );
+                })()}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+
+      {/* Mobile */}
+      <header
+        className="lg:hidden"
+        style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          right: 0,
+          zIndex: 50,
+          background: "#fff",
+          borderBottom: "1px solid var(--color-border-soft)",
+        }}
+      >
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0 1.25rem", height: "72px" }}>
+          <Link href="/" aria-label="PH Prescriptions home" style={{ textDecoration: "none", display: "flex", flexDirection: "column", lineHeight: 1.05 }}>
+            <span style={{ fontFamily: "var(--font-display)", color: "var(--color-navy)", fontSize: "1.15rem", fontWeight: 500, letterSpacing: "-0.02em" }}>
+              PH Prescriptions
+            </span>
+            <span style={{ color: "var(--color-teal)", fontFamily: "var(--font-mono)", fontSize: "0.55rem", letterSpacing: "0.2em", textTransform: "uppercase", marginTop: "2px" }}>
+              Water Health &amp; Wellness
+            </span>
+          </Link>
+          <div style={{ display: "flex", gap: "0.5rem" }}>
+            <a
+              href={`tel:${BUSINESS.phone}`}
+              aria-label={`Call ${BUSINESS.phone}`}
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+                width: "44px",
+                height: "44px",
+                border: "1px solid var(--color-border-strong)",
+                color: "var(--color-ink)",
+              }}
+            >
+              <Phone size={16} />
+            </a>
+            <button
+              onClick={() => setMobileOpen(true)}
+              aria-label="Open menu"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+                width: "44px",
+                height: "44px",
+                background: "var(--color-navy)",
+                color: "#fff",
+                border: "none",
+                cursor: "pointer",
+              }}
+            >
+              <Menu size={18} />
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <AnimatePresence>
+        {mobileOpen && (
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="lg:hidden"
+              style={{ position: "fixed", inset: 0, background: "rgba(59,36,102,0.6)", zIndex: 70 }}
+              onClick={() => setMobileOpen(false)}
+            />
+            <motion.aside
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ type: "spring", damping: 30, stiffness: 280 }}
+              className="lg:hidden"
+              style={{
+                position: "fixed",
+                top: 0,
+                right: 0,
+                bottom: 0,
+                width: "88%",
+                maxWidth: "400px",
+                background: "#fff",
+                zIndex: 80,
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
+              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0 1.25rem", height: "72px", borderBottom: "1px solid var(--color-border-soft)" }}>
+                <span className="eyebrow">Menu</span>
+                <button
+                  onClick={() => setMobileOpen(false)}
+                  aria-label="Close menu"
+                  style={{ background: "transparent", border: "none", color: "var(--color-ink)", cursor: "pointer", padding: "0.75rem" }}
+                >
+                  <X size={20} />
+                </button>
+              </div>
+              <nav style={{ flex: 1, overflowY: "auto", padding: "1.5rem 1.25rem" }}>
+                {NAV.map((it) => (
+                  <div key={it.label}>
+                    <Link
+                      href={it.href}
+                      onClick={() => setMobileOpen(false)}
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        minHeight: "52px",
+                        padding: "0.75rem 0",
+                        fontFamily: "var(--font-display)",
+                        fontSize: "1.375rem",
+                        letterSpacing: "-0.015em",
+                        color: "var(--color-ink)",
+                        textDecoration: "none",
+                        borderBottom: "1px solid var(--color-border-soft)",
+                      }}
+                    >
+                      {it.label}
+                    </Link>
+                    {it.panel?.items.map((c) => (
+                      <Link
+                        key={c.href}
+                        href={c.href}
+                        onClick={() => setMobileOpen(false)}
+                        style={{
+                          display: "block",
+                          padding: "0.5rem 0 0.5rem 1rem",
+                          fontFamily: "var(--font-sans)",
+                          fontSize: "0.875rem",
+                          color: "var(--color-ink-soft)",
+                          textDecoration: "none",
+                          borderBottom: "1px solid var(--color-border-soft)",
+                        }}
+                      >
+                        {c.label}
                       </Link>
                     ))}
                   </div>
-                )}
-              </div>
-            ) : (
-              <Link
-                key={item.href}
-                href={item.href}
-                style={{
-                  color: "var(--color-ink-soft)",
-                  textDecoration: "none",
-                  fontSize: "0.875rem",
-                  fontWeight: 500,
-                  padding: "0.5rem 0.75rem",
-                  transition: "color 0.2s",
-                }}
-                onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = "var(--color-teal)")}
-                onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = "var(--color-ink-soft)")}
-              >
-                {item.label}
-              </Link>
-            )
-          )}
-          <Link href="/consultation" className="btn btn-primary" style={{ marginLeft: "1rem", padding: "0.625rem 1.375rem", fontSize: "0.875rem" }}>
-            Free Consultation
-          </Link>
-        </nav>
-
-        {/* Mobile toggle */}
-        <button
-          className="lg:hidden"
-          onClick={() => setOpen(!open)}
-          style={{ background: "none", border: "none", color: "var(--color-ink)", cursor: "pointer", padding: "0.5rem" }}
-          aria-label="Toggle menu"
-        >
-          {open ? <X size={24} /> : <Menu size={24} />}
-        </button>
-      </div>
-
-      {/* Mobile menu */}
-      {open && (
-        <div style={{ background: "#fff", borderTop: "1px solid var(--color-border-soft)", padding: "1rem 0" }}>
-          <div className="container">
-            {NAV.map((item) => (
-              <div key={item.label}>
+                ))}
+              </nav>
+              <div style={{ padding: "1.25rem", borderTop: "1px solid var(--color-border-soft)", display: "flex", flexDirection: "column", gap: "0.75rem" }}>
                 <Link
-                  href={item.href}
-                  onClick={() => setOpen(false)}
+                  href="/consultation"
+                  onClick={() => setMobileOpen(false)}
+                  className="btn btn-primary"
+                  style={{ width: "100%" }}
+                >
+                  Free Consultation
+                </Link>
+                <a
+                  href={`tel:${BUSINESS.phone}`}
+                  className="tabular"
                   style={{
-                    display: "block",
-                    color: "var(--color-ink)",
+                    textAlign: "center",
+                    fontFamily: "var(--font-mono)",
+                    fontSize: "0.75rem",
+                    letterSpacing: "0.12em",
+                    textTransform: "uppercase",
+                    color: "var(--color-ink-soft)",
                     textDecoration: "none",
-                    padding: "0.75rem 0",
-                    fontSize: "1rem",
-                    fontWeight: 500,
-                    borderBottom: "1px solid var(--color-border-soft)",
+                    padding: "0.5rem",
                   }}
                 >
-                  {item.label}
-                </Link>
-                {item.children?.map((child) => (
-                  <Link
-                    key={child.href}
-                    href={child.href}
-                    onClick={() => setOpen(false)}
-                    style={{
-                      display: "block",
-                      color: "var(--color-ink-soft)",
-                      textDecoration: "none",
-                      padding: "0.5rem 0 0.5rem 1rem",
-                      fontSize: "0.875rem",
-                      borderBottom: "1px solid var(--color-border-soft)",
-                    }}
-                  >
-                    {child.label}
-                  </Link>
-                ))}
+                  or call {BUSINESS.phone}
+                </a>
               </div>
-            ))}
-            <div style={{ paddingTop: "1rem" }}>
-              <a href={`tel:${BUSINESS.phone}`} className="btn btn-primary" style={{ width: "100%", justifyContent: "center" }}>
-                Call {BUSINESS.phone}
-              </a>
-            </div>
-          </div>
-        </div>
-      )}
-    </header>
+            </motion.aside>
+          </>
+        )}
+      </AnimatePresence>
+    </>
   );
 }
