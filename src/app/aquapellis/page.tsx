@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function AquapellisPage() {
   return (
     <>
-      <section style={{ background: "linear-gradient(135deg, #0c2a4a 0%, #0d5e6e 100%)", color: "#fff", padding: "5rem 0 4rem" }}>
+      <section style={{ background: "linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy) 100%)", color: "#fff", padding: "5rem 0 4rem" }}>
         <div className="container" style={{ maxWidth: "740px" }}>
           <div style={{ fontSize: "0.8125rem", color: "var(--color-teal-light)", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "1rem" }}>
             A PH Prescriptions Brand

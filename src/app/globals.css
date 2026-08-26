@@ -20,41 +20,43 @@
 }
 
 :root {
-  /* PH Prescriptions brand — teal-blue primary + purple accent, sampled from phprescription.com */
-  /* Legacy --color-navy-* names are retained as tokens but now hold the teal-blue brand values,
-     so every existing page inherits the correct palette without page-level edits. */
-  --color-navy: #1F8CAF;
-  --color-navy-dark: #187692;
-  --color-navy-deep: #0F5A71;
-  --color-teal: #5A3C96;
-  --color-teal-light: #6B4CA8;
-  --color-teal-soft: #EDE7F6;
-  --color-gold: #5A3C96;
+  /* PH Prescriptions brand — purple primary on white, teal-blue as sparing support.
+     Both colors sampled directly from the phprescription.com logo: purple #583890
+     (Aquapellis wordmark) and teal-blue #1888B0 (caduceus symbol).
+     Legacy --color-navy-* tokens are retained as aliases holding the purple values so
+     every existing page picks up the palette without page-level edits. */
+  --color-navy: #583890;         /* PRIMARY purple */
+  --color-navy-dark: #4A2E7A;    /* purple hover */
+  --color-navy-deep: #3B2466;    /* deepest purple, hero gradients */
+  --color-teal: #1888B0;         /* SUPPORT teal-blue (use sparingly: accents, underlines, icon tints) */
+  --color-teal-light: #4AA0C2;
+  --color-teal-soft: #E0F2F8;    /* very light teal for icon backgrounds */
+  --color-gold: #583890;         /* alias primary purple (where gold was CTA highlight) */
   --color-gold-light: #7B5AB5;
-  --color-cream: #F0F9FF;
-  --color-surface: #F0F9FF;
-  --color-ink: #171717;
-  --color-ink-soft: #494C50;
+  --color-cream: #FFFFFF;        /* WHITE page background */
+  --color-surface: #FAF8FD;      /* barely-tinted purple for alternating sections */
+  --color-ink: #171717;          /* body copy */
+  --color-ink-soft: #494C50;     /* headings */
   --color-ink-mute: #6B7280;
-  --color-border-soft: #DDE6EF;
-  --color-border-strong: #C0CFE0;
+  --color-border-soft: #E5E7EB;
+  --color-border-strong: #D1D5DB;
   --max-content: 1200px;
 
   --background: #FFFFFF;
   --foreground: #171717;
   --card: #FFFFFF;
   --card-foreground: #171717;
-  --primary: #1F8CAF;
+  --primary: #583890;
   --primary-foreground: #FFFFFF;
-  --secondary: #F0F9FF;
-  --secondary-foreground: #1F8CAF;
-  --muted: #F0F9FF;
+  --secondary: #FAF8FD;
+  --secondary-foreground: #583890;
+  --muted: #FAF8FD;
   --muted-foreground: #6B7280;
-  --accent: #5A3C96;
+  --accent: #1888B0;
   --accent-foreground: #FFFFFF;
-  --border: #DDE6EF;
-  --input: #DDE6EF;
-  --ring: #1F8CAF;
+  --border: #E5E7EB;
+  --input: #E5E7EB;
+  --ring: #583890;
   --radius: 0.25rem;
 }
 
@@ -157,7 +159,7 @@ section {
 }
 
 .btn-teal:hover {
-  background: #4A2E80;
+  background: #136E90;
 }
 
 .btn-outline {

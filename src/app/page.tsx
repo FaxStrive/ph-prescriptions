@@ -43,7 +43,7 @@ export default function HomePage() {
       {/* HERO */}
       <section
         style={{
-          background: "linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy) 60%, #1a4f8a 100%)",
+          background: "linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy) 60%, #7B5AB5 100%)",
           color: "#fff",
           padding: "6rem 0 5rem",
           position: "relative",

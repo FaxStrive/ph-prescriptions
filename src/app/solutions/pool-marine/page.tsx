@@ -12,7 +12,7 @@ export default function PoolMarinePage() {
     <>
       <section
         style={{
-          background: "linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy) 60%, #1a6b7a 100%)",
+          background: "linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy) 60%, #7B5AB5 100%)",
           color: "#fff",
           padding: "5rem 0 4rem",
         }}
