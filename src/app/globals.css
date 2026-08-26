@@ -6,9 +6,10 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-serif), "Playfair Display", Georgia, serif;
-  --font-serif: var(--font-serif), "Playfair Display", Georgia, serif;
+  --font-sans: var(--font-open-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-fraunces), Georgia, "Times New Roman", serif;
+  --font-serif: var(--font-fraunces), Georgia, "Times New Roman", serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, monospace;
   --color-ring: var(--ring);
   --color-border: var(--border);
   --color-primary: var(--primary);
@@ -20,40 +21,44 @@
 }
 
 :root {
-  /* PH Prescriptions brand — deep navy/teal palette derived from logo */
-  --color-navy: #1b3a6b;
-  --color-navy-dark: #122a52;
-  --color-navy-deep: #0c1f3d;
-  --color-teal: #0d9488;
-  --color-teal-light: #14b8a6;
-  --color-teal-soft: #e6f7f6;
-  --color-gold: #b8860b;
-  --color-gold-light: #d4a017;
-  --color-cream: #fafaf8;
-  --color-surface: #f4f7fb;
-  --color-ink: #0c1f3d;
-  --color-ink-soft: #4a5d7c;
-  --color-ink-mute: #8595af;
-  --color-border-soft: #dde6ef;
-  --color-border-strong: #c0cfe0;
+  /* PH Prescriptions brand — purple primary on white, teal-blue as sparing support.
+     Both colors sampled directly from the phprescription.com logo: purple #583890
+     (Aquapellis wordmark) and teal-blue #1888B0 (caduceus symbol).
+     Legacy --color-navy-* tokens are retained as aliases holding the purple values so
+     every existing page picks up the palette without page-level edits. */
+  --color-navy: #583890;         /* PRIMARY purple */
+  --color-navy-dark: #4A2E7A;    /* purple hover */
+  --color-navy-deep: #3B2466;    /* deepest purple, hero gradients */
+  --color-teal: #1888B0;         /* SUPPORT teal-blue (use sparingly: accents, underlines, icon tints) */
+  --color-teal-light: #4AA0C2;
+  --color-teal-soft: #E0F2F8;    /* very light teal for icon backgrounds */
+  --color-gold: #583890;         /* alias primary purple (where gold was CTA highlight) */
+  --color-gold-light: #7B5AB5;
+  --color-cream: #FFFFFF;        /* WHITE page background */
+  --color-surface: #FAF8FD;      /* barely-tinted purple for alternating sections */
+  --color-ink: #171717;          /* body copy */
+  --color-ink-soft: #494C50;     /* headings */
+  --color-ink-mute: #6B7280;
+  --color-border-soft: #E5E7EB;
+  --color-border-strong: #D1D5DB;
   --max-content: 1200px;
 
-  --background: #fafaf8;
-  --foreground: #0c1f3d;
-  --card: #ffffff;
-  --card-foreground: #0c1f3d;
-  --primary: #1b3a6b;
-  --primary-foreground: #ffffff;
-  --secondary: #f4f7fb;
-  --secondary-foreground: #1b3a6b;
-  --muted: #f4f7fb;
-  --muted-foreground: #8595af;
-  --accent: #0d9488;
-  --accent-foreground: #ffffff;
-  --border: #dde6ef;
-  --input: #dde6ef;
-  --ring: #1b3a6b;
-  --radius: 0rem;
+  --background: #FFFFFF;
+  --foreground: #171717;
+  --card: #FFFFFF;
+  --card-foreground: #171717;
+  --primary: #583890;
+  --primary-foreground: #FFFFFF;
+  --secondary: #FAF8FD;
+  --secondary-foreground: #583890;
+  --muted: #FAF8FD;
+  --muted-foreground: #6B7280;
+  --accent: #1888B0;
+  --accent-foreground: #FFFFFF;
+  --border: #E5E7EB;
+  --input: #E5E7EB;
+  --ring: #583890;
+  --radius: 0.25rem;
 }
 
 * {
@@ -155,7 +160,7 @@ section {
 }
 
 .btn-teal:hover {
-  background: #0b7a70;
+  background: #136E90;
 }
 
 .btn-outline {
@@ -197,4 +202,58 @@ a:focus-visible, button:focus-visible {
 
 .link-underline:hover {
   background-size: 100% 2px;
+}
+
+/* Editorial utilities */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-ink-mute);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 1.5rem;
+  height: 1px;
+  background: var(--color-navy);
+}
+.italic-accent {
+  font-style: italic;
+  font-family: var(--font-display);
+  font-weight: 300;
+}
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+.max-content {
+  max-width: var(--max-content);
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+@media (min-width: 768px) {
+  .max-content { padding-inline: 2rem; }
+}
+
+/* Product card hover lift */
+.product-card {
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease;
+}
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -20px rgba(88, 56, 144, 0.25);
+}
+
+/* Hero gradient veil */
+.hero-veil {
+  background: linear-gradient(
+    to bottom,
+    rgba(59, 36, 102, 0.55) 0%,
+    rgba(59, 36, 102, 0.35) 45%,
+    rgba(59, 36, 102, 0.85) 100%
+  );
 }
