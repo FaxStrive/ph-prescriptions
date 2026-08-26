@@ -59,7 +59,12 @@ function Hero() {
         flexDirection: "column",
         justifyContent: "space-between",
         paddingBottom: 0,
-        marginTop: "-116px",
+        // main wraps every page in paddingTop:72px to clear the fixed header;
+        // Hero only needs to additionally pull up by the remainder (116px full
+        // header height - 72px already reserved by <main>) to sit flush at
+        // the true viewport top. Using the full -116px double-counted the
+        // 72px main already reserved, leaving a 44px gap below the stats bar.
+        marginTop: "-72px",
         paddingTop: "116px",
       }}
     >
