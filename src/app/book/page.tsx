@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { BUSINESS } from "@/lib/business";
 
@@ -193,68 +194,16 @@ export default function BookPage() {
               </div>
             </div>
 
-            {/* Book cover placeholder; real cover at phprescription.com */}
-            <div
-              style={{
-                width: "180px",
-                flexShrink: 0,
-                display: "none",
-              }}
-              className="lg:block"
-            >
-              <div
-                style={{
-                  width: "180px",
-                  height: "260px",
-                  background: "var(--color-navy)",
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  padding: "1.5rem 1rem",
-                  textAlign: "center",
-                  color: "#fff",
-                  gap: "0.75rem",
-                }}
-              >
-                <div
-                  style={{
-                    fontSize: "0.6rem",
-                    letterSpacing: "0.18em",
-                    textTransform: "uppercase",
-                    opacity: 0.7,
-                  }}
-                >
-                  #1 Best Seller
-                </div>
-                <div
-                  style={{
-                    fontFamily: "var(--font-display)",
-                    fontSize: "1.125rem",
-                    lineHeight: 1.2,
-                    letterSpacing: "-0.01em",
-                  }}
-                >
-                  H2O: Health 2 Overcome
-                </div>
-                <div
-                  style={{
-                    width: "40px",
-                    height: "1px",
-                    background: "rgba(255,255,255,0.4)",
-                  }}
-                />
-                <div
-                  style={{
-                    fontSize: "0.65rem",
-                    letterSpacing: "0.08em",
-                    textTransform: "uppercase",
-                    opacity: 0.8,
-                  }}
-                >
-                  Leo G. Szymborski
-                </div>
-              </div>
+            {/* Book cover */}
+            <div style={{ flexShrink: 0 }}>
+              <Image
+                src="https://phprescription.com/wp-content/uploads/2026/03/H2O-book-cover-top-seller-v2.jpg"
+                alt="H2O: Health 2 Overcome by Leo Szymborski — #1 Amazon Best Seller"
+                width={180}
+                height={260}
+                unoptimized
+                style={{ display: "block" }}
+              />
             </div>
           </div>
         </div>
@@ -586,6 +535,30 @@ export default function BookPage() {
           >
             Leo tells his story in his own words. Three minutes that capture 40 years of water science and personal transformation.
           </p>
+          <div style={{
+            position: "relative",
+            paddingBottom: "56.25%",
+            height: 0,
+            overflow: "hidden",
+            marginBottom: "2rem",
+            maxWidth: "640px",
+            margin: "0 auto 2rem",
+          }}>
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/GhoxueDIF6o"
+              title="H2O: Health 2 Overcome — Book Trailer"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                border: 0,
+              }}
+            />
+          </div>
           <a
             href={`tel:${BUSINESS.phoneTollFree}`}
             style={{
