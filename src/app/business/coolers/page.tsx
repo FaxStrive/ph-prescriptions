@@ -35,8 +35,8 @@ export default function CoolersPage() {
       {/* Hero */}
       <section
         style={{
-          background: "var(--color-navy)",
-          color: "#fff",
+          background: "#fff",
+          color: "var(--color-ink)",
           padding: "5rem 0 4rem",
         }}
       >
@@ -44,7 +44,7 @@ export default function CoolersPage() {
           <div
             style={{
               fontSize: "0.8125rem",
-              color: "var(--color-teal-light)",
+              color: "var(--color-teal)",
               letterSpacing: "0.1em",
               textTransform: "uppercase",
               marginBottom: "1rem",
@@ -65,7 +65,7 @@ export default function CoolersPage() {
           <p
             style={{
               fontSize: "1.0625rem",
-              color: "rgba(255,255,255,0.82)",
+              color: "var(--color-ink-soft)",
               lineHeight: 1.75,
               marginBottom: "2rem",
             }}
@@ -77,8 +77,8 @@ export default function CoolersPage() {
               href="/consultation"
               style={{
                 display: "inline-block",
-                background: "var(--color-navy)",
-                color: "#fff",
+                background: "#fff",
+                color: "var(--color-ink)",
                 padding: "0.875rem 2rem",
                 fontWeight: 600,
                 textDecoration: "none",
@@ -90,8 +90,8 @@ export default function CoolersPage() {
               href={`tel:${BUSINESS.phoneTollFree}`}
               style={{
                 display: "inline-block",
-                border: "1px solid rgba(255,255,255,0.4)",
-                color: "#fff",
+                border: "1px solid var(--color-border-soft)",
+                color: "var(--color-ink)",
                 padding: "0.875rem 2rem",
                 fontWeight: 600,
                 textDecoration: "none",
@@ -127,8 +127,8 @@ export default function CoolersPage() {
             <div
               style={{
                 display: "inline-block",
-                background: "var(--color-navy)",
-                color: "#fff",
+                background: "#fff",
+                color: "var(--color-ink)",
                 fontSize: "0.75rem",
                 fontWeight: 700,
                 padding: "0.25rem 0.75rem",
@@ -182,8 +182,8 @@ export default function CoolersPage() {
               href="/consultation"
               style={{
                 display: "inline-block",
-                background: "var(--color-navy)",
-                color: "#fff",
+                background: "#fff",
+                color: "var(--color-ink)",
                 padding: "0.75rem 1.75rem",
                 fontWeight: 600,
                 textDecoration: "none",
@@ -251,8 +251,8 @@ export default function CoolersPage() {
       {/* Comparison */}
       <section
         style={{
-          background: "var(--color-navy)",
-          color: "#fff",
+          background: "#fff",
+          color: "var(--color-ink)",
           padding: "4rem 0",
         }}
       >
@@ -283,7 +283,7 @@ export default function CoolersPage() {
                   "Standard tap or lever",
                   "No warranty on water quality",
                 ],
-                accent: "rgba(255,255,255,0.3)",
+                accent: "var(--color-ink-mute)",
               },
               {
                 label: "PH Prescriptions Cooler",
@@ -315,10 +315,10 @@ export default function CoolersPage() {
                     key={item}
                     style={{
                       fontSize: "0.9375rem",
-                      color: "rgba(255,255,255,0.82)",
+                      color: "var(--color-ink-soft)",
                       marginBottom: "0.625rem",
                       paddingBottom: "0.625rem",
-                      borderBottom: "1px solid rgba(255,255,255,0.1)",
+                      borderBottom: "1px solid var(--color-border-soft)",
                     }}
                   >
                     {item}
@@ -350,8 +350,8 @@ export default function CoolersPage() {
             href="/consultation"
             style={{
               display: "inline-block",
-              background: "var(--color-navy)",
-              color: "#fff",
+              background: "#fff",
+              color: "var(--color-ink)",
               padding: "0.875rem 2.25rem",
               fontWeight: 600,
               textDecoration: "none",

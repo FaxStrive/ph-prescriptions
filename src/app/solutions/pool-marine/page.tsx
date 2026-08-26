@@ -12,8 +12,8 @@ export default function PoolMarinePage() {
     <>
       <section
         style={{
-          background: "linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy) 60%, #7B5AB5 100%)",
-          color: "#fff",
+          background: "#fff",
+          color: "var(--color-ink)",
           padding: "5rem 0 4rem",
         }}
       >
@@ -21,7 +21,7 @@ export default function PoolMarinePage() {
           <div
             style={{
               fontSize: "0.8125rem",
-              color: "var(--color-teal-light)",
+              color: "var(--color-teal)",
               letterSpacing: "0.1em",
               textTransform: "uppercase",
               marginBottom: "1rem",
@@ -42,7 +42,7 @@ export default function PoolMarinePage() {
           <p
             style={{
               fontSize: "1.0625rem",
-              color: "rgba(255,255,255,0.82)",
+              color: "var(--color-ink-soft)",
               lineHeight: 1.8,
               maxWidth: "600px",
               marginBottom: "2rem",
@@ -54,7 +54,7 @@ export default function PoolMarinePage() {
             <a href={`tel:${BUSINESS.phoneTollFree}`} className="btn btn-primary">
               Call {BUSINESS.phoneTollFree}
             </a>
-            <Link href="/consultation" className="btn btn-white">
+            <Link href="/consultation" className="btn btn-primary">
               Free Consultation
             </Link>
           </div>
@@ -182,8 +182,8 @@ export default function PoolMarinePage() {
 
           <div
             style={{
-              background: "var(--color-navy)",
-              color: "#fff",
+              background: "#fff",
+              color: "var(--color-ink)",
               padding: "2rem 2.5rem",
               display: "flex",
               flexDirection: "column",
@@ -194,7 +194,7 @@ export default function PoolMarinePage() {
               <div
                 style={{
                   fontSize: "0.75rem",
-                  color: "var(--color-teal-light)",
+                  color: "var(--color-teal)",
                   letterSpacing: "0.1em",
                   textTransform: "uppercase",
                   marginBottom: "0.5rem",
@@ -211,7 +211,7 @@ export default function PoolMarinePage() {
               >
                 Exceptional Water Systems
               </h3>
-              <p style={{ color: "rgba(255,255,255,0.78)", lineHeight: 1.75, fontSize: "0.9375rem" }}>
+              <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.75, fontSize: "0.9375rem" }}>
                 PH Prescriptions partners with Exceptional Water Systems to deliver pool and specialty water solutions. Together, we bring the same commitment to true water quality from the home into every environment where water matters.
               </p>
             </div>
@@ -271,7 +271,7 @@ export default function PoolMarinePage() {
                     width: "2.5rem",
                     height: "2.5rem",
                     background: "var(--color-teal)",
-                    color: "#fff",
+                    color: "var(--color-ink)",
                     borderRadius: "50%",
                     display: "flex",
                     alignItems: "center",
@@ -300,7 +300,7 @@ export default function PoolMarinePage() {
         </div>
       </section>
 
-      <section style={{ background: "var(--color-navy)", color: "#fff", padding: "4rem 0" }}>
+      <section style={{ background: "#fff", color: "var(--color-ink)", padding: "4rem 0" }}>
         <div className="container" style={{ maxWidth: "600px", textAlign: "center" }}>
           <h2
             style={{
@@ -312,14 +312,14 @@ export default function PoolMarinePage() {
           >
             Get a Custom Quote
           </h2>
-          <p style={{ color: "rgba(255,255,255,0.78)", lineHeight: 1.75, marginBottom: "2rem" }}>
+          <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.75, marginBottom: "2rem" }}>
             Pool, marine, and RV systems are quoted based on your specific application. Call us and describe what you need. We will tell you what is possible.
           </p>
           <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
             <a href={`tel:${BUSINESS.phoneTollFree}`} className="btn btn-primary">
               Call {BUSINESS.phoneTollFree}
             </a>
-            <Link href="/contact" className="btn btn-white">
+            <Link href="/contact" className="btn btn-primary">
               Send a Message
             </Link>
           </div>

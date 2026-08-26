@@ -14,8 +14,8 @@ export default function WarrantyPage() {
       {/* Hero */}
       <section
         style={{
-          background: "var(--color-navy)",
-          color: "#fff",
+          background: "#fff",
+          color: "var(--color-ink)",
           padding: "5rem 0 4rem",
         }}
       >
@@ -23,7 +23,7 @@ export default function WarrantyPage() {
           <div
             style={{
               fontSize: "0.8125rem",
-              color: "var(--color-teal-light)",
+              color: "var(--color-teal)",
               letterSpacing: "0.1em",
               textTransform: "uppercase",
               marginBottom: "1rem",
@@ -44,7 +44,7 @@ export default function WarrantyPage() {
           <p
             style={{
               fontSize: "1.0625rem",
-              color: "rgba(255,255,255,0.82)",
+              color: "var(--color-ink-soft)",
               lineHeight: 1.75,
               marginBottom: "2rem",
             }}
@@ -55,8 +55,8 @@ export default function WarrantyPage() {
             href={`tel:${BUSINESS.phone}`}
             style={{
               display: "inline-block",
-              background: "var(--color-navy)",
-              color: "#fff",
+              background: "#fff",
+              color: "var(--color-ink)",
               padding: "0.875rem 2rem",
               fontWeight: 600,
               textDecoration: "none",
@@ -240,8 +240,8 @@ export default function WarrantyPage() {
       {/* Filter maintenance note */}
       <section
         style={{
-          background: "var(--color-navy)",
-          color: "#fff",
+          background: "#fff",
+          color: "var(--color-ink)",
           padding: "3.5rem 0",
         }}
       >
@@ -257,7 +257,7 @@ export default function WarrantyPage() {
           </h2>
           <p
             style={{
-              color: "rgba(255,255,255,0.82)",
+              color: "var(--color-ink-soft)",
               lineHeight: 1.75,
               marginBottom: "1.25rem",
             }}
@@ -266,7 +266,7 @@ export default function WarrantyPage() {
           </p>
           <p
             style={{
-              color: "rgba(255,255,255,0.65)",
+              color: "var(--color-ink-mute)",
               lineHeight: 1.75,
               fontSize: "0.9375rem",
             }}
@@ -285,8 +285,8 @@ export default function WarrantyPage() {
               href={`tel:${BUSINESS.phone}`}
               style={{
                 display: "inline-block",
-                background: "var(--color-navy)",
-                color: "#fff",
+                background: "#fff",
+                color: "var(--color-ink)",
                 padding: "0.75rem 1.75rem",
                 fontWeight: 600,
                 textDecoration: "none",
@@ -298,8 +298,8 @@ export default function WarrantyPage() {
               href="/contact"
               style={{
                 display: "inline-block",
-                border: "1px solid rgba(255,255,255,0.4)",
-                color: "#fff",
+                border: "1px solid var(--color-border-soft)",
+                color: "var(--color-ink)",
                 padding: "0.75rem 1.75rem",
                 fontWeight: 600,
                 textDecoration: "none",

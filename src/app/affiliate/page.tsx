@@ -12,8 +12,8 @@ export default function AffiliatePage() {
     <>
       <section
         style={{
-          background: "linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy) 100%)",
-          color: "#fff",
+          background: "#fff",
+          color: "var(--color-ink)",
           padding: "5rem 0 4rem",
         }}
       >
@@ -21,7 +21,7 @@ export default function AffiliatePage() {
           <div
             style={{
               fontSize: "0.8125rem",
-              color: "var(--color-teal-light)",
+              color: "var(--color-teal)",
               letterSpacing: "0.1em",
               textTransform: "uppercase",
               marginBottom: "1rem",
@@ -42,7 +42,7 @@ export default function AffiliatePage() {
           <p
             style={{
               fontSize: "1.0625rem",
-              color: "rgba(255,255,255,0.82)",
+              color: "var(--color-ink-soft)",
               lineHeight: 1.8,
               maxWidth: "600px",
               marginBottom: "2rem",
@@ -54,7 +54,7 @@ export default function AffiliatePage() {
             <a href={`mailto:${BUSINESS.email}`} className="btn btn-primary">
               Apply: {BUSINESS.email}
             </a>
-            <a href={`tel:${BUSINESS.phoneTollFree}`} className="btn btn-white">
+            <a href={`tel:${BUSINESS.phoneTollFree}`} className="btn btn-primary">
               Call {BUSINESS.phoneTollFree}
             </a>
           </div>
@@ -226,7 +226,7 @@ export default function AffiliatePage() {
         </div>
       </section>
 
-      <section style={{ background: "var(--color-navy)", color: "#fff", padding: "4rem 0" }}>
+      <section style={{ background: "#fff", color: "var(--color-ink)", padding: "4rem 0" }}>
         <div className="container" style={{ maxWidth: "600px", textAlign: "center" }}>
           <h2
             style={{
@@ -238,18 +238,18 @@ export default function AffiliatePage() {
           >
             Apply to the Program
           </h2>
-          <p style={{ color: "rgba(255,255,255,0.78)", lineHeight: 1.75, marginBottom: "2rem" }}>
+          <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.75, marginBottom: "2rem" }}>
             Send us a brief introduction: who you are, your practice or business, and why you think PH Prescriptions is a fit for your clients. We review every application personally.
           </p>
           <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
             <a href={`mailto:${BUSINESS.email}?subject=Affiliate Program Application`} className="btn btn-primary">
               Email {BUSINESS.email}
             </a>
-            <a href={`tel:${BUSINESS.phoneTollFree}`} className="btn btn-white">
+            <a href={`tel:${BUSINESS.phoneTollFree}`} className="btn btn-primary">
               Call {BUSINESS.phoneTollFree}
             </a>
           </div>
-          <p style={{ color: "rgba(255,255,255,0.5)", fontSize: "0.8125rem", marginTop: "1.5rem" }}>
+          <p style={{ color: "var(--color-ink-mute)", fontSize: "0.8125rem", marginTop: "1.5rem" }}>
             We respond to all applications within 2 business days.
           </p>
         </div>

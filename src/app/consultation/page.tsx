@@ -10,13 +10,13 @@ export const metadata: Metadata = {
 export default function ConsultationPage() {
   return (
     <>
-      <section style={{ background: "var(--color-navy)", color: "#fff", padding: "5rem 0 4rem" }}>
+      <section style={{ background: "#fff", color: "var(--color-ink)", padding: "5rem 0 4rem" }}>
         <div className="container" style={{ maxWidth: "700px" }}>
-          <div style={{ fontSize: "0.8125rem", color: "var(--color-teal-light)", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "1rem" }}>No Cost, No Obligation</div>
+          <div style={{ fontSize: "0.8125rem", color: "var(--color-teal)", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "1rem" }}>No Cost, No Obligation</div>
           <h1 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2rem,5vw,3.25rem)", marginBottom: "1.25rem", letterSpacing: "-0.02em" }}>
             Free Water Analysis &amp; Consultation
           </h1>
-          <p style={{ fontSize: "1.0625rem", color: "rgba(255,255,255,0.82)", lineHeight: 1.75 }}>
+          <p style={{ fontSize: "1.0625rem", color: "var(--color-ink-soft)", lineHeight: 1.75 }}>
             Schedule a complimentary water analysis. We test what is in your water, explain exactly what we find, and recommend the right solution for your home or business - with no obligation to purchase.
           </p>
         </div>
@@ -40,7 +40,7 @@ export default function ConsultationPage() {
                   <div key={item.step} style={{ display: "flex", gap: "1.25rem", alignItems: "flex-start" }}>
                     <div style={{
                       width: "2.25rem", height: "2.25rem", background: "var(--color-teal)",
-                      color: "#fff", display: "flex", alignItems: "center", justifyContent: "center",
+                      color: "var(--color-ink)", display: "flex", alignItems: "center", justifyContent: "center",
                       fontWeight: 700, fontSize: "0.875rem", flexShrink: 0,
                     }}>{item.step}</div>
                     <div>

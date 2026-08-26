@@ -29,13 +29,13 @@ export default function ContactPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-      <section style={{ background: "var(--color-navy)", color: "#fff", padding: "5rem 0 4rem" }}>
+      <section style={{ background: "#fff", color: "var(--color-ink)", padding: "5rem 0 4rem" }}>
         <div className="container" style={{ maxWidth: "700px" }}>
-          <div style={{ fontSize: "0.8125rem", color: "var(--color-teal-light)", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "1rem" }}>Get in Touch</div>
+          <div style={{ fontSize: "0.8125rem", color: "var(--color-teal)", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "1rem" }}>Get in Touch</div>
           <h1 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2rem,5vw,3.25rem)", marginBottom: "1.25rem", letterSpacing: "-0.02em" }}>
             Contact PH Prescriptions
           </h1>
-          <p style={{ fontSize: "1.0625rem", color: "rgba(255,255,255,0.82)", lineHeight: 1.75 }}>
+          <p style={{ fontSize: "1.0625rem", color: "var(--color-ink-soft)", lineHeight: 1.75 }}>
             Ready to find the right water system for your home or business? Reach out by phone, email, or visit our facility in Palm City, Florida.
           </p>
         </div>
@@ -101,10 +101,10 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div style={{ marginTop: "2rem", padding: "1.5rem", background: "var(--color-navy)", color: "#fff" }}>
-                <div style={{ fontSize: "0.875rem", color: "var(--color-teal-light)", marginBottom: "0.375rem" }}>Aquapellis Inquiries</div>
-                <a href={`mailto:${BUSINESS.emailAquapellis}`} style={{ color: "#fff", textDecoration: "none" }}>{BUSINESS.emailAquapellis}</a>
-                <div style={{ fontSize: "0.8125rem", color: "rgba(255,255,255,0.6)", marginTop: "0.25rem" }}>Molecular hydrogen shower systems</div>
+              <div style={{ marginTop: "2rem", padding: "1.5rem", background: "#fff", color: "var(--color-ink)" }}>
+                <div style={{ fontSize: "0.875rem", color: "var(--color-teal)", marginBottom: "0.375rem" }}>Aquapellis Inquiries</div>
+                <a href={`mailto:${BUSINESS.emailAquapellis}`} style={{ color: "var(--color-ink)", textDecoration: "none" }}>{BUSINESS.emailAquapellis}</a>
+                <div style={{ fontSize: "0.8125rem", color: "var(--color-ink-mute)", marginTop: "0.25rem" }}>Molecular hydrogen shower systems</div>
               </div>
             </div>
 

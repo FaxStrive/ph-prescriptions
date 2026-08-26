@@ -10,11 +10,11 @@ export const metadata: Metadata = {
 export default function DrinkingSystemsPage() {
   return (
     <>
-      <section style={{ background: "var(--color-navy)", color: "#fff", padding: "5rem 0 4rem" }}>
+      <section style={{ background: "#fff", color: "var(--color-ink)", padding: "5rem 0 4rem" }}>
         <div className="container" style={{ maxWidth: "700px" }}>
-          <div style={{ fontSize: "0.8125rem", color: "var(--color-teal-light)", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "1rem" }}>Residential</div>
+          <div style={{ fontSize: "0.8125rem", color: "var(--color-teal)", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "1rem" }}>Residential</div>
           <h1 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2rem,5vw,3.25rem)", marginBottom: "1.25rem", letterSpacing: "-0.02em" }}>Drinking Water Systems</h1>
-          <p style={{ fontSize: "1.0625rem", color: "rgba(255,255,255,0.82)", lineHeight: 1.75 }}>
+          <p style={{ fontSize: "1.0625rem", color: "var(--color-ink-soft)", lineHeight: 1.75 }}>
             Doctor-recommended under-sink systems that filter, alkalize, remineralize, and infuse molecular hydrogen. Non-electric. Lifetime warranty with licensed plumber installation.
           </p>
         </div>
@@ -41,11 +41,11 @@ export default function DrinkingSystemsPage() {
               ))}
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}>
-              <div style={{ background: "var(--color-navy)", color: "#fff", padding: "2rem" }}>
+              <div style={{ background: "#fff", color: "var(--color-ink)", padding: "2rem" }}>
                 <h3 style={{ fontFamily: "var(--font-display)", fontSize: "1.25rem", marginBottom: "1rem" }}>Why These Systems?</h3>
                 {["Non-electric - no power required", "Removes up to 99% of contaminants", "Alkalizes to pH 8.0-9.5", "Re-mineralizes with essential trace minerals", "Infuses molecular hydrogen (H2)", "WQA Certified, Made in USA", "Lifetime warranty with licensed plumber install", "Fits under standard kitchen sink"].map((p) => (
-                  <div key={p} style={{ display: "flex", gap: "0.625rem", padding: "0.5rem 0", borderBottom: "1px solid rgba(255,255,255,0.1)", fontSize: "0.875rem", color: "rgba(255,255,255,0.82)" }}>
-                    <span style={{ color: "var(--color-teal-light)" }}>+</span> {p}
+                  <div key={p} style={{ display: "flex", gap: "0.625rem", padding: "0.5rem 0", borderBottom: "1px solid var(--color-border-soft)", fontSize: "0.875rem", color: "var(--color-ink-soft)" }}>
+                    <span style={{ color: "var(--color-teal)" }}>+</span> {p}
                   </div>
                 ))}
               </div>

@@ -44,8 +44,8 @@ export default function RestaurantPage() {
       {/* Hero */}
       <section
         style={{
-          background: "var(--color-navy)",
-          color: "#fff",
+          background: "#fff",
+          color: "var(--color-ink)",
           padding: "5rem 0 4rem",
         }}
       >
@@ -53,7 +53,7 @@ export default function RestaurantPage() {
           <div
             style={{
               fontSize: "0.8125rem",
-              color: "var(--color-teal-light)",
+              color: "var(--color-teal)",
               letterSpacing: "0.1em",
               textTransform: "uppercase",
               marginBottom: "1rem",
@@ -74,7 +74,7 @@ export default function RestaurantPage() {
           <p
             style={{
               fontSize: "1.0625rem",
-              color: "rgba(255,255,255,0.82)",
+              color: "var(--color-ink-soft)",
               lineHeight: 1.75,
               marginBottom: "2rem",
             }}
@@ -86,8 +86,8 @@ export default function RestaurantPage() {
               href="/consultation"
               style={{
                 display: "inline-block",
-                background: "var(--color-navy)",
-                color: "#fff",
+                background: "#fff",
+                color: "var(--color-ink)",
                 padding: "0.875rem 2rem",
                 fontWeight: 600,
                 textDecoration: "none",
@@ -99,8 +99,8 @@ export default function RestaurantPage() {
               href={`tel:${BUSINESS.phoneTollFree}`}
               style={{
                 display: "inline-block",
-                border: "1px solid rgba(255,255,255,0.4)",
-                color: "#fff",
+                border: "1px solid var(--color-border-soft)",
+                color: "var(--color-ink)",
                 padding: "0.875rem 2rem",
                 fontWeight: 600,
                 textDecoration: "none",
@@ -221,8 +221,8 @@ export default function RestaurantPage() {
             </div>
             <div
               style={{
-                background: "var(--color-navy)",
-                color: "#fff",
+                background: "#fff",
+                color: "var(--color-ink)",
                 padding: "2.5rem",
               }}
             >
@@ -253,7 +253,7 @@ export default function RestaurantPage() {
                 >
                   <span
                     style={{
-                      color: "var(--color-teal-light)",
+                      color: "var(--color-teal)",
                       marginTop: "0.1rem",
                       flexShrink: 0,
                     }}
@@ -262,7 +262,7 @@ export default function RestaurantPage() {
                   </span>
                   <span
                     style={{
-                      color: "rgba(255,255,255,0.85)",
+                      color: "var(--color-ink-soft)",
                       fontSize: "0.9375rem",
                       lineHeight: 1.6,
                     }}
@@ -279,8 +279,8 @@ export default function RestaurantPage() {
       {/* CTA */}
       <section
         style={{
-          background: "var(--color-navy)",
-          color: "#fff",
+          background: "#fff",
+          color: "var(--color-ink)",
           padding: "3.5rem 0",
           textAlign: "center",
         }}
@@ -297,7 +297,7 @@ export default function RestaurantPage() {
           </h2>
           <p
             style={{
-              color: "rgba(255,255,255,0.9)",
+              color: "var(--color-ink-soft)",
               marginBottom: "1.75rem",
               lineHeight: 1.7,
             }}

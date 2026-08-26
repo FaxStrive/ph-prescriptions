@@ -43,48 +43,49 @@ export default function HomePage() {
       {/* HERO */}
       <section
         style={{
-          background: "linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy) 60%, #7B5AB5 100%)",
-          color: "#fff",
-          padding: "6rem 0 5rem",
+          background: "#fff",
+          color: "var(--color-ink)",
+          padding: "5rem 0 4rem",
           position: "relative",
           overflow: "hidden",
+          borderTop: "3px solid var(--color-navy)",
         }}
       >
         <div
           style={{
             position: "absolute", inset: 0,
-            background: "radial-gradient(ellipse at 70% 50%, rgba(13,148,136,0.18) 0%, transparent 65%)",
+            background: "radial-gradient(ellipse at 85% 20%, rgba(24,136,176,0.08) 0%, transparent 55%)",
           }}
         />
         <div className="container" style={{ position: "relative", zIndex: 1 }}>
           <div style={{ maxWidth: "680px" }}>
             <div style={{
               display: "inline-flex", alignItems: "center", gap: "0.5rem",
-              background: "rgba(13,148,136,0.2)", border: "1px solid rgba(13,148,136,0.4)",
+              background: "var(--color-teal-soft)", border: "1px solid rgba(24,136,176,0.25)",
               padding: "0.375rem 1rem", marginBottom: "1.5rem", fontSize: "0.8125rem",
-              color: "var(--color-teal-light)", letterSpacing: "0.08em", textTransform: "uppercase",
+              color: "var(--color-teal)", letterSpacing: "0.08em", textTransform: "uppercase",
             }}>
               <Award size={13} /> #1 Doctor Recommended
             </div>
             <h1 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2.25rem,5vw,3.5rem)", fontWeight: 400, lineHeight: 1.1, marginBottom: "1.25rem", letterSpacing: "-0.03em" }}>
               Water That Works<br />
-              <em style={{ color: "var(--color-teal-light)" }}>for Your Health</em>
+              <em style={{ color: "var(--color-teal)" }}>for Your Health</em>
             </h1>
-            <p style={{ fontSize: "1.125rem", lineHeight: 1.75, color: "rgba(255,255,255,0.82)", marginBottom: "2rem", maxWidth: "560px" }}>
+            <p style={{ fontSize: "1.125rem", lineHeight: 1.75, color: "var(--color-ink-soft)", marginBottom: "2rem", maxWidth: "560px" }}>
               PH Prescriptions delivers WQA Certified, alkaline, re-mineralized, and hydrogen-infused water systems for your home and business. Made in USA since {BUSINESS.founded}. Endorsed by 7+ doctors. Lifetime warranty.
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
-              <Link href="/consultation" className="btn btn-white" style={{ minWidth: "200px" }}>
+              <Link href="/consultation" className="btn btn-primary" style={{ minWidth: "200px" }}>
                 Get a Free Consultation
               </Link>
-              <a href={`tel:${BUSINESS.phone}`} className="btn" style={{ minWidth: "200px", background: "transparent", border: "2px solid rgba(255,255,255,0.6)", color: "#fff" }}>
+              <a href={`tel:${BUSINESS.phone}`} className="btn" style={{ minWidth: "200px", background: "transparent", border: "2px solid var(--color-navy)", color: "var(--color-ink)" }}>
                 <Phone size={16} /> {BUSINESS.phone}
               </a>
             </div>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "1.25rem", marginTop: "2rem" }}>
               {["WQA Certified", "Made in USA", "Lifetime Warranty", "Non-Electric Options"].map((tag) => (
-                <span key={tag} style={{ display: "flex", alignItems: "center", gap: "0.375rem", fontSize: "0.8125rem", color: "rgba(255,255,255,0.7)" }}>
-                  <CheckCircle2 size={13} style={{ color: "var(--color-teal-light)" }} /> {tag}
+                <span key={tag} style={{ display: "flex", alignItems: "center", gap: "0.375rem", fontSize: "0.8125rem", color: "var(--color-ink-soft)" }}>
+                  <CheckCircle2 size={13} style={{ color: "var(--color-teal)" }} /> {tag}
                 </span>
               ))}
             </div>
@@ -93,13 +94,13 @@ export default function HomePage() {
       </section>
 
       {/* STATS */}
-      <section style={{ background: "var(--color-navy)", padding: "2.5rem 0" }}>
+      <section style={{ background: "var(--color-surface)", padding: "2.5rem 0", borderTop: "1px solid var(--color-border-soft)", borderBottom: "1px solid var(--color-border-soft)" }}>
         <div className="container">
           <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "1rem", textAlign: "center" }}>
             {STATS.map((s) => (
               <div key={s.label}>
-                <div style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2rem,4vw,3rem)", color: "var(--color-teal-light)", lineHeight: 1 }}>{s.value}</div>
-                <div style={{ fontSize: "0.8125rem", color: "rgba(255,255,255,0.65)", marginTop: "0.375rem", textTransform: "uppercase", letterSpacing: "0.08em" }}>{s.label}</div>
+                <div style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2rem,4vw,3rem)", color: "var(--color-teal)", lineHeight: 1 }}>{s.value}</div>
+                <div style={{ fontSize: "0.8125rem", color: "var(--color-ink-mute)", marginTop: "0.375rem", textTransform: "uppercase", letterSpacing: "0.08em" }}>{s.label}</div>
               </div>
             ))}
           </div>
@@ -174,27 +175,27 @@ export default function HomePage() {
       </section>
 
       {/* DOCTOR ENDORSEMENTS STRIP */}
-      <section style={{ background: "var(--color-navy-dark)", color: "#fff" }}>
+      <section style={{ background: "#fff", color: "var(--color-ink)" }}>
         <div className="container">
           <div style={{ textAlign: "center", marginBottom: "2.5rem" }}>
-            <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.5rem,3vw,2.25rem)", color: "#fff", marginBottom: "0.75rem" }}>
+            <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.5rem,3vw,2.25rem)", color: "var(--color-ink)", marginBottom: "0.75rem" }}>
               Endorsed by Leading Physicians
             </h2>
-            <p style={{ color: "rgba(255,255,255,0.65)", fontSize: "0.9375rem" }}>
+            <p style={{ color: "var(--color-ink-mute)", fontSize: "0.9375rem" }}>
               7+ doctors, dentists, and researchers recommend PH Prescriptions water systems.
             </p>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "1.25rem" }}>
             {DOCTORS.slice(0, 4).map((d) => (
-              <div key={d.name} style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.12)", padding: "1.375rem 1.25rem" }}>
-                <div style={{ fontFamily: "var(--font-display)", fontSize: "1rem", color: "#fff", marginBottom: "0.25rem" }}>{d.name}</div>
-                <div style={{ fontSize: "0.8125rem", color: "var(--color-teal-light)", marginBottom: "0.25rem" }}>{d.specialty}</div>
-                <div style={{ fontSize: "0.8rem", color: "rgba(255,255,255,0.55)", fontStyle: "italic" }}>{d.credential}</div>
+              <div key={d.name} style={{ background: "var(--color-surface)", border: "1px solid var(--color-border-soft)", padding: "1.375rem 1.25rem" }}>
+                <div style={{ fontFamily: "var(--font-display)", fontSize: "1rem", color: "var(--color-ink)", marginBottom: "0.25rem" }}>{d.name}</div>
+                <div style={{ fontSize: "0.8125rem", color: "var(--color-teal)", marginBottom: "0.25rem" }}>{d.specialty}</div>
+                <div style={{ fontSize: "0.8rem", color: "var(--color-ink-mute)", fontStyle: "italic" }}>{d.credential}</div>
               </div>
             ))}
           </div>
           <div style={{ textAlign: "center", marginTop: "2rem" }}>
-            <Link href="/about/doctors" className="btn btn-outline" style={{ color: "#fff", borderColor: "rgba(255,255,255,0.35)" }}>
+            <Link href="/about/doctors" className="btn btn-outline" style={{ color: "var(--color-ink)", borderColor: "var(--color-navy)" }}>
               View All Doctor Endorsements
             </Link>
           </div>
@@ -229,19 +230,19 @@ export default function HomePage() {
       </section>
 
       {/* CTA */}
-      <section style={{ background: "var(--color-navy)", color: "#fff", textAlign: "center" }}>
+      <section style={{ background: "var(--color-surface)", color: "var(--color-ink)", textAlign: "center", borderTop: "3px solid var(--color-navy)" }}>
         <div className="container" style={{ maxWidth: "700px" }}>
           <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.875rem,4vw,2.75rem)", marginBottom: "1rem" }}>
             Ready to Transform Your Water?
           </h2>
-          <p style={{ fontSize: "1.0625rem", color: "rgba(255,255,255,0.88)", lineHeight: 1.75, marginBottom: "2rem" }}>
+          <p style={{ fontSize: "1.0625rem", color: "var(--color-ink-soft)", lineHeight: 1.75, marginBottom: "2rem" }}>
             Schedule a free water analysis and consultation with our team. We serve all 50 states and offer both residential and commercial solutions.
           </p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem", justifyContent: "center" }}>
-            <Link href="/consultation" className="btn btn-white" style={{ minWidth: "220px" }}>
+            <Link href="/consultation" className="btn btn-primary" style={{ minWidth: "220px" }}>
               Schedule Free Consultation
             </Link>
-            <a href={`tel:${BUSINESS.phone}`} className="btn" style={{ background: "transparent", border: "2px solid rgba(255,255,255,0.6)", color: "#fff", minWidth: "200px" }}>
+            <a href={`tel:${BUSINESS.phone}`} className="btn" style={{ background: "transparent", border: "2px solid var(--color-navy)", color: "var(--color-ink)", minWidth: "200px" }}>
               <Phone size={16} /> {BUSINESS.phone}
             </a>
           </div>

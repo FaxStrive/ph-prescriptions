@@ -10,13 +10,13 @@ export const metadata: Metadata = {
 export default function CommunityPage() {
   return (
     <>
-      <section style={{ background: "var(--color-navy)", color: "#fff", padding: "5rem 0 4rem" }}>
+      <section style={{ background: "#fff", color: "var(--color-ink)", padding: "5rem 0 4rem" }}>
         <div className="container" style={{ maxWidth: "700px" }}>
-          <div style={{ fontSize: "0.8125rem", color: "var(--color-teal-light)", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "1rem" }}>Community</div>
+          <div style={{ fontSize: "0.8125rem", color: "var(--color-teal)", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "1rem" }}>Community</div>
           <h1 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2rem,5vw,3.25rem)", marginBottom: "1.25rem", letterSpacing: "-0.02em" }}>
             Community Care
           </h1>
-          <p style={{ fontSize: "1.0625rem", color: "rgba(255,255,255,0.82)", lineHeight: 1.75 }}>
+          <p style={{ fontSize: "1.0625rem", color: "var(--color-ink-soft)", lineHeight: 1.75 }}>
             PH Prescriptions is rooted in Palm City, Florida. For over 20 years, we have been part of this community - and we believe in giving back to the people and organizations that make it thrive.
           </p>
         </div>

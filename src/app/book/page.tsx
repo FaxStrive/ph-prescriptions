@@ -12,8 +12,8 @@ export default function BookPage() {
     <>
       <section
         style={{
-          background: "linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy) 60%, var(--color-navy-dark) 100%)",
-          color: "#fff",
+          background: "#fff",
+          color: "var(--color-ink)",
           padding: "6rem 0 5rem",
         }}
       >
@@ -21,7 +21,7 @@ export default function BookPage() {
           <div
             style={{
               fontSize: "0.8125rem",
-              color: "var(--color-teal-light)",
+              color: "var(--color-teal)",
               letterSpacing: "0.1em",
               textTransform: "uppercase",
               marginBottom: "1rem",
@@ -43,7 +43,7 @@ export default function BookPage() {
           <p
             style={{
               fontSize: "1.125rem",
-              color: "rgba(255,255,255,0.85)",
+              color: "var(--color-ink-soft)",
               lineHeight: 1.8,
               maxWidth: "600px",
               marginBottom: "2rem",
@@ -55,7 +55,7 @@ export default function BookPage() {
             <a href={`tel:${BUSINESS.phoneTollFree}`} className="btn btn-primary">
               Call to Order: {BUSINESS.phoneTollFree}
             </a>
-            <Link href="/consultation" className="btn btn-white">
+            <Link href="/consultation" className="btn btn-primary">
               Free Consultation
             </Link>
           </div>
@@ -97,15 +97,15 @@ export default function BookPage() {
 
             <div
               style={{
-                background: "var(--color-navy)",
-                color: "#fff",
+                background: "#fff",
+                color: "var(--color-ink)",
                 padding: "2rem",
               }}
             >
               <div
                 style={{
                   fontSize: "0.75rem",
-                  color: "var(--color-teal-light)",
+                  color: "var(--color-teal)",
                   letterSpacing: "0.1em",
                   textTransform: "uppercase",
                   marginBottom: "1rem",
@@ -122,14 +122,14 @@ export default function BookPage() {
               >
                 Leo Szymborski
               </h3>
-              <p style={{ color: "rgba(255,255,255,0.78)", lineHeight: 1.75, fontSize: "0.9375rem", marginBottom: "1rem" }}>
+              <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.75, fontSize: "0.9375rem", marginBottom: "1rem" }}>
                 Third-generation plumber. Founder of PH Prescriptions. 40+ years in water systems and installation. WQA Certified water specialist. Health advocate and researcher.
               </p>
-              <p style={{ color: "rgba(255,255,255,0.78)", lineHeight: 1.75, fontSize: "0.9375rem" }}>
+              <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.75, fontSize: "0.9375rem" }}>
                 Leo founded PH Prescriptions in {BUSINESS.founded} after witnessing how water quality directly affected the health of his clients, his family, and himself. He has since built relationships with medical doctors, researchers, and integrative health practitioners who endorse the science his systems are built on.
               </p>
-              <div style={{ marginTop: "1.5rem", paddingTop: "1.5rem", borderTop: "1px solid rgba(255,255,255,0.15)" }}>
-                <Link href="/about/leo" style={{ color: "var(--color-teal-light)", textDecoration: "none", fontSize: "0.875rem" }}>
+              <div style={{ marginTop: "1.5rem", paddingTop: "1.5rem", borderTop: "1px solid var(--color-border-soft)" }}>
+                <Link href="/about/leo" style={{ color: "var(--color-teal)", textDecoration: "none", fontSize: "0.875rem" }}>
                   Read more about Leo
                 </Link>
               </div>
@@ -220,7 +220,7 @@ export default function BookPage() {
         </div>
       </section>
 
-      <section style={{ background: "var(--color-navy)", color: "#fff", padding: "4rem 0" }}>
+      <section style={{ background: "#fff", color: "var(--color-ink)", padding: "4rem 0" }}>
         <div className="container" style={{ maxWidth: "600px", textAlign: "center" }}>
           <h2
             style={{
@@ -232,14 +232,14 @@ export default function BookPage() {
           >
             Order Your Copy
           </h2>
-          <p style={{ color: "rgba(255,255,255,0.78)", lineHeight: 1.75, marginBottom: "2rem" }}>
+          <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.75, marginBottom: "2rem" }}>
             H2O: Health 2 Overcome is available through PH Prescriptions directly. Call or email to place an order. Bulk orders for health practitioners and clinic waiting rooms are welcome.
           </p>
           <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", justifyContent: "center" }}>
             <a href={`tel:${BUSINESS.phoneTollFree}`} className="btn btn-primary">
               Call {BUSINESS.phoneTollFree}
             </a>
-            <a href={`mailto:${BUSINESS.email}`} className="btn btn-white">
+            <a href={`mailto:${BUSINESS.email}`} className="btn btn-primary">
               Email {BUSINESS.email}
             </a>
           </div>

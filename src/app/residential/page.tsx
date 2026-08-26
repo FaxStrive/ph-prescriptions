@@ -17,11 +17,11 @@ const SECTIONS = [
 export default function ResidentialPage() {
   return (
     <>
-      <section style={{ background: "var(--color-navy)", color: "#fff", padding: "5rem 0 4rem" }}>
+      <section style={{ background: "#fff", color: "var(--color-ink)", padding: "5rem 0 4rem" }}>
         <div className="container" style={{ maxWidth: "700px" }}>
-          <div style={{ fontSize: "0.8125rem", color: "var(--color-teal-light)", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "1rem" }}>For Your Home</div>
+          <div style={{ fontSize: "0.8125rem", color: "var(--color-teal)", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "1rem" }}>For Your Home</div>
           <h1 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2rem,5vw,3.25rem)", marginBottom: "1.25rem", letterSpacing: "-0.02em" }}>Residential Water Systems</h1>
-          <p style={{ fontSize: "1.0625rem", color: "rgba(255,255,255,0.82)", lineHeight: 1.75 }}>
+          <p style={{ fontSize: "1.0625rem", color: "var(--color-ink-soft)", lineHeight: 1.75 }}>
             From under-sink drinking systems to whole-home transformation - WQA Certified, Made in USA, lifetime warranty with licensed plumber installation.
           </p>
         </div>

@@ -64,13 +64,13 @@ export default function FAQPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-      <section style={{ background: "var(--color-navy)", color: "#fff", padding: "5rem 0 4rem" }}>
+      <section style={{ background: "#fff", color: "var(--color-ink)", padding: "5rem 0 4rem" }}>
         <div className="container" style={{ maxWidth: "700px" }}>
-          <div style={{ fontSize: "0.8125rem", color: "var(--color-teal-light)", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "1rem" }}>Help Center</div>
+          <div style={{ fontSize: "0.8125rem", color: "var(--color-teal)", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "1rem" }}>Help Center</div>
           <h1 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2rem,5vw,3.25rem)", marginBottom: "1.25rem", letterSpacing: "-0.02em" }}>
             Frequently Asked Questions
           </h1>
-          <p style={{ fontSize: "1.0625rem", color: "rgba(255,255,255,0.82)", lineHeight: 1.75 }}>
+          <p style={{ fontSize: "1.0625rem", color: "var(--color-ink-soft)", lineHeight: 1.75 }}>
             Everything you need to know about PH Prescriptions water systems, technology, installation, and warranty.
           </p>
         </div>
@@ -103,16 +103,16 @@ export default function FAQPage() {
             ))}
           </div>
 
-          <div style={{ marginTop: "3rem", background: "var(--color-navy)", color: "#fff", padding: "2.5rem", textAlign: "center" }}>
+          <div style={{ marginTop: "3rem", background: "#fff", color: "var(--color-ink)", padding: "2.5rem", textAlign: "center" }}>
             <h3 style={{ fontFamily: "var(--font-display)", fontSize: "1.5rem", marginBottom: "0.75rem" }}>
               Still have questions?
             </h3>
-            <p style={{ color: "rgba(255,255,255,0.75)", marginBottom: "1.5rem" }}>
+            <p style={{ color: "var(--color-ink-soft)", marginBottom: "1.5rem" }}>
               Our team is ready to answer. Call us or schedule a free consultation.
             </p>
             <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", justifyContent: "center" }}>
               <Link href="/consultation" className="btn btn-primary">Free Consultation</Link>
-              <a href={`tel:${BUSINESS.phone}`} className="btn btn-white">Call {BUSINESS.phone}</a>
+              <a href={`tel:${BUSINESS.phone}`} className="btn btn-primary">Call {BUSINESS.phone}</a>
             </div>
           </div>
         </div>

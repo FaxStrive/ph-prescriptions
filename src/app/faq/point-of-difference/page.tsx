@@ -12,8 +12,8 @@ export default function PointOfDifferencePage() {
     <>
       <section
         style={{
-          background: "linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy) 100%)",
-          color: "#fff",
+          background: "#fff",
+          color: "var(--color-ink)",
           padding: "5rem 0 4rem",
         }}
       >
@@ -21,7 +21,7 @@ export default function PointOfDifferencePage() {
           <div
             style={{
               fontSize: "0.8125rem",
-              color: "var(--color-teal-light)",
+              color: "var(--color-teal)",
               letterSpacing: "0.1em",
               textTransform: "uppercase",
               marginBottom: "1rem",
@@ -42,7 +42,7 @@ export default function PointOfDifferencePage() {
           <p
             style={{
               fontSize: "1.0625rem",
-              color: "rgba(255,255,255,0.82)",
+              color: "var(--color-ink-soft)",
               lineHeight: 1.8,
               maxWidth: "600px",
             }}
@@ -200,7 +200,7 @@ export default function PointOfDifferencePage() {
         </div>
       </section>
 
-      <section style={{ background: "var(--color-navy)", color: "#fff", padding: "4rem 0" }}>
+      <section style={{ background: "#fff", color: "var(--color-ink)", padding: "4rem 0" }}>
         <div className="container" style={{ maxWidth: "600px", textAlign: "center" }}>
           <h2
             style={{
@@ -212,14 +212,14 @@ export default function PointOfDifferencePage() {
           >
             See the Difference Yourself
           </h2>
-          <p style={{ color: "rgba(255,255,255,0.78)", lineHeight: 1.75, marginBottom: "2rem" }}>
+          <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.75, marginBottom: "2rem" }}>
             Start with a free water analysis. We will test your current water, show you exactly what is in it, and let you decide whether our systems are right for you. No pressure. No commitment.
           </p>
           <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
             <Link href="/consultation" className="btn btn-primary">
               Free Water Analysis
             </Link>
-            <a href={`tel:${BUSINESS.phoneTollFree}`} className="btn btn-white">
+            <a href={`tel:${BUSINESS.phoneTollFree}`} className="btn btn-primary">
               Call {BUSINESS.phoneTollFree}
             </a>
           </div>

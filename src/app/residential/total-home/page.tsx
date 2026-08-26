@@ -4,11 +4,11 @@ import { BUSINESS } from "@/lib/business";
 export const metadata: Metadata = { title: "Total Home Water Systems | PH Prescriptions", description: "Whole-home restructured water treatment. Every tap, every shower, every glass transformed. pH-WH-3500-CO from $9,244." };
 export default function TotalHomePage() {
   return (<>
-    <section style={{ background: "var(--color-navy)", color: "#fff", padding: "5rem 0 4rem" }}>
+    <section style={{ background: "#fff", color: "var(--color-ink)", padding: "5rem 0 4rem" }}>
       <div className="container" style={{ maxWidth: "700px" }}>
-        <div style={{ fontSize: "0.8125rem", color: "var(--color-teal-light)", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "1rem" }}>Residential</div>
+        <div style={{ fontSize: "0.8125rem", color: "var(--color-teal)", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "1rem" }}>Residential</div>
         <h1 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2rem,5vw,3.25rem)", marginBottom: "1.25rem", letterSpacing: "-0.02em" }}>Total Home Restructured Water</h1>
-        <p style={{ fontSize: "1.0625rem", color: "rgba(255,255,255,0.82)", lineHeight: 1.75 }}>Our Premier Total Home System (pH-WH-3500-CO) transforms every water outlet in your home - every faucet, shower, and appliance. QuadVortex filtration, alkalizing, remineralizing, and hydrogen infusion for the whole house. From $9,244.25.</p>
+        <p style={{ fontSize: "1.0625rem", color: "var(--color-ink-soft)", lineHeight: 1.75 }}>Our Premier Total Home System (pH-WH-3500-CO) transforms every water outlet in your home - every faucet, shower, and appliance. QuadVortex filtration, alkalizing, remineralizing, and hydrogen infusion for the whole house. From $9,244.25.</p>
       </div>
     </section>
     <section style={{ background: "var(--color-cream)" }}>

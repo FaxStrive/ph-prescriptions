@@ -75,14 +75,15 @@ export default function Header() {
     <header
       className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
       style={{
-        background: scrolled ? "rgba(27,58,107,0.97)" : "rgba(27,58,107,1)",
+        background: scrolled ? "rgba(255,255,255,0.97)" : "#fff",
         backdropFilter: scrolled ? "blur(12px)" : "none",
-        boxShadow: scrolled ? "0 2px 20px rgba(0,0,0,0.2)" : "none",
+        boxShadow: scrolled ? "0 2px 20px rgba(0,0,0,0.06)" : "none",
+        borderBottom: "1px solid var(--color-border-soft)",
       }}
     >
       {/* Top bar */}
-      <div style={{ background: "var(--color-navy-dark)", padding: "0.35rem 0" }}>
-        <div className="container" style={{ display: "flex", justifyContent: "flex-end", gap: "1.5rem", fontSize: "0.8125rem", color: "rgba(255,255,255,0.75)" }}>
+      <div style={{ background: "var(--color-surface)", padding: "0.35rem 0", borderBottom: "1px solid var(--color-border-soft)" }}>
+        <div className="container" style={{ display: "flex", justifyContent: "flex-end", gap: "1.5rem", fontSize: "0.8125rem", color: "var(--color-ink-soft)" }}>
           <a href={`tel:${BUSINESS.phone}`} style={{ color: "inherit", textDecoration: "none", display: "flex", alignItems: "center", gap: "0.375rem" }}>
             <Phone size={12} /> {BUSINESS.phone}
           </a>
@@ -98,10 +99,10 @@ export default function Header() {
       {/* Main nav */}
       <div className="container" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "1rem 1.5rem" }}>
         <Link href="/" style={{ textDecoration: "none", display: "flex", flexDirection: "column", lineHeight: 1.1 }}>
-          <span style={{ fontFamily: "var(--font-display)", color: "#fff", fontSize: "1.375rem", fontWeight: 400, letterSpacing: "-0.02em" }}>
+          <span style={{ fontFamily: "var(--font-display)", color: "var(--color-ink)", fontSize: "1.375rem", fontWeight: 400, letterSpacing: "-0.02em" }}>
             PH Prescriptions
           </span>
-          <span style={{ color: "var(--color-teal-light)", fontSize: "0.6875rem", letterSpacing: "0.12em", textTransform: "uppercase" }}>
+          <span style={{ color: "var(--color-teal)", fontSize: "0.6875rem", letterSpacing: "0.12em", textTransform: "uppercase" }}>
             Water Health &amp; Wellness
           </span>
         </Link>
@@ -120,7 +121,7 @@ export default function Header() {
                   style={{
                     background: "none",
                     border: "none",
-                    color: activeDropdown === item.label ? "var(--color-teal-light)" : "rgba(255,255,255,0.88)",
+                    color: activeDropdown === item.label ? "var(--color-navy)" : "var(--color-ink-soft)",
                     fontSize: "0.875rem",
                     fontWeight: 500,
                     cursor: "pointer",
@@ -178,21 +179,21 @@ export default function Header() {
                 key={item.href}
                 href={item.href}
                 style={{
-                  color: "rgba(255,255,255,0.88)",
+                  color: "var(--color-ink-soft)",
                   textDecoration: "none",
                   fontSize: "0.875rem",
                   fontWeight: 500,
                   padding: "0.5rem 0.75rem",
                   transition: "color 0.2s",
                 }}
-                onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = "var(--color-teal-light)")}
-                onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = "rgba(255,255,255,0.88)")}
+                onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = "var(--color-teal)")}
+                onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = "var(--color-ink-soft)")}
               >
                 {item.label}
               </Link>
             )
           )}
-          <Link href="/consultation" className="btn btn-white" style={{ marginLeft: "1rem", padding: "0.625rem 1.375rem", fontSize: "0.875rem" }}>
+          <Link href="/consultation" className="btn btn-primary" style={{ marginLeft: "1rem", padding: "0.625rem 1.375rem", fontSize: "0.875rem" }}>
             Free Consultation
           </Link>
         </nav>
@@ -201,7 +202,7 @@ export default function Header() {
         <button
           className="lg:hidden"
           onClick={() => setOpen(!open)}
-          style={{ background: "none", border: "none", color: "#fff", cursor: "pointer", padding: "0.5rem" }}
+          style={{ background: "none", border: "none", color: "var(--color-ink)", cursor: "pointer", padding: "0.5rem" }}
           aria-label="Toggle menu"
         >
           {open ? <X size={24} /> : <Menu size={24} />}
@@ -210,7 +211,7 @@ export default function Header() {
 
       {/* Mobile menu */}
       {open && (
-        <div style={{ background: "var(--color-navy-dark)", borderTop: "1px solid rgba(255,255,255,0.1)", padding: "1rem 0" }}>
+        <div style={{ background: "#fff", borderTop: "1px solid var(--color-border-soft)", padding: "1rem 0" }}>
           <div className="container">
             {NAV.map((item) => (
               <div key={item.label}>
@@ -219,12 +220,12 @@ export default function Header() {
                   onClick={() => setOpen(false)}
                   style={{
                     display: "block",
-                    color: "#fff",
+                    color: "var(--color-ink)",
                     textDecoration: "none",
                     padding: "0.75rem 0",
                     fontSize: "1rem",
                     fontWeight: 500,
-                    borderBottom: "1px solid rgba(255,255,255,0.08)",
+                    borderBottom: "1px solid var(--color-border-soft)",
                   }}
                 >
                   {item.label}
@@ -236,11 +237,11 @@ export default function Header() {
                     onClick={() => setOpen(false)}
                     style={{
                       display: "block",
-                      color: "rgba(255,255,255,0.7)",
+                      color: "var(--color-ink-soft)",
                       textDecoration: "none",
                       padding: "0.5rem 0 0.5rem 1rem",
                       fontSize: "0.875rem",
-                      borderBottom: "1px solid rgba(255,255,255,0.05)",
+                      borderBottom: "1px solid var(--color-border-soft)",
                     }}
                   >
                     {child.label}
@@ -249,7 +250,7 @@ export default function Header() {
               </div>
             ))}
             <div style={{ paddingTop: "1rem" }}>
-              <a href={`tel:${BUSINESS.phone}`} className="btn btn-white" style={{ width: "100%", justifyContent: "center" }}>
+              <a href={`tel:${BUSINESS.phone}`} className="btn btn-primary" style={{ width: "100%", justifyContent: "center" }}>
                 Call {BUSINESS.phone}
               </a>
             </div>

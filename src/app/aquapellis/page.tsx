@@ -11,21 +11,21 @@ export const metadata: Metadata = {
 export default function AquapellisPage() {
   return (
     <>
-      <section style={{ background: "linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy) 100%)", color: "#fff", padding: "5rem 0 4rem" }}>
+      <section style={{ background: "#fff", color: "var(--color-ink)", padding: "5rem 0 4rem" }}>
         <div className="container" style={{ maxWidth: "740px" }}>
-          <div style={{ fontSize: "0.8125rem", color: "var(--color-teal-light)", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "1rem" }}>
+          <div style={{ fontSize: "0.8125rem", color: "var(--color-teal)", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "1rem" }}>
             A PH Prescriptions Brand
           </div>
           <h1 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2rem,5vw,3.25rem)", marginBottom: "1.25rem", letterSpacing: "-0.02em" }}>
             Aquapellis<br />
-            <em style={{ color: "var(--color-teal-light)" }}>Molecular Hydrogen Shower</em>
+            <em style={{ color: "var(--color-teal)" }}>Molecular Hydrogen Shower</em>
           </h1>
-          <p style={{ fontSize: "1.0625rem", color: "rgba(255,255,255,0.85)", lineHeight: 1.75, marginBottom: "2rem" }}>
+          <p style={{ fontSize: "1.0625rem", color: "var(--color-ink-soft)", lineHeight: 1.75, marginBottom: "2rem" }}>
             The Aquapellis system delivers molecular hydrogen (H2) transdermally - through your skin - with every shower. The same antioxidant science you drink is now absorbed through the body's largest organ, providing whole-body cellular benefit.
           </p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
             <a href={`mailto:${BUSINESS.emailAquapellis}`} className="btn btn-primary">Request Aquapellis Quote</a>
-            <a href={`tel:${BUSINESS.phoneTollFree}`} className="btn btn-white">
+            <a href={`tel:${BUSINESS.phoneTollFree}`} className="btn btn-primary">
               <Phone size={16} /> {BUSINESS.phoneTollFree}
             </a>
           </div>
@@ -60,8 +60,8 @@ export default function AquapellisPage() {
                 ))}
               </div>
             </div>
-            <div style={{ background: "var(--color-navy)", padding: "3rem 2.5rem", color: "#fff" }}>
-              <Droplets size={40} style={{ color: "var(--color-teal-light)", marginBottom: "1.25rem" }} />
+            <div style={{ background: "#fff", padding: "3rem 2.5rem", color: "var(--color-ink)", borderTop: "3px solid var(--color-navy)", boxShadow: "0 2px 24px rgba(88,56,144,0.08)" }}>
+              <Droplets size={40} style={{ color: "var(--color-teal)", marginBottom: "1.25rem" }} />
               <h3 style={{ fontFamily: "var(--font-display)", fontSize: "1.5rem", marginBottom: "1rem" }}>Available Systems</h3>
               {[
                 { name: "Aquapellis Residential", price: "By consultation", desc: "Single-family home installation with custom fitting." },
@@ -69,10 +69,10 @@ export default function AquapellisPage() {
                 { name: "Aquapellis Hospitality", price: "By consultation", desc: "Hotel and resort installations delivering premium guest experience." },
                 { name: "Vital Impact (Military/First Responder)", price: "$7,999", desc: "Dedicated system for active duty military, veterans, and first responders." },
               ].map((sys) => (
-                <div key={sys.name} style={{ borderBottom: "1px solid rgba(255,255,255,0.12)", paddingBottom: "1.125rem", marginBottom: "1.125rem" }}>
-                  <div style={{ fontWeight: 600, fontSize: "0.9375rem", color: "#fff", marginBottom: "0.25rem" }}>{sys.name}</div>
-                  <div style={{ fontSize: "0.8125rem", color: "var(--color-teal-light)", marginBottom: "0.375rem" }}>{sys.price}</div>
-                  <div style={{ fontSize: "0.8125rem", color: "rgba(255,255,255,0.65)" }}>{sys.desc}</div>
+                <div key={sys.name} style={{ borderBottom: "1px solid var(--color-border-soft)", paddingBottom: "1.125rem", marginBottom: "1.125rem" }}>
+                  <div style={{ fontWeight: 600, fontSize: "0.9375rem", color: "var(--color-ink)", marginBottom: "0.25rem" }}>{sys.name}</div>
+                  <div style={{ fontSize: "0.8125rem", color: "var(--color-teal)", marginBottom: "0.375rem" }}>{sys.price}</div>
+                  <div style={{ fontSize: "0.8125rem", color: "var(--color-ink-mute)" }}>{sys.desc}</div>
                 </div>
               ))}
               <a href={`mailto:${BUSINESS.emailAquapellis}`} className="btn btn-primary" style={{ width: "100%", justifyContent: "center", marginTop: "0.5rem" }}>
@@ -83,17 +83,17 @@ export default function AquapellisPage() {
         </div>
       </section>
 
-      <section style={{ background: "var(--color-navy)", color: "#fff", textAlign: "center" }}>
+      <section style={{ background: "#fff", color: "var(--color-ink)", textAlign: "center" }}>
         <div className="container" style={{ maxWidth: "600px" }}>
           <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.75rem,3.5vw,2.25rem)", marginBottom: "1rem" }}>
             Ready to Upgrade Your Shower?
           </h2>
-          <p style={{ color: "rgba(255,255,255,0.88)", lineHeight: 1.75, marginBottom: "2rem" }}>
+          <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.75, marginBottom: "2rem" }}>
             Contact our Aquapellis team for a custom quote. All systems are professionally installed with full support.
           </p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem", justifyContent: "center" }}>
-            <a href={`mailto:${BUSINESS.emailAquapellis}`} className="btn btn-white">Email info@aquapellis.com</a>
-            <a href={`tel:${BUSINESS.phoneTollFree}`} className="btn" style={{ background: "transparent", border: "2px solid rgba(255,255,255,0.5)", color: "#fff" }}>
+            <a href={`mailto:${BUSINESS.emailAquapellis}`} className="btn btn-primary">Email info@aquapellis.com</a>
+            <a href={`tel:${BUSINESS.phoneTollFree}`} className="btn" style={{ background: "transparent", border: "2px solid var(--color-navy)", color: "var(--color-ink)" }}>
               <Phone size={16} /> {BUSINESS.phoneTollFree}
             </a>
           </div>

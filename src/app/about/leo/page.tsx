@@ -10,13 +10,13 @@ export const metadata: Metadata = {
 export default function AboutLeoPage() {
   return (
     <>
-      <section style={{ background: "var(--color-navy)", color: "#fff", padding: "5rem 0 4rem" }}>
+      <section style={{ background: "#fff", color: "var(--color-ink)", padding: "5rem 0 4rem" }}>
         <div className="container" style={{ maxWidth: "700px" }}>
-          <div style={{ fontSize: "0.8125rem", color: "var(--color-teal-light)", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "1rem" }}>Founder</div>
+          <div style={{ fontSize: "0.8125rem", color: "var(--color-teal)", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "1rem" }}>Founder</div>
           <h1 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2rem,5vw,3.25rem)", marginBottom: "1.25rem", letterSpacing: "-0.02em" }}>
             Leo Szymborski
           </h1>
-          <p style={{ fontSize: "1.0625rem", color: "rgba(255,255,255,0.82)", lineHeight: 1.75 }}>
+          <p style={{ fontSize: "1.0625rem", color: "var(--color-ink-soft)", lineHeight: 1.75 }}>
             Third-generation plumber. {BUSINESS.yearsExperience} years in water systems. Author. Founder of PH Prescriptions.
           </p>
         </div>
@@ -41,14 +41,14 @@ export default function AboutLeoPage() {
               His work gained the attention of leading physicians and researchers - including authors, surgeons, and molecular medicine scientists - who now endorse PH Prescriptions systems to their own patients and clients.
             </p>
 
-            <div style={{ background: "var(--color-navy)", color: "#fff", padding: "2.5rem", marginBottom: "2rem" }}>
-              <div style={{ fontFamily: "var(--font-display)", fontSize: "1rem", color: "var(--color-teal-light)", marginBottom: "0.75rem", letterSpacing: "0.05em", textTransform: "uppercase" }}>
+            <div style={{ background: "#fff", color: "var(--color-ink)", padding: "2.5rem", marginBottom: "2rem" }}>
+              <div style={{ fontFamily: "var(--font-display)", fontSize: "1rem", color: "var(--color-teal)", marginBottom: "0.75rem", letterSpacing: "0.05em", textTransform: "uppercase" }}>
                 Book by Leo Szymborski
               </div>
               <h3 style={{ fontFamily: "var(--font-display)", fontSize: "1.625rem", marginBottom: "0.75rem" }}>
                 &ldquo;H2O: Health 2 Overcome&rdquo;
               </h3>
-              <p style={{ color: "rgba(255,255,255,0.78)", lineHeight: 1.75, fontSize: "0.9375rem" }}>
+              <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.75, fontSize: "0.9375rem" }}>
                 Leo documented his journey and the science behind water health in his book H2O: Health 2 Overcome. Available through PH Prescriptions - contact us to learn more.
               </p>
             </div>

@@ -12,8 +12,8 @@ export default function NutraceuticalsPage() {
     <>
       <section
         style={{
-          background: "linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy) 100%)",
-          color: "#fff",
+          background: "#fff",
+          color: "var(--color-ink)",
           padding: "5rem 0 4rem",
         }}
       >
@@ -21,7 +21,7 @@ export default function NutraceuticalsPage() {
           <div
             style={{
               fontSize: "0.8125rem",
-              color: "var(--color-teal-light)",
+              color: "var(--color-teal)",
               letterSpacing: "0.1em",
               textTransform: "uppercase",
               marginBottom: "1rem",
@@ -42,7 +42,7 @@ export default function NutraceuticalsPage() {
           <p
             style={{
               fontSize: "1.0625rem",
-              color: "rgba(255,255,255,0.82)",
+              color: "var(--color-ink-soft)",
               lineHeight: 1.8,
               maxWidth: "600px",
               marginBottom: "2rem",
@@ -54,7 +54,7 @@ export default function NutraceuticalsPage() {
             <a href={`tel:${BUSINESS.phoneTollFree}`} className="btn btn-primary">
               Inquire: {BUSINESS.phoneTollFree}
             </a>
-            <Link href="/consultation" className="btn btn-white">
+            <Link href="/consultation" className="btn btn-primary">
               Free Consultation
             </Link>
           </div>
@@ -173,7 +173,7 @@ export default function NutraceuticalsPage() {
         </div>
       </section>
 
-      <section style={{ background: "var(--color-navy)", color: "#fff", padding: "4rem 0" }}>
+      <section style={{ background: "#fff", color: "var(--color-ink)", padding: "4rem 0" }}>
         <div className="container" style={{ maxWidth: "600px", textAlign: "center" }}>
           <h2
             style={{
@@ -185,7 +185,7 @@ export default function NutraceuticalsPage() {
           >
             Start With Your Water
           </h2>
-          <p style={{ color: "rgba(255,255,255,0.78)", lineHeight: 1.75, marginBottom: "2rem" }}>
+          <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.75, marginBottom: "2rem" }}>
             Every nutraceutical consultation begins with a free water analysis. Understanding what your water is doing first shapes what supplementation makes sense. Schedule a consultation and we will test your water at no cost.
           </p>
           <Link href="/consultation" className="btn btn-primary">

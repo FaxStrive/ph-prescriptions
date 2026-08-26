@@ -12,15 +12,15 @@ export default function TechnologyPage() {
   return (
     <>
       {/* Hero */}
-      <section style={{ background: "var(--color-navy)", color: "#fff", padding: "5rem 0 4rem" }}>
+      <section style={{ background: "#fff", color: "var(--color-ink)", padding: "5rem 0 4rem" }}>
         <div className="container" style={{ maxWidth: "720px" }}>
-          <div style={{ fontSize: "0.8125rem", color: "var(--color-teal-light)", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "1rem" }}>
+          <div style={{ fontSize: "0.8125rem", color: "var(--color-teal)", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "1rem" }}>
             Proprietary Technology
           </div>
           <h1 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2rem,5vw,3.25rem)", marginBottom: "1.25rem", letterSpacing: "-0.02em" }}>
             QuadVortex<sup style={{ fontSize: "0.5em" }}>&#174;</sup> Water Science
           </h1>
-          <p style={{ fontSize: "1.0625rem", color: "rgba(255,255,255,0.82)", lineHeight: 1.75 }}>
+          <p style={{ fontSize: "1.0625rem", color: "var(--color-ink-soft)", lineHeight: 1.75 }}>
             Our proprietary QuadVortex technology goes beyond standard filtration. It removes up to 99% of contaminants, restructures water at the molecular level, restores alkaline pH, re-mineralizes, and infuses molecular hydrogen - the most powerful antioxidant known to science.
           </p>
         </div>
@@ -73,7 +73,7 @@ export default function TechnologyPage() {
       </section>
 
       {/* Differentiators */}
-      <section style={{ background: "var(--color-navy-deep)", color: "#fff" }}>
+      <section style={{ background: "#fff", color: "var(--color-ink)" }}>
         <div className="container">
           <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.75rem,3.5vw,2.25rem)", marginBottom: "2.5rem", textAlign: "center" }}>
             What Makes PH Prescriptions Different
@@ -90,8 +90,8 @@ export default function TechnologyPage() {
               "Founded 2005 by Leo Szymborski, 3rd-generation plumber with 40+ years experience",
             ].map((point) => (
               <div key={point} style={{ display: "flex", gap: "0.875rem", alignItems: "flex-start" }}>
-                <CheckCircle2 size={18} style={{ color: "var(--color-teal-light)", flexShrink: 0, marginTop: "0.15rem" }} />
-                <span style={{ color: "rgba(255,255,255,0.82)", fontSize: "0.9375rem", lineHeight: 1.6 }}>{point}</span>
+                <CheckCircle2 size={18} style={{ color: "var(--color-teal)", flexShrink: 0, marginTop: "0.15rem" }} />
+                <span style={{ color: "var(--color-ink-soft)", fontSize: "0.9375rem", lineHeight: 1.6 }}>{point}</span>
               </div>
             ))}
           </div>

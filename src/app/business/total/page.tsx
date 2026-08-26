@@ -13,8 +13,8 @@ export default function BusinessTotalPage() {
     <>
       <section
         style={{
-          background: "var(--color-navy)",
-          color: "#fff",
+          background: "#fff",
+          color: "var(--color-ink)",
           padding: "5rem 0 4rem",
         }}
       >
@@ -22,7 +22,7 @@ export default function BusinessTotalPage() {
           <div
             style={{
               fontSize: "0.8125rem",
-              color: "var(--color-teal-light)",
+              color: "var(--color-teal)",
               letterSpacing: "0.1em",
               textTransform: "uppercase",
               marginBottom: "1rem",
@@ -43,7 +43,7 @@ export default function BusinessTotalPage() {
           <p
             style={{
               fontSize: "1.0625rem",
-              color: "rgba(255,255,255,0.82)",
+              color: "var(--color-ink-soft)",
               lineHeight: 1.75,
               marginBottom: "2rem",
             }}
@@ -55,8 +55,8 @@ export default function BusinessTotalPage() {
               href="/consultation"
               style={{
                 display: "inline-block",
-                background: "var(--color-navy)",
-                color: "#fff",
+                background: "#fff",
+                color: "var(--color-ink)",
                 padding: "0.875rem 2rem",
                 fontWeight: 600,
                 textDecoration: "none",
@@ -68,8 +68,8 @@ export default function BusinessTotalPage() {
               href={`tel:${BUSINESS.phoneTollFree}`}
               style={{
                 display: "inline-block",
-                border: "1px solid rgba(255,255,255,0.4)",
-                color: "#fff",
+                border: "1px solid var(--color-border-soft)",
+                color: "var(--color-ink)",
                 padding: "0.875rem 2rem",
                 fontWeight: 600,
                 textDecoration: "none",
@@ -262,8 +262,8 @@ export default function BusinessTotalPage() {
 
       <section
         style={{
-          background: "var(--color-navy)",
-          color: "#fff",
+          background: "#fff",
+          color: "var(--color-ink)",
           padding: "3.5rem 0",
           textAlign: "center",
         }}
@@ -280,7 +280,7 @@ export default function BusinessTotalPage() {
           </h2>
           <p
             style={{
-              color: "rgba(255,255,255,0.82)",
+              color: "var(--color-ink-soft)",
               marginBottom: "1.75rem",
               lineHeight: 1.7,
             }}
@@ -291,8 +291,8 @@ export default function BusinessTotalPage() {
             href="/consultation"
             style={{
               display: "inline-block",
-              background: "var(--color-navy)",
-              color: "#fff",
+              background: "#fff",
+              color: "var(--color-ink)",
               padding: "0.875rem 2.25rem",
               fontWeight: 600,
               textDecoration: "none",
