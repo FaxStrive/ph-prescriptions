@@ -183,7 +183,7 @@ export default function Header() {
             style={{
               display: "flex",
               alignItems: "center",
-              gap: "2rem",
+              gap: "1.25rem",
               height: 80,
             }}
           >
@@ -195,16 +195,16 @@ export default function Header() {
               <Image
                 src="/logo.png"
                 alt="pH Prescription — Water Health & Wellness"
-                width={180}
-                height={64}
+                width={155}
+                height={55}
                 priority
-                style={{ height: 56, width: "auto", display: "block" }}
+                style={{ height: 50, width: "auto", display: "block" }}
               />
             </Link>
 
-            <nav style={{ flex: 1, minWidth: 0, overflow: "hidden" }}>
+            <nav style={{ flex: 1, minWidth: 0 }}>
               <ul
-                style={{ display: "flex", alignItems: "center", gap: "1.5rem", listStyle: "none", margin: 0, padding: 0, justifyContent: "center" }}
+                style={{ display: "flex", alignItems: "center", gap: "1.125rem", listStyle: "none", margin: 0, padding: 0, justifyContent: "center" }}
                 onMouseLeave={() => setOpenPanel(null)}
               >
                 {NAV.map((item) => {
@@ -216,9 +216,9 @@ export default function Header() {
                     padding: "1.5rem 0",
                     cursor: "pointer",
                     fontFamily: "var(--font-sans)",
-                    fontSize: "0.8125rem",
+                    fontSize: "0.75rem",
                     fontWeight: 600,
-                    letterSpacing: "0.05em",
+                    letterSpacing: "0.04em",
                     textTransform: "uppercase",
                     color: active ? "var(--color-navy)" : "var(--color-ink)",
                     display: "inline-flex",
@@ -276,16 +276,16 @@ export default function Header() {
               </ul>
             </nav>
 
-            <div style={{ display: "flex", alignItems: "center", gap: "1.25rem", flexShrink: 0 }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "1rem", flexShrink: 0 }}>
               <a
                 href={`tel:${BUSINESS.phone}`}
                 className="tabular"
                 style={{
                   display: "inline-flex",
                   alignItems: "center",
-                  gap: "0.5rem",
+                  gap: "0.4rem",
                   fontFamily: "var(--font-sans)",
-                  fontSize: "1.0625rem",
+                  fontSize: "0.9375rem",
                   fontWeight: 700,
                   color: "var(--color-navy)",
                   textDecoration: "none",
@@ -302,15 +302,15 @@ export default function Header() {
                   justifyContent: "center",
                   background: "var(--color-navy)",
                   color: "#fff",
-                  padding: "0.875rem 1.5rem",
-                  fontSize: "0.8125rem",
+                  padding: "0.875rem 1.25rem",
+                  fontSize: "0.75rem",
                   fontWeight: 700,
                   letterSpacing: "0.05em",
                   textDecoration: "none",
                   textTransform: "uppercase",
                   transition: "background 0.2s",
                   whiteSpace: "nowrap",
-                  minWidth: 190,
+                  minWidth: 170,
                 }}
                 onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.background = "var(--color-navy-dark)")}
                 onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.background = "var(--color-navy)")}
