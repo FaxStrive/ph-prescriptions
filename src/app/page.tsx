@@ -54,9 +54,11 @@ function Hero() {
         overflow: "hidden",
         background: "#3B2466",
         color: "#fff",
-        minHeight: "auto",
+        minHeight: "100vh",
         display: "flex",
         flexDirection: "column",
+        justifyContent: "space-between",
+        paddingBottom: 0,
         marginTop: "-116px",
         paddingTop: "116px",
       }}
