@@ -38,7 +38,25 @@ const NAV = [
       { label: "Community Care", href: "/about/community" },
     ],
   },
-  { label: "FAQ", href: "/faq" },
+  {
+    label: "FAQ",
+    href: "/faq",
+    children: [
+      { label: "All FAQs", href: "/faq" },
+      { label: "Point of Difference", href: "/faq/point-of-difference" },
+    ],
+  },
+  {
+    label: "More",
+    href: "/resources",
+    children: [
+      { label: "Resources", href: "/resources" },
+      { label: "Book: H2O", href: "/book" },
+      { label: "Nutraceuticals", href: "/nutraceuticals" },
+      { label: "Pool & Marine/RV", href: "/solutions/pool-marine" },
+      { label: "Affiliate Program", href: "/affiliate" },
+    ],
+  },
   { label: "Contact", href: "/contact" },
 ];
 
