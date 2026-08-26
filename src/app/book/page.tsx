@@ -5,7 +5,7 @@ import { BUSINESS } from "@/lib/business";
 export const metadata: Metadata = {
   title: "H2O: Health 2 Overcome | PH Prescriptions",
   description:
-    "Leo Szymborski's #1 Amazon Best Seller memoir on how water quality transformed his health — the science behind hydrogen therapy, mineral balance, and true water healing.",
+    "Leo Szymborski's #1 Amazon Best Seller memoir on how water quality transformed his health. The science behind hydrogen therapy, mineral balance, and true water healing.",
 };
 
 const AMAZON_URL =
@@ -50,7 +50,7 @@ export default function BookPage() {
       name: "Leo G. Szymborski",
     },
     description:
-      "The inspirational memoir of pH Prescription Founder Leo G. Szymborski — illness, trauma, loss, learning disabilities, and the overwhelming drive to rise above and thrive as a family man and entrepreneur.",
+      "The inspirational memoir of pH Prescription Founder Leo G. Szymborski. Illness, trauma, loss, learning disabilities, and the overwhelming drive to rise above and thrive as a family man and entrepreneur.",
     isbn: "B0FYRZKGMT",
     bookFormat: "https://schema.org/EBook",
     inLanguage: "en",
@@ -193,7 +193,7 @@ export default function BookPage() {
               </div>
             </div>
 
-            {/* Book cover placeholder — real cover at phprescription.com */}
+            {/* Book cover placeholder; real cover at phprescription.com */}
             <div
               style={{
                 width: "180px",
