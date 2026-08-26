@@ -6,7 +6,7 @@ import { BUSINESS } from "@/lib/business";
 export const metadata: Metadata = {
   title: "Doctors and Researchers Who Recommend Our Water Systems",
   description:
-    "Eight physicians, dentists, and researchers who use and endorse PH Prescriptions water filtration systems in their homes, offices, and clinical practices.",
+    "Eight physicians, dentists, and researchers who use and endorse pH Prescription water filtration systems in their homes, offices, and clinical practices.",
 };
 
 interface Doctor {
@@ -57,7 +57,7 @@ const DOCTORS: Doctor[] = [
     specialty: "Dentistry",
     photo: "/doctors/steve-evans.jpg",
     photoAlt: "Steve Evans, DDS",
-    bio: "Steve Evans is a dental practitioner who has worked alongside Leo Szymborski and pH Prescription for a number of years. He has integrated PH Prescriptions water into every aspect of his practice, from patient hydration and irrigation to office functions, and uses it throughout his home. He has linked to PH Prescriptions from his practice website to inform his patients about the benefits of structured alkaline water.",
+    bio: "Steve Evans is a dental practitioner who has worked alongside Leo Szymborski and pH Prescription for a number of years. He has integrated pH Prescription water into every aspect of his practice, from patient hydration and irrigation to office functions, and uses it throughout his home. He has linked to pH Prescription from his practice website to inform his patients about the benefits of structured alkaline water.",
     quote:
       "We only use water produced through pH products in our practice and home. Starting with a water cooler in our office, we give water to patients before and after treatments. We only use pH Prescription water for all office functions, including irrigation. The scientific validation provided to us has been outstanding, as well as the integrity of Leo and products produced by pH Prescription.",
   },
@@ -87,7 +87,7 @@ const DOCTORS: Doctor[] = [
     specialty: "Clinical Medicine and Health Rejuvenation",
     photo: "/doctors/dr-gil.jpg",
     photoAlt: "Dr. Walter Gil, M.D.",
-    bio: "Dr. Walter Gil is a board-certified MD with 35 years of experience in clinical medicine, with a focused interest in health and rejuvenation. He has evaluated PH Prescriptions water systems within the context of integrative patient care and has incorporated them as a core recommendation for patients where water contaminants are identified as a contributing health factor.",
+    bio: "Dr. Walter Gil is a board-certified MD with 35 years of experience in clinical medicine, with a focused interest in health and rejuvenation. He has evaluated pH Prescription water systems within the context of integrative patient care and has incorporated them as a core recommendation for patients where water contaminants are identified as a contributing health factor.",
     quote:
       "Leo Szymborski has managed to excel at water quality with masterful purification and detoxification systems. He has applied water to health and rejuvenation, making a natural product best for hydration, medical and nutritional purpose, while allowing the natural ingredients to remain. Those cases in which contaminants are shown to be a contributing factor, pH Prescription is the ONLY choice.",
   },
@@ -157,7 +157,7 @@ export default function ExpertsPage() {
               marginBottom: "1rem",
             }}
           >
-            PH Prescriptions is endorsed by physicians, surgeons, dentists, and research
+            pH Prescription is endorsed by physicians, surgeons, dentists, and research
             scientists who have independently evaluated our systems and use them in their homes,
             offices, and clinical practices.
           </p>

@@ -3,8 +3,8 @@ import Link from "next/link";
 import { BUSINESS } from "@/lib/business";
 
 export const metadata: Metadata = {
-  title: "Nutraceuticals | PH Prescriptions pHP New Product Line",
-  description: "Targeted nutrition supplements that complement PH Prescriptions water systems. Mineral repletion, hydrogen-boosting, and cellular support. Part of the pHP New product line.",
+  title: "Nutraceuticals | pH Prescription pHP New Product Line",
+  description: "Targeted nutrition supplements that complement pH Prescription water systems. Mineral repletion, hydrogen-boosting, and cellular support. Part of the pHP New product line.",
 };
 
 export default function NutraceuticalsPage() {

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { BUSINESS } from "@/lib/business";
 
 export const metadata: Metadata = {
-  title: "Medical-Grade Water Solutions | PH Prescriptions",
+  title: "Medical-Grade Water Solutions | pH Prescription",
   description:
     "Ultra-pure water systems for dialysis centers, dental practices, medical imaging facilities, and sterile-prep environments. WQA-certified. Serving medical facilities across all 50 states.",
 };
@@ -137,7 +137,7 @@ export default function MedicalPage() {
               marginBottom: "2rem",
             }}
           >
-            Dialysis centers, dental practices, imaging facilities, and sterile-prep rooms all require water that municipal supply cannot reliably deliver. PH Prescriptions builds systems to match each clinical application.
+            Dialysis centers, dental practices, imaging facilities, and sterile-prep rooms all require water that municipal supply cannot reliably deliver. pH Prescription builds systems to match each clinical application.
           </p>
           <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
             <a
@@ -406,7 +406,7 @@ export default function MedicalPage() {
                   marginBottom: "1rem",
                 }}
               >
-                Every medical application draws from the same foundation: PH Prescriptions' proprietary 4-phase filtration process. KDF-55 handles heavy metals and chloramines. Catalytic and Brimac carbon address VOCs, fluoride, and radioactive isotopes. Tourmaline and garnet gemstones restructure the water at a mineral level. Finally, molecular hydrogen infusion delivers cell-permeable antioxidant benefits.
+                Every medical application draws from the same foundation: pH Prescription' proprietary 4-phase filtration process. KDF-55 handles heavy metals and chloramines. Catalytic and Brimac carbon address VOCs, fluoride, and radioactive isotopes. Tourmaline and garnet gemstones restructure the water at a mineral level. Finally, molecular hydrogen infusion delivers cell-permeable antioxidant benefits.
               </p>
               <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.8 }}>
                 For medical applications, we layer additional stages as the application requires: UV sterilization, sub-micron filtration, and deionization options for the most demanding environments.
@@ -510,7 +510,7 @@ export default function MedicalPage() {
               lineHeight: 1.75,
             }}
           >
-            Seven physicians and researchers have reviewed and endorsed the science behind PH Prescriptions systems. Our medical clients are not taking our word alone.
+            Seven physicians and researchers have reviewed and endorsed the science behind pH Prescription systems. Our medical clients are not taking our word alone.
           </p>
           <div
             style={{

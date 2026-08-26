@@ -3,8 +3,8 @@ import Link from "next/link";
 import { BUSINESS } from "@/lib/business";
 
 export const metadata: Metadata = {
-  title: "About PH Prescriptions | Founded 2005, Palm City FL",
-  description: "PH Prescriptions was founded in 2005 by Leo Szymborski in Palm City, FL. WQA Certified water health systems made in the USA. 40+ years experience. Serving all 50 states.",
+  title: "About pH Prescription | Founded 2005, Palm City FL",
+  description: "pH Prescription was founded in 2005 by Leo Szymborski in Palm City, FL. WQA Certified water health systems made in the USA. 40+ years experience. Serving all 50 states.",
 };
 
 export default function AboutPage() {
@@ -17,7 +17,7 @@ export default function AboutPage() {
             Water Health Science<br />Since {BUSINESS.founded}
           </h1>
           <p style={{ fontSize: "1.0625rem", color: "var(--color-ink-soft)", lineHeight: 1.75 }}>
-            PH Prescriptions was built on a simple premise: the water you drink and bathe in profoundly affects your health. Founded by Leo Szymborski in Palm City, Florida, we have spent two decades refining the science of water and delivering it to homes and businesses across all 50 states.
+            pH Prescription was built on a simple premise: the water you drink and bathe in profoundly affects your health. Founded by Leo Szymborski in Palm City, Florida, we have spent two decades refining the science of water and delivering it to homes and businesses across all 50 states.
           </p>
         </div>
       </section>
@@ -30,13 +30,13 @@ export default function AboutPage() {
                 Our Mission
               </h2>
               <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.8, marginBottom: "1.25rem" }}>
-                PH Prescriptions exists to give every family and business access to water that is truly clean - not just filtered, but restructured, remineralized, and hydrogen-infused for measurable health outcomes.
+                pH Prescription exists to give every family and business access to water that is truly clean - not just filtered, but restructured, remineralized, and hydrogen-infused for measurable health outcomes.
               </p>
               <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.8, marginBottom: "1.25rem" }}>
                 We operate from a 10,000 square foot facility in Palm City, FL, where every system is assembled, tested, and certified before it ships. Our WQA certification and Made in USA commitment are not marketing claims - they are the foundation of everything we do.
               </p>
               <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.8 }}>
-                When you purchase a PH Prescriptions system, you receive a lifetime warranty when installed by a licensed plumber - because we build systems meant to last.
+                When you purchase a pH Prescription system, you receive a lifetime warranty when installed by a licensed plumber - because we build systems meant to last.
               </p>
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
@@ -67,7 +67,7 @@ export default function AboutPage() {
             {[
               { title: "About Leo Szymborski", desc: "Founder story and 40+ years in water health.", href: "/about/leo" },
               { title: "Doctor Endorsements", desc: "7+ physicians and researchers who recommend our systems.", href: "/about/doctors" },
-              { title: "Community Care", desc: "How PH Prescriptions gives back to the community.", href: "/about/community" },
+              { title: "Community Care", desc: "How pH Prescription gives back to the community.", href: "/about/community" },
               { title: "Our Technology", desc: "How QuadVortex works and what makes it different.", href: "/technology" },
             ].map((card) => (
               <Link key={card.href} href={card.href} style={{

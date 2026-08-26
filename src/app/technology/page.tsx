@@ -5,7 +5,7 @@ import { BUSINESS } from "@/lib/business";
 export const metadata: Metadata = {
   title: "4-Phase Filtration Science and QuadVortex Technology",
   description:
-    "Learn how PH Prescriptions' 4-phase filtration process uses KDF-55, Brimac coconut carbon, tourmaline and garnet gemstones, and molecular hydrogen to rebuild your water from the ground up.",
+    "Learn how pH Prescription' 4-phase filtration process uses KDF-55, Brimac coconut carbon, tourmaline and garnet gemstones, and molecular hydrogen to rebuild your water from the ground up.",
 };
 
 const PHASES = [
@@ -82,15 +82,15 @@ const PHASES = [
 const TECH_FAQS = [
   {
     q: "What is QuadVortex technology?",
-    a: "QuadVortex is PH Prescriptions' proprietary system that combines the four filtration phases above into one integrated whole-home and drinking-water platform. The name reflects the four-stage vortex structure that moves water through each medium in sequence, ensuring every phase is fully active before the water reaches your tap. It is a registered trademark and the core of our Total Home Premier system.",
+    a: "QuadVortex is pH Prescription' proprietary system that combines the four filtration phases above into one integrated whole-home and drinking-water platform. The name reflects the four-stage vortex structure that moves water through each medium in sequence, ensuring every phase is fully active before the water reaches your tap. It is a registered trademark and the core of our Total Home Premier system.",
   },
   {
     q: "Why don't you use an ionizer to raise pH?",
-    a: "Ionizers use electricity to split water into alkaline and acidic streams. The alkalinity is artificial and does not come from minerals. PH Prescriptions uses an earth-based filter medium approach: minerals in the filter bed naturally raise pH by dissolving into the water, the same way glacial springs produce naturally alkaline water. The result is a stable, mineral-based alkalinity that the body recognizes, not an electrically induced one.",
+    a: "Ionizers use electricity to split water into alkaline and acidic streams. The alkalinity is artificial and does not come from minerals. pH Prescription uses an earth-based filter medium approach: minerals in the filter bed naturally raise pH by dissolving into the water, the same way glacial springs produce naturally alkaline water. The result is a stable, mineral-based alkalinity that the body recognizes, not an electrically induced one.",
   },
   {
     q: "What is water micro-clustering?",
-    a: "Tap water molecules exist in clusters of 11 to 20 molecules per group. Glacial water, widely studied for its hydrating properties, clusters at 4 to 6 molecules per group. Smaller clusters pass through cell membranes more easily, improving cellular hydration and cell-to-cell communication. PH Prescriptions systems restructure tap water toward the smaller cluster profile found in pristine glacial sources.",
+    a: "Tap water molecules exist in clusters of 11 to 20 molecules per group. Glacial water, widely studied for its hydrating properties, clusters at 4 to 6 molecules per group. Smaller clusters pass through cell membranes more easily, improving cellular hydration and cell-to-cell communication. pH Prescription systems restructure tap water toward the smaller cluster profile found in pristine glacial sources.",
   },
   {
     q: "What is molecular hydrogen and why does it matter?",
@@ -98,10 +98,10 @@ const TECH_FAQS = [
   },
   {
     q: "What is ORP and why is negative ORP good?",
-    a: "ORP stands for oxidation reduction potential. A positive ORP means the water is an electron stealer, oxidizing what it touches. A negative ORP means the water donates electrons, reducing oxidation. Tap water typically carries a positive ORP. PH Prescriptions water, thanks to tourmaline and molecular hydrogen, carries a negative ORP, making it antioxidant by nature rather than by chemical additive.",
+    a: "ORP stands for oxidation reduction potential. A positive ORP means the water is an electron stealer, oxidizing what it touches. A negative ORP means the water donates electrons, reducing oxidation. Tap water typically carries a positive ORP. pH Prescription water, thanks to tourmaline and molecular hydrogen, carries a negative ORP, making it antioxidant by nature rather than by chemical additive.",
   },
   {
-    q: "Do I need electricity to run a PH Prescriptions drinking system?",
+    q: "Do I need electricity to run a pH Prescription drinking system?",
     a: "No. Our under-sink drinking systems are entirely non-electric. Water pressure drives the filtration process through each phase. No power outlet, no electricity, no ongoing power cost. The system fits existing plumbing and requires only a licensed plumber for installation.",
   },
   {
@@ -155,7 +155,7 @@ export default function TechnologyPage() {
             <sup style={{ fontSize: "0.45em", verticalAlign: "super" }}>&reg;</sup> Technology
           </h1>
           <p style={{ fontSize: "1.0625rem", color: "var(--color-ink-soft)", lineHeight: 1.75, marginBottom: "1.25rem" }}>
-            PH Prescriptions has spent over 20 years developing filtration that goes beyond removing
+            pH Prescription has spent over 20 years developing filtration that goes beyond removing
             contaminants. Our 4-phase system rebuilds water at the molecular level: KDF-55 and
             Brimac carbon strip what harms, tourmaline and garnet gemstones restructure what
             remains, and molecular hydrogen turns every drop into an antioxidant.
@@ -363,7 +363,7 @@ export default function TechnologyPage() {
                 Proprietary Technology
               </h2>
               <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.8, marginBottom: "1rem" }}>
-                QuadVortex is the registered trademark that identifies PH Prescriptions'
+                QuadVortex is the registered trademark that identifies pH Prescription'
                 four-phase integrated filtration approach. It is the architecture that holds the
                 four phases together as a single engineered system rather than four separate
                 products bolted in sequence.
@@ -419,7 +419,7 @@ export default function TechnologyPage() {
                     marginBottom: "1.25rem",
                   }}
                 >
-                  Seven Differentiators of the PH Prescriptions Approach
+                  Seven Differentiators of the pH Prescription Approach
                 </h3>
                 <ol style={{ paddingLeft: "1.25rem", margin: 0 }}>
                   {[
@@ -627,7 +627,7 @@ export default function TechnologyPage() {
               </p>
               <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.8, fontSize: "0.9375rem" }}>
                 The combination of tourmaline and garnet in a single stage is not found in any
-                other consumer filtration product. It is proprietary to PH Prescriptions and is
+                other consumer filtration product. It is proprietary to pH Prescription and is
                 the reason Phase 3 output carries a measurably different ORP profile from
                 Phase 2 output.
               </p>
@@ -656,7 +656,7 @@ export default function TechnologyPage() {
               Tap water molecules cluster in groups of 11 to 20 molecules. Glacial spring water
               clusters at 4 to 6 molecules per group. Smaller clusters pass through cell membranes
               faster and improve cell-to-cell communication. The mineral and electrical activity in
-              Phases 3 and 4 moves the cluster size of PH Prescriptions water toward the smaller
+              Phases 3 and 4 moves the cluster size of pH Prescription water toward the smaller
               profile found in high-altitude spring water.
             </p>
           </div>

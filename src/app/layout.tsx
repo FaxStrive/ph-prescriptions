@@ -23,7 +23,7 @@ const fraunces = Fraunces({
 
 export const metadata: Metadata = {
   title: {
-    default: "PH Prescriptions | Doctor-Recommended Water Health Systems | Palm City FL",
+    default: "pH Prescription | Doctor-Recommended Water Health Systems | Palm City FL",
     template: `%s | ${BUSINESS.name}`,
   },
   description:
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://phprescription.com"),
   alternates: { canonical: "/" },
   openGraph: {
-    title: "PH Prescriptions | Doctor-Recommended Water Health Systems",
+    title: "pH Prescription | Doctor-Recommended Water Health Systems",
     description: "WQA Certified. Made in USA since 2005. Serving all 50 states.",
     type: "website",
     locale: "en_US",

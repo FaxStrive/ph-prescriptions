@@ -3,8 +3,8 @@ import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { BUSINESS } from "@/lib/business";
 
 export const metadata: Metadata = {
-  title: "Contact Us | PH Prescriptions Palm City FL",
-  description: "Contact PH Prescriptions by phone, email, or visit our 10,000 sq ft facility in Palm City, FL. Available for residential and commercial water system consultations.",
+  title: "Contact Us | pH Prescription Palm City FL",
+  description: "Contact pH Prescription by phone, email, or visit our 10,000 sq ft facility in Palm City, FL. Available for residential and commercial water system consultations.",
 };
 
 export default function ContactPage() {
@@ -33,7 +33,7 @@ export default function ContactPage() {
         <div className="container" style={{ maxWidth: "700px" }}>
           <div style={{ fontSize: "0.8125rem", color: "var(--color-teal)", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "1rem" }}>Get in Touch</div>
           <h1 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2rem,5vw,3.25rem)", marginBottom: "1.25rem", letterSpacing: "-0.02em" }}>
-            Contact PH Prescriptions
+            Contact pH Prescription
           </h1>
           <p style={{ fontSize: "1.0625rem", color: "var(--color-ink-soft)", lineHeight: 1.75 }}>
             Ready to find the right water system for your home or business? Reach out by phone, email, or visit our facility in Palm City, Florida.

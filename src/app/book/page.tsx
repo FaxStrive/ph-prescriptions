@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { BUSINESS } from "@/lib/business";
 
 export const metadata: Metadata = {
-  title: "H2O: Health 2 Overcome | PH Prescriptions",
+  title: "H2O: Health 2 Overcome | pH Prescription",
   description:
     "Leo Szymborski's #1 Amazon Best Seller memoir on how water quality transformed his health. The science behind hydrogen therapy, mineral balance, and true water healing.",
 };
@@ -31,7 +32,7 @@ export default function BookPage() {
       url: BUSINESS.url,
     },
     description:
-      "Third-generation plumber turned water health advocate. Founder of PH Prescriptions. 40+ years in water systems. WQA Certified water specialist.",
+      "Third-generation plumber turned water health advocate. Founder of pH Prescription. 40+ years in water systems. WQA Certified water specialist.",
     knowsAbout: [
       "Water Quality",
       "Molecular Hydrogen Therapy",
@@ -125,7 +126,7 @@ export default function BookPage() {
                   marginBottom: "0.75rem",
                 }}
               >
-                PH Prescriptions Book
+                pH Prescription Book
               </div>
               <h1
                 style={{
@@ -147,7 +148,7 @@ export default function BookPage() {
                   marginBottom: "2rem",
                 }}
               >
-                The memoir of Leo Szymborski, founder of PH Prescriptions. Illness, trauma, loss, learning disabilities, and the drive to rise above and thrive. Water changed his life. This book explains how and why.
+                The memoir of Leo Szymborski, founder of pH Prescription. Illness, trauma, loss, learning disabilities, and the drive to rise above and thrive. Water changed his life. This book explains how and why.
               </p>
               <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
                 <a
@@ -193,68 +194,16 @@ export default function BookPage() {
               </div>
             </div>
 
-            {/* Book cover placeholder; real cover at phprescription.com */}
-            <div
-              style={{
-                width: "180px",
-                flexShrink: 0,
-                display: "none",
-              }}
-              className="lg:block"
-            >
-              <div
-                style={{
-                  width: "180px",
-                  height: "260px",
-                  background: "var(--color-navy)",
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  padding: "1.5rem 1rem",
-                  textAlign: "center",
-                  color: "#fff",
-                  gap: "0.75rem",
-                }}
-              >
-                <div
-                  style={{
-                    fontSize: "0.6rem",
-                    letterSpacing: "0.18em",
-                    textTransform: "uppercase",
-                    opacity: 0.7,
-                  }}
-                >
-                  #1 Best Seller
-                </div>
-                <div
-                  style={{
-                    fontFamily: "var(--font-display)",
-                    fontSize: "1.125rem",
-                    lineHeight: 1.2,
-                    letterSpacing: "-0.01em",
-                  }}
-                >
-                  H2O: Health 2 Overcome
-                </div>
-                <div
-                  style={{
-                    width: "40px",
-                    height: "1px",
-                    background: "rgba(255,255,255,0.4)",
-                  }}
-                />
-                <div
-                  style={{
-                    fontSize: "0.65rem",
-                    letterSpacing: "0.08em",
-                    textTransform: "uppercase",
-                    opacity: 0.8,
-                  }}
-                >
-                  Leo G. Szymborski
-                </div>
-              </div>
+            {/* Book cover */}
+            <div style={{ flexShrink: 0 }}>
+              <Image
+                src="https://phprescription.com/wp-content/uploads/2026/03/H2O-book-cover-top-seller-v2.jpg"
+                alt="H2O: Health 2 Overcome by Leo Szymborski — #1 Amazon Best Seller"
+                width={180}
+                height={260}
+                unoptimized
+                style={{ display: "block" }}
+              />
             </div>
           </div>
         </div>
@@ -299,7 +248,7 @@ export default function BookPage() {
                   marginBottom: "1rem",
                 }}
               >
-                What he discovered transformed his health and ultimately became the foundation of PH Prescriptions. H2O: Health 2 Overcome tells that story and shares the science that convinced a skeptical tradesman turned water health advocate.
+                What he discovered transformed his health and ultimately became the foundation of pH Prescription. H2O: Health 2 Overcome tells that story and shares the science that convinced a skeptical tradesman turned water health advocate.
               </p>
               <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.8 }}>
                 The book is not a sales pitch. It is a personal account backed by the research Leo spent years studying, the doctors who validated it, and the clients whose lives changed after they changed their water.
@@ -342,7 +291,7 @@ export default function BookPage() {
                   marginBottom: "1rem",
                 }}
               >
-                Third-generation plumber. Founder of PH Prescriptions. 40+ years in water systems and installation. WQA Certified water specialist. Health advocate and researcher.
+                Third-generation plumber. Founder of pH Prescription. 40+ years in water systems and installation. WQA Certified water specialist. Health advocate and researcher.
               </p>
               <p
                 style={{
@@ -351,7 +300,7 @@ export default function BookPage() {
                   fontSize: "0.9375rem",
                 }}
               >
-                Leo founded PH Prescriptions in {BUSINESS.founded} after witnessing how water quality directly affected the health of his clients, his family, and himself. He has since built relationships with medical doctors, researchers, and integrative health practitioners who endorse the science his systems are built on.
+                Leo founded pH Prescription in {BUSINESS.founded} after witnessing how water quality directly affected the health of his clients, his family, and himself. He has since built relationships with medical doctors, researchers, and integrative health practitioners who endorse the science his systems are built on.
               </p>
               <div
                 style={{
@@ -586,6 +535,30 @@ export default function BookPage() {
           >
             Leo tells his story in his own words. Three minutes that capture 40 years of water science and personal transformation.
           </p>
+          <div style={{
+            position: "relative",
+            paddingBottom: "56.25%",
+            height: 0,
+            overflow: "hidden",
+            marginBottom: "2rem",
+            maxWidth: "640px",
+            margin: "0 auto 2rem",
+          }}>
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/GhoxueDIF6o"
+              title="H2O: Health 2 Overcome — Book Trailer"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                border: 0,
+              }}
+            />
+          </div>
           <a
             href={`tel:${BUSINESS.phoneTollFree}`}
             style={{
@@ -723,7 +696,7 @@ export default function BookPage() {
               marginBottom: "1.75rem",
             }}
           >
-            The claims in the book are not Leo's alone. Seven physicians and researchers have reviewed the technology and science behind PH Prescriptions and added their professional endorsement.
+            The claims in the book are not Leo's alone. Seven physicians and researchers have reviewed the technology and science behind pH Prescription and added their professional endorsement.
           </p>
           <Link
             href="/experts"

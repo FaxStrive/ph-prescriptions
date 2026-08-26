@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BUSINESS } from "@/lib/business";
-export const metadata: Metadata = { title: "UV Anti-Microbial Enhancements | PH Prescriptions", description: "Add UV anti-microbial enhancement to any PH Prescriptions system. Chemical-free bacteria and virus elimination for residential water systems." };
+export const metadata: Metadata = { title: "UV Anti-Microbial Enhancements | pH Prescription", description: "Add UV anti-microbial enhancement to any pH Prescription system. Chemical-free bacteria and virus elimination for residential water systems." };
 export default function UVPage() {
   return (<>
     <section style={{ background: "#fff", color: "var(--color-ink)", padding: "5rem 0 4rem" }}>
       <div className="container" style={{ maxWidth: "700px" }}>
         <div style={{ fontSize: "0.8125rem", color: "var(--color-teal)", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "1rem" }}>Residential Add-On</div>
         <h1 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2rem,5vw,3.25rem)", marginBottom: "1.25rem" }}>UV Anti-Microbial Enhancements</h1>
-        <p style={{ fontSize: "1.0625rem", color: "var(--color-ink-soft)", lineHeight: 1.75 }}>Chemical-free UV treatment eliminates bacteria, viruses, and pathogens from your water supply. Pairs with any PH Prescriptions drinking or whole-home system for complete protection.</p>
+        <p style={{ fontSize: "1.0625rem", color: "var(--color-ink-soft)", lineHeight: 1.75 }}>Chemical-free UV treatment eliminates bacteria, viruses, and pathogens from your water supply. Pairs with any pH Prescription drinking or whole-home system for complete protection.</p>
       </div>
     </section>
     <section style={{ background: "var(--color-cream)" }}>

@@ -13,7 +13,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div style={{ fontFamily: "var(--font-display)", color: "var(--color-ink)", fontSize: "1.375rem", marginBottom: "0.5rem" }}>
-              PH Prescriptions
+              pH Prescription
             </div>
             <p style={{ fontSize: "0.875rem", lineHeight: 1.7, marginBottom: "1.25rem" }}>
               WQA Certified water health systems since {BUSINESS.founded}. Made in USA. Serving all 50 states and international clients from Palm City, FL.
@@ -37,16 +37,16 @@ export default function Footer() {
 
           {/* Residential */}
           <div>
-            <h4 style={{ color: "var(--color-ink)", fontSize: "0.8125rem", fontFamily: "var(--font-sans)", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "1rem" }}>Residential</h4>
-            <nav style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+            <h3 style={{ color: "var(--color-ink)", fontSize: "0.8125rem", fontFamily: "var(--font-sans)", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "1rem" }}>Residential</h3>
+            <nav aria-label="Footer" style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
               {[
-                ["Drinking Systems", "/residential/drinking-systems"],
-                ["Total Home Systems", "/residential/total-home"],
-                ["Showers & Tubs", "/residential/showers"],
-                ["UV Enhancements", "/residential/uv"],
-                ["Aquapellis", "/aquapellis"],
-              ].map(([label, href]) => (
-                <Link key={href} href={href} style={{ color: "var(--color-ink-mute)", textDecoration: "none", fontSize: "0.875rem", transition: "color 0.2s" }}
+                ["Drinking Systems", "/residential/drinking-systems", "Residential Drinking Systems"],
+                ["Total Home Systems", "/residential/total-home", ""],
+                ["Showers & Tubs", "/residential/showers", ""],
+                ["UV Enhancements", "/residential/uv", ""],
+                ["Aquapellis", "/aquapellis", ""],
+              ].map(([label, href, ariaLabel]) => (
+                <Link key={href} href={href} aria-label={ariaLabel || undefined} style={{ color: "var(--color-ink-mute)", textDecoration: "none", fontSize: "0.875rem", transition: "color 0.2s" }}
                   onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = "var(--color-teal)")}
                   onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = "var(--color-ink-mute)")}>
                   {label}
@@ -57,15 +57,15 @@ export default function Footer() {
 
           {/* Business */}
           <div>
-            <h4 style={{ color: "var(--color-ink)", fontSize: "0.8125rem", fontFamily: "var(--font-sans)", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "1rem" }}>Business</h4>
-            <nav style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+            <h3 style={{ color: "var(--color-ink)", fontSize: "0.8125rem", fontFamily: "var(--font-sans)", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "1rem" }}>Business</h3>
+            <nav aria-label="Footer" style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
               {[
-                ["Restaurant & Hospitality", "/business/restaurant"],
-                ["Water Coolers", "/business/coolers"],
-                ["Drinking Systems", "/business/drinking-systems"],
-                ["Total Business", "/business/total"],
-              ].map(([label, href]) => (
-                <Link key={href} href={href} style={{ color: "var(--color-ink-mute)", textDecoration: "none", fontSize: "0.875rem", transition: "color 0.2s" }}
+                ["Restaurant & Hospitality", "/business/restaurant", ""],
+                ["Water Coolers", "/business/coolers", ""],
+                ["Drinking Systems", "/business/drinking-systems", "Business Drinking Systems"],
+                ["Total Business", "/business/total", ""],
+              ].map(([label, href, ariaLabel]) => (
+                <Link key={href} href={href} aria-label={ariaLabel || undefined} style={{ color: "var(--color-ink-mute)", textDecoration: "none", fontSize: "0.875rem", transition: "color 0.2s" }}
                   onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = "var(--color-teal)")}
                   onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = "var(--color-ink-mute)")}>
                   {label}
@@ -76,8 +76,8 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h4 style={{ color: "var(--color-ink)", fontSize: "0.8125rem", fontFamily: "var(--font-sans)", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "1rem" }}>Company</h4>
-            <nav style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+            <h3 style={{ color: "var(--color-ink)", fontSize: "0.8125rem", fontFamily: "var(--font-sans)", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "1rem" }}>Company</h3>
+            <nav aria-label="Footer" style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
               {[
                 ["Our Story", "/about"],
                 ["About Leo", "/about/leo"],
@@ -100,7 +100,7 @@ export default function Footer() {
 
         {/* Bottom */}
         <div style={{ borderTop: "1px solid var(--color-border-soft)", paddingTop: "1.5rem", display: "flex", flexWrap: "wrap", justifyContent: "space-between", gap: "0.75rem", fontSize: "0.8125rem" }}>
-          <span>&copy; {year} PH Prescriptions. All rights reserved. WQA Certified. Made in USA.</span>
+          <span>&copy; {year} pH Prescription. All rights reserved. WQA Certified. Made in USA.</span>
           <div style={{ display: "flex", gap: "1.5rem" }}>
             <Link href="/privacy" style={{ color: "var(--color-ink-mute)", textDecoration: "none" }}>Privacy Policy</Link>
             <Link href="/terms" style={{ color: "var(--color-ink-mute)", textDecoration: "none" }}>Terms</Link>

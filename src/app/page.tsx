@@ -22,7 +22,7 @@ const TESTIMONIALS = [
   {
     name: "Dr. Robert K.",
     location: "Stuart, FL",
-    text: "I recommend PH Prescriptions to my patients. The science behind their QuadVortex technology is sound and the results are measurable.",
+    text: "I recommend pH Prescription to my patients. The science behind their QuadVortex technology is sound and the results are measurable.",
   },
   {
     name: "James T.",
@@ -54,10 +54,17 @@ function Hero() {
         overflow: "hidden",
         background: "#3B2466",
         color: "#fff",
-        minHeight: "auto",
+        minHeight: "100vh",
         display: "flex",
         flexDirection: "column",
-        marginTop: "-116px",
+        justifyContent: "space-between",
+        paddingBottom: 0,
+        // main wraps every page in paddingTop:72px to clear the fixed header;
+        // Hero only needs to additionally pull up by the remainder (116px full
+        // header height - 72px already reserved by <main>) to sit flush at
+        // the true viewport top. Using the full -116px double-counted the
+        // 72px main already reserved, leaving a 44px gap below the stats bar.
+        marginTop: "-72px",
         paddingTop: "116px",
       }}
     >
@@ -106,7 +113,7 @@ function Hero() {
               transition={{ duration: 0.9, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
               style={{ display: "block" }}
             >
-              Water that works
+              Water that works{" "}
             </motion.span>
             <motion.span
               initial={reduce ? false : { opacity: 0, y: 40 }}
@@ -125,7 +132,7 @@ function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.65 }}
         className="max-content"
-        style={{ position: "relative", paddingBottom: "clamp(1.25rem, 2.5vw, 2rem)" }}
+        style={{ position: "relative", paddingBottom: "clamp(5rem, 9vw, 7rem)" }}
       >
         <div style={{ height: "1px", background: "rgba(255,255,255,0.2)", marginBottom: "1.25rem" }} />
         <div
@@ -225,6 +232,61 @@ function Hero() {
           </a>
         </div>
       </motion.div>
+
+      {/* Stats bar — second flex child, pushed to bottom by space-between */}
+      <motion.div
+        initial={reduce ? false : { opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8, delay: 0.9 }}
+        style={{
+          position: "relative",
+          zIndex: 2,
+          borderTop: "1px solid rgba(255,255,255,0.12)",
+          background: "rgba(0,0,0,0.35)",
+          backdropFilter: "blur(12px)",
+          WebkitBackdropFilter: "blur(12px)",
+        }}
+      >
+        <div
+          className="max-content"
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(4, 1fr)",
+            gap: "1rem",
+            padding: "1.25rem 0",
+            textAlign: "center",
+          }}
+        >
+          {STATS.map((s) => (
+            <div key={s.label}>
+              <div
+                style={{
+                  fontFamily: "var(--font-display)",
+                  fontWeight: 400,
+                  fontSize: "clamp(1.5rem, 3vw, 2.25rem)",
+                  color: "#B9E3EF",
+                  lineHeight: 1,
+                  letterSpacing: "-0.02em",
+                }}
+              >
+                {s.value}
+              </div>
+              <div
+                style={{
+                  marginTop: "0.35rem",
+                  fontFamily: "var(--font-mono)",
+                  fontSize: "0.6rem",
+                  letterSpacing: "0.2em",
+                  textTransform: "uppercase",
+                  color: "rgba(255,255,255,0.55)",
+                }}
+              >
+                {s.label}
+              </div>
+            </div>
+          ))}
+        </div>
+      </motion.div>
     </section>
   );
 }
@@ -287,7 +349,7 @@ function Pillars() {
       <div className="max-content">
         <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: "3rem", marginBottom: "4rem", maxWidth: "820px" }}>
           <div>
-            <span className="eyebrow" style={{ color: "var(--color-navy)" }}>Why PH Prescriptions</span>
+            <span className="eyebrow" style={{ color: "var(--color-navy)" }}>Why pH Prescription</span>
             <h2
               style={{
                 marginTop: "1rem",
@@ -629,7 +691,7 @@ function Doctors() {
               Endorsed by <span className="italic-accent" style={{ color: "var(--color-teal)" }}>leading physicians.</span>
             </h2>
             <p style={{ marginTop: "1rem", color: "var(--color-ink-soft)", fontSize: "1rem", lineHeight: 1.7 }}>
-              Seven doctors, dentists and researchers have put their names behind PH Prescriptions systems.
+              Seven doctors, dentists and researchers have put their names behind pH Prescription systems.
             </p>
           </div>
         </div>
@@ -745,7 +807,7 @@ function Testimonials() {
                   letterSpacing: "-0.005em",
                 }}
               >
-                “{t.text}”
+                &ldquo;{t.text}&rdquo;
               </p>
               <footer style={{ marginTop: "auto", display: "flex", flexDirection: "column", gap: "0.25rem" }}>
                 <cite
@@ -887,7 +949,6 @@ export default function HomePage() {
         }}
       />
       <Hero />
-      <TrustStrip />
       <Pillars />
       <Products />
       <VideoDivider />

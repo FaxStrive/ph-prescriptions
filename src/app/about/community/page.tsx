@@ -3,8 +3,8 @@ import Link from "next/link";
 import { BUSINESS } from "@/lib/business";
 
 export const metadata: Metadata = {
-  title: "Community Care | PH Prescriptions",
-  description: "PH Prescriptions is committed to giving back to the Palm City FL community and beyond. Learn about our community care initiatives.",
+  title: "Community Care | pH Prescription",
+  description: "pH Prescription is committed to giving back to the Palm City FL community and beyond. Learn about our community care initiatives.",
 };
 
 export default function CommunityPage() {
@@ -17,7 +17,7 @@ export default function CommunityPage() {
             Community Care
           </h1>
           <p style={{ fontSize: "1.0625rem", color: "var(--color-ink-soft)", lineHeight: 1.75 }}>
-            PH Prescriptions is rooted in Palm City, Florida. For over 20 years, we have been part of this community - and we believe in giving back to the people and organizations that make it thrive.
+            pH Prescription is rooted in Palm City, Florida. For over 20 years, we have been part of this community - and we believe in giving back to the people and organizations that make it thrive.
           </p>
         </div>
       </section>
@@ -39,7 +39,7 @@ export default function CommunityPage() {
                 Affiliate Program
               </h3>
               <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.75, marginBottom: "1.25rem" }}>
-                Health practitioners, doctors, coaches, and community leaders can join our Affiliate Program and earn while bringing PH Prescriptions water health to their clients and networks.
+                Health practitioners, doctors, coaches, and community leaders can join our Affiliate Program and earn while bringing pH Prescription water health to their clients and networks.
               </p>
               <a href={`mailto:${BUSINESS.email}`} className="btn btn-primary">Inquire About Affiliates</a>
             </div>

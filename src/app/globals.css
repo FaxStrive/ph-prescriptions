@@ -21,15 +21,15 @@
 }
 
 :root {
-  /* PH Prescriptions brand — purple primary on white, teal-blue as sparing support.
+  /* pH Prescription brand — purple primary on white, teal-blue as sparing support.
      Both colors sampled directly from the phprescription.com logo: purple #583890
-     (Aquapellis wordmark) and teal-blue #1888B0 (caduceus symbol).
+     (Aquapellis wordmark) and teal-blue #146a8d (caduceus symbol).
      Legacy --color-navy-* tokens are retained as aliases holding the purple values so
      every existing page picks up the palette without page-level edits. */
   --color-navy: #583890;         /* PRIMARY purple */
   --color-navy-dark: #4A2E7A;    /* purple hover */
   --color-navy-deep: #3B2466;    /* deepest purple, hero gradients */
-  --color-teal: #1888B0;         /* SUPPORT teal-blue (use sparingly: accents, underlines, icon tints) */
+  --color-teal: #146a8d;         /* SUPPORT teal-blue (use sparingly: accents, underlines, icon tints) */
   --color-teal-light: #4AA0C2;
   --color-teal-soft: #E0F2F8;    /* very light teal for icon backgrounds */
   --color-gold: #583890;         /* alias primary purple (where gold was CTA highlight) */
@@ -53,7 +53,7 @@
   --secondary-foreground: #583890;
   --muted: #FAF8FD;
   --muted-foreground: #6B7280;
-  --accent: #1888B0;
+  --accent: #146a8d;
   --accent-foreground: #FFFFFF;
   --border: #E5E7EB;
   --input: #E5E7EB;

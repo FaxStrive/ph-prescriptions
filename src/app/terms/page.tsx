@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { BUSINESS } from "@/lib/business";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | PH Prescriptions",
-  description: "PH Prescriptions terms of service — your agreement with us when using our website and purchasing our products.",
+  title: "Terms of Service | pH Prescription",
+  description: "pH Prescription terms of service — your agreement with us when using our website and purchasing our products.",
 };
 
 export default function TermsPage() {
@@ -35,11 +35,11 @@ export default function TermsPage() {
         {[
           {
             heading: "1. Acceptance of Terms",
-            body: `By accessing or using our website at phprescription.com, or by purchasing products or services from PH Prescriptions, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our website or purchase our products.`,
+            body: `By accessing or using our website at phprescription.com, or by purchasing products or services from pH Prescription, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our website or purchase our products.`,
           },
           {
             heading: "2. Products and Services",
-            body: `PH Prescriptions sells water treatment systems and related products. All prices are listed in U.S. dollars. We reserve the right to modify prices and product availability at any time without notice. Product descriptions are as accurate as possible; we do not warrant that descriptions are complete, current, or error-free.`,
+            body: `pH Prescription sells water treatment systems and related products. All prices are listed in U.S. dollars. We reserve the right to modify prices and product availability at any time without notice. Product descriptions are as accurate as possible; we do not warrant that descriptions are complete, current, or error-free.`,
           },
           {
             heading: "3. Orders and Payment",
@@ -47,7 +47,7 @@ export default function TermsPage() {
           },
           {
             heading: "4. Installation",
-            body: `Many PH Prescriptions systems require installation by a licensed plumber. Our lifetime warranty applies only when the system is installed by a licensed plumber. We maintain a network of licensed installers in all 50 states. We are not responsible for damage caused by improper installation performed by unlicensed individuals.`,
+            body: `Many pH Prescription systems require installation by a licensed plumber. Our lifetime warranty applies only when the system is installed by a licensed plumber. We maintain a network of licensed installers in all 50 states. We are not responsible for damage caused by improper installation performed by unlicensed individuals.`,
           },
           {
             heading: "5. Warranty",
@@ -59,7 +59,7 @@ export default function TermsPage() {
           },
           {
             heading: "7. Limitation of Liability",
-            body: `To the fullest extent permitted by law, PH Prescriptions shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of our products or website. Our total liability for any claim related to our products or services shall not exceed the amount you paid for the product or service in question.`,
+            body: `To the fullest extent permitted by law, pH Prescription shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of our products or website. Our total liability for any claim related to our products or services shall not exceed the amount you paid for the product or service in question.`,
           },
           {
             heading: "8. Health Information",
@@ -67,7 +67,7 @@ export default function TermsPage() {
           },
           {
             heading: "9. Intellectual Property",
-            body: `All content on our website — including text, images, logos, and the QuadVortex trade name — is the property of PH Prescriptions or its licensors and is protected by applicable intellectual property laws. You may not use our content without written permission.`,
+            body: `All content on our website — including text, images, logos, and the QuadVortex trade name — is the property of pH Prescription or its licensors and is protected by applicable intellectual property laws. You may not use our content without written permission.`,
           },
           {
             heading: "10. Governing Law",
@@ -75,7 +75,7 @@ export default function TermsPage() {
           },
           {
             heading: "11. Contact",
-            body: `PH Prescriptions\n${BUSINESS.address.full}\nPhone: ${BUSINESS.phone}\nToll Free: ${BUSINESS.phoneTollFree}\nEmail: ${BUSINESS.email}`,
+            body: `pH Prescription\n${BUSINESS.address.full}\nPhone: ${BUSINESS.phone}\nToll Free: ${BUSINESS.phoneTollFree}\nEmail: ${BUSINESS.email}`,
           },
         ].map((section) => (
           <div key={section.heading} style={{ marginBottom: "2.5rem" }}>

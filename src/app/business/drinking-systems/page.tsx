@@ -3,7 +3,7 @@ import Link from "next/link";
 import { BUSINESS } from "@/lib/business";
 
 export const metadata: Metadata = {
-  title: "Business Drinking Water Systems | PH Prescriptions",
+  title: "Business Drinking Water Systems | pH Prescription",
   description:
     "Commercial under-counter and point-of-use drinking water systems. QuadVortex filtration, alkaline, remineralized, hydrogen-infused. WQA Certified. Lifetime warranty.",
 };

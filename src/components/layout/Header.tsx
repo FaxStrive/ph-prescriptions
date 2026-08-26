@@ -215,7 +215,7 @@ export default function Header() {
               />
             </Link>
 
-            <nav style={{ flex: 1, minWidth: 0 }}>
+            <nav aria-label="Primary" style={{ flex: 1, minWidth: 0 }}>
               <ul
                 style={{ display: "flex", alignItems: "center", gap: "1.125rem", listStyle: "none", margin: 0, padding: 0, justifyContent: "center" }}
                 onMouseLeave={() => setOpenPanel(null)}
@@ -432,7 +432,7 @@ export default function Header() {
                                     color: "var(--color-teal)",
                                   }}
                                 >
-                                  Explore →
+                                  Explore &rarr;
                                 </span>
                               </Link>
                             </li>
@@ -549,7 +549,7 @@ export default function Header() {
                   <X size={20} />
                 </button>
               </div>
-              <nav style={{ flex: 1, overflowY: "auto", padding: "1.5rem 1.25rem" }}>
+              <nav aria-label="Primary" style={{ flex: 1, overflowY: "auto", padding: "1.5rem 1.25rem" }}>
                 {NAV.map((it) => (
                   <div key={it.label}>
                     <Link

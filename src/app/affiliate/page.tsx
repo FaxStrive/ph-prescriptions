@@ -3,8 +3,8 @@ import Link from "next/link";
 import { BUSINESS } from "@/lib/business";
 
 export const metadata: Metadata = {
-  title: "Affiliate & Partner Program | PH Prescriptions",
-  description: "Partner with PH Prescriptions as an affiliate, referral partner, or distributor. Ideal for health practitioners, plumbers, naturopaths, dentists, and wellness centers.",
+  title: "Affiliate & Partner Program | pH Prescription",
+  description: "Partner with pH Prescription as an affiliate, referral partner, or distributor. Ideal for health practitioners, plumbers, naturopaths, dentists, and wellness centers.",
 };
 
 export default function AffiliatePage() {
@@ -84,10 +84,10 @@ export default function AffiliatePage() {
                 How the Program Works
               </h2>
               <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.8, marginBottom: "1rem" }}>
-                The PH Prescriptions affiliate program is commission-based. When you refer a client who purchases a system, you earn a referral commission. There is no inventory to hold, no order fulfillment responsibility, and no minimum sales volume required to stay active.
+                The pH Prescription affiliate program is commission-based. When you refer a client who purchases a system, you earn a referral commission. There is no inventory to hold, no order fulfillment responsibility, and no minimum sales volume required to stay active.
               </p>
               <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.8, marginBottom: "1rem" }}>
-                All orders, consultations, and installations are handled by PH Prescriptions. Your role is the introduction. Our team takes the conversation from there.
+                All orders, consultations, and installations are handled by pH Prescription. Your role is the introduction. Our team takes the conversation from there.
               </p>
               <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.8 }}>
                 Commission structure and tracking details are discussed during the application conversation. Contact us to start that discussion.
@@ -186,7 +186,7 @@ export default function AffiliatePage() {
               },
               {
                 title: "Marketing Support",
-                body: "Access to product information, educational materials, and support from the PH Prescriptions team to help you explain the systems to your clients.",
+                body: "Access to product information, educational materials, and support from the pH Prescription team to help you explain the systems to your clients.",
               },
               {
                 title: "WQA-Certified Products",
@@ -239,7 +239,7 @@ export default function AffiliatePage() {
             Apply to the Program
           </h2>
           <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.75, marginBottom: "2rem" }}>
-            Send us a brief introduction: who you are, your practice or business, and why you think PH Prescriptions is a fit for your clients. We review every application personally.
+            Send us a brief introduction: who you are, your practice or business, and why you think pH Prescription is a fit for your clients. We review every application personally.
           </p>
           <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
             <a href={`mailto:${BUSINESS.email}?subject=Affiliate Program Application`} className="btn btn-primary">

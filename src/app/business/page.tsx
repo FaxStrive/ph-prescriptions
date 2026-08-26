@@ -3,7 +3,7 @@ import Link from "next/link";
 import { BUSINESS } from "@/lib/business";
 
 export const metadata: Metadata = {
-  title: "Business Water Systems | PH Prescriptions",
+  title: "Business Water Systems | pH Prescription",
   description:
     "Commercial water treatment for restaurants, offices, and facilities. WQA Certified systems with lifetime warranties. Serving all 50 states.",
 };
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const SECTIONS = [
   {
     title: "Restaurant & Hospitality",
-    desc: "Protect equipment, enhance taste, and give guests the purest water. From ice machines to espresso bars — PH Prescriptions has the commercial solution.",
+    desc: "Protect equipment, enhance taste, and give guests the purest water. From ice machines to espresso bars — pH Prescription has the commercial solution.",
     href: "/business/restaurant",
     from: "By consultation",
   },
@@ -262,7 +262,7 @@ export default function BusinessPage() {
               marginBottom: "2rem",
             }}
           >
-            Why Businesses Choose PH Prescriptions
+            Why Businesses Choose pH Prescription
           </h2>
           <div
             style={{

@@ -3,8 +3,8 @@ import { Phone, CheckCircle2 } from "lucide-react";
 import { BUSINESS } from "@/lib/business";
 
 export const metadata: Metadata = {
-  title: "Free Water Consultation | PH Prescriptions",
-  description: "Schedule a free water analysis and consultation with PH Prescriptions. We test your water and recommend the right system for your home or business.",
+  title: "Free Water Consultation | pH Prescription",
+  description: "Schedule a free water analysis and consultation with pH Prescription. We test your water and recommend the right system for your home or business.",
 };
 
 export default function ConsultationPage() {
@@ -34,7 +34,7 @@ export default function ConsultationPage() {
                 {[
                   { step: "1", title: "Submit Your Request", desc: "Fill out the form with your name, phone, and zip code. We will reach out within 24 hours." },
                   { step: "2", title: "Water Analysis", desc: "Our team tests your current water supply and identifies contaminants, pH levels, and mineral content." },
-                  { step: "3", title: "System Recommendation", desc: "We walk you through the results and recommend the right PH Prescriptions system for your specific water and needs." },
+                  { step: "3", title: "System Recommendation", desc: "We walk you through the results and recommend the right pH Prescription system for your specific water and needs." },
                   { step: "4", title: "No-Pressure Decision", desc: "Take all the time you need. There is zero obligation. If you are ready, we handle installation from start to finish." },
                 ].map((item) => (
                   <div key={item.step} style={{ display: "flex", gap: "1.25rem", alignItems: "flex-start" }}>
