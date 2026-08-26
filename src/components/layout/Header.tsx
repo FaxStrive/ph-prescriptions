@@ -192,7 +192,7 @@ export default function Header() {
               </Link>
             )
           )}
-          <Link href="/consultation" className="btn btn-teal" style={{ marginLeft: "1rem", padding: "0.625rem 1.375rem", fontSize: "0.875rem" }}>
+          <Link href="/consultation" className="btn btn-white" style={{ marginLeft: "1rem", padding: "0.625rem 1.375rem", fontSize: "0.875rem" }}>
             Free Consultation
           </Link>
         </nav>
@@ -249,7 +249,7 @@ export default function Header() {
               </div>
             ))}
             <div style={{ paddingTop: "1rem" }}>
-              <a href={`tel:${BUSINESS.phone}`} className="btn btn-teal" style={{ width: "100%", justifyContent: "center" }}>
+              <a href={`tel:${BUSINESS.phone}`} className="btn btn-white" style={{ width: "100%", justifyContent: "center" }}>
                 Call {BUSINESS.phone}
               </a>
             </div>

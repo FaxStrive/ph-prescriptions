@@ -77,7 +77,7 @@ export default function CoolersPage() {
               href="/consultation"
               style={{
                 display: "inline-block",
-                background: "var(--color-teal)",
+                background: "var(--color-navy)",
                 color: "#fff",
                 padding: "0.875rem 2rem",
                 fontWeight: 600,
@@ -127,7 +127,7 @@ export default function CoolersPage() {
             <div
               style={{
                 display: "inline-block",
-                background: "var(--color-teal)",
+                background: "var(--color-navy)",
                 color: "#fff",
                 fontSize: "0.75rem",
                 fontWeight: 700,

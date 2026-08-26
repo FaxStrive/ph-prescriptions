@@ -51,7 +51,7 @@ export default function PoolMarinePage() {
             Clean, structured water everywhere you need it. PH Prescriptions partners with Exceptional Water Systems to bring advanced water treatment to pools, boats, and recreational vehicles.
           </p>
           <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-            <a href={`tel:${BUSINESS.phoneTollFree}`} className="btn btn-teal">
+            <a href={`tel:${BUSINESS.phoneTollFree}`} className="btn btn-primary">
               Call {BUSINESS.phoneTollFree}
             </a>
             <Link href="/consultation" className="btn btn-white">
@@ -316,7 +316,7 @@ export default function PoolMarinePage() {
             Pool, marine, and RV systems are quoted based on your specific application. Call us and describe what you need. We will tell you what is possible.
           </p>
           <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
-            <a href={`tel:${BUSINESS.phoneTollFree}`} className="btn btn-teal">
+            <a href={`tel:${BUSINESS.phoneTollFree}`} className="btn btn-primary">
               Call {BUSINESS.phoneTollFree}
             </a>
             <Link href="/contact" className="btn btn-white">

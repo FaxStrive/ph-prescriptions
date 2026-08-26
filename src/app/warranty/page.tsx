@@ -55,7 +55,7 @@ export default function WarrantyPage() {
             href={`tel:${BUSINESS.phone}`}
             style={{
               display: "inline-block",
-              background: "var(--color-teal)",
+              background: "var(--color-navy)",
               color: "#fff",
               padding: "0.875rem 2rem",
               fontWeight: 600,
@@ -285,7 +285,7 @@ export default function WarrantyPage() {
               href={`tel:${BUSINESS.phone}`}
               style={{
                 display: "inline-block",
-                background: "var(--color-teal)",
+                background: "var(--color-navy)",
                 color: "#fff",
                 padding: "0.75rem 1.75rem",
                 fontWeight: 600,

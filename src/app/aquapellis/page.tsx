@@ -24,7 +24,7 @@ export default function AquapellisPage() {
             The Aquapellis system delivers molecular hydrogen (H2) transdermally - through your skin - with every shower. The same antioxidant science you drink is now absorbed through the body's largest organ, providing whole-body cellular benefit.
           </p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
-            <a href={`mailto:${BUSINESS.emailAquapellis}`} className="btn btn-teal">Request Aquapellis Quote</a>
+            <a href={`mailto:${BUSINESS.emailAquapellis}`} className="btn btn-primary">Request Aquapellis Quote</a>
             <a href={`tel:${BUSINESS.phoneTollFree}`} className="btn btn-white">
               <Phone size={16} /> {BUSINESS.phoneTollFree}
             </a>
@@ -75,7 +75,7 @@ export default function AquapellisPage() {
                   <div style={{ fontSize: "0.8125rem", color: "rgba(255,255,255,0.65)" }}>{sys.desc}</div>
                 </div>
               ))}
-              <a href={`mailto:${BUSINESS.emailAquapellis}`} className="btn btn-teal" style={{ width: "100%", justifyContent: "center", marginTop: "0.5rem" }}>
+              <a href={`mailto:${BUSINESS.emailAquapellis}`} className="btn btn-primary" style={{ width: "100%", justifyContent: "center", marginTop: "0.5rem" }}>
                 Contact Aquapellis Team
               </a>
             </div>
@@ -83,7 +83,7 @@ export default function AquapellisPage() {
         </div>
       </section>
 
-      <section style={{ background: "var(--color-teal)", color: "#fff", textAlign: "center" }}>
+      <section style={{ background: "var(--color-navy)", color: "#fff", textAlign: "center" }}>
         <div className="container" style={{ maxWidth: "600px" }}>
           <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.75rem,3.5vw,2.25rem)", marginBottom: "1rem" }}>
             Ready to Upgrade Your Shower?

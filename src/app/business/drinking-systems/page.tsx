@@ -74,7 +74,7 @@ export default function BusinessDrinkingSystemsPage() {
               href="/consultation"
               style={{
                 display: "inline-block",
-                background: "var(--color-teal)",
+                background: "var(--color-navy)",
                 color: "#fff",
                 padding: "0.875rem 2rem",
                 fontWeight: 600,
@@ -277,7 +277,7 @@ export default function BusinessDrinkingSystemsPage() {
             href="/consultation"
             style={{
               display: "inline-block",
-              background: "var(--color-teal)",
+              background: "var(--color-navy)",
               color: "#fff",
               padding: "0.875rem 2.25rem",
               fontWeight: 600,

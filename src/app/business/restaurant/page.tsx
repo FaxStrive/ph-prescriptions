@@ -86,7 +86,7 @@ export default function RestaurantPage() {
               href="/consultation"
               style={{
                 display: "inline-block",
-                background: "var(--color-teal)",
+                background: "var(--color-navy)",
                 color: "#fff",
                 padding: "0.875rem 2rem",
                 fontWeight: 600,
@@ -279,7 +279,7 @@ export default function RestaurantPage() {
       {/* CTA */}
       <section
         style={{
-          background: "var(--color-teal)",
+          background: "var(--color-navy)",
           color: "#fff",
           padding: "3.5rem 0",
           textAlign: "center",

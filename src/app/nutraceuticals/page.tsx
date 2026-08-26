@@ -51,7 +51,7 @@ export default function NutraceuticalsPage() {
             Targeted nutritional supplements that work alongside our water systems to support mineral repletion, cellular hydration, and hydrogen-boosting at the cellular level.
           </p>
           <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-            <a href={`tel:${BUSINESS.phoneTollFree}`} className="btn btn-teal">
+            <a href={`tel:${BUSINESS.phoneTollFree}`} className="btn btn-primary">
               Inquire: {BUSINESS.phoneTollFree}
             </a>
             <Link href="/consultation" className="btn btn-white">
@@ -162,7 +162,7 @@ export default function NutraceuticalsPage() {
               pHP New nutraceuticals are not sold online. We match each client to specific formulations based on their water test results, health history, and goals. To inquire about availability or to order, contact us directly.
             </p>
             <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-              <a href={`tel:${BUSINESS.phoneTollFree}`} className="btn btn-teal">
+              <a href={`tel:${BUSINESS.phoneTollFree}`} className="btn btn-primary">
                 Call {BUSINESS.phoneTollFree}
               </a>
               <a href={`mailto:${BUSINESS.email}`} style={{ color: "var(--color-teal)", textDecoration: "none", fontWeight: 500, alignSelf: "center" }}>
@@ -188,7 +188,7 @@ export default function NutraceuticalsPage() {
           <p style={{ color: "rgba(255,255,255,0.78)", lineHeight: 1.75, marginBottom: "2rem" }}>
             Every nutraceutical consultation begins with a free water analysis. Understanding what your water is doing first shapes what supplementation makes sense. Schedule a consultation and we will test your water at no cost.
           </p>
-          <Link href="/consultation" className="btn btn-teal">
+          <Link href="/consultation" className="btn btn-primary">
             Schedule Free Water Analysis
           </Link>
         </div>

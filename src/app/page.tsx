@@ -74,10 +74,10 @@ export default function HomePage() {
               PH Prescriptions delivers WQA Certified, alkaline, re-mineralized, and hydrogen-infused water systems for your home and business. Made in USA since {BUSINESS.founded}. Endorsed by 7+ doctors. Lifetime warranty.
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
-              <Link href="/consultation" className="btn btn-teal" style={{ minWidth: "200px" }}>
+              <Link href="/consultation" className="btn btn-white" style={{ minWidth: "200px" }}>
                 Get a Free Consultation
               </Link>
-              <a href={`tel:${BUSINESS.phone}`} className="btn btn-white" style={{ minWidth: "200px" }}>
+              <a href={`tel:${BUSINESS.phone}`} className="btn" style={{ minWidth: "200px", background: "transparent", border: "2px solid rgba(255,255,255,0.6)", color: "#fff" }}>
                 <Phone size={16} /> {BUSINESS.phone}
               </a>
             </div>
@@ -229,7 +229,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA */}
-      <section style={{ background: "var(--color-teal)", color: "#fff", textAlign: "center" }}>
+      <section style={{ background: "var(--color-navy)", color: "#fff", textAlign: "center" }}>
         <div className="container" style={{ maxWidth: "700px" }}>
           <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.875rem,4vw,2.75rem)", marginBottom: "1rem" }}>
             Ready to Transform Your Water?

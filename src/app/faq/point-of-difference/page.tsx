@@ -216,7 +216,7 @@ export default function PointOfDifferencePage() {
             Start with a free water analysis. We will test your current water, show you exactly what is in it, and let you decide whether our systems are right for you. No pressure. No commitment.
           </p>
           <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
-            <Link href="/consultation" className="btn btn-teal">
+            <Link href="/consultation" className="btn btn-primary">
               Free Water Analysis
             </Link>
             <a href={`tel:${BUSINESS.phoneTollFree}`} className="btn btn-white">

@@ -12,7 +12,7 @@ export default function BookPage() {
     <>
       <section
         style={{
-          background: "linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy) 60%, var(--color-teal) 100%)",
+          background: "linear-gradient(135deg, var(--color-navy-deep) 0%, var(--color-navy) 60%, var(--color-navy-dark) 100%)",
           color: "#fff",
           padding: "6rem 0 5rem",
         }}
@@ -52,7 +52,7 @@ export default function BookPage() {
             The personal story and science behind how water quality can transform your health. Written by Leo Szymborski, founder of PH Prescriptions, with 40+ years in water systems.
           </p>
           <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-            <a href={`tel:${BUSINESS.phoneTollFree}`} className="btn btn-teal">
+            <a href={`tel:${BUSINESS.phoneTollFree}`} className="btn btn-primary">
               Call to Order: {BUSINESS.phoneTollFree}
             </a>
             <Link href="/consultation" className="btn btn-white">
@@ -236,7 +236,7 @@ export default function BookPage() {
             H2O: Health 2 Overcome is available through PH Prescriptions directly. Call or email to place an order. Bulk orders for health practitioners and clinic waiting rooms are welcome.
           </p>
           <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", justifyContent: "center" }}>
-            <a href={`tel:${BUSINESS.phoneTollFree}`} className="btn btn-teal">
+            <a href={`tel:${BUSINESS.phoneTollFree}`} className="btn btn-primary">
               Call {BUSINESS.phoneTollFree}
             </a>
             <a href={`mailto:${BUSINESS.email}`} className="btn btn-white">

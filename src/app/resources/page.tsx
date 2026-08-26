@@ -237,7 +237,7 @@ export default function ResourcesPage() {
             Our team is available by phone or email. If you need documentation, have a technical question, or are looking for something specific, call or write and we will get it to you.
           </p>
           <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
-            <a href={`tel:${BUSINESS.phoneTollFree}`} className="btn btn-teal">
+            <a href={`tel:${BUSINESS.phoneTollFree}`} className="btn btn-primary">
               Call {BUSINESS.phoneTollFree}
             </a>
             <Link href="/contact" className="btn btn-white">

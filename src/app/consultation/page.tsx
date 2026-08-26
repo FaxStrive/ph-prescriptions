@@ -98,7 +98,7 @@ export default function ConsultationPage() {
                     4.9 stars. WQA Certified. Lifetime warranty. No obligation.
                   </span>
                 </div>
-                <button type="submit" className="btn btn-teal" style={{ justifyContent: "center", padding: "1rem 2rem", fontSize: "1rem" }}>
+                <button type="submit" className="btn btn-primary" style={{ justifyContent: "center", padding: "1rem 2rem", fontSize: "1rem" }}>
                   Get My Free Water Analysis
                 </button>
                 <p style={{ fontSize: "0.8125rem", color: "var(--color-ink-mute)", textAlign: "center" }}>

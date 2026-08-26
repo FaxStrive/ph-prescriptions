@@ -111,7 +111,7 @@ export default function FAQPage() {
               Our team is ready to answer. Call us or schedule a free consultation.
             </p>
             <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", justifyContent: "center" }}>
-              <Link href="/consultation" className="btn btn-teal">Free Consultation</Link>
+              <Link href="/consultation" className="btn btn-primary">Free Consultation</Link>
               <a href={`tel:${BUSINESS.phone}`} className="btn btn-white">Call {BUSINESS.phone}</a>
             </div>
           </div>

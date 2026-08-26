@@ -51,7 +51,7 @@ export default function AffiliatePage() {
             Refer clients. Earn commissions. Help people access water that genuinely supports their health. Built for practitioners, plumbers, and wellness professionals who already believe in what we do.
           </p>
           <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-            <a href={`mailto:${BUSINESS.email}`} className="btn btn-teal">
+            <a href={`mailto:${BUSINESS.email}`} className="btn btn-primary">
               Apply: {BUSINESS.email}
             </a>
             <a href={`tel:${BUSINESS.phoneTollFree}`} className="btn btn-white">
@@ -242,7 +242,7 @@ export default function AffiliatePage() {
             Send us a brief introduction: who you are, your practice or business, and why you think PH Prescriptions is a fit for your clients. We review every application personally.
           </p>
           <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
-            <a href={`mailto:${BUSINESS.email}?subject=Affiliate Program Application`} className="btn btn-teal">
+            <a href={`mailto:${BUSINESS.email}?subject=Affiliate Program Application`} className="btn btn-primary">
               Email {BUSINESS.email}
             </a>
             <a href={`tel:${BUSINESS.phoneTollFree}`} className="btn btn-white">

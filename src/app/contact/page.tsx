@@ -56,7 +56,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <div style={{ fontWeight: 600, color: "var(--color-navy)", marginBottom: "0.375rem" }}>Phone</div>
-                    <a href={`tel:${BUSINESS.phone}`} style={{ display: "block", color: "var(--color-teal)", textDecoration: "none", fontSize: "1.0625rem", marginBottom: "0.25rem" }}>{BUSINESS.phone}</a>
+                    <a href={`tel:${BUSINESS.phone}`} style={{ display: "block", color: "var(--color-navy)", textDecoration: "none", fontSize: "1.0625rem", marginBottom: "0.25rem" }}>{BUSINESS.phone}</a>
                     <a href={`tel:${BUSINESS.phoneTollFree}`} style={{ display: "block", color: "var(--color-ink-soft)", textDecoration: "none", fontSize: "0.9rem" }}>Toll Free: {BUSINESS.phoneTollFree}</a>
                     <a href={`tel:${BUSINESS.phoneEmergency}`} style={{ display: "block", color: "var(--color-ink-soft)", textDecoration: "none", fontSize: "0.9rem" }}>Emergency: {BUSINESS.phoneEmergency}</a>
                   </div>
@@ -68,7 +68,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <div style={{ fontWeight: 600, color: "var(--color-navy)", marginBottom: "0.375rem" }}>Email</div>
-                    <a href={`mailto:${BUSINESS.email}`} style={{ color: "var(--color-teal)", textDecoration: "none" }}>{BUSINESS.email}</a>
+                    <a href={`mailto:${BUSINESS.email}`} style={{ color: "var(--color-navy)", textDecoration: "none" }}>{BUSINESS.email}</a>
                   </div>
                 </div>
 

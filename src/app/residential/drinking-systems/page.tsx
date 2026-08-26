@@ -52,7 +52,7 @@ export default function DrinkingSystemsPage() {
               <div style={{ background: "var(--color-surface)", padding: "1.75rem" }}>
                 <div style={{ fontWeight: 600, color: "var(--color-navy)", marginBottom: "0.75rem" }}>Schedule a Free Water Analysis</div>
                 <p style={{ color: "var(--color-ink-soft)", fontSize: "0.9rem", lineHeight: 1.65, marginBottom: "1.25rem" }}>We test your water and recommend the right system with no obligation.</p>
-                <Link href="/consultation" className="btn btn-teal" style={{ width: "100%", justifyContent: "center" }}>Get My Free Analysis</Link>
+                <Link href="/consultation" className="btn btn-primary" style={{ width: "100%", justifyContent: "center" }}>Get My Free Analysis</Link>
                 <div style={{ textAlign: "center", marginTop: "0.75rem" }}>
                   <a href={`tel:${BUSINESS.phone}`} style={{ color: "var(--color-teal)", textDecoration: "none", fontSize: "0.875rem" }}>{BUSINESS.phone}</a>
                 </div>
