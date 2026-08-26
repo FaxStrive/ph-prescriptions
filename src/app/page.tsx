@@ -127,7 +127,7 @@ function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.65 }}
         className="max-content"
-        style={{ position: "relative", paddingBottom: "clamp(1.25rem, 2.5vw, 2rem)" }}
+        style={{ position: "relative", paddingBottom: "clamp(5rem, 9vw, 7rem)" }}
       >
         <div style={{ height: "1px", background: "rgba(255,255,255,0.2)", marginBottom: "1.25rem" }} />
         <div
@@ -225,6 +225,62 @@ function Hero() {
               {BUSINESS.phone}
             </span>
           </a>
+        </div>
+      </motion.div>
+
+      {/* Stats bar pinned to hero bottom */}
+      <motion.div
+        initial={reduce ? false : { opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8, delay: 0.9 }}
+        style={{
+          position: "absolute",
+          bottom: 0,
+          left: 0,
+          right: 0,
+          background: "rgba(0,0,0,0.35)",
+          backdropFilter: "blur(8px)",
+          borderTop: "1px solid rgba(255,255,255,0.12)",
+        }}
+      >
+        <div
+          className="max-content"
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(4, 1fr)",
+            gap: "1rem",
+            padding: "1.25rem 0",
+            textAlign: "center",
+          }}
+        >
+          {STATS.map((s) => (
+            <div key={s.label}>
+              <div
+                style={{
+                  fontFamily: "var(--font-display)",
+                  fontWeight: 400,
+                  fontSize: "clamp(1.75rem, 3.5vw, 2.5rem)",
+                  color: "#fff",
+                  lineHeight: 1,
+                  letterSpacing: "-0.02em",
+                }}
+              >
+                {s.value}
+              </div>
+              <div
+                style={{
+                  marginTop: "0.35rem",
+                  fontFamily: "var(--font-mono)",
+                  fontSize: "0.6rem",
+                  letterSpacing: "0.18em",
+                  textTransform: "uppercase",
+                  color: "rgba(255,255,255,0.6)",
+                }}
+              >
+                {s.label}
+              </div>
+            </div>
+          ))}
         </div>
       </motion.div>
     </section>
@@ -889,7 +945,6 @@ export default function HomePage() {
         }}
       />
       <Hero />
-      <TrustStrip />
       <Pillars />
       <Products />
       <VideoDivider />
