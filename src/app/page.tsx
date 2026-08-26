@@ -54,7 +54,7 @@ function Hero() {
         overflow: "hidden",
         background: "#3B2466",
         color: "#fff",
-        minHeight: "calc(100svh - 116px)",
+        minHeight: "auto",
         display: "flex",
         flexDirection: "column",
         marginTop: "-116px",
@@ -83,64 +83,12 @@ function Hero() {
       </motion.video>
       <div className="hero-veil" style={{ position: "absolute", inset: 0 }} />
 
-      <div className="max-content" style={{ position: "relative", paddingTop: "clamp(2rem, 6vw, 4rem)" }}>
-        <motion.div
-          initial={reduce ? false : { opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "1rem" }}
-        >
-          <span
-            style={{
-              fontFamily: "var(--font-mono)",
-              fontSize: "0.7rem",
-              letterSpacing: "0.22em",
-              textTransform: "uppercase",
-              color: "rgba(255,255,255,0.85)",
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "0.75rem",
-            }}
-          >
-            <span style={{ display: "inline-block", width: "1.5rem", height: "1px", background: "rgba(255,255,255,0.6)" }} />
-            Doctor-Recommended · Made in USA
-          </span>
-          <span
-            className="tabular"
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "0.5rem",
-              fontFamily: "var(--font-mono)",
-              fontSize: "0.65rem",
-              letterSpacing: "0.2em",
-              textTransform: "uppercase",
-              color: "rgba(255,255,255,0.75)",
-            }}
-          >
-            <span
-              aria-hidden
-              style={{
-                position: "relative",
-                display: "inline-flex",
-                width: "8px",
-                height: "8px",
-                background: "#34d399",
-                borderRadius: "9999px",
-                boxShadow: "0 0 0 4px rgba(52, 211, 153, 0.25)",
-              }}
-            />
-            Free consultation · No pressure
-          </span>
-        </motion.div>
-      </div>
-
       <motion.div
         style={reduce ? undefined : { y: contentY }}
         className="max-content"
         // eslint-disable-next-line react/forbid-dom-props
       >
-        <div style={{ position: "relative", flex: 1, display: "flex", alignItems: "center", padding: "clamp(2.5rem, 6vw, 4rem) 0" }}>
+        <div style={{ position: "relative", flex: 1, display: "flex", alignItems: "center", padding: "clamp(2.5rem, 6vw, 4rem) 0 clamp(1rem, 2vw, 1.5rem)" }}>
           <h1
             style={{
               fontFamily: "var(--font-sans)",
@@ -177,9 +125,9 @@ function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.65 }}
         className="max-content"
-        style={{ position: "relative", paddingBottom: "clamp(2.5rem, 6vw, 4rem)" }}
+        style={{ position: "relative", paddingBottom: "clamp(1.25rem, 2.5vw, 2rem)" }}
       >
-        <div style={{ height: "1px", background: "rgba(255,255,255,0.2)", marginBottom: "2rem" }} />
+        <div style={{ height: "1px", background: "rgba(255,255,255,0.2)", marginBottom: "1.25rem" }} />
         <div
           style={{
             display: "grid",
