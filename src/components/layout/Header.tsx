@@ -3,8 +3,9 @@
 import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, X, Phone, ChevronDown } from "lucide-react";
+import { Menu, X, Phone, ChevronDown, MapPin, Clock } from "lucide-react";
 import { BUSINESS } from "@/lib/business";
 
 type NavPanelItem = { label: string; href: string; description: string };
@@ -73,7 +74,6 @@ const NAV: NavItem[] = [
       ],
     },
   },
-  { label: "Contact", href: "/contact" },
 ];
 
 export default function Header() {
@@ -83,7 +83,7 @@ export default function Header() {
   const pathname = usePathname();
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 12);
+    const onScroll = () => setScrolled(window.scrollY > 100);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -112,286 +112,327 @@ export default function Header() {
           right: 0,
           zIndex: 50,
           background: "#fff",
-          borderBottom: scrolled
-            ? "1px solid var(--color-border-soft)"
-            : "1px solid transparent",
-          boxShadow: scrolled ? "0 1px 0 rgba(0,0,0,0.02)" : "none",
-          transition: "border-color 0.3s, box-shadow 0.3s",
+          boxShadow: scrolled ? "0 2px 12px rgba(0,0,0,0.06)" : "none",
+          transition: "box-shadow 0.3s",
         }}
       >
+        {/* Row 1: Utility bar */}
         <div
-          className="max-content"
           style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            gap: "2.5rem",
-            height: "72px",
+            background: "var(--color-navy-deep)",
+            color: "rgba(255,255,255,0.92)",
+            fontSize: "0.75rem",
+            letterSpacing: "0.03em",
+            height: scrolled ? 0 : 36,
+            overflow: "hidden",
+            transition: "height 0.3s cubic-bezier(0.22,1,0.36,1)",
           }}
         >
-          <Link
-            href="/"
-            aria-label="PH Prescriptions home"
-            style={{ display: "flex", flexDirection: "column", lineHeight: 1.05, textDecoration: "none" }}
+          <div
+            className="max-content"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              height: 36,
+              gap: "2rem",
+            }}
           >
-            <span
-              style={{
-                fontFamily: "var(--font-display)",
-                color: "var(--color-navy)",
-                fontSize: "1.375rem",
-                fontWeight: 500,
-                letterSpacing: "-0.025em",
-              }}
-            >
-              PH Prescriptions
-            </span>
-            <span
-              style={{
-                color: "var(--color-teal)",
-                fontFamily: "var(--font-mono)",
-                fontSize: "0.6rem",
-                letterSpacing: "0.22em",
-                textTransform: "uppercase",
-                marginTop: "2px",
-              }}
-            >
-              Water Health &amp; Wellness
-            </span>
-          </Link>
-
-          <nav>
-            <ul
-              style={{ display: "flex", alignItems: "center", gap: "1.75rem", listStyle: "none", margin: 0, padding: 0 }}
-              onMouseLeave={() => setOpenPanel(null)}
-            >
-              {NAV.map((item) => {
-                const active = openPanel === item.label || pathname.startsWith(item.href);
-                const isPanelOpen = openPanel === item.label;
-                return (
-                  <li key={item.label} style={{ position: "relative" }}>
-                    {item.panel ? (
-                      <button
-                        type="button"
-                        onMouseEnter={() => setOpenPanel(item.label)}
-                        onFocus={() => setOpenPanel(item.label)}
-                        onClick={() => setOpenPanel((p) => (p === item.label ? null : item.label))}
-                        style={{
-                          background: "transparent",
-                          border: "none",
-                          padding: "1.25rem 0",
-                          cursor: "pointer",
-                          fontFamily: "var(--font-sans)",
-                          fontSize: "0.8125rem",
-                          fontWeight: 500,
-                          letterSpacing: "0.04em",
-                          textTransform: "uppercase",
-                          color: active ? "var(--color-navy)" : "var(--color-ink-soft)",
-                          display: "inline-flex",
-                          alignItems: "center",
-                          gap: "0.375rem",
-                          transition: "color 0.2s",
-                          position: "relative",
-                        }}
-                      >
-                        <span>{item.label}</span>
-                        <ChevronDown
-                          size={11}
-                          style={{
-                            transition: "transform 0.3s",
-                            transform: isPanelOpen ? "rotate(180deg)" : "rotate(0deg)",
-                          }}
-                        />
-                        <span
-                          style={{
-                            position: "absolute",
-                            left: 0,
-                            right: 0,
-                            bottom: "-1px",
-                            height: "2px",
-                            background: "var(--color-navy)",
-                            transform: isPanelOpen ? "scaleX(1)" : "scaleX(0)",
-                            transformOrigin: "left",
-                            transition: "transform 0.3s cubic-bezier(0.22,1,0.36,1)",
-                          }}
-                        />
-                      </button>
-                    ) : (
-                      <Link
-                        href={item.href}
-                        onMouseEnter={() => setOpenPanel(null)}
-                        style={{
-                          display: "inline-block",
-                          padding: "1.25rem 0",
-                          fontFamily: "var(--font-sans)",
-                          fontSize: "0.8125rem",
-                          fontWeight: 500,
-                          letterSpacing: "0.04em",
-                          textTransform: "uppercase",
-                          color: active ? "var(--color-navy)" : "var(--color-ink-soft)",
-                          textDecoration: "none",
-                          transition: "color 0.2s",
-                        }}
-                      >
-                        {item.label}
-                      </Link>
-                    )}
-                  </li>
-                );
-              })}
-            </ul>
-          </nav>
-
-          <div style={{ display: "flex", alignItems: "center", gap: "1.25rem" }}>
-            <a
-              href={`tel:${BUSINESS.phone}`}
-              className="tabular"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "0.375rem",
-                fontFamily: "var(--font-mono)",
-                fontSize: "0.75rem",
-                letterSpacing: "0.06em",
-                color: "var(--color-ink-soft)",
-                textDecoration: "none",
-              }}
-            >
-              <Phone size={12} /> {BUSINESS.phone}
-            </a>
-            <Link
-              href="/consultation"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                background: "var(--color-navy)",
-                color: "#fff",
-                padding: "0.625rem 1.375rem",
-                fontSize: "0.8125rem",
-                fontWeight: 600,
-                letterSpacing: "0.04em",
-                textDecoration: "none",
-                textTransform: "uppercase",
-                transition: "background 0.2s",
-              }}
-              onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.background = "var(--color-navy-dark)")}
-              onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.background = "var(--color-navy)")}
-            >
-              Free Consultation
-            </Link>
+            <div style={{ display: "flex", alignItems: "center", gap: "1.5rem" }}>
+              <span style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem" }}>
+                <MapPin size={12} /> Palm City, FL · Serving All 50 States
+              </span>
+              <span
+                style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem", opacity: 0.85 }}
+              >
+                <Clock size={12} /> Mon–Fri 8am–5pm ET
+              </span>
+            </div>
+            <div style={{ display: "flex", alignItems: "center", gap: "1.75rem" }}>
+              <Link
+                href="/consultation"
+                style={{ color: "rgba(255,255,255,0.92)", textDecoration: "none" }}
+              >
+                Financing Available
+              </Link>
+              <Link
+                href="/warranty"
+                style={{ color: "rgba(255,255,255,0.92)", textDecoration: "none" }}
+              >
+                Warranty Support
+              </Link>
+              <Link
+                href="/about/doctors"
+                style={{ color: "rgba(255,255,255,0.92)", textDecoration: "none" }}
+              >
+                Doctor-Recommended
+              </Link>
+            </div>
           </div>
         </div>
 
-        <AnimatePresence>
-          {openPanel && NAV.find((i) => i.label === openPanel)?.panel && (
-            <motion.div
-              key={openPanel}
-              initial={{ opacity: 0, y: -8 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -8 }}
-              transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
-              onMouseEnter={() => setOpenPanel(openPanel)}
-              onMouseLeave={() => setOpenPanel(null)}
-              style={{
-                position: "absolute",
-                left: 0,
-                right: 0,
-                top: "100%",
-                background: "#fff",
-                borderTop: "1px solid var(--color-border-soft)",
-                borderBottom: "1px solid var(--color-border-soft)",
-              }}
+        {/* Row 2: Main nav */}
+        <div
+          style={{
+            borderBottom: "1px solid var(--color-border-soft)",
+            background: "#fff",
+          }}
+        >
+          <div
+            className="max-content"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "2rem",
+              height: 80,
+            }}
+          >
+            <Link
+              href="/"
+              aria-label="pH Prescription home"
+              style={{ display: "inline-flex", alignItems: "center", flexShrink: 0, textDecoration: "none" }}
             >
-              <div className="max-content" style={{ padding: "3rem 1.5rem" }}>
-                {(() => {
-                  const panel = NAV.find((i) => i.label === openPanel)?.panel;
-                  if (!panel) return null;
+              <Image
+                src="/logo.png"
+                alt="pH Prescription — Water Health & Wellness"
+                width={180}
+                height={64}
+                priority
+                style={{ height: 56, width: "auto", display: "block" }}
+              />
+            </Link>
+
+            <nav style={{ flex: 1, minWidth: 0, overflow: "hidden" }}>
+              <ul
+                style={{ display: "flex", alignItems: "center", gap: "1.5rem", listStyle: "none", margin: 0, padding: 0, justifyContent: "center" }}
+                onMouseLeave={() => setOpenPanel(null)}
+              >
+                {NAV.map((item) => {
+                  const active = openPanel === item.label || pathname.startsWith(item.href);
+                  const isPanelOpen = openPanel === item.label;
+                  const commonStyle: React.CSSProperties = {
+                    background: "transparent",
+                    border: "none",
+                    padding: "1.5rem 0",
+                    cursor: "pointer",
+                    fontFamily: "var(--font-sans)",
+                    fontSize: "0.8125rem",
+                    fontWeight: 600,
+                    letterSpacing: "0.05em",
+                    textTransform: "uppercase",
+                    color: active ? "var(--color-navy)" : "var(--color-ink)",
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "0.375rem",
+                    transition: "color 0.2s",
+                    position: "relative",
+                    textDecoration: "none",
+                    whiteSpace: "nowrap",
+                  };
                   return (
-                    <div style={{ display: "grid", gridTemplateColumns: "1fr 3fr", gap: "4rem" }}>
-                      <div>
-                        <span className="eyebrow" style={{ color: "var(--color-navy)" }}>{panel.eyebrow}</span>
-                        <h3
+                    <li key={item.label} style={{ position: "relative" }}>
+                      {item.panel ? (
+                        <button
+                          type="button"
+                          onMouseEnter={() => setOpenPanel(item.label)}
+                          onFocus={() => setOpenPanel(item.label)}
+                          onClick={() => setOpenPanel((p) => (p === item.label ? null : item.label))}
+                          style={commonStyle}
+                        >
+                          <span>{item.label}</span>
+                          <ChevronDown
+                            size={11}
+                            style={{
+                              transition: "transform 0.3s",
+                              transform: isPanelOpen ? "rotate(180deg)" : "rotate(0deg)",
+                            }}
+                          />
+                          <span
+                            style={{
+                              position: "absolute",
+                              left: 0,
+                              right: 0,
+                              bottom: "-1px",
+                              height: "2px",
+                              background: "var(--color-navy)",
+                              transform: isPanelOpen ? "scaleX(1)" : "scaleX(0)",
+                              transformOrigin: "left",
+                              transition: "transform 0.3s cubic-bezier(0.22,1,0.36,1)",
+                            }}
+                          />
+                        </button>
+                      ) : (
+                        <Link
+                          href={item.href}
+                          onMouseEnter={() => setOpenPanel(null)}
+                          style={commonStyle}
+                        >
+                          {item.label}
+                        </Link>
+                      )}
+                    </li>
+                  );
+                })}
+              </ul>
+            </nav>
+
+            <div style={{ display: "flex", alignItems: "center", gap: "1.25rem", flexShrink: 0 }}>
+              <a
+                href={`tel:${BUSINESS.phone}`}
+                className="tabular"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "0.5rem",
+                  fontFamily: "var(--font-sans)",
+                  fontSize: "1.0625rem",
+                  fontWeight: 700,
+                  color: "var(--color-navy)",
+                  textDecoration: "none",
+                  whiteSpace: "nowrap",
+                }}
+              >
+                <Phone size={16} strokeWidth={2.5} /> {BUSINESS.phone}
+              </a>
+              <Link
+                href="/consultation"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  background: "var(--color-navy)",
+                  color: "#fff",
+                  padding: "0.875rem 1.5rem",
+                  fontSize: "0.8125rem",
+                  fontWeight: 700,
+                  letterSpacing: "0.05em",
+                  textDecoration: "none",
+                  textTransform: "uppercase",
+                  transition: "background 0.2s",
+                  whiteSpace: "nowrap",
+                  minWidth: 190,
+                }}
+                onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.background = "var(--color-navy-dark)")}
+                onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.background = "var(--color-navy)")}
+              >
+                Free Consultation
+              </Link>
+            </div>
+          </div>
+
+          <AnimatePresence>
+            {openPanel && NAV.find((i) => i.label === openPanel)?.panel && (
+              <motion.div
+                key={openPanel}
+                initial={{ opacity: 0, y: -8 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -8 }}
+                transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
+                onMouseEnter={() => setOpenPanel(openPanel)}
+                onMouseLeave={() => setOpenPanel(null)}
+                style={{
+                  position: "absolute",
+                  left: 0,
+                  right: 0,
+                  top: "100%",
+                  background: "#fff",
+                  borderTop: "1px solid var(--color-border-soft)",
+                  borderBottom: "1px solid var(--color-border-soft)",
+                  boxShadow: "0 12px 24px rgba(0,0,0,0.06)",
+                }}
+              >
+                <div className="max-content" style={{ padding: "3rem 1.5rem" }}>
+                  {(() => {
+                    const panel = NAV.find((i) => i.label === openPanel)?.panel;
+                    if (!panel) return null;
+                    return (
+                      <div style={{ display: "grid", gridTemplateColumns: "1fr 3fr", gap: "4rem" }}>
+                        <div>
+                          <span className="eyebrow" style={{ color: "var(--color-navy)" }}>{panel.eyebrow}</span>
+                          <h3
+                            style={{
+                              marginTop: "1.25rem",
+                              fontFamily: "var(--font-display)",
+                              fontWeight: 400,
+                              fontSize: "1.75rem",
+                              lineHeight: 1.15,
+                              letterSpacing: "-0.02em",
+                              color: "var(--color-ink)",
+                              maxWidth: "18ch",
+                            }}
+                          >
+                            {panel.headline}
+                          </h3>
+                        </div>
+                        <ul
                           style={{
-                            marginTop: "1.25rem",
-                            fontFamily: "var(--font-display)",
-                            fontWeight: 400,
-                            fontSize: "1.75rem",
-                            lineHeight: 1.15,
-                            letterSpacing: "-0.02em",
-                            color: "var(--color-ink)",
-                            maxWidth: "18ch",
+                            display: "grid",
+                            gridTemplateColumns: "repeat(2, 1fr)",
+                            columnGap: "3rem",
+                            rowGap: "2rem",
+                            listStyle: "none",
+                            margin: 0,
+                            padding: 0,
                           }}
                         >
-                          {panel.headline}
-                        </h3>
+                          {panel.items.map((it) => (
+                            <li key={it.href}>
+                              <Link
+                                href={it.href}
+                                onClick={() => setOpenPanel(null)}
+                                style={{ display: "block", textDecoration: "none" }}
+                              >
+                                <span
+                                  style={{
+                                    display: "block",
+                                    fontFamily: "var(--font-mono)",
+                                    fontSize: "0.65rem",
+                                    letterSpacing: "0.18em",
+                                    textTransform: "uppercase",
+                                    color: "var(--color-ink-mute)",
+                                    marginBottom: "0.5rem",
+                                  }}
+                                >
+                                  {it.description}
+                                </span>
+                                <span
+                                  style={{
+                                    display: "block",
+                                    fontFamily: "var(--font-display)",
+                                    fontWeight: 400,
+                                    fontSize: "1.375rem",
+                                    lineHeight: 1.2,
+                                    letterSpacing: "-0.015em",
+                                    color: "var(--color-ink)",
+                                  }}
+                                >
+                                  {it.label}
+                                </span>
+                                <span
+                                  style={{
+                                    display: "inline-block",
+                                    marginTop: "0.5rem",
+                                    fontFamily: "var(--font-mono)",
+                                    fontSize: "0.7rem",
+                                    letterSpacing: "0.1em",
+                                    textTransform: "uppercase",
+                                    color: "var(--color-teal)",
+                                  }}
+                                >
+                                  Explore →
+                                </span>
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
                       </div>
-                      <ul
-                        style={{
-                          display: "grid",
-                          gridTemplateColumns: "repeat(2, 1fr)",
-                          columnGap: "3rem",
-                          rowGap: "2rem",
-                          listStyle: "none",
-                          margin: 0,
-                          padding: 0,
-                        }}
-                      >
-                        {panel.items.map((it) => (
-                          <li key={it.href}>
-                            <Link
-                              href={it.href}
-                              onClick={() => setOpenPanel(null)}
-                              style={{ display: "block", textDecoration: "none" }}
-                            >
-                              <span
-                                style={{
-                                  display: "block",
-                                  fontFamily: "var(--font-mono)",
-                                  fontSize: "0.65rem",
-                                  letterSpacing: "0.18em",
-                                  textTransform: "uppercase",
-                                  color: "var(--color-ink-mute)",
-                                  marginBottom: "0.5rem",
-                                }}
-                              >
-                                {it.description}
-                              </span>
-                              <span
-                                style={{
-                                  display: "block",
-                                  fontFamily: "var(--font-display)",
-                                  fontWeight: 400,
-                                  fontSize: "1.375rem",
-                                  lineHeight: 1.2,
-                                  letterSpacing: "-0.015em",
-                                  color: "var(--color-ink)",
-                                }}
-                              >
-                                {it.label}
-                              </span>
-                              <span
-                                style={{
-                                  display: "inline-block",
-                                  marginTop: "0.5rem",
-                                  fontFamily: "var(--font-mono)",
-                                  fontSize: "0.7rem",
-                                  letterSpacing: "0.1em",
-                                  textTransform: "uppercase",
-                                  color: "var(--color-teal)",
-                                }}
-                              >
-                                Explore →
-                              </span>
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  );
-                })()}
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+                    );
+                  })()}
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
       </div>
 
       {/* Mobile */}
@@ -408,13 +449,15 @@ export default function Header() {
         }}
       >
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0 1.25rem", height: "72px" }}>
-          <Link href="/" aria-label="PH Prescriptions home" style={{ textDecoration: "none", display: "flex", flexDirection: "column", lineHeight: 1.05 }}>
-            <span style={{ fontFamily: "var(--font-display)", color: "var(--color-navy)", fontSize: "1.15rem", fontWeight: 500, letterSpacing: "-0.02em" }}>
-              PH Prescriptions
-            </span>
-            <span style={{ color: "var(--color-teal)", fontFamily: "var(--font-mono)", fontSize: "0.55rem", letterSpacing: "0.2em", textTransform: "uppercase", marginTop: "2px" }}>
-              Water Health &amp; Wellness
-            </span>
+          <Link href="/" aria-label="pH Prescription home" style={{ display: "inline-flex", alignItems: "center", textDecoration: "none" }}>
+            <Image
+              src="/logo.png"
+              alt="pH Prescription"
+              width={150}
+              height={54}
+              priority
+              style={{ height: 46, width: "auto", display: "block" }}
+            />
           </Link>
           <div style={{ display: "flex", gap: "0.5rem" }}>
             <a
@@ -427,10 +470,10 @@ export default function Header() {
                 width: "44px",
                 height: "44px",
                 border: "1px solid var(--color-border-strong)",
-                color: "var(--color-ink)",
+                color: "var(--color-navy)",
               }}
             >
-              <Phone size={16} />
+              <Phone size={16} strokeWidth={2.5} />
             </a>
             <button
               onClick={() => setMobileOpen(true)}
@@ -549,11 +592,10 @@ export default function Header() {
                   className="tabular"
                   style={{
                     textAlign: "center",
-                    fontFamily: "var(--font-mono)",
-                    fontSize: "0.75rem",
-                    letterSpacing: "0.12em",
-                    textTransform: "uppercase",
-                    color: "var(--color-ink-soft)",
+                    fontFamily: "var(--font-sans)",
+                    fontSize: "0.9rem",
+                    fontWeight: 700,
+                    color: "var(--color-navy)",
                     textDecoration: "none",
                     padding: "0.5rem",
                   }}

@@ -54,11 +54,11 @@ function Hero() {
         overflow: "hidden",
         background: "#3B2466",
         color: "#fff",
-        minHeight: "calc(100svh - 72px)",
+        minHeight: "calc(100svh - 116px)",
         display: "flex",
         flexDirection: "column",
-        marginTop: "-72px",
-        paddingTop: "72px",
+        marginTop: "-116px",
+        paddingTop: "116px",
       }}
     >
       <motion.video
@@ -143,13 +143,13 @@ function Hero() {
         <div style={{ position: "relative", flex: 1, display: "flex", alignItems: "center", padding: "clamp(2.5rem, 6vw, 4rem) 0" }}>
           <h1
             style={{
-              fontFamily: "var(--font-display)",
-              fontWeight: 400,
+              fontFamily: "var(--font-sans)",
+              fontWeight: 800,
               color: "#fff",
-              fontSize: "clamp(2.5rem, 10vw, 7rem)",
-              lineHeight: 0.95,
-              letterSpacing: "-0.04em",
-              maxWidth: "16ch",
+              fontSize: "clamp(2.5rem, 9vw, 6.25rem)",
+              lineHeight: 1.0,
+              letterSpacing: "-0.03em",
+              maxWidth: "18ch",
             }}
           >
             <motion.span
@@ -164,7 +164,6 @@ function Hero() {
               initial={reduce ? false : { opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 0.28, ease: [0.22, 1, 0.36, 1] }}
-              className="italic-accent"
               style={{ display: "block", color: "#B9E3EF" }}
             >
               for your health.
