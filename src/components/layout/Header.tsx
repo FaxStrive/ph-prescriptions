@@ -47,6 +47,19 @@ const NAV: NavItem[] = [
   { label: "Aquapellis", href: "/aquapellis" },
   { label: "Technology", href: "/technology" },
   {
+    label: "Solutions",
+    href: "/solutions",
+    panel: {
+      eyebrow: "Specialty Applications",
+      headline: "Precision water for every environment.",
+      items: [
+        { label: "Pool & Marine / RV", href: "/solutions/pool-marine", description: "Pools, boats & rec vehicles" },
+        { label: "Medical", href: "/solutions/medical", description: "Dialysis, dental & sterile prep" },
+        { label: "Restaurant & Hospitality", href: "/solutions/restaurant-hospitality", description: "Restaurants, resorts & spas" },
+      ],
+    },
+  },
+  {
     label: "About",
     href: "/about",
     panel: {
