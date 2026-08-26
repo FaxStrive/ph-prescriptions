@@ -81,6 +81,8 @@ const NAV: NavItem[] = [
       headline: "The library behind the systems.",
       items: [
         { label: "All Resources", href: "/resources", description: "Guides & articles" },
+        { label: "Blog", href: "/blog", description: "Water health articles" },
+        { label: "H2O: Health 2 Overcome", href: "/h2o-health", description: "Leo's memoir and story" },
         { label: "FAQ", href: "/faq", description: "Answers to common questions" },
         { label: "The H2O Book", href: "/book", description: "Leo's water-health manual" },
         { label: "Nutraceuticals", href: "/nutraceuticals", description: "Supplement line" },
