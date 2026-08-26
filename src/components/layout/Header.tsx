@@ -104,7 +104,7 @@ export default function Header() {
     <>
       {/* Desktop */}
       <div
-        className="hidden lg:block"
+        className="hidden xl:block"
         style={{
           position: "fixed",
           top: 0,
@@ -437,7 +437,7 @@ export default function Header() {
 
       {/* Mobile */}
       <header
-        className="lg:hidden"
+        className="xl:hidden"
         style={{
           position: "fixed",
           top: 0,
@@ -503,7 +503,7 @@ export default function Header() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="lg:hidden"
+              className="xl:hidden"
               style={{ position: "fixed", inset: 0, background: "rgba(59,36,102,0.6)", zIndex: 70 }}
               onClick={() => setMobileOpen(false)}
             />
@@ -512,7 +512,7 @@ export default function Header() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 30, stiffness: 280 }}
-              className="lg:hidden"
+              className="xl:hidden"
               style={{
                 position: "fixed",
                 top: 0,
