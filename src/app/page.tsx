@@ -5,6 +5,8 @@ import Link from "next/link";
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { Shield, Award, Droplets, Phone, CheckCircle2, Star, ArrowUpRight, ArrowRight } from "lucide-react";
 import { BUSINESS, PRODUCTS, DOCTORS } from "@/lib/business";
+import { SystemBreakdown } from "@/components/breakdown/SystemBreakdown";
+import { ro1100Config } from "@/lib/ro1100Config";
 
 const STATS = [
   { value: "40+", label: "Years Experience" },
@@ -953,6 +955,7 @@ export default function HomePage() {
       <Products />
       <VideoDivider />
       <Doctors />
+      <SystemBreakdown config={ro1100Config} />
       <Testimonials />
       <CTABand />
     </>
