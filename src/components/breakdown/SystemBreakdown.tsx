@@ -36,6 +36,8 @@ export function SystemBreakdown({ config }: SystemBreakdownProps) {
   const N = steps.length;
 
   const sectionRef = useRef<HTMLDivElement>(null);
+  const stageRef = useRef<HTMLDivElement>(null);
+  const reduceMotionRef = useRef(false);
   const rafRef = useRef<number>(0);
 
   // Refs track current values without triggering renders
@@ -60,6 +62,12 @@ export function SystemBreakdown({ config }: SystemBreakdownProps) {
 
       const raw = (window.scrollY - sectionTop) / (sectionHeight - vh);
       const fraction = clamp(raw, 0, 1);
+
+      // Slow zoom across the whole chapter run so the footage breathes
+      // instead of sitting in a static box. Skipped under reduced motion.
+      if (stageRef.current && !reduceMotionRef.current) {
+        stageRef.current.style.transform = `scale(${(1.08 + 0.14 * fraction).toFixed(4)})`;
+      }
 
       const stepProgress = fraction * N;
       const newStepIdx = clamp(Math.floor(stepProgress), 0, N - 1);
@@ -96,6 +104,9 @@ export function SystemBreakdown({ config }: SystemBreakdownProps) {
   }, [N, steps]);
 
   useEffect(() => {
+    reduceMotionRef.current = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
     return () => {
@@ -126,7 +137,25 @@ export function SystemBreakdown({ config }: SystemBreakdownProps) {
       >
         {/* ── Frame canvas ── */}
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="relative w-full h-full max-w-3xl mx-auto">
+          <div
+            ref={stageRef}
+            className="relative mx-auto"
+            style={{
+              // Stage matches the footage ratio exactly (frames are 1544x864),
+              // so the edge feather below always lands on the frame's own
+              // borders regardless of viewport shape. Width is capped so the
+              // box never exceeds the 100vh sticky viewport.
+              aspectRatio: "1544 / 864",
+              width: "min(100%, 175vh)",
+              transform: "scale(1.08)",
+              maskImage:
+                "linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%), linear-gradient(to bottom, transparent 0%, black 9%, black 78%, transparent 96%)",
+              WebkitMaskImage:
+                "linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%), linear-gradient(to bottom, transparent 0%, black 9%, black 78%, transparent 96%)",
+              maskComposite: "intersect",
+              WebkitMaskComposite: "source-in",
+            }}
+          >
             <FootageScrubber
               stepId={currentStep.id}
               frameCount={currentStep.frameCount}
