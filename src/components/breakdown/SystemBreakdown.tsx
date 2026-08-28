@@ -4,7 +4,7 @@
  * SystemBreakdown
  *
  * Config-driven, scroll-driven frame-scrubbing section for the pH-RO-1100.
- * Ported from District Water bottles breakdown — adapted for ro1100Config.
+ * Ported from District Water bottles breakdown - adapted for ro1100Config.
  *
  * Scroll architecture:
  *   section height = steps.length * 200vh
@@ -14,7 +14,7 @@
  *   within a step, fraction maps to frame 0..(frameCount-1)
  *
  * Content overlay:
- *   "contentless" steps show no card —
+ *   "contentless" steps show no card -
  *   the previous content step's card remains visible during the transition.
  *   A CSS key change on the card div re-triggers the rise animation.
  */

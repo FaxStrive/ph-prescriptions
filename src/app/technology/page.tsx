@@ -94,7 +94,7 @@ const TECH_FAQS = [
   },
   {
     q: "What is molecular hydrogen and why does it matter?",
-    a: "Molecular hydrogen (H2) is the smallest molecule in existence, small enough to cross cell membranes and enter mitochondria directly. It is a selective antioxidant: it neutralizes the most damaging free radicals while leaving beneficial oxidative signals the body uses for normal signaling. Over 3,000 research and scientific papers have been published on molecular hydrogen in the past decade (source: Aquapellis Molecular Hydrogen Brochure, https://phprescription.com/wp-content/uploads/2026/01/Aquapellis-Shower-System-Brochure-Molecular-Hydrogen-Insert-DEC25-WEB.pdf).",
+    a: "Molecular hydrogen (H2) is the smallest molecule in existence, small enough to cross cell membranes and enter mitochondria directly. It is a selective antioxidant: it neutralizes the most damaging free radicals while leaving beneficial oxidative signals the body uses for normal signaling. Over 3,000 research and scientific papers have been published on molecular hydrogen in the past decade (source: Aquapellis Molecular Hydrogen Brochure, /docs/aquapellis-molecular-hydrogen-brochure.pdf).",
   },
   {
     q: "What is ORP and why is negative ORP good?",
@@ -481,7 +481,7 @@ export default function TechnologyPage() {
               the past decade. Over 3,000 scientific papers have been published on molecular
               hydrogen (source: Aquapellis Molecular Hydrogen Brochure,{" "}
               <a
-                href="https://phprescription.com/wp-content/uploads/2026/01/Aquapellis-Shower-System-Brochure-Molecular-Hydrogen-Insert-DEC25-WEB.pdf"
+                href="/docs/aquapellis-molecular-hydrogen-brochure.pdf"
                 style={{ color: "var(--color-teal-light)", textDecoration: "underline" }}
                 target="_blank"
                 rel="noopener noreferrer"

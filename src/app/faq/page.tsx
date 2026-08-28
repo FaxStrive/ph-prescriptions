@@ -10,11 +10,11 @@ export const metadata: Metadata = {
 const FAQS = [
   {
     q: "What is the pH Prescription Point of Difference?",
-    a: "Founded in 2005, headquartered in Palm City, Florida, with a 10,000sf manufacturing warehouse, pH Prescription is the leader in finely filtered, re-mineralized and hydrogen-infused water through innovative natural-based science and technology. Our mission goes beyond simply removing toxins — our goal is to restore water to its purest, most natural state: clean, mineral-rich, energetically vibrant, and infused with molecular hydrogen. Our systems have earned the trust of wellness clinics, leading health experts, professional athletes, celebrities, and thousands of families around the world. For the team at pH Prescription, water is not just a profession — it is a purpose driven by truth, guided by the belief that everyone deserves not just clean, but healthified water: water that naturally heals.",
+    a: "Founded in 2005, headquartered in Palm City, Florida, with a 10,000sf manufacturing warehouse, pH Prescription is the leader in finely filtered, re-mineralized and hydrogen-infused water through innovative natural-based science and technology. Our mission goes beyond simply removing toxins - our goal is to restore water to its purest, most natural state: clean, mineral-rich, energetically vibrant, and infused with molecular hydrogen. Our systems have earned the trust of wellness clinics, leading health experts, professional athletes, celebrities, and thousands of families around the world. For the team at pH Prescription, water is not just a profession - it is a purpose driven by truth, guided by the belief that everyone deserves not just clean, but healthified water: water that naturally heals.",
   },
   {
     q: "Why 'Water Doctors Recommend'?",
-    a: "Over 20 years ago, a life-threatening illness propelled our founder Leo Szymborski on a journey to heal. Research from medical doctors, science, and leaders in healing fueled his exploration into how water could create the ideal environment for the body to heal itself. His eureka moment came when he learned that water can not only attain but retain an electrical charge and become an antioxidant itself. By consuming finely filtered water, Leo was able to wean himself off all medications and return to a healthier state. He developed finely filtered water systems and presented them at premier medical conventions. Leading medical doctors endorsed pH Prescription's systems, used them at home, in their offices and medical facilities, and began recommending them to patients. These endorsements are the critical point of difference — pH Prescription provides water that doctors recommend, hence the name: Water Doctors Recommend.",
+    a: "Over 20 years ago, a life-threatening illness propelled our founder Leo Szymborski on a journey to heal. Research from medical doctors, science, and leaders in healing fueled his exploration into how water could create the ideal environment for the body to heal itself. His eureka moment came when he learned that water can not only attain but retain an electrical charge and become an antioxidant itself. By consuming finely filtered water, Leo was able to wean himself off all medications and return to a healthier state. He developed finely filtered water systems and presented them at premier medical conventions. Leading medical doctors endorsed pH Prescription's systems, used them at home, in their offices and medical facilities, and began recommending them to patients. These endorsements are the critical point of difference - pH Prescription provides water that doctors recommend, hence the name: Water Doctors Recommend.",
   },
   {
     q: "What does the pH Prescription Alkaline Antioxidant Drinking Filter System do to water?",
@@ -22,7 +22,7 @@ const FAQS = [
   },
   {
     q: "How do the pH Prescription alkaline drinking systems compare to bottled water?",
-    a: "Alkaline water will help flush out acid wastes which can lead to disease. Bottled water cannot maintain alkalinity and will lose both its alkalinity and antioxidant potential over time. The antioxidant potential typically begins to drop about 24 hours after alkaline water is made. The water's alkalinity starts to drop off about a week after it was made. Alkaline water is a drink best consumed fresh — which is why a pH Prescription system at your home is far superior to any bottled alternative.",
+    a: "Alkaline water will help flush out acid wastes which can lead to disease. Bottled water cannot maintain alkalinity and will lose both its alkalinity and antioxidant potential over time. The antioxidant potential typically begins to drop about 24 hours after alkaline water is made. The water's alkalinity starts to drop off about a week after it was made. Alkaline water is a drink best consumed fresh - which is why a pH Prescription system at your home is far superior to any bottled alternative.",
   },
   {
     q: "What conditions may be helped by alkaline water?",
@@ -30,11 +30,11 @@ const FAQS = [
   },
   {
     q: "What is structured water?",
-    a: "The main component of structured water is energy, and that energy comes down to the water molecule itself. Structured water has lower surface tension and better hydrating properties than unstructured water. The geometric patterning breaks up large low-energy water molecule clusters into smaller high-energy clusters, which increases cellular hydration and cell-to-cell communication. Structured water is said to be 'living body water' — very similar to our body's own liquid. When we drink ordinary water, a great deal of energy is consumed to convert it into living body water. Structured water, since it is very close to our body's water, requires much less energy for the conversion and is more easily absorbed.",
+    a: "The main component of structured water is energy, and that energy comes down to the water molecule itself. Structured water has lower surface tension and better hydrating properties than unstructured water. The geometric patterning breaks up large low-energy water molecule clusters into smaller high-energy clusters, which increases cellular hydration and cell-to-cell communication. Structured water is said to be 'living body water' - very similar to our body's own liquid. When we drink ordinary water, a great deal of energy is consumed to convert it into living body water. Structured water, since it is very close to our body's water, requires much less energy for the conversion and is more easily absorbed.",
   },
   {
     q: "What effect does pH Prescription's alkaline filters have on water clusters?",
-    a: "The smaller the molecule cluster, the better the water. Structured water has the lowest molecule structure of any water on earth. The lower the cluster of water molecules, the easier the water can be absorbed into the body without loss of energy. This allows you to rehydrate more thoroughly — the water is more permeable, allowing it to be absorbed into the body and stimulate the immune system.",
+    a: "The smaller the molecule cluster, the better the water. Structured water has the lowest molecule structure of any water on earth. The lower the cluster of water molecules, the easier the water can be absorbed into the body without loss of energy. This allows you to rehydrate more thoroughly - the water is more permeable, allowing it to be absorbed into the body and stimulate the immune system.",
   },
   {
     q: "What is the science behind water acting as an antioxidant?",
@@ -46,15 +46,15 @@ const FAQS = [
   },
   {
     q: "Should a water softener be used with a pH Prescription Total Home system?",
-    a: "Water softeners may be used if needed and will not harm the pH Prescription Total Home water systems or our drinking systems. If you use a water softener, we recommend potassium chloride — if it is available in your area — instead of salt, because it is much healthier for drinking and has a better effect on your skin and hair when bathing.",
+    a: "Water softeners may be used if needed and will not harm the pH Prescription Total Home water systems or our drinking systems. If you use a water softener, we recommend potassium chloride - if it is available in your area - instead of salt, because it is much healthier for drinking and has a better effect on your skin and hair when bathing.",
   },
   {
     q: "What should I expect from my pH Prescription RO (Reverse Osmosis) drinking system (pH-RO-1100)?",
-    a: "The negative ion media inside the alkaline filter, when new, produces extra active hydrogen while processing water. Initially, it may make the water seem cloudy — this is normal. The cloudiness is actually hydrogen gas bubbles. The visibility of the gas bubbles will slow within a week or two. A system that is working properly will always have a small degree of gas bubbles visible. Reverse osmosis can turn ocean water into drinking water — water is forced by pressure through microscopic pores in a filtering membrane, so small that only incredibly cleansed water can pass through after salt, minerals, sediment, and other unwanted elements are filter-flushed away naturally.",
+    a: "The negative ion media inside the alkaline filter, when new, produces extra active hydrogen while processing water. Initially, it may make the water seem cloudy - this is normal. The cloudiness is actually hydrogen gas bubbles. The visibility of the gas bubbles will slow within a week or two. A system that is working properly will always have a small degree of gas bubbles visible. Reverse osmosis can turn ocean water into drinking water - water is forced by pressure through microscopic pores in a filtering membrane, so small that only incredibly cleansed water can pass through after salt, minerals, sediment, and other unwanted elements are filter-flushed away naturally.",
   },
   {
     q: "Why is the water from the pH Prescription pH-RO-1100 drinking system cloudy?",
-    a: "This is a natural process for the filter to adjust and is harmless to use or drink. If you look closely into the water, you will see air bubbles — actually active hydrogen. The cloudiness is caused by hydrogen gas bubbles from the negative ion media and is perfectly normal. The cloudiness typically reduces within a week or two as the system settles in.",
+    a: "This is a natural process for the filter to adjust and is harmless to use or drink. If you look closely into the water, you will see air bubbles - actually active hydrogen. The cloudiness is caused by hydrogen gas bubbles from the negative ion media and is perfectly normal. The cloudiness typically reduces within a week or two as the system settles in.",
   },
   {
     q: "Why should I add UV Sterilization to my pH Prescription water system?",
@@ -62,7 +62,7 @@ const FAQS = [
   },
   {
     q: "Why is the pH-WH-3500 Combo your most popular system?",
-    a: "This system reduces up to 99% of chlorine, chloramines, fluorides, pharmaceuticals, heavy metals and more. Combined with our most Doctor Recommended drinking system pH-RO-1100 Reverse Osmosis Re-mineralizing Water System, it restructures the water, increases oxygen, and raises pH to alkaline. The combination provides maximum water filtration — finely filtered working water and refreshing alkaline drinking water — ensuring all your water sources taste clean and provide finely filtered water for the home, appliances, and refreshing energized alkaline water for drinking.",
+    a: "This system reduces up to 99% of chlorine, chloramines, fluorides, pharmaceuticals, heavy metals and more. Combined with our most Doctor Recommended drinking system pH-RO-1100 Reverse Osmosis Re-mineralizing Water System, it restructures the water, increases oxygen, and raises pH to alkaline. The combination provides maximum water filtration - finely filtered working water and refreshing alkaline drinking water - ensuring all your water sources taste clean and provide finely filtered water for the home, appliances, and refreshing energized alkaline water for drinking.",
   },
   {
     q: "Why is your pH-RO-1100 Reverse Osmosis Water System the most Doctor Recommended System?",
@@ -74,7 +74,7 @@ const FAQS = [
   },
   {
     q: "What is high-capacity fluoride and chlorine reducing carbon?",
-    a: "It is Brimac Carbon — a high calcium, Kosher Certified, 100% organic carbon made of 80% phosphate of calcium, 10% carbon, and 10% calcium carbonate. It lasts a long time, has no toxicity, and leaves behind beneficial minerals. It can reduce chlorine, heavy metals, and radioactive isotopes on top of fluoride. Brimac carbon is more effective than coconut carbon because it is hundreds of times more porous and contains calcium which attracts fluoride. Two-stage systems reduce about 50% of fluoride, three-stage about 75%, and four-stage Carbon/KDF systems reduce up to 99% based on 1.5ppm fluoride.",
+    a: "It is Brimac Carbon - a high calcium, Kosher Certified, 100% organic carbon made of 80% phosphate of calcium, 10% carbon, and 10% calcium carbonate. It lasts a long time, has no toxicity, and leaves behind beneficial minerals. It can reduce chlorine, heavy metals, and radioactive isotopes on top of fluoride. Brimac carbon is more effective than coconut carbon because it is hundreds of times more porous and contains calcium which attracts fluoride. Two-stage systems reduce about 50% of fluoride, three-stage about 75%, and four-stage Carbon/KDF systems reduce up to 99% based on 1.5ppm fluoride.",
   },
   {
     q: "How long does Brimac Carbon last?",
@@ -86,7 +86,7 @@ const FAQS = [
   },
   {
     q: "How long does the Total Home mixed multi-media proprietary filter system last?",
-    a: "Our Total Home systems can filter up to about one million gallons. This may vary depending on your contaminant levels, but is accurate for normal use for an average family of four. Most systems like this last about 5 years or 1,000,000 gallons, whichever comes first. The pH Prescription control valve has a built-in meter to keep track of gallons used — like an odometer on your car. This way you will know when you need to replace the media inside the tanks. We also offer a pH Prescription Replenishment Program for savings on regular filter replenishment.",
+    a: "Our Total Home systems can filter up to about one million gallons. This may vary depending on your contaminant levels, but is accurate for normal use for an average family of four. Most systems like this last about 5 years or 1,000,000 gallons, whichever comes first. The pH Prescription control valve has a built-in meter to keep track of gallons used - like an odometer on your car. This way you will know when you need to replace the media inside the tanks. We also offer a pH Prescription Replenishment Program for savings on regular filter replenishment.",
   },
   {
     q: "What is Coconut Activated Carbon?",
@@ -102,11 +102,11 @@ const FAQS = [
   },
   {
     q: "What are VOCs?",
-    a: "Volatile Organic Compounds (VOCs) include 32 chemical contaminants listed by the EPA — such as benzene, dichloroethylene, carbon tetrachloride, dioxin, styrene, toluene, chloroform, and vinyl chloride. Total Trihalomethanes alone are suspected cancer causers present in virtually all chlorinated tap water. The EPA also lists 14 pesticides and 12 herbicides where activated carbon is the only recommended treatment. When people say water filter, they most frequently mean a carbon filter, because since the Egyptians discovered that storing water in charcoal made it stay fresher and taste better, carbon has been a standard feature in water treatment.",
+    a: "Volatile Organic Compounds (VOCs) include 32 chemical contaminants listed by the EPA - such as benzene, dichloroethylene, carbon tetrachloride, dioxin, styrene, toluene, chloroform, and vinyl chloride. Total Trihalomethanes alone are suspected cancer causers present in virtually all chlorinated tap water. The EPA also lists 14 pesticides and 12 herbicides where activated carbon is the only recommended treatment. When people say water filter, they most frequently mean a carbon filter, because since the Egyptians discovered that storing water in charcoal made it stay fresher and taste better, carbon has been a standard feature in water treatment.",
   },
   {
     q: "What are PFOS?",
-    a: "The EPA has set a lifetime health advisory level for PFAS in drinking water: the level is 70 parts per trillion (ppt) for PFOA and PFOS combined. This is the level below which no harm is expected from these chemicals. There are other PFAS compounds that do not have advisory levels. Most in-home water filters cannot effectively reduce PFAS chemicals — however, pH Prescription's multi-media Total Home and drinking systems are highly effective at reducing PFAS. If you have water test results, we would be happy to review them and build a custom system for your specific needs.",
+    a: "The EPA has set a lifetime health advisory level for PFAS in drinking water: the level is 70 parts per trillion (ppt) for PFOA and PFOS combined. This is the level below which no harm is expected from these chemicals. There are other PFAS compounds that do not have advisory levels. Most in-home water filters cannot effectively reduce PFAS chemicals - however, pH Prescription's multi-media Total Home and drinking systems are highly effective at reducing PFAS. If you have water test results, we would be happy to review them and build a custom system for your specific needs.",
   },
   {
     q: "What should I do if my drinking water contains PFAS?",

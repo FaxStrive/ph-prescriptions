@@ -3,7 +3,7 @@ import { BUSINESS } from "@/lib/business";
 
 export const metadata: Metadata = {
   title: "Terms of Service | pH Prescription",
-  description: "pH Prescription terms of service — your agreement with us when using our website and purchasing our products.",
+  description: "pH Prescription terms of service - your agreement with us when using our website and purchasing our products.",
 };
 
 export default function TermsPage() {
@@ -67,7 +67,7 @@ export default function TermsPage() {
           },
           {
             heading: "9. Intellectual Property",
-            body: `All content on our website — including text, images, logos, and the QuadVortex trade name — is the property of pH Prescription or its licensors and is protected by applicable intellectual property laws. You may not use our content without written permission.`,
+            body: `All content on our website - including text, images, logos, and the QuadVortex trade name - is the property of pH Prescription or its licensors and is protected by applicable intellectual property laws. You may not use our content without written permission.`,
           },
           {
             heading: "10. Governing Law",

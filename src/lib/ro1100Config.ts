@@ -66,7 +66,7 @@ export const ro1100Config: BreakdownConfig = {
       frameCount: 64,
       label: "Membrane pH-RO 75 GPD",
       description:
-        "Reverse osmosis at a 1:1 waste-to-product ratio — the most efficient on the market.",
+        "Reverse osmosis at a 1:1 waste-to-product ratio - the most efficient on the market.",
       chips: ["Reverse Osmosis", "75 GPD", "1:1 Ratio", "Cartridge 4"],
     },
     {
@@ -90,7 +90,7 @@ export const ro1100Config: BreakdownConfig = {
       frameCount: 64,
       label: "Finely filtered, re-mineralized, hydrogen-infused",
       description:
-        "The pH-RO-1100 — doctor-recommended water for your home.",
+        "The pH-RO-1100 - doctor-recommended water for your home.",
       chips: ["pH-RO-1100", "6-Stage", "Doctor Recommended"],
     },
   ],

@@ -70,7 +70,7 @@ export default function ProductsPage() {
               maxWidth: "600px",
             }}
           >
-            46 systems, filters, and accessories — WQA Certified, Made in USA
+            46 systems, filters, and accessories - WQA Certified, Made in USA
           </p>
         </div>
       </section>
@@ -274,7 +274,7 @@ export default function ProductsPage() {
               marginBottom: "2rem",
             }}
           >
-            Our team will assess your water, your home, and your goals — and recommend exactly the right system. Free consultation, no pressure.
+            Our team will assess your water, your home, and your goals - and recommend exactly the right system. Free consultation, no pressure.
           </p>
           <Link
             href="/consultation"

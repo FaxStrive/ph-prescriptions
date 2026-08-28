@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const SECTIONS = [
   {
     title: "Restaurant & Hospitality",
-    desc: "Protect equipment, enhance taste, and give guests the purest water. From ice machines to espresso bars — pH Prescription has the commercial solution.",
+    desc: "Protect equipment, enhance taste, and give guests the purest water. From ice machines to espresso bars - pH Prescription has the commercial solution.",
     href: "/business/restaurant",
     from: "By consultation",
   },
@@ -23,7 +23,7 @@ const SECTIONS = [
   },
   {
     title: "Drinking Systems",
-    desc: "Under-counter and point-of-use commercial drinking systems — the same doctor-recommended technology, scaled for your business.",
+    desc: "Under-counter and point-of-use commercial drinking systems - the same doctor-recommended technology, scaled for your business.",
     href: "/business/drinking-systems",
     from: "By consultation",
   },
@@ -274,7 +274,7 @@ export default function BusinessPage() {
             {[
               {
                 title: "Free Water Analysis",
-                body: "We test your current water before recommending any system — no guesswork, no overselling.",
+                body: "We test your current water before recommending any system - no guesswork, no overselling.",
               },
               {
                 title: "Nationwide Service",
@@ -329,7 +329,7 @@ export default function BusinessPage() {
             Get a Free Business Water Analysis
           </h2>
           <p style={{ color: "rgba(27,58,107,0.7)", marginBottom: "1.5rem" }}>
-            Tell us your facility type and usage. We will recommend the right system at the right scale — and back it with a lifetime warranty.
+            Tell us your facility type and usage. We will recommend the right system at the right scale - and back it with a lifetime warranty.
           </p>
           <Link
             href="/consultation"

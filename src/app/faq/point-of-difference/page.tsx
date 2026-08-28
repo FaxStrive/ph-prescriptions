@@ -57,11 +57,11 @@ export default function PointOfDifferencePage() {
           <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
             {[
               {
-                heading: "QuadVortex Technology — Proprietary, Not Off-the-Shelf",
+                heading: "QuadVortex Technology - Proprietary, Not Off-the-Shelf",
                 body: "Standard water filters only remove contaminants. Every major competitor stops there. pH Prescription systems do four things: filter up to 99% of contaminants, restructure water molecules at the vortex stage, restore alkaline pH through mineral re-introduction, and infuse therapeutic concentrations of molecular hydrogen. No other consumer-available system does all four. The QuadVortex process is proprietary and is not available under any other brand.",
               },
               {
-                heading: "Non-Electric — No Power Required",
+                heading: "Non-Electric - No Power Required",
                 body: "Our systems require no electricity to operate. That means no operating cost, no EMF concern, no power-outage vulnerability, and simpler installation in almost any location. Most competitors rely on electric pumps, UV lights, or ionizers that fail when the power does.",
               },
               {
@@ -70,10 +70,10 @@ export default function PointOfDifferencePage() {
               },
               {
                 heading: "WQA Certified, Made in USA",
-                body: "Our systems are certified by the Water Quality Association — the independent body that sets the standard for the industry. They are manufactured in the United States, not overseas. Most filter brands sold online are made in China to price-competitive specifications. WQA certification means an independent lab verified the claims.",
+                body: "Our systems are certified by the Water Quality Association - the independent body that sets the standard for the industry. They are manufactured in the United States, not overseas. Most filter brands sold online are made in China to price-competitive specifications. WQA certification means an independent lab verified the claims.",
               },
               {
-                heading: "7+ Doctor Endorsements — Independent, Not Paid",
+                heading: "7+ Doctor Endorsements - Independent, Not Paid",
                 body: "The medical professionals who endorse pH Prescription are independent practitioners who evaluated our systems and concluded the science is sound. They are not paid spokespeople. They use our systems in their own practices and recommend them to patients.",
               },
               {
@@ -193,7 +193,7 @@ export default function PointOfDifferencePage() {
             ))}
           </div>
           <div style={{ marginTop: "2rem", textAlign: "center" }}>
-            <Link href="/about/doctors" style={{ color: "var(--color-teal)", textDecoration: "none", fontWeight: 500 }}>
+            <Link href="/experts" style={{ color: "var(--color-teal)", textDecoration: "none", fontWeight: 500 }}>
               View full doctor endorsements
             </Link>
           </div>

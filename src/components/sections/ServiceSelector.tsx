@@ -116,14 +116,13 @@ export default function ServiceSelector() {
               margin: "0 auto",
             }}
           >
-            pH Prescription serves every environment — from home to hospital.
+            pH Prescription serves every environment - from home to hospital.
           </p>
         </div>
 
         <div
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
           style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fill, minmax(240px, 1fr))",
             gap: "1px",
             background: "var(--color-border-soft)",
             border: "1px solid var(--color-border-soft)",

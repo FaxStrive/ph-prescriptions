@@ -15,7 +15,7 @@ const BENEFITS = [
   },
   {
     title: "Equipment Protection",
-    body: "Hard water and chlorine destroy commercial equipment. Our systems eliminate scale buildup in steamers, dishwashers, ice machines, and espresso equipment — extending their lifespan significantly.",
+    body: "Hard water and chlorine destroy commercial equipment. Our systems eliminate scale buildup in steamers, dishwashers, ice machines, and espresso equipment - extending their lifespan significantly.",
   },
   {
     title: "Guest Experience",

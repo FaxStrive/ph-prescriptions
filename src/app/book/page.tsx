@@ -197,8 +197,8 @@ export default function BookPage() {
             {/* Book cover */}
             <div style={{ flexShrink: 0 }}>
               <Image
-                src="https://phprescription.com/wp-content/uploads/2026/03/H2O-book-cover-top-seller-v2.jpg"
-                alt="H2O: Health 2 Overcome by Leo Szymborski — #1 Amazon Best Seller"
+                src="/products/H2O-book-cover-top-seller-v2.jpg"
+                alt="H2O: Health 2 Overcome by Leo Szymborski - #1 Amazon Best Seller"
                 width={180}
                 height={260}
                 unoptimized
@@ -546,7 +546,7 @@ export default function BookPage() {
           }}>
             <iframe
               src="https://www.youtube-nocookie.com/embed/GhoxueDIF6o"
-              title="H2O: Health 2 Overcome — Book Trailer"
+              title="H2O: Health 2 Overcome - Book Trailer"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               style={{

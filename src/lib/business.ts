@@ -1,4 +1,4 @@
-// TODO: Shopify — integrate Storefront API for live product/pricing data in future phase
+// TODO: Shopify - integrate Storefront API for live product/pricing data in future phase
 
 export const BUSINESS = {
   name: "pH Prescription",
@@ -35,6 +35,7 @@ export const PRODUCTS = [
     badge: "#1 Doctor Recommended",
     description: "Our flagship under-sink reverse osmosis drinking system. Multi-phase reverse osmosis with re-mineralization. Removes up to 99% of toxins, re-mineralizes, and infuses molecular hydrogen for antioxidant-rich drinking water.",
     slug: "ultimate-purified-drinking-system",
+    image: "/products/TW56095-600.jpg",
   },
   {
     name: "Finely Filtered Compact Drinking System",
@@ -43,6 +44,7 @@ export const PRODUCTS = [
     badge: "Most Popular",
     description: "Experience our best value in finely filtered water with antioxidant and energizing benefits in a compact yet powerful under-counter model that filters and mineralizes water, reducing up to 99% of chemicals like chlorine, chloramines, fluoride, heavy metals and many other toxins.",
     slug: "compact-drinking-system",
+    image: "/products/pHUC-700-full-size-600x600.jpg",
   },
   {
     name: "Total Home Premier",
@@ -51,6 +53,7 @@ export const PRODUCTS = [
     badge: "Whole Home",
     description: "Prevent unwanted toxins and impurities before they enter your home with our twin-tank high-capacity Total Home Multi-Phase Enhanced Finely Filtered Water System. This 2-Part System extends health and wellness for your family and keeps water lines to appliances clean.",
     slug: "total-home-system",
+    image: "/products/pH-WH-3500-CO-v2.jpg",
   },
   {
     name: "Total Home Grande High Capacity",
@@ -59,22 +62,25 @@ export const PRODUCTS = [
     badge: "High Capacity",
     description: "Recommended for homes with up to 7 bathrooms. Prevents toxins and impurities with 2 million gallon capability. Extend your family's health and wellness as well as the cleanliness of water lines to all your taps and appliances.",
     slug: "total-home-grande",
+    image: "/products/ph-WH-5500.jpg",
   },
   {
     name: "NEW Hydro-Clean Shower Filter",
     sku: "pH-SF-OH",
     price: "$81.00",
     badge: "Shower",
-    description: "Sleek lightweight design with powerful proprietary filtering media with Chlorigone™ — 100x more effective at removing Chlorine, Chloramines, lead, mercury, cadmium, aluminum and many other heavy metals. Fits most overhead showers and hand-held shower systems.",
+    description: "Sleek lightweight design with powerful proprietary filtering media with Chlorigone™ - 100x more effective at removing Chlorine, Chloramines, lead, mercury, cadmium, aluminum and many other heavy metals. Fits most overhead showers and hand-held shower systems.",
     slug: "hydro-clean-shower-filter",
+    image: "/products/hydro-filter-slide-v2.jpeg",
   },
   {
     name: "Total Business Paddle-Touch Hot/Cold",
     sku: "WC-PP-6",
-    price: "$2,613.60 – $3,484.80",
+    price: "$2,613.60 - $3,484.80",
     badge: "Commercial",
     description: "High-capacity hot/cold water cooler with paddle-touch dispensing for offices, restaurants, and facilities. 80 lbs, 14 x 14 x 48 in. Lease and finance options available.",
     slug: "business-water-cooler",
+    image: "/products/TW56030-600x900.jpg",
   },
 ] as const;
 
@@ -98,7 +104,7 @@ export const PRODUCTS_ALL: Product[] = [
     badge: "Drinking Systems",
     description: "Multi-phase reverse osmosis with re-mineralization. Removes up to 99% of toxins, restructures water, and infuses molecular hydrogen for antioxidant-rich drinking water.",
     category: "Drinking Systems",
-    image: "https://phprescription.com/wp-content/uploads/2020/12/TW56095-600.jpg",
+    image: "/products/TW56095-600.jpg",
     slug: "ultimate-purified-drinking-system",
   },
   {
@@ -108,7 +114,7 @@ export const PRODUCTS_ALL: Product[] = [
     badge: "Drinking Systems",
     description: "Best value in finely filtered water with antioxidant and energizing benefits. Compact under-counter model reduces up to 99% of chemicals like chlorine, chloramines, fluoride, heavy metals and other toxins.",
     category: "Drinking Systems",
-    image: "https://phprescription.com/wp-content/uploads/2020/12/pHUC-700-full-size-600x600.jpg",
+    image: "/products/pHUC-700-full-size-600x600.jpg",
     slug: "compact-drinking-system",
   },
   {
@@ -118,7 +124,7 @@ export const PRODUCTS_ALL: Product[] = [
     badge: "Drinking Systems",
     description: "Premium alkaline water filtration system with lead-free faucet. Multi-stage reverse osmosis with alkaline re-mineralization.",
     category: "Drinking Systems",
-    image: "https://phprescription.com/wp-content/uploads/2020/12/TW56095-600.jpg",
+    image: "/products/TW56095-600.jpg",
     slug: "alkaline-water-filtration",
   },
   {
@@ -128,7 +134,7 @@ export const PRODUCTS_ALL: Product[] = [
     badge: "Drinking Systems",
     description: "Medical-grade drinking water system engineered for clinical purity standards. Advanced multi-stage filtration for medical and high-purity applications.",
     category: "Drinking Systems",
-    image: "https://phprescription.com/wp-content/uploads/2021/01/water-square.jpg",
+    image: "/products/water-square.jpg",
     slug: "md-drinking-water",
   },
   {
@@ -136,9 +142,9 @@ export const PRODUCTS_ALL: Product[] = [
     sku: "UC-F-56",
     price: "$412.50",
     badge: "Drinking Systems",
-    description: "Replacement filter for the Doctor Recommended System — the only filter that simultaneously provides alkalinity, hydrogen and critical mineral replacement for optimum taste and quality.",
+    description: "Replacement filter for the Doctor Recommended System - the only filter that simultaneously provides alkalinity, hydrogen and critical mineral replacement for optimum taste and quality.",
     category: "Drinking Systems",
-    image: "https://phprescription.com/wp-content/uploads/2020/12/pH-UC-56-600x384.jpg",
+    image: "/products/pH-UC-56-600x384.jpg",
     slug: "ultimate-purified-restructured-drinking-system-filter",
   },
   {
@@ -146,9 +152,9 @@ export const PRODUCTS_ALL: Product[] = [
     sku: "UC-F-123",
     price: "$110.00",
     badge: "Drinking Systems",
-    description: "Replacement filter — tri-integrated cartridge with 5-micron sediment filtration, Granular Activated Carbon, and Carbon Block to maintain efficiency of your Ultimate Purified Multi-Phase Drinking System.",
+    description: "Replacement filter - tri-integrated cartridge with 5-micron sediment filtration, Granular Activated Carbon, and Carbon Block to maintain efficiency of your Ultimate Purified Multi-Phase Drinking System.",
     category: "Drinking Systems",
-    image: "https://phprescription.com/wp-content/uploads/2020/12/pHRO-1100-UC123-full-size-600x600.jpg",
+    image: "/products/pHRO-1100-UC123-full-size-600x600.jpg",
     slug: "ultimate-purified-multi-phase-drinking-system-filter",
   },
   // Total Home
@@ -159,7 +165,7 @@ export const PRODUCTS_ALL: Product[] = [
     badge: "Total Home",
     description: "Twin-tank high-capacity Total Home Multi-Phase Enhanced Finely Filtered Water System + Ultimate Purified Drinking System. Extends health and wellness for your family and keeps water lines clean.",
     category: "Total Home",
-    image: "https://phprescription.com/wp-content/uploads/2021/05/pH-WH-3500-CO-v2.jpg",
+    image: "/products/pH-WH-3500-CO-v2.jpg",
     slug: "total-home-premier",
   },
   {
@@ -169,7 +175,7 @@ export const PRODUCTS_ALL: Product[] = [
     badge: "Total Home",
     description: "Our premium whole-home package with enhanced features. Comprehensive whole-home water restructuring for every tap, every shower, every glass of water.",
     category: "Total Home",
-    image: "https://phprescription.com/wp-content/uploads/slider27/total-home-premier-plus-main-with-charger.png",
+    image: "/products/total-home-premier-plus-main-with-charger.png",
     slug: "total-home-premier-plus",
   },
   {
@@ -179,7 +185,7 @@ export const PRODUCTS_ALL: Product[] = [
     badge: "Total Home",
     description: "Drinking, cooking, bathing and daily care rituals become a wellness experience. Naturally reduces harmful chemicals while creating beneficial finely filtered spring quality water from every tap.",
     category: "Total Home",
-    image: "https://phprescription.com/wp-content/uploads/2020/12/pH-WH-3500-WMS-600x900.jpg",
+    image: "/products/pH-WH-3500-WMS-600x900.jpg",
     slug: "total-home-optimum-restructured-water-system",
   },
   {
@@ -189,7 +195,7 @@ export const PRODUCTS_ALL: Product[] = [
     badge: "Total Home",
     description: "Recommended for homes with up to 7 bathrooms. 2 million gallon capability. Extends health and wellness as well as cleanliness of water lines to all taps and appliances.",
     category: "Total Home",
-    image: "https://phprescription.com/wp-content/uploads/2020/12/ph-WH-5500.jpg",
+    image: "/products/ph-WH-5500.jpg",
     slug: "total-home-grande",
   },
   {
@@ -199,7 +205,7 @@ export const PRODUCTS_ALL: Product[] = [
     badge: "Total Home",
     description: "Innovative Environmental system. Provides micro-clustered/structured energized water with Fibonacci-designed quadruple vortex system using rare earth magnets. Recommended for use with all Total Home systems.",
     category: "Total Home",
-    image: "https://phprescription.com/wp-content/uploads/2020/12/pH-WMS-900-CO-tank-v2-600x600.jpg",
+    image: "/products/pH-WMS-900-CO-tank-v2-600x600.jpg",
     slug: "total-home-wms-quadvortex-system",
   },
   {
@@ -209,7 +215,7 @@ export const PRODUCTS_ALL: Product[] = [
     badge: "Total Home",
     description: "Fibonacci-designed with four vortices and twelve rare earth magnets. Paired with premium Total Home Toxin Reducer PLUS filtration system for finely filtered spring-quality water from every tap.",
     category: "Total Home",
-    image: "https://phprescription.com/wp-content/uploads/2020/12/pH-WMS-900-CO-v4-600x600.jpg",
+    image: "/products/pH-WMS-900-CO-v4-600x600.jpg",
     slug: "total-home-wms-quadvortex-plus",
   },
   {
@@ -219,7 +225,7 @@ export const PRODUCTS_ALL: Product[] = [
     badge: "Total Home",
     description: "Ideal for handling minerals like calcium, magnesium, manganese, iron and heavy metals. Filters up to 99% of chlorine, pesticides, herbicides, VOCs, THMs, PFAS/Forever Plastics through natural media blends.",
     category: "Total Home",
-    image: "https://phprescription.com/wp-content/uploads/2020/12/pH-wh-2700.jpg",
+    image: "/products/pH-wh-2700.jpg",
     slug: "total-home-water-treatment-system",
   },
   {
@@ -229,7 +235,7 @@ export const PRODUCTS_ALL: Product[] = [
     badge: "Total Home",
     description: "Reduces fluoride and filters up to 99% of chlorine, heavy metals, pesticides, herbicides, VOCs, THMs, PFAS/Forever Plastics through Brimac Carbon and KDF 55 media.",
     category: "Total Home",
-    image: "https://phprescription.com/wp-content/uploads/2020/12/pH-WH-2000-600x600.jpg",
+    image: "/products/pH-WH-2000-600x600.jpg",
     slug: "total-home-toxin-reducer-plus",
   },
   {
@@ -239,7 +245,7 @@ export const PRODUCTS_ALL: Product[] = [
     badge: "Total Home",
     description: "Reduces chlorine, volatile organic compounds and more. Multi-stage natural media filtration for comprehensive whole-home water treatment.",
     category: "Total Home",
-    image: "https://phprescription.com/wp-content/uploads/2020/12/pH-WH-2000-600x600.jpg",
+    image: "/products/pH-WH-2000-600x600.jpg",
     slug: "total-home-toxin-reducer-filters-vocs",
   },
   {
@@ -249,7 +255,7 @@ export const PRODUCTS_ALL: Product[] = [
     badge: "Total Home",
     description: "Double-duty system reduces fluoride and filters up to 99% of chlorine, chloramine, heavy metals, pesticides, herbicides, VOCs and THMs while handling hard minerals.",
     category: "Total Home",
-    image: "https://phprescription.com/wp-content/uploads/2022/03/pH-WH-4700-600x600.jpg",
+    image: "/products/pH-WH-4700-600x600.jpg",
     slug: "total-home-toxin-and-water-hardness-reduction-system",
   },
   {
@@ -259,7 +265,7 @@ export const PRODUCTS_ALL: Product[] = [
     badge: "Total Home",
     description: "Comprehensive whole-house filtration with QuadVortex technology. Quality water system for every tap in your home.",
     category: "Total Home",
-    image: "https://phprescription.com/wp-content/uploads/2021/05/pH-WH-3500-CO-v2.jpg",
+    image: "/products/pH-WH-3500-CO-v2.jpg",
     slug: "best-whole-house-water-filtration-system",
   },
   {
@@ -269,7 +275,7 @@ export const PRODUCTS_ALL: Product[] = [
     badge: "Total Home",
     description: "Powerful UV disinfection for rates up to 15 gallons per minute. Controls bacteria, viruses, E-coli, cysts, spores, Cryptosporidium and Giardia lamblia with long-lasting performance.",
     category: "Total Home",
-    image: "https://phprescription.com/wp-content/uploads/2025/02/pH-CWUV5-6-15C-product-img-600x600.png",
+    image: "/products/pH-CWUV5-6-15C-product-img-600x600.png",
     slug: "total-home-charger-uv-water-disinfection-system",
   },
   // UV & Disinfection
@@ -280,7 +286,7 @@ export const PRODUCTS_ALL: Product[] = [
     badge: "UV & Disinfection",
     description: "Disinfection and micro-organism protection to 0.5ppm including bacteria, E-coli, Cysts, Spores, Viruses, VOCs, THMs, chloramines with 9000 hours of use.",
     category: "UV & Disinfection",
-    image: "https://phprescription.com/wp-content/uploads/2020/12/pH-UV-370-full-size-600x600.jpg",
+    image: "/products/pH-UV-370-full-size-600x600.jpg",
     slug: "anti-microbial-filtration-with-uv-sterilization",
   },
   {
@@ -290,7 +296,7 @@ export const PRODUCTS_ALL: Product[] = [
     badge: "UV & Disinfection",
     description: "Developed to laboratory standard of eliminating micro-organisms. Applicable for multiple industries from medical to cosmetic to food to pharmaceutical and more.",
     category: "UV & Disinfection",
-    image: "https://phprescription.com/wp-content/uploads/2020/12/Polaris-UVA-1C-full-size-600x512.jpg",
+    image: "/products/Polaris-UVA-1C-full-size-600x512.jpg",
     slug: "polaris-disinfection-system",
   },
   {
@@ -300,7 +306,7 @@ export const PRODUCTS_ALL: Product[] = [
     badge: "UV & Disinfection",
     description: "Replacement quartz sleeve for Polaris Scientific UVA-1C ultraviolet sterilization system. 245mm, made for the GI1OPP 10W UV Lamp.",
     category: "UV & Disinfection",
-    image: "https://phprescription.com/wp-content/uploads/2023/05/polaris-uv-sleeve-replacement.jpg",
+    image: "/products/polaris-uv-sleeve-replacement.jpg",
     slug: "drinking-system-polaris-uv-quartz-sleeve-replacement",
   },
   {
@@ -310,7 +316,7 @@ export const PRODUCTS_ALL: Product[] = [
     badge: "UV & Disinfection",
     description: "Replacement transformer for the UVA Disinfection Drinking System. Accepts 100VAC or 200VAC input. Developed to laboratory standard.",
     category: "UV & Disinfection",
-    image: "https://phprescription.com/wp-content/uploads/2023/05/polaris-transformer-replacement.jpg",
+    image: "/products/polaris-transformer-replacement.jpg",
     slug: "drinking-system-polaris-uv-transformer-replacement",
   },
   {
@@ -320,7 +326,7 @@ export const PRODUCTS_ALL: Product[] = [
     badge: "UV & Disinfection",
     description: "Annual UV lamp replacement for proper disinfection function. Install authentic Replacement Lamps to ensure system performance and efficiency.",
     category: "UV & Disinfection",
-    image: "https://phprescription.com/wp-content/uploads/2023/05/polaris-uv-lamp-replacement-prongs.jpg",
+    image: "/products/polaris-uv-lamp-replacement-prongs.jpg",
     slug: "drinking-system-polaris-uv-lamp-replacement",
   },
   {
@@ -330,7 +336,7 @@ export const PRODUCTS_ALL: Product[] = [
     badge: "UV & Disinfection",
     description: "Electronic ballast for the Total Home UV Water Disinfection System pH-UV-410. Features visual power indicator, audible lamp failure alert, lamp replacement reminder.",
     category: "UV & Disinfection",
-    image: "https://phprescription.com/wp-content/uploads/2023/05/viqua-power-pack.jpg",
+    image: "/products/viqua-power-pack.jpg",
     slug: "total-home-uv-viqua-transformer-replacement",
   },
   {
@@ -340,7 +346,7 @@ export const PRODUCTS_ALL: Product[] = [
     badge: "UV & Disinfection",
     description: "Annual UV lamp replacement for proper disinfection. Install authentic Replacement Lamps to ensure proper system performance and efficiency.",
     category: "UV & Disinfection",
-    image: "https://phprescription.com/wp-content/uploads/2023/05/viqua-lamp-tube.jpg",
+    image: "/products/viqua-lamp-tube.jpg",
     slug: "total-home-uv-viqua-lamp-replacement",
   },
   {
@@ -350,7 +356,7 @@ export const PRODUCTS_ALL: Product[] = [
     badge: "UV & Disinfection",
     description: "Compatible replacement quartz sleeve for Total Home UV Water Disinfection System pH-UV-410. Double open-ended quartz sleeve shipped with two o-rings.",
     category: "UV & Disinfection",
-    image: "https://phprescription.com/wp-content/uploads/2023/05/viqua-sleeve.jpg",
+    image: "/products/viqua-sleeve.jpg",
     slug: "total-home-uv-viqua-quartz-sleeve-replacement",
   },
   // Showers & Tubs
@@ -359,9 +365,9 @@ export const PRODUCTS_ALL: Product[] = [
     sku: "pH-SF-OH",
     price: "$81.00",
     badge: "Showers & Tubs",
-    description: "Sleek lightweight design with Chlorigone™ filtering media — 100x more effective at removing Chlorine, Chloramines, lead, mercury, cadmium, aluminum and heavy metals. Fits most overhead and hand-held shower systems.",
+    description: "Sleek lightweight design with Chlorigone™ filtering media - 100x more effective at removing Chlorine, Chloramines, lead, mercury, cadmium, aluminum and heavy metals. Fits most overhead and hand-held shower systems.",
     category: "Showers & Tubs",
-    image: "https://phprescription.com/wp-content/uploads/slider8/hydro-filter-slide-v2.jpeg",
+    image: "/products/hydro-filter-slide-v2.jpeg",
     slug: "hydro-clean-shower-filter",
   },
   {
@@ -369,9 +375,9 @@ export const PRODUCTS_ALL: Product[] = [
     sku: "pH-SF-HH",
     price: "$172.25",
     badge: "Showers & Tubs",
-    description: "Hand-held shower system with Chlorigone™ filtering media — 100x more effective at removing Chlorine, Chloramines, lead, mercury, cadmium, aluminum and heavy metals. Hybrid filtration controls bacteria, algae, fungi and scale.",
+    description: "Hand-held shower system with Chlorigone™ filtering media - 100x more effective at removing Chlorine, Chloramines, lead, mercury, cadmium, aluminum and heavy metals. Hybrid filtration controls bacteria, algae, fungi and scale.",
     category: "Showers & Tubs",
-    image: "https://phprescription.com/wp-content/uploads/slider8/hydro-handheld-hero-v3.jpeg",
+    image: "/products/hydro-handheld-hero-v3.jpeg",
     slug: "hydro-clean-handheld-shower",
   },
   {
@@ -381,7 +387,7 @@ export const PRODUCTS_ALL: Product[] = [
     badge: "Showers & Tubs",
     description: "Nearly 10 years of research, breakthrough in Life Sciences. Proprietary Hyper Dissolved Oxygen (HDO) technology creates billions of oxygen nano-bubbles for detox, reset, improved healing and energy. 72x48x27 in.",
     category: "Showers & Tubs",
-    image: "https://phprescription.com/wp-content/uploads/2024/06/pneuma-tub-hero.jpg",
+    image: "/products/pneuma-tub-hero.jpg",
     slug: "pneuma-genesis-hdo-warm-cold-soaking-tub",
   },
   {
@@ -391,7 +397,7 @@ export const PRODUCTS_ALL: Product[] = [
     badge: "Showers & Tubs",
     description: "HDO technology creates billions of nano-bubbles in a warm soaking tub allowing the dermis and epidermis to absorb increased oxygen into red blood cells for healing and repair. 72x48x27 in.",
     category: "Showers & Tubs",
-    image: "https://phprescription.com/wp-content/uploads/2024/06/pneuma-tub-hero.jpg",
+    image: "/products/pneuma-tub-hero.jpg",
     slug: "pneuma-genesis-hdo-warm-recovery-soaking-tub",
   },
   // Nutraceuticals
@@ -402,7 +408,7 @@ export const PRODUCTS_ALL: Product[] = [
     badge: "Nutraceuticals",
     description: "Nitric oxide support in convenient lozenge form. Gluten-free, GMO-free, all-natural. Supports cardiovascular health and cellular energy.",
     category: "Nutraceuticals",
-    image: "https://phprescription.com/wp-content/uploads/2024/07/N1o1-Lozenge-hero.jpg",
+    image: "/products/N1o1-Lozenge-hero.jpg",
     slug: "n101-nitric-oxide-lozenges",
   },
   {
@@ -412,7 +418,7 @@ export const PRODUCTS_ALL: Product[] = [
     badge: "Nutraceuticals",
     description: "Backed by 20+ years of research from Dr. Nathan Bryan, the first to discover natural chemistry for Nitric Oxide production. Most powerful Nitric Oxide enhancer available. Mix one packet in 2-3 oz finely filtered water daily.",
     category: "Nutraceuticals",
-    image: "https://phprescription.com/wp-content/uploads/2024/06/no-beetz-hero.jpg",
+    image: "/products/no-beetz-hero.jpg",
     slug: "no-beetz-nitric-oxide-infusion-sticks",
   },
   // Faucets
@@ -423,7 +429,7 @@ export const PRODUCTS_ALL: Product[] = [
     badge: "Faucets",
     description: "Lead-free countertop faucet in elegant design. 5x1.5x14 in, 2 lbs. Compatible with pH Prescription drinking systems.",
     category: "Faucets",
-    image: "https://phprescription.com/wp-content/uploads/2021/01/TW55708-600x900.jpg",
+    image: "/products/TW55708-600x900.jpg",
     slug: "lead-free-countertop-faucet-elegant",
   },
   {
@@ -433,7 +439,7 @@ export const PRODUCTS_ALL: Product[] = [
     badge: "Faucets",
     description: "Lead-free countertop faucet in contemporary copper finish. 5x1.5x14 in, 2 lbs. Stylish upgrade for your pH Prescription drinking system.",
     category: "Faucets",
-    image: "https://phprescription.com/wp-content/uploads/2021/04/TW55747-600.jpg",
+    image: "/products/TW55747-600.jpg",
     slug: "lead-free-countertop-faucet-contemporary-copper",
   },
   {
@@ -443,7 +449,7 @@ export const PRODUCTS_ALL: Product[] = [
     badge: "Faucets",
     description: "Lead-free countertop faucet in contemporary design. 7x1.5x14 in, 2 lbs. Clean modern lines for any kitchen aesthetic.",
     category: "Faucets",
-    image: "https://phprescription.com/wp-content/uploads/2021/01/TW55678-600x764.jpg",
+    image: "/products/TW55678-600x764.jpg",
     slug: "lead-free-countertop-faucet-contemporary",
   },
   // Testing Equipment
@@ -454,7 +460,7 @@ export const PRODUCTS_ALL: Product[] = [
     badge: "Testing Equipment",
     description: "Portable ORP meter for Educational, Agriculture, Horticulture, water and environmental analysis. 5x1x6 in, 2 lbs.",
     category: "Testing Equipment",
-    image: "https://phprescription.com/wp-content/uploads/2020/12/pH-orp-meter-MW500-full-size.jpg",
+    image: "/products/pH-orp-meter-MW500-full-size.jpg",
     slug: "orp-water-test-meter",
   },
   {
@@ -464,7 +470,7 @@ export const PRODUCTS_ALL: Product[] = [
     badge: "Testing Equipment",
     description: "Portable handy meter for testing water pH. Suitable for Educational, Agriculture and Horticulture as well as water and environmental analysis. 3x1x6 in, 3 lbs.",
     category: "Testing Equipment",
-    image: "https://phprescription.com/wp-content/uploads/2020/12/pH-water-test-MW100-full-size.jpg",
+    image: "/products/pH-water-test-MW100-full-size.jpg",
     slug: "ph-water-testing-portable-meter",
   },
   // Replacement Parts
@@ -475,7 +481,7 @@ export const PRODUCTS_ALL: Product[] = [
     badge: "Replacement Parts",
     description: "Final stage of your pH Prescription drinking water system. Engineered with Crystal Technology to produce alkaline water, molecular hydrogen, negative ORP, and replenish essential minerals including calcium, magnesium, potassium and trace minerals.",
     category: "Replacement Parts",
-    image: "https://phprescription.com/wp-content/uploads/2020/12/pH-UC-123-600x400.jpg",
+    image: "/products/pH-UC-123-600x400.jpg",
     slug: "alkaline-triple-filter-replacement-5",
   },
   {
@@ -485,7 +491,7 @@ export const PRODUCTS_ALL: Product[] = [
     badge: "Replacement Parts",
     description: "Provides a polished finale to your water by eliminating post carbon taste and other odors.",
     category: "Replacement Parts",
-    image: "https://phprescription.com/wp-content/uploads/2021/01/ICF-10-full-size-600x600.jpg",
+    image: "/products/ICF-10-full-size-600x600.jpg",
     slug: "taste-and-odor-filter-replacement-6",
   },
   {
@@ -495,7 +501,7 @@ export const PRODUCTS_ALL: Product[] = [
     badge: "Replacement Parts",
     description: "Quality water system high recovery membrane for maximum pressure PSI: 125PSI. 15x3x3 in, 1.75 lbs.",
     category: "Replacement Parts",
-    image: "https://phprescription.com/wp-content/uploads/2020/12/GRO-75EN-full-size-600x600.jpg",
+    image: "/products/GRO-75EN-full-size-600x600.jpg",
     slug: "ultimate-water-purification-membrane-replacement",
   },
   // Business Stations
@@ -506,17 +512,17 @@ export const PRODUCTS_ALL: Product[] = [
     badge: "Business Stations",
     description: "Premium commercial hydration station. 15x18x45 in, 77 lbs. Lease and finance options available for offices, gyms and corporate environments.",
     category: "Business Stations",
-    image: "https://phprescription.com/wp-content/uploads/slider28/phs-info-with-logo.jpeg",
+    image: "/products/phs-info-with-logo.jpeg",
     slug: "premium-hydration-station",
   },
   {
     name: "Total Business Paddle-Touch Hot/Cold",
     sku: "WC-PP-6",
-    price: "$2,613.60 – $3,484.80",
+    price: "$2,613.60 - $3,484.80",
     badge: "Business Stations",
     description: "High-capacity hot/cold water cooler with paddle-touch dispensing. 14x14x48 in, 80 lbs. Lease and finance options available.",
     category: "Business Stations",
-    image: "https://phprescription.com/wp-content/uploads/2021/04/TW56030-600x900.jpg",
+    image: "/products/TW56030-600x900.jpg",
     slug: "total-business-paddle-touch-hot-cold",
   },
   // Marine & Pool
@@ -527,7 +533,7 @@ export const PRODUCTS_ALL: Product[] = [
     badge: "Marine & Pool",
     description: "Advanced marine water filtration system for vessels and coastal facilities. Handles saltwater and brackish water environments with proprietary mineral-reduction media.",
     category: "Marine & Pool",
-    image: "https://phprescription.com/wp-content/uploads/2021/01/fpo_yacht_small.jpg",
+    image: "/products/fpo_yacht_small.jpg",
     slug: "marine-water-system",
   },
   {
@@ -537,7 +543,7 @@ export const PRODUCTS_ALL: Product[] = [
     badge: "Marine & Pool",
     description: "Advanced pool and spa water treatment. Reduces chlorine demand by 25-40% while improving water clarity and guest comfort. Integrates with existing pool circulation systems.",
     category: "Marine & Pool",
-    image: "https://phprescription.com/wp-content/uploads/2020/12/water-ripples-600x343.jpg",
+    image: "/products/water-ripples-600x343.jpg",
     slug: "pool-water-treatment-system",
   },
   // Other
@@ -548,7 +554,7 @@ export const PRODUCTS_ALL: Product[] = [
     badge: "Other",
     description: "Portable versatile water pump that mounts easily. Ideal for large bottled water, events, family gatherings when access to water is limited. 8x4x5 in, 3 lbs.",
     category: "Other",
-    image: "https://phprescription.com/wp-content/uploads/2020/12/flojet-pump-full-size-600x600.jpg",
+    image: "/products/flojet-pump-full-size-600x600.jpg",
     slug: "flojet-bottled-water-pump",
   },
   {
@@ -558,7 +564,7 @@ export const PRODUCTS_ALL: Product[] = [
     badge: "Other",
     description: "Powerful compact twin-tanks filter that fits in small spaces. Carbon-block filtration removes up to 99% of chlorine, natural organic compounds, taste and odor compounds, and synthetic organic chemicals.",
     category: "Other",
-    image: "https://phprescription.com/wp-content/uploads/2022/04/pH-WH-CDFS-featured-600x711.jpg",
+    image: "/products/pH-WH-CDFS-featured-600x711.jpg",
     slug: "compact-dual-filtration-system",
   },
 ];
@@ -601,6 +607,6 @@ export const DOCTORS = [
   },
 ] as const;
 
-// TODO: Shopify — integrate Storefront API for live product/pricing data in future phase
+// TODO: Shopify - integrate Storefront API for live product/pricing data in future phase
 // When ready: use @shopify/storefront-api-client with SHOPIFY_STOREFRONT_TOKEN env var
 // to fetch real inventory, pricing, and cart functionality from the Shopify store.

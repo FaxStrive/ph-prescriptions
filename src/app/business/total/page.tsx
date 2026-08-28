@@ -109,7 +109,7 @@ export default function BusinessTotalPage() {
                   marginBottom: "1.25rem",
                 }}
               >
-                Our residential Total Home Premier System retails at $9,244.25. Commercial configurations are scoped and priced after a free facility assessment — building size, daily usage, fixture count, and current water quality all affect the specification.
+                Our residential Total Home Premier System retails at $9,244.25. Commercial configurations are scoped and priced after a free facility assessment - building size, daily usage, fixture count, and current water quality all affect the specification.
               </p>
               <p
                 style={{

@@ -13,7 +13,7 @@ const COOLER = PRODUCTS.find((p) => p.slug === "business-water-cooler")!;
 const FEATURES = [
   {
     title: "Paddle-Touch Dispensing",
-    body: "Hands-free hygienic dispensing — tap with a cup, bottle, or the back of your hand. Ideal for high-traffic environments.",
+    body: "Hands-free hygienic dispensing - tap with a cup, bottle, or the back of your hand. Ideal for high-traffic environments.",
   },
   {
     title: "Hot & Cold",
@@ -25,7 +25,7 @@ const FEATURES = [
   },
   {
     title: "QuadVortex Technology",
-    body: "Water passes through our proprietary QuadVortex module — alkalized, remineralized, and hydrogen-infused before it reaches the spout.",
+    body: "Water passes through our proprietary QuadVortex module - alkalized, remineralized, and hydrogen-infused before it reaches the spout.",
   },
 ];
 
@@ -70,7 +70,7 @@ export default function CoolersPage() {
               marginBottom: "2rem",
             }}
           >
-            Replace your water cooler rental with a WQA Certified system that delivers alkaline, remineralized, hydrogen-infused water — hot or cold — from a hygienic paddle-touch dispenser. Made in USA. Lifetime warranty.
+            Replace your water cooler rental with a WQA Certified system that delivers alkaline, remineralized, hydrogen-infused water - hot or cold - from a hygienic paddle-touch dispenser. Made in USA. Lifetime warranty.
           </p>
           <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
             <Link

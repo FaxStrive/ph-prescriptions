@@ -4,19 +4,19 @@ import Link from "next/link";
 const FEATURED_DOCTORS = [
   {
     name: "Dr. Nathan Bryan, PhD",
-    credential: "Molecular Biologist — Nitric Oxide Researcher",
-    photo: "/images/team/dr-nathan-bryan.png",
+    credential: "Molecular Biologist - Nitric Oxide Researcher",
+    photo: "/doctors/dr-bryan.jpg",
     quote:
       "People get sick for two reasons and two reasons only: 1. their body is missing essential nutrients and 2. their body is exposed to toxins, both orally and transdermally, both prevent the body from performing optimally. I use pH Prescription and Aquapellis finely filtered systems and recommend them as I have researched and studied them since 2018.",
-    link: "/about/doctors",
+    link: "/experts",
   },
   {
     name: "Dr. Jerry Tennant, MD",
     credential: "Founder, Tennant Institute for Integrative and Natural Medicine",
-    photo: "/images/team/dr-jerry-tennant.png",
+    photo: "/doctors/dr-tennant.jpg",
     quote:
-      "An international lecturer and published author, Dr. Tennant has dedicated his career to understanding how the body heals. He holds over 12 patents and practices in Dallas, Texas — and recommends pH Prescription's finely filtered systems for their approach to complete water quality.",
-    link: "/about/doctors",
+      "An international lecturer and published author, Dr. Tennant has dedicated his career to understanding how the body heals. He holds over 12 patents and practices in Dallas, Texas - and recommends pH Prescription's finely filtered systems for their approach to complete water quality.",
+    link: "/experts",
   },
 ];
 

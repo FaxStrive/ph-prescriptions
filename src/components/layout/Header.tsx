@@ -68,7 +68,7 @@ const NAV: NavItem[] = [
       items: [
         { label: "Our Story", href: "/about", description: "Founded 2005 · Palm City FL" },
         { label: "About Leo", href: "/about/leo", description: "Founder Leo Szymborski" },
-        { label: "Doctor Endorsements", href: "/about/doctors", description: "7+ physicians on record" },
+        { label: "Doctor Endorsements", href: "/experts", description: "7+ physicians on record" },
         { label: "Community Care", href: "/about/community", description: "How we give back" },
       ],
     },
@@ -82,9 +82,8 @@ const NAV: NavItem[] = [
       items: [
         { label: "All Resources", href: "/resources", description: "Guides & articles" },
         { label: "Blog", href: "/blog", description: "Water health articles" },
-        { label: "H2O: Health 2 Overcome", href: "/h2o-health", description: "Leo's memoir and story" },
+        { label: "H2O: Health 2 Overcome", href: "/book", description: "Leo's #1 best-selling book" },
         { label: "FAQ", href: "/faq", description: "Answers to common questions" },
-        { label: "The H2O Book", href: "/book", description: "Leo's water-health manual" },
         { label: "Nutraceuticals", href: "/nutraceuticals", description: "Supplement line" },
       ],
     },
@@ -160,7 +159,7 @@ export default function Header() {
               <span
                 style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem", opacity: 0.85 }}
               >
-                <Clock size={12} /> Mon–Fri 8am–5pm ET
+                <Clock size={12} /> Mon-Fri 8am-5pm ET
               </span>
             </div>
             <div style={{ display: "flex", alignItems: "center", gap: "1.75rem" }}>
@@ -177,7 +176,7 @@ export default function Header() {
                 Warranty Support
               </Link>
               <Link
-                href="/about/doctors"
+                href="/experts"
                 style={{ color: "rgba(255,255,255,0.92)", textDecoration: "none" }}
               >
                 Doctor-Recommended
@@ -209,7 +208,7 @@ export default function Header() {
             >
               <Image
                 src="/logo.png"
-                alt="pH Prescription — Water Health & Wellness"
+                alt="pH Prescription - Water Health & Wellness"
                 width={155}
                 height={55}
                 priority

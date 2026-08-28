@@ -80,10 +80,10 @@ export default function Footer() {
             <nav aria-label="Footer Resources" style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
               {[
                 ["Blog", "/blog"],
-                ["H2O: Health 2 Overcome", "/h2o-health"],
+                ["H2O: Health 2 Overcome", "/book"],
                 ["FAQ", "/faq"],
                 ["Technology", "/technology"],
-                ["Doctor Endorsements", "/about/doctors"],
+                ["Doctor Endorsements", "/experts"],
                 ["Free Consultation", "/consultation"],
               ].map(([label, href]) => (
                 <Link key={href} href={href} style={{ color: "var(--color-ink-mute)", textDecoration: "none", fontSize: "0.875rem", transition: "color 0.2s" }}

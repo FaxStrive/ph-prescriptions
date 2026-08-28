@@ -3,29 +3,29 @@ import Link from "next/link";
 import { BUSINESS } from "@/lib/business";
 
 export const metadata: Metadata = {
-  title: "Marine and RV Water — Saltwater and Brackish Filtration | pH Prescription",
+  title: "Marine and RV Water - Saltwater and Brackish Filtration | pH Prescription",
   description:
     "Compact, low-power marine and RV water filtration systems for saltwater and brackish environments. Reduces TDS, controls corrosion and scaling. Designed for vessels and mobile platforms.",
 };
 
 const PROBLEMS = [
   "Saltwater and brackish water sources contain dissolved salts, sediment, biological contaminants, and high TDS that standard filters cannot handle",
-  "Marina water supply is inconsistent in quality — sometimes municipal, sometimes well water, sometimes brackish — and changes with location",
+  "Marina water supply is inconsistent in quality - sometimes municipal, sometimes well water, sometimes brackish - and changes with location",
   "Hard water and dissolved minerals accelerate corrosion of plumbing, fixtures, water heaters, and galley appliances on vessels",
   "Space and power constraints on vessels and RVs make most residential water treatment systems impractical or impossible to install",
 ];
 
 const WHY_FAILS = [
   "Residential carbon and sediment filters are not designed for saltwater or brackish input and foul quickly in marine environments",
-  "Standard RO systems require significant pressure (typically 60-80 PSI) and produce substantial wastewater — impractical for mobile platforms with limited water storage",
+  "Standard RO systems require significant pressure (typically 60-80 PSI) and produce substantial wastewater - impractical for mobile platforms with limited water storage",
   "UV sterilization alone does not address dissolved salts, minerals, or chemical contamination in marine water sources",
-  "Most marine water systems on the market filter sediment and taste only — they do not address chloramine, heavy metals, or hardness at the level a live-aboard demands",
+  "Most marine water systems on the market filter sediment and taste only - they do not address chloramine, heavy metals, or hardness at the level a live-aboard demands",
 ];
 
 const SOLUTIONS = [
   {
     heading: "Compact Multi-Stage Filtration for Marine and RV",
-    body: "Our marine and RV systems are engineered to fit in confined spaces — under-counter, in-cabinet, or in-line installations. Multi-stage KDF, catalytic carbon, and sediment filtration work together to handle variable input water quality from marinas, campgrounds, and remote hookups.",
+    body: "Our marine and RV systems are engineered to fit in confined spaces - under-counter, in-cabinet, or in-line installations. Multi-stage KDF, catalytic carbon, and sediment filtration work together to handle variable input water quality from marinas, campgrounds, and remote hookups.",
   },
   {
     heading: "Corrosion and Scale Control",
@@ -55,7 +55,7 @@ const WHO_FOR = [
 const FAQS = [
   {
     q: "Can your systems handle saltwater input?",
-    a: "Our marine filtration systems are designed for brackish and variable-salinity marina water, not open-ocean seawater desalination. For open-ocean applications, a reverse osmosis watermaker is the required technology — we can integrate our multi-stage pre-filtration with watermaker systems to extend membrane life and improve output quality. Contact us to discuss your specific water source and application.",
+    a: "Our marine filtration systems are designed for brackish and variable-salinity marina water, not open-ocean seawater desalination. For open-ocean applications, a reverse osmosis watermaker is the required technology - we can integrate our multi-stage pre-filtration with watermaker systems to extend membrane life and improve output quality. Contact us to discuss your specific water source and application.",
   },
   {
     q: "How much space does the system require?",
@@ -113,10 +113,10 @@ export default function MarinePage() {
               lineHeight: 1.1,
             }}
           >
-            Marine and RV Water — Saltwater and Brackish Filtration
+            Marine and RV Water - Saltwater and Brackish Filtration
           </h1>
           <p style={{ fontSize: "1.0625rem", color: "var(--color-ink-soft)", lineHeight: 1.8, maxWidth: "600px", marginBottom: "2rem" }}>
-            Compact, low-power filtration systems that handle variable water quality from marinas, campgrounds, and remote hookups — protecting your plumbing and your health wherever you are.
+            Compact, low-power filtration systems that handle variable water quality from marinas, campgrounds, and remote hookups - protecting your plumbing and your health wherever you are.
           </p>
           <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
             <a
@@ -306,7 +306,7 @@ export default function MarinePage() {
             Get a Marine Water Assessment
           </h2>
           <p style={{ color: "rgba(255,255,255,0.8)", lineHeight: 1.75, marginBottom: "2rem" }}>
-            We assess your vessel or mobile platform, your typical water sources, and your usage patterns — then configure a system that fits your space, power budget, and water quality goals.
+            We assess your vessel or mobile platform, your typical water sources, and your usage patterns - then configure a system that fits your space, power budget, and water quality goals.
           </p>
           <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", justifyContent: "center" }}>
             <a

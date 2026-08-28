@@ -119,7 +119,7 @@ export default function BusinessDrinkingSystemsPage() {
               maxWidth: "560px",
             }}
           >
-            Commercial configurations of our residential technology — same four-stage process, higher daily output.
+            Commercial configurations of our residential technology - same four-stage process, higher daily output.
           </p>
           <div
             style={{
@@ -137,7 +137,7 @@ export default function BusinessDrinkingSystemsPage() {
               {
                 step: "02",
                 name: "Alkalizing",
-                desc: "Raises pH to 8.5-9.5 through an alkalizing cartridge — no electricity required.",
+                desc: "Raises pH to 8.5-9.5 through an alkalizing cartridge - no electricity required.",
               },
               {
                 step: "03",

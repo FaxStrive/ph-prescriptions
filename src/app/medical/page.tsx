@@ -3,7 +3,7 @@ import Link from "next/link";
 import { BUSINESS } from "@/lib/business";
 
 export const metadata: Metadata = {
-  title: "Medical-Grade Water — Precision Filtration for Clinical Excellence | pH Prescription",
+  title: "Medical-Grade Water - Precision Filtration for Clinical Excellence | pH Prescription",
   description:
     "Medical-grade water systems for dialysis centers, dental practices, medical imaging facilities, and sterile-prep environments. WQA-certified, NSF/ANSI 58 and 42. Serving medical facilities across all 50 states.",
 };
@@ -11,14 +11,14 @@ export const metadata: Metadata = {
 const PROBLEMS = [
   "Municipal water contains chloramine, chlorine byproducts, heavy metals, and pharmaceutical traces that municipal treatment does not fully remove",
   "Standard commercial filtration systems are not rated for clinical-grade output and fail to meet AAMI or FDA water purity requirements",
-  "Hard water scale damages equipment — autoclaves, dental chairs, imaging systems — shortening service life and creating unplanned downtime",
+  "Hard water scale damages equipment - autoclaves, dental chairs, imaging systems - shortening service life and creating unplanned downtime",
   "Inconsistent water purity creates variable outcomes in procedures where contamination control is not optional",
 ];
 
 const WHY_FAILS = [
   "Single-stage carbon or sediment filters do not address chloramine, heavy metals, bacteria, or endotoxins at clinical levels",
-  "Ion exchange softeners replace hardness minerals with sodium — which introduces a different contamination profile for medical use",
-  "Reverse osmosis alone does not re-mineralize or disinfect — and membranes foul quickly without upstream protection",
+  "Ion exchange softeners replace hardness minerals with sodium - which introduces a different contamination profile for medical use",
+  "Reverse osmosis alone does not re-mineralize or disinfect - and membranes foul quickly without upstream protection",
   "Most systems are designed for residential comfort, not for clinical-grade purity or continuous high-volume flow",
 ];
 
@@ -33,7 +33,7 @@ const SOLUTIONS = [
   },
   {
     heading: "Total Home Point-of-Entry for Whole-Facility Coverage",
-    body: "Large dialysis centers, imaging suites, and multi-chair dental offices benefit from point-of-entry whole-facility treatment. One system protects every water outlet — procedure rooms, sterilization, lab sinks, patient water, and HVAC loops.",
+    body: "Large dialysis centers, imaging suites, and multi-chair dental offices benefit from point-of-entry whole-facility treatment. One system protects every water outlet - procedure rooms, sterilization, lab sinks, patient water, and HVAC loops.",
   },
   {
     heading: "Custom System Sizing and Configuration",
@@ -43,7 +43,7 @@ const SOLUTIONS = [
 
 const WHO_FOR = [
   "Dialysis and hemodialysis centers",
-  "Dental practices — general and specialty",
+  "Dental practices - general and specialty",
   "Medical imaging facilities (MRI, CT, X-ray)",
   "Central sterile supply departments",
   "Surgical and procedure prep environments",

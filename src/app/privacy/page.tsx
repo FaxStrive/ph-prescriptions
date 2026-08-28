@@ -3,7 +3,7 @@ import { BUSINESS } from "@/lib/business";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | pH Prescription",
-  description: "pH Prescription privacy policy — how we collect, use, and protect your personal information.",
+  description: "pH Prescription privacy policy - how we collect, use, and protect your personal information.",
 };
 
 export default function PrivacyPage() {
@@ -39,7 +39,7 @@ export default function PrivacyPage() {
           },
           {
             heading: "2. Information We Collect",
-            body: `We collect information you provide directly — such as your name, phone number, email address, and ZIP code when you request a consultation, submit a contact form, or register for a warranty. We also collect standard website analytics data (pages visited, session duration, device type) through cookies and similar technologies. We do not sell or rent your personal information.`,
+            body: `We collect information you provide directly - such as your name, phone number, email address, and ZIP code when you request a consultation, submit a contact form, or register for a warranty. We also collect standard website analytics data (pages visited, session duration, device type) through cookies and similar technologies. We do not sell or rent your personal information.`,
           },
           {
             heading: "3. How We Use Your Information",

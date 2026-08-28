@@ -54,7 +54,7 @@ export default function AboutLeoPage() {
             </div>
 
             <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-              <Link href="/about/doctors" className="btn btn-primary">View Doctor Endorsements</Link>
+              <Link href="/experts" className="btn btn-primary">View Doctor Endorsements</Link>
               <Link href="/consultation" className="btn btn-outline">Free Consultation</Link>
             </div>
           </div>

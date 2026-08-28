@@ -39,7 +39,7 @@ const TESTIMONIALS = [
 const PILLARS = [
   { icon: Shield, title: "Up to 99% Contaminant Removal", desc: "QuadVortex filtration removes bacteria, heavy metals, chlorine, fluoride, pharmaceuticals and more." },
   { icon: Droplets, title: "Alkaline & Re-Mineralized", desc: "Restores healthy pH balance and adds back essential minerals stripped by conventional filtration." },
-  { icon: Award, title: "Molecular Hydrogen Infused", desc: "H2 infusion — the most powerful antioxidant known to science — is built into every system." },
+  { icon: Award, title: "Molecular Hydrogen Infused", desc: "H2 infusion - the most powerful antioxidant known to science - is built into every system." },
   { icon: CheckCircle2, title: "Lifetime Warranty", desc: "Every system carries a lifetime warranty when installed by a licensed plumber." },
 ];
 
@@ -141,11 +141,9 @@ function Hero() {
       >
         <div style={{ height: "1px", background: "rgba(255,255,255,0.2)", marginBottom: "1.25rem" }} />
         <div
+          className="grid grid-cols-1 md:[grid-template-columns:minmax(0,1fr)_auto_auto] md:items-center"
           style={{
-            display: "grid",
-            gridTemplateColumns: "minmax(0, 1fr) auto auto",
             gap: "1.5rem",
-            alignItems: "center",
           }}
         >
           <div>
@@ -238,7 +236,7 @@ function Hero() {
         </div>
       </motion.div>
 
-      {/* Stats bar — second flex child, pushed to bottom by space-between */}
+      {/* Stats bar - second flex child, pushed to bottom by space-between */}
       <motion.div
         initial={reduce ? false : { opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -253,10 +251,8 @@ function Hero() {
         }}
       >
         <div
-          className="max-content"
+          className="max-content grid grid-cols-2 md:grid-cols-4"
           style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(4, 1fr)",
             gap: "1rem",
             padding: "1.25rem 0",
             textAlign: "center",
@@ -420,7 +416,7 @@ function Pillars() {
                 maxWidth: "60ch",
               }}
             >
-              Our proprietary QuadVortex technology filters what nobody else bothers to, then re-mineralizes your water and infuses molecular hydrogen — the same science that seven physicians put their names behind.
+              Our proprietary QuadVortex technology filters what nobody else bothers to, then re-mineralizes your water and infuses molecular hydrogen - the same science that seven physicians put their names behind.
             </p>
           </div>
         </div>
@@ -471,7 +467,7 @@ function Products() {
               Every system, <span className="italic-accent" style={{ color: "var(--color-teal)" }}>properly specified.</span>
             </h2>
             <p style={{ marginTop: "1rem", fontSize: "1rem", lineHeight: 1.7, color: "var(--color-ink-soft)" }}>
-              From compact under-sink drinking systems to whole-home restructured water — WQA Certified, Made in USA, backed by lifetime warranty.
+              From compact under-sink drinking systems to whole-home restructured water - WQA Certified, Made in USA, backed by lifetime warranty.
             </p>
           </div>
           <Link
@@ -536,31 +532,21 @@ function Products() {
                   </span>
                 )}
                 <div
-                  aria-hidden
                   style={{
-                    height: "180px",
-                    background: `linear-gradient(140deg, ${featured ? "#583890" : "var(--color-teal-soft)"} 0%, ${featured ? "#7B5AB5" : "#B9E3EF"} 100%)`,
+                    height: "220px",
+                    background: "#fff",
                     position: "relative",
                     overflow: "hidden",
+                    borderBottom: "1px solid var(--color-border-soft)",
                   }}
                 >
-                  <div
-                    style={{
-                      position: "absolute",
-                      inset: 0,
-                      background: `radial-gradient(circle at 30% 30%, rgba(255,255,255,0.35) 0%, transparent 55%)`,
-                    }}
-                  />
-                  <Droplets
-                    size={64}
-                    strokeWidth={1}
-                    style={{
-                      position: "absolute",
-                      bottom: "1.5rem",
-                      right: "1.5rem",
-                      color: featured ? "rgba(255,255,255,0.5)" : "var(--color-teal)",
-                      opacity: 0.9,
-                    }}
+                  <Image
+                    src={p.image}
+                    alt={p.name}
+                    fill
+                    unoptimized
+                    sizes="(max-width: 768px) 100vw, 25vw"
+                    style={{ objectFit: "contain", padding: "1.25rem" }}
                   />
                 </div>
                 <div style={{ padding: "1.5rem 1.5rem 1.25rem", borderBottom: "1px solid var(--color-border-soft)" }}>
@@ -782,7 +768,7 @@ function Doctors() {
         </div>
         <div style={{ textAlign: "center", marginTop: "2.5rem" }}>
           <Link
-            href="/about/doctors"
+            href="/experts"
             style={{
               display: "inline-flex",
               alignItems: "center",

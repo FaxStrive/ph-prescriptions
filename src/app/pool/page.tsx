@@ -3,7 +3,7 @@ import Link from "next/link";
 import { BUSINESS } from "@/lib/business";
 
 export const metadata: Metadata = {
-  title: "Pool and Spa Water — Advanced Filtration Beyond Chlorine | pH Prescription",
+  title: "Pool and Spa Water - Advanced Filtration Beyond Chlorine | pH Prescription",
   description:
     "Advanced pool and spa water treatment systems. Reduce chlorine demand 25-40% while improving water clarity and guest comfort. Integrates with existing pool circulation systems.",
 };
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const PROBLEMS = [
   "Conventional pool treatment relies on chlorine concentrations high enough to cause eye irritation, skin dryness, and respiratory discomfort for swimmers",
   "Chlorine combined with organic matter produces chloramine and disinfection byproducts (DBPs) that are difficult to eliminate with shock treatment alone",
-  "Hard water causes scale buildup on pool walls, tile lines, equipment surfaces, and filter media — shortening equipment life and requiring costly descaling",
+  "Hard water causes scale buildup on pool walls, tile lines, equipment surfaces, and filter media - shortening equipment life and requiring costly descaling",
   "Saltwater pools still generate chlorine through electrolysis and face the same DBP challenges, with added corrosion risk from elevated salinity",
 ];
 
@@ -54,7 +54,7 @@ const WHO_FOR = [
 const FAQS = [
   {
     q: "Will your system replace chlorine entirely?",
-    a: "Our system significantly reduces the amount of chlorine required to maintain safe pool water — typically 25-40% less. Most pool operators and regulatory authorities require a minimum residual chlorine level for bather safety, so we reduce chemical demand rather than eliminate it entirely. The result is water that is gentler on skin and eyes with fewer disinfection byproducts.",
+    a: "Our system significantly reduces the amount of chlorine required to maintain safe pool water - typically 25-40% less. Most pool operators and regulatory authorities require a minimum residual chlorine level for bather safety, so we reduce chemical demand rather than eliminate it entirely. The result is water that is gentler on skin and eyes with fewer disinfection byproducts.",
   },
   {
     q: "How does your system integrate with my existing pool equipment?",
@@ -112,7 +112,7 @@ export default function PoolPage() {
               lineHeight: 1.1,
             }}
           >
-            Pool and Spa Water — Advanced Filtration Beyond Chlorine
+            Pool and Spa Water - Advanced Filtration Beyond Chlorine
           </h1>
           <p style={{ fontSize: "1.0625rem", color: "var(--color-ink-soft)", lineHeight: 1.8, maxWidth: "600px", marginBottom: "2rem" }}>
             Reduce chlorine demand by 25-40%, eliminate scale and disinfection byproducts, and deliver water your swimmers and guests actually want to be in.
