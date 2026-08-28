@@ -374,6 +374,7 @@ function LifestyleImage() {
               letterSpacing: "-0.02em",
               color: "#fff",
               maxWidth: "20ch",
+              textShadow: "0 2px 28px rgba(30,15,60,0.85), 0 1px 4px rgba(30,15,60,0.5)",
             }}
           >
             Clean water,{" "}
@@ -389,7 +390,7 @@ function Pillars() {
   return (
     <section style={{ background: "#fff", padding: "clamp(4rem, 8vw, 7rem) 0" }}>
       <div className="max-content">
-        <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: "3rem", marginBottom: "4rem", maxWidth: "820px" }}>
+        <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,820px)_1fr]" style={{ gap: "3.5rem", marginBottom: "4rem", alignItems: "center" }}>
           <div>
             <span className="eyebrow" style={{ color: "var(--color-navy)" }}>Why pH Prescription</span>
             <h2
@@ -418,6 +419,15 @@ function Pillars() {
             >
               Our proprietary QuadVortex technology filters what nobody else bothers to, then re-mineralizes your water and infuses molecular hydrogen - the same science that seven physicians put their names behind.
             </p>
+          </div>
+          <div className="hidden lg:block" style={{ position: "relative", aspectRatio: "4 / 3", overflow: "hidden" }}>
+            <Image
+              src="/images/lifestyle/family-water-glasses.jpeg"
+              alt="Family filling glasses with clean filtered water"
+              fill
+              sizes="(max-width: 1024px) 0px, 40vw"
+              style={{ objectFit: "cover" }}
+            />
           </div>
         </div>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "1px", background: "var(--color-border-soft)" }}>

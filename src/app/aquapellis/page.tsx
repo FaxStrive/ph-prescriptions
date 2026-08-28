@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Image from "next/image";
 import { Droplets, Phone, CheckCircle2 } from "lucide-react";
 import { BUSINESS } from "@/lib/business";
 
@@ -12,29 +12,44 @@ export default function AquapellisPage() {
   return (
     <>
       <section style={{ background: "#fff", color: "var(--color-ink)", padding: "5rem 0 4rem" }}>
-        <div className="container" style={{ maxWidth: "740px" }}>
-          <div style={{ fontSize: "0.8125rem", color: "var(--color-teal)", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "1rem" }}>
-            A pH Prescription Brand
-          </div>
-          <h1 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2rem,5vw,3.25rem)", marginBottom: "1.25rem", letterSpacing: "-0.02em" }}>
-            Aquapellis<br />
-            <em style={{ color: "var(--color-teal)" }}>Molecular Hydrogen Shower</em>
-          </h1>
-          <p style={{ fontSize: "1.0625rem", color: "var(--color-ink-soft)", lineHeight: 1.75, marginBottom: "2rem" }}>
-            The Aquapellis system delivers molecular hydrogen (H2) transdermally - through your skin - with every shower. The same antioxidant science you drink is now absorbed through the body's largest organ, providing whole-body cellular benefit.
-          </p>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
-            <a href={`mailto:${BUSINESS.emailAquapellis}`} className="btn btn-primary">Request Aquapellis Quote</a>
-            <a href={`tel:${BUSINESS.phoneTollFree}`} className="btn btn-primary">
-              <Phone size={16} /> {BUSINESS.phoneTollFree}
-            </a>
+        <div className="container">
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_420px]" style={{ gap: "3.5rem", alignItems: "center" }}>
+            <div style={{ maxWidth: "740px" }}>
+              <div style={{ fontSize: "0.8125rem", color: "var(--color-teal)", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "1rem" }}>
+                A pH Prescription Brand
+              </div>
+              <h1 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2rem,5vw,3.25rem)", marginBottom: "1.25rem", letterSpacing: "-0.02em" }}>
+                Aquapellis<br />
+                <em style={{ color: "var(--color-teal)" }}>Molecular Hydrogen Shower</em>
+              </h1>
+              <p style={{ fontSize: "1.0625rem", color: "var(--color-ink-soft)", lineHeight: 1.75, marginBottom: "2rem" }}>
+                The Aquapellis system delivers molecular hydrogen (H2) transdermally - through your skin - with every shower. The same antioxidant science you drink is now absorbed through the body's largest organ, providing whole-body cellular benefit.
+              </p>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
+                <a href={`mailto:${BUSINESS.emailAquapellis}`} className="btn btn-primary">Request Aquapellis Quote</a>
+                <a href={`tel:${BUSINESS.phoneTollFree}`} className="btn btn-primary">
+                  <Phone size={16} /> {BUSINESS.phoneTollFree}
+                </a>
+              </div>
+            </div>
+            <div style={{ position: "relative", aspectRatio: "1 / 1", background: "var(--color-surface)", border: "1px solid var(--color-border-soft)" }}>
+              <Image
+                src="/products/aquapellis-main-v2.jpg"
+                alt="Aquapellis molecular hydrogen shower system"
+                fill
+                unoptimized
+                sizes="(max-width: 1024px) 100vw, 420px"
+                style={{ objectFit: "cover" }}
+                priority
+              />
+            </div>
           </div>
         </div>
       </section>
 
       <section style={{ background: "var(--color-cream)" }}>
         <div className="container">
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "4rem", alignItems: "center" }}>
+          <div className="grid grid-cols-1 lg:grid-cols-2" style={{ gap: "4rem", alignItems: "center" }}>
             <div>
               <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.75rem,3.5vw,2.5rem)", color: "var(--color-navy)", marginBottom: "1.25rem" }}>
                 Transdermal H2 Therapy
@@ -79,6 +94,28 @@ export default function AquapellisPage() {
                 Contact Aquapellis Team
               </a>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section style={{ background: "#fff", color: "var(--color-ink)" }}>
+        <div className="container">
+          <div className="grid grid-cols-1 sm:grid-cols-3" style={{ gap: "1.5rem" }}>
+            {[
+              { src: "/products/aquapellis-residential-v2.jpg", label: "Residential", caption: "Custom-fit for any home shower" },
+              { src: "/products/aquapellis-molecular-hydrogen.jpg", label: "Molecular Hydrogen", caption: "H2 infused at therapeutic concentrations" },
+              { src: "/products/aquapellis-vital-impact-main-v2.jpg", label: "Vital Impact", caption: "Built for military and first responders" },
+            ].map((img) => (
+              <figure key={img.src} style={{ margin: 0 }}>
+                <div style={{ position: "relative", aspectRatio: "1 / 1", background: "var(--color-surface)", border: "1px solid var(--color-border-soft)", overflow: "hidden" }}>
+                  <Image src={img.src} alt={`Aquapellis ${img.label}`} fill unoptimized sizes="(max-width: 640px) 100vw, 33vw" style={{ objectFit: "cover" }} />
+                </div>
+                <figcaption style={{ marginTop: "0.75rem" }}>
+                  <span style={{ display: "block", fontWeight: 600, fontSize: "0.9375rem", color: "var(--color-ink)" }}>{img.label}</span>
+                  <span style={{ display: "block", fontSize: "0.8125rem", color: "var(--color-ink-mute)", marginTop: "0.2rem" }}>{img.caption}</span>
+                </figcaption>
+              </figure>
+            ))}
           </div>
         </div>
       </section>
