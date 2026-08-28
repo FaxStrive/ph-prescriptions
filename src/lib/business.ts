@@ -572,36 +572,43 @@ export const PRODUCTS_ALL: Product[] = [
 export const DOCTORS = [
   {
     name: "Dr. Mark A. Breiner, DDS",
+    photo: "/doctors/dr-breiner.jpg",
     credential: "Author of Whole Body Dentistry",
     specialty: "Holistic Dentistry",
   },
   {
     name: "Dr. Debra DeMarta, MD, FACS",
+    photo: "/doctors/dr-demarta.jpg",
     credential: "Board-Certified Colorectal Surgeon",
     specialty: "Colorectal Surgery",
   },
   {
     name: "Dr. Jerry Tennant, MD",
+    photo: "/doctors/dr-tennant.jpg",
     credential: "Author of Healing is Voltage",
     specialty: "Integrative Medicine",
   },
   {
     name: "Steve Evans, DDS",
+    photo: "/doctors/steve-evans.jpg",
     credential: "Dental Practitioner",
     specialty: "Dentistry",
   },
   {
     name: "Dr. Nathan Bryan, PhD",
+    photo: "/doctors/dr-bryan.jpg",
     credential: "Molecular Medicine Researcher",
     specialty: "Molecular Hydrogen Research",
   },
   {
     name: "Dr. Josh Axe, DC, DNM, CNS",
+    photo: "/doctors/dr-axe.jpg",
     credential: "Clinical Nutritionist",
     specialty: "Natural Medicine",
   },
   {
     name: "Dr. Walter Gil, M.D.",
+    photo: "/doctors/dr-gil.jpg",
     credential: "Medical Doctor",
     specialty: "Medicine",
   },

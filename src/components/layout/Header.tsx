@@ -114,6 +114,17 @@ export default function Header() {
     };
   }, [mobileOpen]);
 
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setOpenPanel(null);
+        setMobileOpen(false);
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, []);
+
   return (
     <>
       {/* Desktop */}
@@ -248,6 +259,8 @@ export default function Header() {
                       {item.panel ? (
                         <button
                           type="button"
+                          aria-haspopup="true"
+                          aria-expanded={isPanelOpen}
                           onMouseEnter={() => setOpenPanel(item.label)}
                           onFocus={() => setOpenPanel(item.label)}
                           onClick={() => setOpenPanel((p) => (p === item.label ? null : item.label))}
@@ -310,24 +323,15 @@ export default function Header() {
               </a>
               <Link
                 href="/consultation"
+                className="btn btn-primary"
                 style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  background: "var(--color-navy)",
-                  color: "#fff",
                   padding: "0.875rem 1.25rem",
                   fontSize: "0.75rem",
-                  fontWeight: 700,
                   letterSpacing: "0.05em",
-                  textDecoration: "none",
                   textTransform: "uppercase",
-                  transition: "background 0.2s",
                   whiteSpace: "nowrap",
                   minWidth: 170,
                 }}
-                onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.background = "var(--color-navy-dark)")}
-                onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.background = "var(--color-navy)")}
               >
                 Free Consultation
               </Link>

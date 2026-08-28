@@ -128,19 +128,49 @@ section {
   overflow: hidden;
 }
 
+/* Liquid hover: a translucent water fill rises from the bottom of every
+   button. Two staggered crests with uneven rounded crowns read as liquid
+   rather than a wipe. Fills are translucent so bare button text stays
+   legible without z-index gymnastics. */
+.btn::before,
 .btn::after {
   content: "";
   position: absolute;
+  left: 50%;
   bottom: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background: rgba(255,255,255,0.12);
-  transition: width 0.3s ease;
+  width: 240%;
+  aspect-ratio: 1.6;
+  pointer-events: none;
+  transform: translate(-50%, 102%);
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.btn:hover::after {
-  width: 100%;
+.btn::before {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 46% 41% 0 0;
+  transition-duration: 0.7s;
+}
+
+.btn::after {
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 39% 47% 0 0;
+}
+
+.btn:hover::before,
+.btn:focus-visible::before {
+  transform: translate(-50%, 55%) rotate(-2deg);
+}
+
+.btn:hover::after,
+.btn:focus-visible::after {
+  transform: translate(-50%, 62%) rotate(1.5deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn::before,
+  .btn::after {
+    transition: none;
+  }
 }
 
 .btn-primary {
@@ -174,6 +204,23 @@ section {
   color: #fff;
 }
 
+/* Light-surface buttons need tinted water, not white-on-white */
+.btn-outline::before {
+  background: rgba(88, 56, 144, 0.07);
+}
+
+.btn-outline::after {
+  background: rgba(88, 56, 144, 0.1);
+}
+
+.btn-white::before {
+  background: rgba(185, 227, 239, 0.35);
+}
+
+.btn-white::after {
+  background: rgba(185, 227, 239, 0.5);
+}
+
 .btn-white {
   background: #fff;
   color: var(--color-navy);
@@ -188,6 +235,40 @@ section {
 a:focus-visible, button:focus-visible {
   outline: 2px solid var(--color-teal);
   outline-offset: 3px;
+}
+
+/* Marquee strips (install/lifestyle walls). Track content is duplicated in
+   the markup, so -50% is one full loop. */
+.marquee-track {
+  display: flex;
+  gap: 1rem;
+  width: max-content;
+  animation: marquee-left 52s linear infinite;
+}
+
+.marquee-track.reverse {
+  animation-name: marquee-right;
+  animation-duration: 62s;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes marquee-right {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
 }
 
 /* Smooth underline link */
@@ -255,5 +336,17 @@ a:focus-visible, button:focus-visible {
     rgba(59, 36, 102, 0.55) 0%,
     rgba(59, 36, 102, 0.35) 45%,
     rgba(59, 36, 102, 0.85) 100%
+  );
+}
+
+/* Second, horizontal scrim layer: darker on the copy side, lighter over the
+   footage, per the two-layer scrim rule. A single flat veil that makes text
+   legible also flattens the video. */
+.hero-veil-x {
+  background: linear-gradient(
+    to right,
+    rgba(30, 15, 60, 0.5) 0%,
+    rgba(30, 15, 60, 0.2) 50%,
+    rgba(30, 15, 60, 0.05) 100%
   );
 }
