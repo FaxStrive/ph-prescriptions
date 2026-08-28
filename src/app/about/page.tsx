@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { BUSINESS } from "@/lib/business";
+import PageHero from "@/components/ui/PageHero";
+import ImageBand from "@/components/ui/ImageBand";
+import PhotoCardGrid from "@/components/ui/PhotoCardGrid";
 
 export const metadata: Metadata = {
   title: "About pH Prescription | Founded 2005, Palm City FL",
@@ -64,42 +67,18 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero */}
-      <section style={{ background: "#fff", color: "var(--color-ink)", padding: "5rem 0 4rem" }}>
-        <div className="max-content" style={{ maxWidth: "760px" }}>
-          <span
-            style={{
-              display: "inline-block",
-              fontFamily: "var(--font-mono)",
-              fontSize: "0.7rem",
-              letterSpacing: "0.18em",
-              textTransform: "uppercase",
-              color: "var(--color-teal)",
-              marginBottom: "1rem",
-            }}
-          >
-            Our Story
-          </span>
-          <h1
-            style={{
-              fontFamily: "var(--font-display)",
-              fontSize: "clamp(2rem, 5vw, 3.25rem)",
-              marginBottom: "1.25rem",
-              letterSpacing: "-0.02em",
-              fontWeight: 400,
-              lineHeight: 1.1,
-            }}
-          >
-            Water Health Science
-            <br />
-            Since {BUSINESS.founded}
-          </h1>
-          <p style={{ fontSize: "1.0625rem", color: "var(--color-ink-soft)", lineHeight: 1.75 }}>
-            pH Prescription was built on a simple premise: the water you drink and bathe in profoundly affects your
-            health. Founded by Leo Szymborski in Palm City, Florida, we have spent two decades refining the science
-            of water and delivering it to homes and businesses across all 50 states.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Our Story"
+        title="Water Health Science"
+        titleAccent={`Since ${BUSINESS.founded}`}
+        subhead="pH Prescription was built on a simple premise: the water you drink and bathe in profoundly affects your health. Founded by Leo Szymborski in Palm City, Florida, we have spent two decades refining the science of water and delivering it to homes and businesses across all 50 states."
+        image="/images/lifestyle2/svc-service-family-sink.jpg"
+        imageAlt="Family filling a glass of clean filtered water together at their kitchen sink"
+        ctas={[
+          { label: "Free Consultation", href: "/consultation", variant: "primary" },
+          { label: "Meet the Experts", href: "/experts", variant: "outline" },
+        ]}
+      />
 
       {/* Mission / Vision / History */}
       <section style={{ background: "var(--color-surface)", padding: "5rem 0" }}>
@@ -176,6 +155,14 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Photo band */}
+      <ImageBand
+        image="/images/lifestyle2/idw-family-water-2.jpg"
+        imageAlt="Family sharing glasses of clean filtered water around the kitchen table"
+        statement="Healthy water for"
+        statementAccent="every family, every tap."
+      />
+
       {/* Founder Story */}
       <section style={{ background: "#fff", padding: "5rem 0" }}>
         <div className="max-content">
@@ -250,7 +237,7 @@ export default function AboutPage() {
                     color: "var(--color-ink-soft)",
                   }}
                 >
-                  "Water Doctors Recommend"
+                  &ldquo;Water Doctors Recommend&rdquo;
                 </blockquote>
               </div>
             </div>
@@ -265,7 +252,7 @@ export default function AboutPage() {
               <p style={{ marginBottom: "1.25rem" }}>
                 His journey began in the industrial landscape of New Jersey, where he grew up in the shadow of
                 chemical plants. Born with chronic health issues and struggling in school, Leo was mislabeled as
-                "dumb" by teachers who failed to recognize his dyslexia. It was not until later in life that he
+                &ldquo;dumb&rdquo; by teachers who failed to recognize his dyslexia. It was not until later in life that he
                 learned the truth, unlocking a deeper understanding of the resilience and determination that had
                 carried him through those early challenges.
               </p>
@@ -276,7 +263,7 @@ export default function AboutPage() {
               </p>
               <p style={{ marginBottom: "1.5rem" }}>
                 Today, pH Prescription is headquartered in a 10,000 square foot facility in Palm City, Florida,
-                serving customers across all 50 states and internationally. The company's Aquapellis brand
+                serving customers across all 50 states and internationally. The company&apos;s Aquapellis brand
                 extends the same water health science to personal care products.
               </p>
               <Link
@@ -293,7 +280,92 @@ export default function AboutPage() {
                   textDecoration: "none",
                 }}
               >
-                Read Leo's memoir: H2O: Health 2 Overcome &rarr;
+                Read Leo&apos;s memoir: H2O: Health 2 Overcome &rarr;
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Clinical endorsements */}
+      <section style={{ background: "#fff", padding: "0 0 5rem" }}>
+        <div className="max-content">
+          <div
+            style={{
+              borderTop: "1px solid var(--color-border-soft)",
+              paddingTop: "3rem",
+              display: "flex",
+              flexWrap: "wrap",
+              gap: "2rem",
+              alignItems: "center",
+              justifyContent: "space-between",
+            }}
+          >
+            <div style={{ maxWidth: "420px" }}>
+              <span
+                style={{
+                  display: "block",
+                  fontFamily: "var(--font-mono)",
+                  fontSize: "0.7rem",
+                  letterSpacing: "0.18em",
+                  textTransform: "uppercase",
+                  color: "var(--color-teal)",
+                  marginBottom: "0.75rem",
+                }}
+              >
+                Clinical Endorsements
+              </span>
+              <p style={{ margin: 0, fontSize: "0.9375rem", lineHeight: 1.7, color: "var(--color-ink-soft)" }}>
+                The science behind our systems carries the independent endorsement of practicing physicians and
+                researchers who use pH Prescription water themselves.
+              </p>
+            </div>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: "1.75rem", alignItems: "center" }}>
+              {[
+                { name: "Dr. Debra DeMarta", cred: "MD, FACS", photo: "/images/team/deborah-demarta.jpg", alt: "Portrait of Dr. Debra DeMarta, endorsing physician" },
+                { name: "Dr. Jerry Tennant", cred: "MD, MD(H)", photo: "/images/team/dr-jerry-tennant.png", alt: "Portrait of Dr. Jerry Tennant, endorsing physician" },
+                { name: "Dr. Nathan Bryan", cred: "PhD", photo: "/images/team/dr-nathan-bryan.png", alt: "Portrait of Dr. Nathan Bryan, molecular biologist" },
+              ].map((doc) => (
+                <div key={doc.name} style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
+                  <div
+                    style={{
+                      width: "56px",
+                      height: "56px",
+                      borderRadius: "50%",
+                      overflow: "hidden",
+                      flexShrink: 0,
+                      border: "2px solid var(--color-border-soft)",
+                      background: "var(--color-surface)",
+                    }}
+                  >
+                    <Image
+                      src={doc.photo}
+                      alt={doc.alt}
+                      width={56}
+                      height={56}
+                      style={{ width: "56px", height: "56px", objectFit: "cover" }}
+                    />
+                  </div>
+                  <div>
+                    <span style={{ display: "block", fontSize: "0.875rem", fontWeight: 600, color: "var(--color-ink)", lineHeight: 1.3 }}>
+                      {doc.name}
+                    </span>
+                    <span style={{ display: "block", fontSize: "0.75rem", color: "var(--color-ink-mute)" }}>{doc.cred}</span>
+                  </div>
+                </div>
+              ))}
+              <Link
+                href="/experts"
+                style={{
+                  fontFamily: "var(--font-mono)",
+                  fontSize: "0.7rem",
+                  letterSpacing: "0.12em",
+                  textTransform: "uppercase",
+                  color: "var(--color-teal)",
+                  textDecoration: "none",
+                }}
+              >
+                All endorsements &rarr;
               </Link>
             </div>
           </div>
@@ -441,6 +513,72 @@ export default function AboutPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* In the field */}
+      <section style={{ background: "var(--color-surface)", padding: "5rem 0" }}>
+        <div className="max-content">
+          <div style={{ marginBottom: "3rem", maxWidth: "640px" }}>
+            <span
+              style={{
+                display: "inline-block",
+                fontFamily: "var(--font-mono)",
+                fontSize: "0.7rem",
+                letterSpacing: "0.18em",
+                textTransform: "uppercase",
+                color: "var(--color-teal)",
+                marginBottom: "1rem",
+              }}
+            >
+              In The Field
+            </span>
+            <h2
+              style={{
+                fontFamily: "var(--font-display)",
+                fontWeight: 400,
+                fontSize: "clamp(1.75rem, 3.5vw, 2.5rem)",
+                letterSpacing: "-0.025em",
+                lineHeight: 1.1,
+                color: "var(--color-ink)",
+                margin: 0,
+              }}
+            >
+              Where Our Water Goes to Work
+            </h2>
+          </div>
+          <PhotoCardGrid
+            columns={3}
+            cards={[
+              {
+                image: "/images/lifestyle/family-thumbs-up.jpg",
+                imageAlt: "Happy family giving a thumbs up for the filtered water in their home",
+                eyebrow: "Residential",
+                title: "Whole Home Confidence",
+                body: "Point-of-entry systems that protect every tap, shower, and appliance in the house.",
+                href: "/residential",
+                linkLabel: "Home solutions",
+              },
+              {
+                image: "/images/lifestyle2/idw-people-drinking-1.jpg",
+                imageAlt: "Friends raising glasses of clean filtered drinking water together",
+                eyebrow: "Wellness",
+                title: "Water You Can Feel",
+                body: "Re-mineralized, hydrogen-infused alkaline water that supports the body instead of just passing through it.",
+                href: "/technology",
+                linkLabel: "The science",
+              },
+              {
+                image: "/images/trade-shows/team-at-booth.jpg",
+                imageAlt: "pH Prescription team members at the company booth during a wellness trade show",
+                eyebrow: "On The Road",
+                title: "Expos and Real Conversations",
+                body: "From medical conventions to wellness expos, we show up in person to demonstrate the systems and answer hard questions.",
+                href: "/about/community",
+                linkLabel: "Community care",
+              },
+            ]}
+          />
         </div>
       </section>
 

@@ -2,6 +2,11 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { PRODUCTS_ALL } from "@/lib/business";
+import PageHero from "@/components/ui/PageHero";
+
+function categoryId(category: string) {
+  return category.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+}
 
 export const metadata: Metadata = {
   title: "All Products | pH Prescription Water Systems",
@@ -32,46 +37,64 @@ export default function ProductsPage() {
   return (
     <>
       {/* Hero */}
+      <PageHero
+        eyebrow="Product Catalogue"
+        title="Our Complete Product Catalogue"
+        subhead="46 systems, filters, and accessories - WQA Certified, Made in USA"
+        image="/images/lifestyle2/svc-service-tap-closeup.jpg"
+        imageAlt="Man filling a tall glass with fresh water from a brushed-steel gooseneck kitchen faucet"
+        minHeight="52vh"
+        ctas={[{ label: "Book a Free Consultation", href: "/consultation", variant: "primary" }]}
+      />
+
+      {/* Category quick links */}
       <section
-        style={{
-          background: "#fff",
-          color: "var(--color-ink)",
-          padding: "5rem 0 4rem",
-        }}
+        aria-label="Browse by category"
+        style={{ background: "#fff", padding: "1.5rem 0", borderBottom: "1px solid var(--color-border-soft)" }}
       >
-        <div className="container" style={{ maxWidth: "820px" }}>
+        <div className="container">
           <div
             style={{
-              fontSize: "0.8125rem",
-              color: "var(--color-teal)",
-              letterSpacing: "0.1em",
-              textTransform: "uppercase",
-              marginBottom: "1rem",
+              display: "flex",
+              flexWrap: "wrap",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: "0.5rem 0.75rem",
             }}
           >
-            Product Catalogue
+            <span
+              style={{
+                fontFamily: "var(--font-mono)",
+                fontSize: "0.65rem",
+                letterSpacing: "0.16em",
+                textTransform: "uppercase",
+                color: "var(--color-ink-mute)",
+                marginRight: "0.5rem",
+              }}
+            >
+              Jump to
+            </span>
+            {CATEGORY_ORDER.filter((category) =>
+              PRODUCTS_ALL.some((p) => p.category === category)
+            ).map((category) => (
+              <a
+                key={category}
+                href={`#${categoryId(category)}`}
+                style={{
+                  display: "inline-block",
+                  padding: "0.45rem 0.9rem",
+                  fontSize: "0.8125rem",
+                  fontWeight: 600,
+                  color: "var(--color-navy)",
+                  background: "var(--color-surface)",
+                  border: "1px solid var(--color-border-soft)",
+                  textDecoration: "none",
+                }}
+              >
+                {category}
+              </a>
+            ))}
           </div>
-          <h1
-            style={{
-              fontFamily: "var(--font-display)",
-              fontSize: "clamp(2rem,5vw,3.25rem)",
-              marginBottom: "1.25rem",
-              letterSpacing: "-0.02em",
-              lineHeight: 1.1,
-            }}
-          >
-            Our Complete Product Catalogue
-          </h1>
-          <p
-            style={{
-              fontSize: "1.0625rem",
-              color: "var(--color-ink-soft)",
-              lineHeight: 1.8,
-              maxWidth: "600px",
-            }}
-          >
-            46 systems, filters, and accessories - WQA Certified, Made in USA
-          </p>
         </div>
       </section>
 
@@ -126,7 +149,7 @@ export default function ProductsPage() {
             const products = grouped[category];
             if (!products || products.length === 0) return null;
             return (
-              <div key={category} style={{ marginBottom: "4rem" }}>
+              <div key={category} id={categoryId(category)} style={{ marginBottom: "4rem", scrollMarginTop: "6rem" }}>
                 <div
                   style={{
                     borderBottom: "2px solid var(--color-navy)",

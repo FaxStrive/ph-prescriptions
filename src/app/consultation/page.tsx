@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Phone, CheckCircle2 } from "lucide-react";
 import { BUSINESS } from "@/lib/business";
+import PageHero from "@/components/ui/PageHero";
+import ImageBand from "@/components/ui/ImageBand";
 
 export const metadata: Metadata = {
   title: "Free Water Consultation | pH Prescription",
@@ -10,17 +12,15 @@ export const metadata: Metadata = {
 export default function ConsultationPage() {
   return (
     <>
-      <section style={{ background: "#fff", color: "var(--color-ink)", padding: "5rem 0 4rem" }}>
-        <div className="container" style={{ maxWidth: "700px" }}>
-          <div style={{ fontSize: "0.8125rem", color: "var(--color-teal)", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "1rem" }}>No Cost, No Obligation</div>
-          <h1 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2rem,5vw,3.25rem)", marginBottom: "1.25rem", letterSpacing: "-0.02em" }}>
-            Free Water Analysis &amp; Consultation
-          </h1>
-          <p style={{ fontSize: "1.0625rem", color: "var(--color-ink-soft)", lineHeight: 1.75 }}>
-            Schedule a complimentary water analysis. We test what is in your water, explain exactly what we find, and recommend the right solution for your home or business - with no obligation to purchase.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="No Cost, No Obligation"
+        title="Free Water Analysis"
+        titleAccent="& Consultation"
+        subhead="Schedule a complimentary water analysis. We test what is in your water, explain exactly what we find, and recommend the right solution for your home or business - with no obligation to purchase."
+        image="/images/lifestyle/consultation.jpg"
+        imageAlt="Water specialist reviewing test results with a homeowner during a consultation"
+        minHeight="54vh"
+      />
 
       <section style={{ background: "var(--color-cream)" }}>
         <div className="container">
@@ -69,21 +69,21 @@ export default function ConsultationPage() {
                 <div>
                   <label style={{ display: "block", fontSize: "0.875rem", fontWeight: 600, color: "var(--color-navy)", marginBottom: "0.5rem" }}>Full Name *</label>
                   <input type="text" name="name" required placeholder="Your full name"
-                    style={{ width: "100%", padding: "0.875rem 1rem", border: "1px solid var(--color-border-strong)", fontSize: "0.9375rem", outline: "none", background: "#fff" }} />
+                    style={{ width: "100%", minHeight: "48px", padding: "0.875rem 1rem", border: "1px solid var(--color-border-strong)", fontSize: "0.9375rem", outline: "none", background: "#fff" }} />
                 </div>
                 <div>
                   <label style={{ display: "block", fontSize: "0.875rem", fontWeight: 600, color: "var(--color-navy)", marginBottom: "0.5rem" }}>Phone *</label>
                   <input type="tel" name="phone" required placeholder="Best number to reach you"
-                    style={{ width: "100%", padding: "0.875rem 1rem", border: "1px solid var(--color-border-strong)", fontSize: "0.9375rem", outline: "none", background: "#fff" }} />
+                    style={{ width: "100%", minHeight: "48px", padding: "0.875rem 1rem", border: "1px solid var(--color-border-strong)", fontSize: "0.9375rem", outline: "none", background: "#fff" }} />
                 </div>
                 <div>
                   <label style={{ display: "block", fontSize: "0.875rem", fontWeight: 600, color: "var(--color-navy)", marginBottom: "0.5rem" }}>ZIP Code *</label>
                   <input type="text" name="zip" required placeholder="Your ZIP code"
-                    style={{ width: "100%", padding: "0.875rem 1rem", border: "1px solid var(--color-border-strong)", fontSize: "0.9375rem", outline: "none", background: "#fff" }} />
+                    style={{ width: "100%", minHeight: "48px", padding: "0.875rem 1rem", border: "1px solid var(--color-border-strong)", fontSize: "0.9375rem", outline: "none", background: "#fff" }} />
                 </div>
                 <div>
                   <label style={{ display: "block", fontSize: "0.875rem", fontWeight: 600, color: "var(--color-navy)", marginBottom: "0.5rem" }}>System Type</label>
-                  <select name="type" style={{ width: "100%", padding: "0.875rem 1rem", border: "1px solid var(--color-border-strong)", fontSize: "0.9375rem", outline: "none", background: "#fff" }}>
+                  <select name="type" style={{ width: "100%", minHeight: "48px", padding: "0.875rem 1rem", border: "1px solid var(--color-border-strong)", fontSize: "0.9375rem", outline: "none", background: "#fff" }}>
                     <option value="">Select interest area</option>
                     <option value="residential-drinking">Residential Drinking System</option>
                     <option value="residential-whole-home">Whole Home System</option>
@@ -109,6 +109,13 @@ export default function ConsultationPage() {
           </div>
         </div>
       </section>
+
+      <ImageBand
+        image="/images/lifestyle2/svc-service-woman-drinking.jpg"
+        imageAlt="Woman drinking a glass of freshly filtered water at home"
+        statement="Know what is in your water"
+        statementAccent="before you buy anything."
+      />
     </>
   );
 }

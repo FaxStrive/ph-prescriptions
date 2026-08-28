@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { blogPosts, getBlogPost } from "@/lib/blog-posts";
 
 export async function generateStaticParams() {
@@ -81,6 +82,25 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             >
               {post.title}
             </h1>
+            <div
+              style={{
+                position: "relative",
+                width: "100%",
+                aspectRatio: "16 / 9",
+                overflow: "hidden",
+                background: "var(--color-surface)",
+                margin: "1.75rem 0",
+              }}
+            >
+              <Image
+                src={post.heroImage}
+                alt={post.heroImageAlt}
+                fill
+                priority
+                sizes="(max-width: 800px) 100vw, 760px"
+                style={{ objectFit: "cover" }}
+              />
+            </div>
             <p
               style={{
                 margin: 0,

@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { BUSINESS } from "@/lib/business";
+import PageHero from "@/components/ui/PageHero";
+import ImageBand from "@/components/ui/ImageBand";
+import PhotoCardGrid from "@/components/ui/PhotoCardGrid";
 
 export const metadata: Metadata = {
   title: "Residential Drinking Water Systems | pH Prescription",
@@ -10,18 +14,22 @@ export const metadata: Metadata = {
 export default function DrinkingSystemsPage() {
   return (
     <>
-      <section style={{ background: "#fff", color: "var(--color-ink)", padding: "5rem 0 4rem" }}>
-        <div className="container" style={{ maxWidth: "700px" }}>
-          <div style={{ fontSize: "0.8125rem", color: "var(--color-teal)", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "1rem" }}>Residential</div>
-          <h1 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2rem,5vw,3.25rem)", marginBottom: "1.25rem", letterSpacing: "-0.02em" }}>Drinking Water Systems</h1>
-          <p style={{ fontSize: "1.0625rem", color: "var(--color-ink-soft)", lineHeight: 1.75 }}>
-            Doctor-recommended under-sink systems that filter, alkalize, remineralize, and infuse molecular hydrogen. Non-electric. Lifetime warranty with licensed plumber installation.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Residential"
+        title="Drinking Water"
+        titleAccent="Systems"
+        subhead="Doctor-recommended under-sink systems that filter, alkalize, remineralize, and infuse molecular hydrogen. Non-electric. Lifetime warranty with licensed plumber installation."
+        image="/images/hero/drinking-water-hero.jpg"
+        imageAlt="Glass pitcher and cup of purified water on a kitchen counter with a reverse osmosis system in the background"
+        ctas={[
+          { label: "Get My Free Analysis", href: "/consultation", variant: "white" },
+          { label: `Call ${BUSINESS.phone}`, href: `tel:${BUSINESS.phone}`, variant: "outline" },
+        ]}
+      />
+
       <section style={{ background: "var(--color-cream)" }}>
         <div className="container">
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "3rem", alignItems: "start" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "3rem", alignItems: "start" }}>
             <div>
               <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.625rem,3vw,2.125rem)", color: "var(--color-navy)", marginBottom: "1.25rem" }}>Our Drinking Systems</h2>
               {[
@@ -59,6 +67,74 @@ export default function DrinkingSystemsPage() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section style={{ background: "#fff" }}>
+        <div className="container">
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "3rem", alignItems: "center" }}>
+            <div style={{ position: "relative", aspectRatio: "4 / 5", overflow: "hidden" }}>
+              <Image
+                src="/images/installations/bathroom-install-progress.jpg"
+                alt="Technician installing a pH Prescription multi-stage drinking system inside an under-sink cabinet"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                style={{ objectFit: "cover" }}
+              />
+            </div>
+            <div>
+              <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.7rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--color-teal)", display: "block", marginBottom: "1rem" }}>
+                A Real Install
+              </span>
+              <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.5rem,3vw,2rem)", color: "var(--color-navy)", marginBottom: "1.25rem", letterSpacing: "-0.02em" }}>
+                Installed Under Your Sink, Out of Sight
+              </h2>
+              <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.8, marginBottom: "1.25rem" }}>
+                Both systems tuck into a standard kitchen cabinet and connect to your existing plumbing - no electricity, no countertop clutter. A licensed plumber handles the entire install, which is what lets us back every system with a lifetime warranty.
+              </p>
+              <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.8 }}>
+                From first glass onward, your water is filtered, alkalized to pH 8.0-9.5, remineralized, and infused with molecular hydrogen.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <ImageBand
+        image="/images/lifestyle2/svc-service-couple-drinking.jpg"
+        imageAlt="Parents and their young daughter raising glasses of water together on the couch"
+        statement="Up to 99% of contaminants removed,"
+        statementAccent="every single glass"
+      />
+
+      <section style={{ background: "var(--color-cream)" }}>
+        <div className="container">
+          <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.5rem,3vw,2rem)", color: "var(--color-navy)", marginBottom: "2rem", letterSpacing: "-0.02em" }}>
+            What Better Drinking Water Looks Like
+          </h2>
+          <PhotoCardGrid
+            columns={3}
+            cards={[
+              {
+                image: "/images/lifestyle2/pa-enjoy-pure-water.jpg",
+                imageAlt: "Cupped hands catching a stream of clean water in the sunlight",
+                title: "Clean at the Source",
+                body: "QuadVortex reverse osmosis strips heavy metals, chlorine, fluoride, and micro-organisms before the water reaches your glass.",
+              },
+              {
+                image: "/images/lifestyle2/svc-service-kitchen-tap.jpg",
+                imageAlt: "Hand filling a glass from a modern black kitchen faucet beside fresh produce",
+                title: "Right at Your Tap",
+                body: "Alkaline, remineralized water on demand for drinking, cooking, coffee, and rinsing produce.",
+              },
+              {
+                image: "/images/hero/faq-hero.jpg",
+                imageAlt: "Woman filling a glass of water at the kitchen sink and smiling",
+                title: "Water You Actually Drink",
+                body: "When water tastes clean, families drink more of it. H2-infused water adds antioxidant support with every pour.",
+              },
+            ]}
+          />
         </div>
       </section>
     </>

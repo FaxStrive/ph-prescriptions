@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Image from "next/image";
 import { BUSINESS } from "@/lib/business";
 
 export const metadata: Metadata = {
@@ -95,6 +95,35 @@ export default function AffiliatePage() {
             </div>
 
             <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+              <figure style={{ margin: 0 }}>
+                <div
+                  style={{
+                    position: "relative",
+                    width: "100%",
+                    aspectRatio: "1 / 1",
+                    overflow: "hidden",
+                    background: "#fff",
+                  }}
+                >
+                  <Image
+                    src="/images/promo/home-system-ad.jpg"
+                    alt="pH Prescription home water system promotional graphic available to affiliate partners"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 400px"
+                    style={{ objectFit: "cover" }}
+                  />
+                </div>
+                <figcaption
+                  style={{
+                    marginTop: "0.625rem",
+                    fontSize: "0.8125rem",
+                    color: "var(--color-ink-mute)",
+                    lineHeight: 1.5,
+                  }}
+                >
+                  Ready-made promotional material like this is part of the marketing support available to partners.
+                </figcaption>
+              </figure>
               <div
                 style={{
                   background: "#fff",

@@ -59,7 +59,7 @@ const SERVICES = [
     ),
     title: "Pool",
     description: "Mineral-balanced, chlorine-free pool water",
-    href: "/solutions/pool-marine",
+    href: "/pool",
   },
   {
     icon: (

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BUSINESS } from "@/lib/business";
+import PageHero from "@/components/ui/PageHero";
+import ImageBand from "@/components/ui/ImageBand";
 
 export const metadata: Metadata = {
   title: "About Leo Szymborski | Founder of pH Prescription",
@@ -10,17 +12,17 @@ export const metadata: Metadata = {
 export default function AboutLeoPage() {
   return (
     <>
-      <section style={{ background: "#fff", color: "var(--color-ink)", padding: "5rem 0 4rem" }}>
-        <div className="container" style={{ maxWidth: "700px" }}>
-          <div style={{ fontSize: "0.8125rem", color: "var(--color-teal)", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "1rem" }}>Founder</div>
-          <h1 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2rem,5vw,3.25rem)", marginBottom: "1.25rem", letterSpacing: "-0.02em" }}>
-            Leo Szymborski
-          </h1>
-          <p style={{ fontSize: "1.0625rem", color: "var(--color-ink-soft)", lineHeight: 1.75 }}>
-            Third-generation plumber. {BUSINESS.yearsExperience} years in water systems. Author. Founder of pH Prescription.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Founder"
+        title="Leo Szymborski"
+        subhead={`Third-generation plumber. ${BUSINESS.yearsExperience} years in water systems. Author. Founder of pH Prescription.`}
+        image="/images/lifestyle2/idw-person-drinking-4.jpg"
+        imageAlt="Man drinking a glass of clean filtered water"
+        ctas={[
+          { label: "Read His Book", href: "/book", variant: "primary" },
+          { label: "Doctor Endorsements", href: "/experts", variant: "outline" },
+        ]}
+      />
 
       <section style={{ background: "var(--color-cream)" }}>
         <div className="container">
@@ -37,10 +39,23 @@ export default function AboutLeoPage() {
             <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.85, fontSize: "1.0625rem", marginBottom: "1.25rem" }}>
               Leo has since built a 10,000 square foot manufacturing facility in Palm City, FL, and grown pH Prescription into a nationally recognized brand serving all 50 states. Every system bears the WQA certification and the Made in USA designation he is proud of.
             </p>
-            <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.85, fontSize: "1.0625rem", marginBottom: "2rem" }}>
+            <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.85, fontSize: "1.0625rem", marginBottom: "1.25rem" }}>
               His work gained the attention of leading physicians and researchers - including authors, surgeons, and molecular medicine scientists - who now endorse pH Prescription systems to their own patients and clients.
             </p>
+          </div>
+        </div>
+      </section>
 
+      <ImageBand
+        image="/images/lifestyle2/svc-service-family-outdoor.jpg"
+        imageAlt="Family spending time together outdoors, healthy and well hydrated"
+        statement="Water changed his life."
+        statementAccent="Then it became his life's work."
+      />
+
+      <section style={{ background: "var(--color-cream)" }}>
+        <div className="container">
+          <div style={{ maxWidth: "760px", margin: "0 auto" }}>
             <div style={{ background: "#fff", color: "var(--color-ink)", padding: "2.5rem", marginBottom: "2rem" }}>
               <div style={{ fontFamily: "var(--font-display)", fontSize: "1rem", color: "var(--color-teal)", marginBottom: "0.75rem", letterSpacing: "0.05em", textTransform: "uppercase" }}>
                 Book by Leo Szymborski

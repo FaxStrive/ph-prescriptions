@@ -53,7 +53,8 @@ const NAV: NavItem[] = [
       eyebrow: "Specialty Applications",
       headline: "Precision water for every environment.",
       items: [
-        { label: "Pool & Marine / RV", href: "/solutions/pool-marine", description: "Pools, boats & rec vehicles" },
+        { label: "Pool & Spa", href: "/pool", description: "Chlorine-free pool water" },
+        { label: "Marine & RV", href: "/marine", description: "Boats, yachts & travel" },
         { label: "Medical", href: "/solutions/medical", description: "Dialysis, dental & sterile prep" },
         { label: "Restaurant & Hospitality", href: "/solutions/restaurant-hospitality", description: "Restaurants, resorts & spas" },
       ],
@@ -103,11 +104,6 @@ export default function Header() {
   }, []);
 
   useEffect(() => {
-    setMobileOpen(false);
-    setOpenPanel(null);
-  }, [pathname]);
-
-  useEffect(() => {
     document.body.style.overflow = mobileOpen ? "hidden" : "";
     return () => {
       document.body.style.overflow = "";
@@ -128,7 +124,7 @@ export default function Header() {
   return (
     <>
       {/* Desktop */}
-      <div
+      <header
         className="hidden xl:block"
         style={{
           position: "fixed",
@@ -451,7 +447,7 @@ export default function Header() {
             )}
           </AnimatePresence>
         </div>
-      </div>
+      </header>
 
       {/* Mobile */}
       <header

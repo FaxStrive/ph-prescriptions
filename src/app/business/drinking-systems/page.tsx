@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { BUSINESS } from "@/lib/business";
+import PageHero from "@/components/ui/PageHero";
+import PhotoCardGrid from "@/components/ui/PhotoCardGrid";
 
 export const metadata: Metadata = {
   title: "Business Drinking Water Systems | pH Prescription",
@@ -12,185 +15,154 @@ const APPLICATIONS = [
   {
     name: "Office Break Rooms",
     desc: "Replace bottled water programs with inline filtered water at the sink. Saves thousands annually for mid-size offices.",
+    image: "/images/hero/health-supplements-hero.jpg",
+    imageAlt: "Woman drinking a glass of water at a table set with fresh fruit and vegetables",
   },
   {
     name: "Medical & Dental Offices",
     desc: "Ultra-pure water for patient hydration and clinical applications. Doctor-recommended systems trusted by physicians nationwide.",
+    image: "/images/business/medical-healthcare.jpg",
+    imageAlt: "Doctor in a white coat consulting with a patient at her desk",
   },
   {
     name: "Gyms & Fitness Centers",
     desc: "High-volume under-counter systems for member hydration stations. Alkaline water supports faster recovery.",
+    image: "/images/industries/fitness.jpg",
+    imageAlt: "Athlete in workout gear drinking from a water bottle under a clear sky",
   },
   {
     name: "Corporate Cafeterias",
     desc: "High-capacity systems for food service, beverage stations, and employee dining. Sized for your daily volume.",
+    image: "/images/lifestyle2/idw-tap-kitchen-1.jpg",
+    imageAlt: "Filtered water tap in an office kitchen ready for staff refills",
   },
 ];
 
 export default function BusinessDrinkingSystemsPage() {
   return (
     <>
-      <section
-        style={{
-          background: "#fff",
-          color: "var(--color-ink)",
-          padding: "5rem 0 4rem",
-        }}
-      >
-        <div className="container" style={{ maxWidth: "700px" }}>
-          <div
-            style={{
-              fontSize: "0.8125rem",
-              color: "var(--color-teal)",
-              letterSpacing: "0.1em",
-              textTransform: "uppercase",
-              marginBottom: "1rem",
-            }}
-          >
-            Business / Drinking Systems
-          </div>
-          <h1
-            style={{
-              fontFamily: "var(--font-display)",
-              fontSize: "clamp(2rem,5vw,3.25rem)",
-              marginBottom: "1.25rem",
-              letterSpacing: "-0.02em",
-            }}
-          >
-            Commercial Drinking Water Systems
-          </h1>
-          <p
-            style={{
-              fontSize: "1.0625rem",
-              color: "var(--color-ink-soft)",
-              lineHeight: 1.75,
-              marginBottom: "2rem",
-            }}
-          >
-            The same doctor-recommended QuadVortex technology from our residential line, scaled for commercial usage. Under-counter, point-of-use, and high-volume configurations. WQA Certified. Lifetime warranty. All 50 states.
-          </p>
-          <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-            <Link
-              href="/consultation"
-              style={{
-                display: "inline-block",
-                background: "#fff",
-                color: "var(--color-ink)",
-                padding: "0.875rem 2rem",
-                fontWeight: 600,
-                textDecoration: "none",
-              }}
-            >
-              Request Commercial Quote
-            </Link>
-            <a
-              href={`tel:${BUSINESS.phoneTollFree}`}
-              style={{
-                display: "inline-block",
-                border: "1px solid var(--color-border-soft)",
-                color: "var(--color-ink)",
-                padding: "0.875rem 2rem",
-                fontWeight: 600,
-                textDecoration: "none",
-              }}
-            >
-              {BUSINESS.phoneTollFree}
-            </a>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Business / Drinking Systems"
+        title="Commercial Drinking"
+        titleAccent="Water Systems"
+        subhead="The same doctor-recommended QuadVortex technology from our residential line, scaled for commercial usage. Under-counter, point-of-use, and high-volume configurations. WQA Certified. Lifetime warranty. All 50 states."
+        image="/images/hero/office-hero.jpg"
+        imageAlt="Technician preparing a multi-stage reverse osmosis unit for installation, red toolbox at his side"
+        ctas={[
+          { label: "Request Commercial Quote", href: "/consultation", variant: "white" },
+          { label: BUSINESS.phoneTollFree, href: `tel:${BUSINESS.phoneTollFree}`, variant: "outline" },
+        ]}
+      />
 
       <section style={{ background: "var(--color-cream)", padding: "4rem 0" }}>
         <div className="container">
-          <h2
-            style={{
-              fontFamily: "var(--font-display)",
-              fontSize: "clamp(1.5rem,3vw,2rem)",
-              color: "var(--color-navy)",
-              marginBottom: "0.75rem",
-            }}
-          >
-            What Every System Delivers
-          </h2>
-          <p
-            style={{
-              color: "rgba(27,58,107,0.65)",
-              marginBottom: "2.5rem",
-              maxWidth: "560px",
-            }}
-          >
-            Commercial configurations of our residential technology - same four-stage process, higher daily output.
-          </p>
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-              gap: "1.25rem",
+              gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+              gap: "3rem",
+              alignItems: "center",
             }}
           >
-            {[
-              {
-                step: "01",
-                name: "Reverse Osmosis",
-                desc: "Removes up to 99% of contaminants including heavy metals, chlorine, fluoride, and micro-organisms.",
-              },
-              {
-                step: "02",
-                name: "Alkalizing",
-                desc: "Raises pH to 8.5-9.5 through an alkalizing cartridge - no electricity required.",
-              },
-              {
-                step: "03",
-                name: "Remineralization",
-                desc: "Adds back essential minerals stripped by RO: calcium, magnesium, potassium.",
-              },
-              {
-                step: "04",
-                name: "Hydrogen Infusion",
-                desc: "QuadVortex molecular hydrogen infusion. Antioxidant-rich water at every pour.",
-              },
-            ].map((s) => (
-              <div
-                key={s.step}
+            <div>
+              <h2
                 style={{
-                  background: "#fff",
-                  border: "1px solid rgba(27,58,107,0.1)",
-                  padding: "1.75rem",
+                  fontFamily: "var(--font-display)",
+                  fontSize: "clamp(1.5rem,3vw,2rem)",
+                  color: "var(--color-navy)",
+                  marginBottom: "0.75rem",
                 }}
               >
-                <div
-                  style={{
-                    fontSize: "2rem",
-                    fontFamily: "var(--font-display)",
-                    color: "var(--color-teal)",
-                    opacity: 0.4,
-                    lineHeight: 1,
-                    marginBottom: "0.75rem",
-                  }}
-                >
-                  {s.step}
-                </div>
-                <div
-                  style={{
-                    fontFamily: "var(--font-display)",
-                    fontSize: "1.0625rem",
-                    color: "var(--color-navy)",
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  {s.name}
-                </div>
-                <p
-                  style={{
-                    color: "rgba(27,58,107,0.7)",
-                    fontSize: "0.9rem",
-                    lineHeight: 1.65,
-                  }}
-                >
-                  {s.desc}
-                </p>
+                What Every System Delivers
+              </h2>
+              <p
+                style={{
+                  color: "rgba(27,58,107,0.65)",
+                  marginBottom: "2rem",
+                  maxWidth: "560px",
+                }}
+              >
+                Commercial configurations of our residential technology - same four-stage process, higher daily output.
+              </p>
+              <div style={{ display: "grid", gap: "1.25rem" }}>
+                {[
+                  {
+                    step: "01",
+                    name: "Reverse Osmosis",
+                    desc: "Removes up to 99% of contaminants including heavy metals, chlorine, fluoride, and micro-organisms.",
+                  },
+                  {
+                    step: "02",
+                    name: "Alkalizing",
+                    desc: "Raises pH to 8.5-9.5 through an alkalizing cartridge - no electricity required.",
+                  },
+                  {
+                    step: "03",
+                    name: "Remineralization",
+                    desc: "Adds back essential minerals stripped by RO: calcium, magnesium, potassium.",
+                  },
+                  {
+                    step: "04",
+                    name: "Hydrogen Infusion",
+                    desc: "QuadVortex molecular hydrogen infusion. Antioxidant-rich water at every pour.",
+                  },
+                ].map((s) => (
+                  <div
+                    key={s.step}
+                    style={{
+                      display: "flex",
+                      gap: "1.25rem",
+                      alignItems: "flex-start",
+                      background: "#fff",
+                      border: "1px solid rgba(27,58,107,0.1)",
+                      padding: "1.25rem 1.5rem",
+                    }}
+                  >
+                    <div
+                      style={{
+                        fontSize: "1.5rem",
+                        fontFamily: "var(--font-display)",
+                        color: "var(--color-teal)",
+                        opacity: 0.5,
+                        lineHeight: 1.2,
+                      }}
+                    >
+                      {s.step}
+                    </div>
+                    <div>
+                      <div
+                        style={{
+                          fontFamily: "var(--font-display)",
+                          fontSize: "1.0625rem",
+                          color: "var(--color-navy)",
+                          marginBottom: "0.25rem",
+                        }}
+                      >
+                        {s.name}
+                      </div>
+                      <p
+                        style={{
+                          color: "rgba(27,58,107,0.7)",
+                          fontSize: "0.9rem",
+                          lineHeight: 1.65,
+                        }}
+                      >
+                        {s.desc}
+                      </p>
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
+            <div style={{ position: "relative", aspectRatio: "4 / 3", overflow: "hidden" }}>
+              <Image
+                src="/images/hero/resources-hero.jpg"
+                alt="Replacement filter cartridges laid out beside a glass of purified water in a bright kitchen"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                style={{ objectFit: "cover" }}
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -207,49 +179,21 @@ export default function BusinessDrinkingSystemsPage() {
           >
             Commercial Applications
           </h2>
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-              gap: "1.5rem",
-            }}
-          >
-            {APPLICATIONS.map((a) => (
-              <div
-                key={a.name}
-                style={{
-                  borderTop: "3px solid var(--color-teal)",
-                  paddingTop: "1.25rem",
-                }}
-              >
-                <h3
-                  style={{
-                    fontFamily: "var(--font-display)",
-                    fontSize: "1.0625rem",
-                    color: "var(--color-navy)",
-                    marginBottom: "0.625rem",
-                  }}
-                >
-                  {a.name}
-                </h3>
-                <p
-                  style={{
-                    color: "rgba(27,58,107,0.7)",
-                    fontSize: "0.9375rem",
-                    lineHeight: 1.7,
-                  }}
-                >
-                  {a.desc}
-                </p>
-              </div>
-            ))}
-          </div>
+          <PhotoCardGrid
+            columns={2}
+            cards={APPLICATIONS.map((a) => ({
+              image: a.image,
+              imageAlt: a.imageAlt,
+              title: a.name,
+              body: a.desc,
+            }))}
+          />
         </div>
       </section>
 
       <section
         style={{
-          background: "#fff",
+          background: "var(--color-cream)",
           color: "var(--color-ink)",
           padding: "3.5rem 0",
           textAlign: "center",
@@ -273,17 +217,7 @@ export default function BusinessDrinkingSystemsPage() {
           >
             We test first, then recommend. No overselling. Licensed installation. Lifetime warranty. Nationwide.
           </p>
-          <Link
-            href="/consultation"
-            style={{
-              display: "inline-block",
-              background: "#fff",
-              color: "var(--color-ink)",
-              padding: "0.875rem 2.25rem",
-              fontWeight: 600,
-              textDecoration: "none",
-            }}
-          >
+          <Link href="/consultation" className="btn btn-primary">
             Request My Commercial Quote
           </Link>
         </div>

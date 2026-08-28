@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { BUSINESS } from "@/lib/business";
+import PageHero from "@/components/ui/PageHero";
+import ImageBand from "@/components/ui/ImageBand";
 
 export const metadata: Metadata = {
   title: "Restaurant & Hospitality Water Systems | pH Prescription",
@@ -41,76 +44,18 @@ const APPLICATIONS = [
 export default function RestaurantPage() {
   return (
     <>
-      {/* Hero */}
-      <section
-        style={{
-          background: "#fff",
-          color: "var(--color-ink)",
-          padding: "5rem 0 4rem",
-        }}
-      >
-        <div className="container" style={{ maxWidth: "700px" }}>
-          <div
-            style={{
-              fontSize: "0.8125rem",
-              color: "var(--color-teal)",
-              letterSpacing: "0.1em",
-              textTransform: "uppercase",
-              marginBottom: "1rem",
-            }}
-          >
-            For Your Business
-          </div>
-          <h1
-            style={{
-              fontFamily: "var(--font-display)",
-              fontSize: "clamp(2rem,5vw,3.25rem)",
-              marginBottom: "1.25rem",
-              letterSpacing: "-0.02em",
-            }}
-          >
-            Restaurant & Hospitality Water Treatment
-          </h1>
-          <p
-            style={{
-              fontSize: "1.0625rem",
-              color: "var(--color-ink-soft)",
-              lineHeight: 1.75,
-              marginBottom: "2rem",
-            }}
-          >
-            Water quality is a kitchen variable most operators overlook. pH Prescription delivers WQA Certified commercial systems that protect equipment, improve every dish and beverage, and give your guests the water quality they deserve.
-          </p>
-          <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-            <Link
-              href="/consultation"
-              style={{
-                display: "inline-block",
-                background: "#fff",
-                color: "var(--color-ink)",
-                padding: "0.875rem 2rem",
-                fontWeight: 600,
-                textDecoration: "none",
-              }}
-            >
-              Request Restaurant Quote
-            </Link>
-            <a
-              href={`tel:${BUSINESS.phoneTollFree}`}
-              style={{
-                display: "inline-block",
-                border: "1px solid var(--color-border-soft)",
-                color: "var(--color-ink)",
-                padding: "0.875rem 2rem",
-                fontWeight: 600,
-                textDecoration: "none",
-              }}
-            >
-              {BUSINESS.phoneTollFree}
-            </a>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="For Your Business"
+        title="Restaurant & Hospitality"
+        titleAccent="Water Treatment"
+        subhead="Water quality is a kitchen variable most operators overlook. pH Prescription delivers WQA Certified commercial systems that protect equipment, improve every dish and beverage, and give your guests the water quality they deserve."
+        image="/images/hero/hospitality-hero.jpg"
+        imageAlt="Row of water glasses being filled in sequence for table service"
+        ctas={[
+          { label: "Request Restaurant Quote", href: "/consultation", variant: "white" },
+          { label: BUSINESS.phoneTollFree, href: `tel:${BUSINESS.phoneTollFree}`, variant: "outline" },
+        ]}
+      />
 
       {/* Benefits */}
       <section style={{ background: "var(--color-cream)", padding: "4rem 0" }}>
@@ -138,6 +83,7 @@ export default function RestaurantPage() {
                 style={{
                   background: "#fff",
                   border: "1px solid rgba(27,58,107,0.1)",
+                  borderTop: "3px solid var(--color-teal)",
                   padding: "2rem",
                 }}
               >
@@ -166,15 +112,22 @@ export default function RestaurantPage() {
         </div>
       </section>
 
+      <ImageBand
+        image="/images/commercial/cfw-commercial-ro-membrane-skid-build-v2.jpg"
+        imageAlt="Technician assembling a commercial reverse osmosis membrane skid in a warehouse"
+        statement="Commercial-grade equipment,"
+        statementAccent="sized for your kitchen"
+      />
+
       {/* Applications */}
       <section style={{ background: "#fff", padding: "4rem 0" }}>
         <div className="container">
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-              gap: "4rem",
-              alignItems: "center",
+              gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+              gap: "3rem",
+              alignItems: "start",
             }}
           >
             <div>
@@ -197,7 +150,7 @@ export default function RestaurantPage() {
               >
                 From single-restaurant installs to multi-property hotel chains, our systems are sized and specified for your exact usage profile. Free water analysis before every recommendation.
               </p>
-              <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+              <ul style={{ listStyle: "none", padding: 0, margin: "0 0 2rem" }}>
                 {APPLICATIONS.map((app) => (
                   <li
                     key={app}
@@ -211,66 +164,104 @@ export default function RestaurantPage() {
                       gap: "0.625rem",
                     }}
                   >
-                    <span style={{ color: "var(--color-teal)", fontWeight: 700 }}>
-                      --
-                    </span>
+                    <span style={{ color: "var(--color-teal)", fontWeight: 700 }}>+</span>
                     {app}
                   </li>
                 ))}
               </ul>
+              <div style={{ position: "relative", aspectRatio: "16 / 10", overflow: "hidden" }}>
+                <Image
+                  src="/images/hero/experts-hero.jpg"
+                  alt="Gloved hands rinsing a laboratory beaker under running water during a water quality test"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  style={{ objectFit: "cover" }}
+                />
+              </div>
             </div>
-            <div
-              style={{
-                background: "#fff",
-                color: "var(--color-ink)",
-                padding: "2.5rem",
-              }}
-            >
-              <h3
+            <div>
+              <div style={{ display: "grid", gap: "1.25rem", marginBottom: "1.5rem" }}>
+                <div style={{ position: "relative", aspectRatio: "16 / 10", overflow: "hidden" }}>
+                  <Image
+                    src="/images/commercial/cfw-commercial-ro-storage-tank-maintenance-v2.jpg"
+                    alt="Large commercial reverse osmosis storage tank with a maintenance log posted on its side"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    style={{ objectFit: "cover" }}
+                  />
+                </div>
+                <div style={{ position: "relative", aspectRatio: "16 / 10", overflow: "hidden" }}>
+                  <Image
+                    src="/images/commercial/dwc-industrial-grade-reverse-osmosis.jpg"
+                    alt="Industrial-grade reverse osmosis unit plumbed for high-volume commercial service"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    style={{ objectFit: "cover" }}
+                  />
+                </div>
+              </div>
+              <div
                 style={{
-                  fontFamily: "var(--font-display)",
-                  fontSize: "1.375rem",
-                  marginBottom: "1.25rem",
+                  background: "var(--color-cream)",
+                  color: "var(--color-ink)",
+                  padding: "2rem",
                 }}
               >
-                What&apos;s Included in Every Commercial Quote
-              </h3>
-              {[
-                "Free water quality analysis for your location",
-                "System sizing based on your daily usage",
-                "Installation by a licensed plumber in your area",
-                "Lifetime warranty on every system",
-                "Ongoing service and filter replacement plans",
-              ].map((item) => (
-                <div
-                  key={item}
+                <h3
                   style={{
-                    display: "flex",
-                    gap: "0.75rem",
-                    marginBottom: "1rem",
-                    alignItems: "flex-start",
+                    fontFamily: "var(--font-display)",
+                    fontSize: "1.375rem",
+                    marginBottom: "1.25rem",
                   }}
                 >
-                  <span
+                  What&apos;s Included in Every Commercial Quote
+                </h3>
+                {[
+                  "Free water quality analysis for your location",
+                  "System sizing based on your daily usage",
+                  "Installation by a licensed plumber in your area",
+                  "Lifetime warranty on every system",
+                  "Ongoing service and filter replacement plans",
+                ].map((item) => (
+                  <div
+                    key={item}
                     style={{
-                      color: "var(--color-teal)",
-                      marginTop: "0.1rem",
-                      flexShrink: 0,
+                      display: "flex",
+                      gap: "0.75rem",
+                      marginBottom: "1rem",
+                      alignItems: "flex-start",
                     }}
                   >
-                    +
-                  </span>
-                  <span
-                    style={{
-                      color: "var(--color-ink-soft)",
-                      fontSize: "0.9375rem",
-                      lineHeight: 1.6,
-                    }}
-                  >
-                    {item}
-                  </span>
+                    <span
+                      style={{
+                        color: "var(--color-teal)",
+                        marginTop: "0.1rem",
+                        flexShrink: 0,
+                      }}
+                    >
+                      +
+                    </span>
+                    <span
+                      style={{
+                        color: "var(--color-ink-soft)",
+                        fontSize: "0.9375rem",
+                        lineHeight: 1.6,
+                      }}
+                    >
+                      {item}
+                    </span>
+                  </div>
+                ))}
+                <div style={{ position: "relative", aspectRatio: "16 / 9", overflow: "hidden", marginTop: "1.25rem" }}>
+                  <Image
+                    src="/images/lifestyle2/svc-service-tech-handshake.jpg"
+                    alt="Technician holding a toolbox while shaking hands with a client"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 40vw"
+                    style={{ objectFit: "cover" }}
+                  />
                 </div>
-              ))}
+              </div>
             </div>
           </div>
         </div>
@@ -279,7 +270,7 @@ export default function RestaurantPage() {
       {/* CTA */}
       <section
         style={{
-          background: "#fff",
+          background: "var(--color-cream)",
           color: "var(--color-ink)",
           padding: "3.5rem 0",
           textAlign: "center",
@@ -304,17 +295,7 @@ export default function RestaurantPage() {
           >
             We analyze your water, specify the right system, and back every install with a lifetime warranty. All 50 states.
           </p>
-          <Link
-            href="/consultation"
-            style={{
-              display: "inline-block",
-              background: "#fff",
-              color: "var(--color-teal)",
-              padding: "0.875rem 2.25rem",
-              fontWeight: 700,
-              textDecoration: "none",
-            }}
-          >
+          <Link href="/consultation" className="btn btn-primary">
             Get My Free Business Quote
           </Link>
         </div>

@@ -19,13 +19,13 @@ export default function Footer() {
               WQA Certified water health systems since {BUSINESS.founded}. Made in USA. Serving all 50 states and international clients from Palm City, FL.
             </p>
             <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem", fontSize: "0.875rem" }}>
-              <a href={`tel:${BUSINESS.phone}`} style={{ color: "var(--color-teal)", textDecoration: "none", display: "flex", alignItems: "center", gap: "0.5rem" }}>
+              <a href={`tel:${BUSINESS.phone}`} style={{ color: "var(--color-teal)", textDecoration: "none", display: "flex", alignItems: "center", gap: "0.5rem", paddingBlock: "0.35rem" }}>
                 <Phone size={14} /> {BUSINESS.phone}
               </a>
-              <a href={`tel:${BUSINESS.phoneTollFree}`} style={{ color: "var(--color-ink-mute)", textDecoration: "none", display: "flex", alignItems: "center", gap: "0.5rem" }}>
+              <a href={`tel:${BUSINESS.phoneTollFree}`} style={{ color: "var(--color-ink-mute)", textDecoration: "none", display: "flex", alignItems: "center", gap: "0.5rem", paddingBlock: "0.35rem" }}>
                 <Phone size={14} /> {BUSINESS.phoneTollFree} (Toll Free)
               </a>
-              <a href={`mailto:${BUSINESS.email}`} style={{ color: "var(--color-ink-mute)", textDecoration: "none", display: "flex", alignItems: "center", gap: "0.5rem" }}>
+              <a href={`mailto:${BUSINESS.email}`} style={{ color: "var(--color-ink-mute)", textDecoration: "none", display: "flex", alignItems: "center", gap: "0.5rem", paddingBlock: "0.35rem" }}>
                 <Mail size={14} /> {BUSINESS.email}
               </a>
               <div style={{ display: "flex", alignItems: "flex-start", gap: "0.5rem" }}>
@@ -46,7 +46,7 @@ export default function Footer() {
                 ["UV Enhancements", "/residential/uv", ""],
                 ["Aquapellis", "/aquapellis", ""],
               ].map(([label, href, ariaLabel]) => (
-                <Link key={href} href={href} aria-label={ariaLabel || undefined} style={{ color: "var(--color-ink-mute)", textDecoration: "none", fontSize: "0.875rem", transition: "color 0.2s" }}
+                <Link key={href} href={href} aria-label={ariaLabel || undefined} style={{ color: "var(--color-ink-mute)", textDecoration: "none", fontSize: "0.875rem", transition: "color 0.2s", paddingBlock: "0.4rem" }}
                   onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = "var(--color-teal)")}
                   onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = "var(--color-ink-mute)")}>
                   {label}
@@ -65,7 +65,7 @@ export default function Footer() {
                 ["Drinking Systems", "/business/drinking-systems", "Business Drinking Systems"],
                 ["Total Business", "/business/total", ""],
               ].map(([label, href, ariaLabel]) => (
-                <Link key={href} href={href} aria-label={ariaLabel || undefined} style={{ color: "var(--color-ink-mute)", textDecoration: "none", fontSize: "0.875rem", transition: "color 0.2s" }}
+                <Link key={href} href={href} aria-label={ariaLabel || undefined} style={{ color: "var(--color-ink-mute)", textDecoration: "none", fontSize: "0.875rem", transition: "color 0.2s", paddingBlock: "0.4rem" }}
                   onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = "var(--color-teal)")}
                   onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = "var(--color-ink-mute)")}>
                   {label}
@@ -86,7 +86,7 @@ export default function Footer() {
                 ["Doctor Endorsements", "/experts"],
                 ["Free Consultation", "/consultation"],
               ].map(([label, href]) => (
-                <Link key={href} href={href} style={{ color: "var(--color-ink-mute)", textDecoration: "none", fontSize: "0.875rem", transition: "color 0.2s" }}
+                <Link key={href} href={href} style={{ color: "var(--color-ink-mute)", textDecoration: "none", fontSize: "0.875rem", transition: "color 0.2s", paddingBlock: "0.4rem" }}
                   onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = "var(--color-teal)")}
                   onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = "var(--color-ink-mute)")}>
                   {label}
@@ -105,7 +105,7 @@ export default function Footer() {
                 ["Community Care", "/about/community"],
                 ["Contact", "/contact"],
               ].map(([label, href]) => (
-                <Link key={href} href={href} style={{ color: "var(--color-ink-mute)", textDecoration: "none", fontSize: "0.875rem", transition: "color 0.2s" }}
+                <Link key={href} href={href} style={{ color: "var(--color-ink-mute)", textDecoration: "none", fontSize: "0.875rem", transition: "color 0.2s", paddingBlock: "0.4rem" }}
                   onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = "var(--color-teal)")}
                   onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = "var(--color-ink-mute)")}>
                   {label}

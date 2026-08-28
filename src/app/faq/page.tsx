@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BUSINESS } from "@/lib/business";
+import PageHero from "@/components/ui/PageHero";
+import ImageBand from "@/components/ui/ImageBand";
 
 export const metadata: Metadata = {
   title: "FAQ | pH Prescription Water Systems",
@@ -176,17 +178,15 @@ export default function FAQPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-      <section style={{ background: "#fff", color: "var(--color-ink)", padding: "5rem 0 4rem" }}>
-        <div className="container" style={{ maxWidth: "700px" }}>
-          <div style={{ fontSize: "0.8125rem", color: "var(--color-teal)", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "1rem" }}>Help Center</div>
-          <h1 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2rem,5vw,3.25rem)", marginBottom: "1.25rem", letterSpacing: "-0.02em" }}>
-            Frequently Asked Questions
-          </h1>
-          <p style={{ fontSize: "1.0625rem", color: "var(--color-ink-soft)", lineHeight: 1.75 }}>
-            Everything you need to know about pH Prescription water systems, technology, installation, and warranty.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Help Center"
+        title="Frequently Asked"
+        titleAccent="Questions"
+        subhead="Everything you need to know about pH Prescription water systems, technology, installation, and warranty."
+        image="/images/lifestyle2/idw-person-drinking-3.jpg"
+        imageAlt="Person drinking a glass of clean filtered water"
+        minHeight="54vh"
+      />
 
       <section style={{ background: "var(--color-cream)" }}>
         <div className="container" style={{ maxWidth: "820px" }}>
@@ -214,8 +214,19 @@ export default function FAQPage() {
               </details>
             ))}
           </div>
+        </div>
+      </section>
 
-          <div style={{ marginTop: "3rem", background: "#fff", color: "var(--color-ink)", padding: "2.5rem", textAlign: "center" }}>
+      <ImageBand
+        image="/images/lifestyle2/idw-child-drinking-2.jpg"
+        imageAlt="Child drinking a glass of clean filtered water at home"
+        statement="Every question deserves"
+        statementAccent="a straight answer."
+      />
+
+      <section style={{ background: "var(--color-cream)" }}>
+        <div className="container" style={{ maxWidth: "820px" }}>
+          <div style={{ background: "#fff", color: "var(--color-ink)", padding: "2.5rem", textAlign: "center" }}>
             <h2 style={{ fontFamily: "var(--font-display)", fontSize: "1.5rem", marginBottom: "0.75rem" }}>
               Still have questions?
             </h2>

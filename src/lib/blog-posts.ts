@@ -3,6 +3,8 @@ export interface BlogPost {
   title: string;
   date: string;
   excerpt: string;
+  heroImage: string;
+  heroImageAlt: string;
   content: string;
 }
 
@@ -12,6 +14,8 @@ export const blogPosts: BlogPost[] = [
     title: "Why a Well-Known Athlete Chose Aquapellis to Aid in His Health and Recovery",
     date: "2024-03-15",
     excerpt: "Discover how a professional athlete turned to pH Prescription's Aquapellis system to support his training recovery and long-term health goals.",
+    heroImage: "/images/lifestyle/healthy-hydration.jpg",
+    heroImageAlt: "Athletic man drinking a tall glass of clean filtered water after training",
     content: `Professional athletes put enormous demands on their bodies. Recovery is not optional - it is the foundation of sustained performance. When one well-known athlete began experiencing issues with water quality affecting his recovery, he turned to pH Prescription's Aquapellis system for a solution.
 
 The Aquapellis system delivers finely filtered, mineral-balanced water that supports cellular hydration. Unlike standard tap or bottled water, Aquapellis water is restructured at the molecular level to improve absorption and reduce the toxic load on the body.
@@ -29,6 +33,8 @@ pH Prescription systems are available for home, business, and specialized athlet
     title: "A Deep Dive into Tap Water: Filtering Out Toxins and Replacing with Positive Elements",
     date: "2024-02-20",
     excerpt: "What is actually in your tap water, and what can you do about it? A comprehensive look at common contaminants and how proper filtration restores water quality.",
+    heroImage: "/images/articles/water-testing-lab.jpg",
+    heroImageAlt: "Editorial graphic of a laboratory water quality analysis with sample vials and test results",
     content: `Most people assume tap water is safe because it meets regulatory minimums. But meeting a minimum standard is not the same as being healthy. Tap water across the United States contains a complex mixture of chemicals, minerals, and byproducts that can affect long-term health in ways that are difficult to detect until damage accumulates.
 
 Common contaminants found in municipal tap water include:
@@ -50,6 +56,8 @@ Filtering toxins out is only half the equation. Conventional reverse osmosis and
     title: "Clean Is Not Enough: The Science Behind Water That Actually Heals the Body",
     date: "2024-01-10",
     excerpt: "Clean water removes threats. Healthy water restores function. Here is what the science says about what water needs to do beyond filtration.",
+    heroImage: "/images/lifestyle2/idw-woman-drinking-1.jpg",
+    heroImageAlt: "Woman drinking a glass of mineral-rich filtered water in a bright kitchen",
     content: `There is a meaningful difference between water that is clean and water that is healthy. Clean water has had harmful things removed from it. Healthy water actively supports the biological processes your body relies on every day.
 
 The distinction matters because most water filtration on the market stops at clean. Reverse osmosis, activated carbon, and UV sterilization are all effective at removing contaminants. But in stripping out the bad, they also strip out minerals that the body needs - calcium, magnesium, silica, bicarbonate - and they do nothing to address the molecular structure of the water itself.
@@ -67,6 +75,8 @@ The combination of deep filtration, re-mineralization, and molecular hydrogen in
     title: "How to Remove Harmful Toxins in Water",
     date: "2023-11-05",
     excerpt: "A practical guide to understanding which contaminants are in your water and what filtration technologies actually remove them.",
+    heroImage: "/images/articles/family-clean-water.jpg",
+    heroImageAlt: "Editorial graphic of a family protected by clean, toxin-free water at home",
     content: `Not all water filters are the same, and not all contaminants are removed by the same technology. Understanding what is in your water - and what is required to remove it - is the first step toward making an informed decision about your family's water health.
 
 The most common harmful toxins in residential water supplies and the filtration approaches that address them:
@@ -90,6 +100,8 @@ pH Prescription's QuadVortex system addresses all of these categories in a singl
     title: "The East Palestine Train Disaster's Effect on Water",
     date: "2023-03-01",
     excerpt: "The February 2023 derailment in East Palestine, Ohio raised urgent questions about industrial chemical contamination of local water sources.",
+    heroImage: "/images/lifestyle/child-drinking-water.jpg",
+    heroImageAlt: "Young child drinking a glass of water at home, a reminder of what is at stake in water contamination events",
     content: `The February 3, 2023 derailment of a Norfolk Southern freight train in East Palestine, Ohio, released a significant quantity of hazardous chemicals into the surrounding environment. Among the most concerning was vinyl chloride, a carcinogenic compound used in PVC production, which was deliberately burned off in a controlled detonation that produced a plume of toxic combustion byproducts including phosgene and hydrogen chloride.
 
 The disaster raised immediate questions about water safety - both for the municipal water supply serving the area and for private wells in the surrounding region.
@@ -109,6 +121,8 @@ pH Prescription systems are designed to remove a wide range of organic chemical 
     title: "Environmental Impact on Our Water: What Are We Really Exposed To?",
     date: "2023-09-15",
     excerpt: "Agriculture, industry, and infrastructure aging all contribute to water contamination. Understanding the sources is the first step to protecting your family.",
+    heroImage: "/images/articles/florida-water-hardness-map.jpg",
+    heroImageAlt: "Editorial map graphic showing regional water hardness and contamination differences across Florida",
     content: `Water contamination is not a problem that exists only in developing countries or industrial zones. It is a widespread condition affecting municipal supplies and private wells across the United States, driven by agricultural runoff, aging infrastructure, industrial activity, and the limitations of treatment technology designed decades before many modern contaminants were understood.
 
 Agricultural sources:
@@ -128,6 +142,8 @@ No single source is responsible, and no single filter stage addresses all of the
     title: "The Importance of Total Home Water Filtration",
     date: "2023-07-20",
     excerpt: "Why filtering only your drinking water misses more than half the picture. What whole-home filtration protects against that under-sink systems cannot.",
+    heroImage: "/images/articles/whole-home-lifestyle.jpg",
+    heroImageAlt: "Editorial graphic of a whole home protected by point-of-entry water filtration",
     content: `Many people invest in a drinking water filter for the kitchen tap and consider the job done. It is a reasonable starting point - the water you drink matters. But the water you drink represents only a fraction of your total water exposure.
 
 Consider the other ways your body interacts with your home's water supply:
@@ -147,6 +163,8 @@ Total home filtration addresses the complete picture. pH Prescription's whole-ho
     title: "Why Do I Need a Drinking System If I Have a Whole House Water Filtration System?",
     date: "2023-06-10",
     excerpt: "A whole-home system removes contaminants for every tap. A dedicated drinking system goes further with final-stage polishing, re-mineralization, and molecular hydrogen infusion.",
+    heroImage: "/images/lifestyle2/idw-family-kitchen-2.jpg",
+    heroImageAlt: "Family filling glasses of filtered drinking water at the kitchen tap",
     content: `This is one of the most common questions we receive, and it is a good one. If a whole-home system filters all the water in the house, why would you need a separate drinking system?
 
 The answer is that they are designed to do different things. A whole-home filtration system is designed to remove the contaminants that affect the quality of water used throughout the house - for bathing, laundry, appliances, and general use. It is sized and optimized for high flow rates across the entire home.
@@ -168,6 +186,8 @@ The whole-home system and the drinking system work as a team. The whole-home sys
     title: "What Is the Difference Between Clean Water and Healthy Water?",
     date: "2023-05-15",
     excerpt: "Clean water has had harmful things removed. Healthy water actively supports your biology. pH Prescription is designed to deliver both.",
+    heroImage: "/images/articles/water-comparison-infographic.jpg",
+    heroImageAlt: "Infographic comparing merely clean water with re-mineralized, hydrogen-infused healthy water",
     content: `The language of water quality has trained most people to think in terms of what water does not contain. Clean water is defined by absence: no bacteria, no heavy metals, no chemicals above a certain threshold. The goal is to remove threats.
 
 This framing, while important, is incomplete. The body's need for water goes beyond the avoidance of harm. Water is a biological medium - it transports nutrients, facilitates cellular communication, regulates temperature, supports detoxification, and enables virtually every metabolic process. The quality of that medium affects how well those processes work.
@@ -189,6 +209,8 @@ pH Prescription is designed around all four of these parameters: filtration to r
     title: "Molecular Weight Explained",
     date: "2023-04-01",
     excerpt: "Understanding molecular weight helps explain why some water compounds are absorbed by the body and others are not - and why molecular hydrogen is uniquely effective.",
+    heroImage: "/images/articles/molecular-hydrogen.jpg",
+    heroImageAlt: "Editorial graphic illustrating molecular hydrogen, the smallest molecule in existence",
     content: `Molecular weight is a fundamental concept in chemistry that describes the mass of a molecule relative to a standard unit. In the context of water health, molecular weight matters because it directly affects how compounds interact with biological systems - whether they can pass through cell membranes, cross the blood-brain barrier, or be absorbed at the cellular level.
 
 The basics:
@@ -209,6 +231,8 @@ Understanding molecular weight is one reason pH Prescription focuses specificall
     title: "The New pH Prescription Quad Vortex Water Filtration System",
     date: "2023-02-15",
     excerpt: "An overview of pH Prescription's QuadVortex technology and what makes it different from conventional multi-stage filtration.",
+    heroImage: "/images/promo/clinical-purification-infographic.jpg",
+    heroImageAlt: "Infographic detailing the stages of pH Prescription clinical-grade water purification",
     content: `pH Prescription's QuadVortex system represents the core technology behind every water treatment solution the company produces. Understanding how it works helps explain why pH Prescription water is fundamentally different from what comes out of a standard filter or a bottled water product.
 
 What QuadVortex means:
@@ -231,6 +255,8 @@ pH Prescription systems are manufactured at the company's Palm City, Florida fac
     title: "How pH Prescription Was Created",
     date: "2022-12-01",
     excerpt: "The story of founder Leo Szymborski and the personal journey that led him to create one of the most advanced water filtration systems available today.",
+    heroImage: "/images/lifestyle/professional-installation.jpg",
+    heroImageAlt: "Water treatment professional completing a residential filtration system installation",
     content: `pH Prescription was founded in 2005 by Leo Szymborski, a nationally recognized water innovator and entrepreneur who grew up in New Jersey in the shadow of chemical plants.
 
 Leo's story is one of adversity turned into purpose. Growing up with chronic health issues and struggling in school - later identified as dyslexia - he was underestimated early in life. Those early challenges became the foundation of the determination that would eventually drive him to spend decades mastering water science.
@@ -250,6 +276,8 @@ Leo's journey is documented in his memoir, H2O: Health 2 Overcome, which became 
     title: "Alkaline Water and Stomach Acid by Dr. Jerry Tennant",
     date: "2022-10-15",
     excerpt: "Dr. Jerry Tennant, founder of the Tennant Institute for Integrative and Natural Medicine, addresses the common concern about alkaline water's effect on stomach acid.",
+    heroImage: "/images/lifestyle2/idw-person-drinking-1.jpg",
+    heroImageAlt: "Person drinking a glass of alkaline water with a meal",
     content: `One of the most frequently asked questions about alkaline water is whether drinking it interferes with stomach acid. If the water is alkaline, does it neutralize the acid needed for digestion? Dr. Jerry Tennant, MD - integrative medicine specialist and founder of the Tennant Institute - addresses this directly.
 
 The concern is understandable. Stomach acid (hydrochloric acid, HCl) has a very low pH, typically between 1.5 and 3.5. Alkaline water has a pH above 7. The fear is that drinking alkaline water before or during a meal would neutralize stomach acid and impair digestion.
@@ -271,6 +299,8 @@ Dr. Jerry Tennant has endorsed pH Prescription's systems for their approach to c
     title: "pH Prescription Research Links",
     date: "2022-09-01",
     excerpt: "A curated collection of peer-reviewed research supporting the science behind pH Prescription's water quality approach.",
+    heroImage: "/images/lifestyle2/svc-service-woman-glass.jpg",
+    heroImageAlt: "Woman studying a clear glass of filtered water",
     content: `pH Prescription's approach to water health is grounded in peer-reviewed science. The following areas of research inform the technology and the health claims associated with pH Prescription systems.
 
 Molecular hydrogen research:
@@ -295,6 +325,8 @@ This is a reference document. For specific citations and current research update
     title: "Dr. Nathan Bryan: pH Prescription Is the Best Whole House Water Filter on the Market",
     date: "2022-08-10",
     excerpt: "Molecular biologist and nitric oxide researcher Dr. Nathan Bryan explains why he personally uses and recommends pH Prescription's filtration systems.",
+    heroImage: "/images/promo/medical-grade-doctor.jpg",
+    heroImageAlt: "Promotional graphic of a physician recommending medical-grade water filtration",
     content: `Dr. Nathan Bryan, PhD, is one of the world's leading researchers in nitric oxide biology and molecular medicine. His research has contributed to the understanding of how nitric oxide affects cardiovascular health, immune function, and cellular signaling. He is the author of multiple peer-reviewed studies and a sought-after voice in integrative medicine.
 
 Dr. Bryan's connection to pH Prescription:
@@ -317,6 +349,8 @@ pH Prescription is honored to have Dr. Bryan's continued support and recommendat
     title: "Alkaline Water Filter System and Whole Home Water Filtration System: Part 4 of 4",
     date: "2022-07-01",
     excerpt: "The final part of our four-part series on alkaline whole-home water filtration. Covering maintenance, cost, and long-term health outcomes.",
+    heroImage: "/images/lifestyle/technician-installation.jpeg",
+    heroImageAlt: "Technician performing maintenance on a residential water filtration system",
     content: `This is the fourth and final installment of our series on alkaline whole-home water filtration systems. Parts 1 through 3 covered the science of water quality, the technology of alkaline filtration, and system selection. This section addresses maintenance, cost of ownership, and what you can expect over the long term.
 
 Maintenance requirements:
@@ -339,6 +373,8 @@ The cumulative benefit of whole-home filtration is difficult to measure in a sho
     title: "Alkaline Home Water Filter System: Alkaline Water Benefits",
     date: "2022-06-01",
     excerpt: "What the research and clinical experience say about the benefits of drinking alkaline water daily, and what to look for in an alkaline filtration system.",
+    heroImage: "/images/lifestyle/woman-drinking-water.jpg",
+    heroImageAlt: "Woman enjoying a glass of alkaline mineral water at home",
     content: `Alkaline water has attracted significant consumer interest, along with a range of claims ranging from well-supported to unsupported. This article covers what the peer-reviewed research actually shows about alkaline water benefits and what matters when selecting an alkaline home water filter system.
 
 What the research supports:
@@ -361,6 +397,8 @@ The pH of water matters, but so does how it was made alkaline. Ionized water, re
     title: "Alkaline Water Filter System and Whole Home Water Filtration System: Part 3 of 4",
     date: "2022-05-01",
     excerpt: "Part 3 of our series: How to select the right whole-home alkaline water filtration system for your household size, water source, and health priorities.",
+    heroImage: "/images/articles/installation-process.jpg",
+    heroImageAlt: "Editorial graphic walking through selection and installation of a whole home water system",
     content: `In Parts 1 and 2 of this series, we covered the science of alkaline water and the technology behind whole-home filtration systems. Part 3 addresses the practical question: how do you select the right system for your specific situation?
 
 Water source assessment:
@@ -386,6 +424,8 @@ Consultation with pH Prescription is free and includes a system recommendation s
     title: "Alkaline Water Filter System and Whole Home Water Filtration System: Part 2 of 4",
     date: "2022-04-01",
     excerpt: "Part 2 of our series: How alkaline water filter systems work and what the different stages of whole-home filtration actually do.",
+    heroImage: "/images/articles/6-stage-filtration-explainer.jpg",
+    heroImageAlt: "Editorial diagram explaining the six stages of whole home alkaline water filtration",
     content: `Part 1 of this series established why alkaline water differs from simply filtered water and why water quality matters for long-term health. Part 2 covers how these systems actually work - what each stage does and why the combination matters.
 
 Stage 1: Sediment filtration
@@ -411,6 +451,8 @@ The final stage for pH Prescription drinking systems infuses molecular hydrogen 
     title: "Alkaline Water Filter System and Whole Home Water Filtration System: Part 1 of 4",
     date: "2022-03-01",
     excerpt: "The first in a four-part series covering the science behind alkaline water filtration and why whole-home systems represent a fundamentally different approach to water quality.",
+    heroImage: "/images/lifestyle/family-drinking-water.jpg",
+    heroImageAlt: "Family drinking glasses of filtered water together at home",
     content: `This is the first of a four-part series on alkaline water filter systems and whole-home water filtration. The series is designed for people who want to understand the science and make an informed decision - not just be sold something.
 
 Why water quality is a foundation issue:

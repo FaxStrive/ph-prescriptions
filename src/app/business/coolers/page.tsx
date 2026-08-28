@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { BUSINESS, PRODUCTS } from "@/lib/business";
+import PageHero from "@/components/ui/PageHero";
+import ImageBand from "@/components/ui/ImageBand";
+import PhotoCardGrid from "@/components/ui/PhotoCardGrid";
 
 export const metadata: Metadata = {
   title: "Commercial Water Coolers | pH Prescription",
@@ -32,76 +36,18 @@ const FEATURES = [
 export default function CoolersPage() {
   return (
     <>
-      {/* Hero */}
-      <section
-        style={{
-          background: "#fff",
-          color: "var(--color-ink)",
-          padding: "5rem 0 4rem",
-        }}
-      >
-        <div className="container" style={{ maxWidth: "700px" }}>
-          <div
-            style={{
-              fontSize: "0.8125rem",
-              color: "var(--color-teal)",
-              letterSpacing: "0.1em",
-              textTransform: "uppercase",
-              marginBottom: "1rem",
-            }}
-          >
-            Business / Water Coolers
-          </div>
-          <h1
-            style={{
-              fontFamily: "var(--font-display)",
-              fontSize: "clamp(2rem,5vw,3.25rem)",
-              marginBottom: "1.25rem",
-              letterSpacing: "-0.02em",
-            }}
-          >
-            Commercial Water Coolers
-          </h1>
-          <p
-            style={{
-              fontSize: "1.0625rem",
-              color: "var(--color-ink-soft)",
-              lineHeight: 1.75,
-              marginBottom: "2rem",
-            }}
-          >
-            Replace your water cooler rental with a WQA Certified system that delivers alkaline, remineralized, hydrogen-infused water - hot or cold - from a hygienic paddle-touch dispenser. Made in USA. Lifetime warranty.
-          </p>
-          <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-            <Link
-              href="/consultation"
-              style={{
-                display: "inline-block",
-                background: "#fff",
-                color: "var(--color-ink)",
-                padding: "0.875rem 2rem",
-                fontWeight: 600,
-                textDecoration: "none",
-              }}
-            >
-              Request Cooler Quote
-            </Link>
-            <a
-              href={`tel:${BUSINESS.phoneTollFree}`}
-              style={{
-                display: "inline-block",
-                border: "1px solid var(--color-border-soft)",
-                color: "var(--color-ink)",
-                padding: "0.875rem 2rem",
-                fontWeight: 600,
-                textDecoration: "none",
-              }}
-            >
-              {BUSINESS.phoneTollFree}
-            </a>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Business / Water Coolers"
+        title="Commercial"
+        titleAccent="Water Coolers"
+        subhead="Replace your water cooler rental with a WQA Certified system that delivers alkaline, remineralized, hydrogen-infused water - hot or cold - from a hygienic paddle-touch dispenser. Made in USA. Lifetime warranty."
+        image="/images/hero/php-new-hero.jpg"
+        imageAlt="Fresh water streaming from a modern black dispenser spout into the light"
+        ctas={[
+          { label: "Request Cooler Quote", href: "/consultation", variant: "white" },
+          { label: BUSINESS.phoneTollFree, href: `tel:${BUSINESS.phoneTollFree}`, variant: "outline" },
+        ]}
+      />
 
       {/* Product card */}
       <section style={{ background: "var(--color-cream)", padding: "4rem 0" }}>
@@ -118,79 +64,87 @@ export default function CoolersPage() {
           </h2>
           <div
             style={{
-              background: "#fff",
-              border: "1px solid rgba(27,58,107,0.1)",
-              padding: "2.5rem",
-              maxWidth: "680px",
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+              gap: "2rem",
+              alignItems: "stretch",
             }}
           >
             <div
               style={{
-                display: "inline-block",
                 background: "#fff",
-                color: "var(--color-ink)",
-                fontSize: "0.75rem",
-                fontWeight: 700,
-                padding: "0.25rem 0.75rem",
-                letterSpacing: "0.06em",
-                textTransform: "uppercase",
-                marginBottom: "1rem",
+                border: "1px solid rgba(27,58,107,0.1)",
+                borderTop: "3px solid var(--color-teal)",
+                padding: "2.5rem",
               }}
             >
-              {COOLER.badge}
+              <div
+                style={{
+                  display: "inline-block",
+                  background: "var(--color-teal-soft, rgba(13,148,136,0.1))",
+                  color: "var(--color-teal)",
+                  fontSize: "0.75rem",
+                  fontWeight: 700,
+                  padding: "0.25rem 0.75rem",
+                  letterSpacing: "0.06em",
+                  textTransform: "uppercase",
+                  marginBottom: "1rem",
+                }}
+              >
+                {COOLER.badge}
+              </div>
+              <h3
+                style={{
+                  fontFamily: "var(--font-display)",
+                  fontSize: "1.375rem",
+                  color: "var(--color-navy)",
+                  marginBottom: "0.5rem",
+                }}
+              >
+                {COOLER.name}
+              </h3>
+              <div
+                style={{
+                  fontSize: "0.8125rem",
+                  color: "rgba(27,58,107,0.5)",
+                  marginBottom: "1rem",
+                }}
+              >
+                SKU: {COOLER.sku}
+              </div>
+              <p
+                style={{
+                  color: "rgba(27,58,107,0.75)",
+                  lineHeight: 1.7,
+                  marginBottom: "1.25rem",
+                }}
+              >
+                {COOLER.description}
+              </p>
+              <div
+                style={{
+                  fontSize: "1.5rem",
+                  fontFamily: "var(--font-display)",
+                  color: "var(--color-navy)",
+                  fontWeight: 700,
+                  marginBottom: "1.5rem",
+                }}
+              >
+                {COOLER.price}
+              </div>
+              <Link href="/consultation" className="btn btn-primary">
+                Request Pricing
+              </Link>
             </div>
-            <h3
-              style={{
-                fontFamily: "var(--font-display)",
-                fontSize: "1.375rem",
-                color: "var(--color-navy)",
-                marginBottom: "0.5rem",
-              }}
-            >
-              {COOLER.name}
-            </h3>
-            <div
-              style={{
-                fontSize: "0.8125rem",
-                color: "rgba(27,58,107,0.5)",
-                marginBottom: "1rem",
-              }}
-            >
-              SKU: {COOLER.sku}
+            <div style={{ position: "relative", minHeight: "320px", overflow: "hidden" }}>
+              <Image
+                src="/images/hero/marine-rv-hero.jpg"
+                alt="Water pouring into a clear glass in soft window light"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                style={{ objectFit: "cover" }}
+              />
             </div>
-            <p
-              style={{
-                color: "rgba(27,58,107,0.75)",
-                lineHeight: 1.7,
-                marginBottom: "1.25rem",
-              }}
-            >
-              {COOLER.description}
-            </p>
-            <div
-              style={{
-                fontSize: "1.5rem",
-                fontFamily: "var(--font-display)",
-                color: "var(--color-navy)",
-                fontWeight: 700,
-                marginBottom: "1.5rem",
-              }}
-            >
-              {COOLER.price}
-            </div>
-            <Link
-              href="/consultation"
-              style={{
-                display: "inline-block",
-                background: "#fff",
-                color: "var(--color-ink)",
-                padding: "0.75rem 1.75rem",
-                fontWeight: 600,
-                textDecoration: "none",
-              }}
-            >
-              Request Pricing
-            </Link>
           </div>
         </div>
       </section>
@@ -248,7 +202,14 @@ export default function CoolersPage() {
         </div>
       </section>
 
-      {/* Comparison */}
+      <ImageBand
+        image="/images/hero/case-studies-hero.jpg"
+        imageAlt="Woman drinking from a glass of clear water"
+        statement="Water your team"
+        statementAccent="actually drinks"
+      />
+
+      {/* Comparison + service */}
       <section
         style={{
           background: "#fff",
@@ -256,109 +217,152 @@ export default function CoolersPage() {
           padding: "4rem 0",
         }}
       >
-        <div className="container" style={{ maxWidth: "720px" }}>
-          <h2
-            style={{
-              fontFamily: "var(--font-display)",
-              fontSize: "clamp(1.375rem,2.5vw,1.875rem)",
-              marginBottom: "2rem",
-            }}
-          >
-            vs. Standard Water Cooler Rentals
-          </h2>
+        <div className="container">
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-              gap: "1.5rem",
+              gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+              gap: "3rem",
+              alignItems: "start",
             }}
           >
-            {[
-              {
-                label: "Standard Rental",
-                items: [
-                  "Monthly rental fee forever",
-                  "Basic filtration only",
-                  "No hydrogen or remineralization",
-                  "Standard tap or lever",
-                  "No warranty on water quality",
-                ],
-                accent: "var(--color-ink-mute)",
-              },
-              {
-                label: "pH Prescription Cooler",
-                items: [
-                  "One-time purchase, owned outright",
-                  "QuadVortex inline filtration",
-                  "Alkaline + H2 infusion included",
-                  "Hygienic paddle-touch dispenser",
-                  "Lifetime warranty",
-                ],
-                accent: "var(--color-teal-light)",
-              },
-            ].map((col) => (
-              <div key={col.label}>
-                <div
-                  style={{
-                    fontSize: "0.875rem",
-                    fontWeight: 700,
-                    color: col.accent,
-                    marginBottom: "1rem",
-                    textTransform: "uppercase",
-                    letterSpacing: "0.08em",
-                  }}
-                >
-                  {col.label}
-                </div>
-                {col.items.map((item) => (
-                  <div
-                    key={item}
-                    style={{
-                      fontSize: "0.9375rem",
-                      color: "var(--color-ink-soft)",
-                      marginBottom: "0.625rem",
-                      paddingBottom: "0.625rem",
-                      borderBottom: "1px solid var(--color-border-soft)",
-                    }}
-                  >
-                    {item}
+            <div>
+              <h2
+                style={{
+                  fontFamily: "var(--font-display)",
+                  fontSize: "clamp(1.375rem,2.5vw,1.875rem)",
+                  marginBottom: "2rem",
+                }}
+              >
+                vs. Standard Water Cooler Rentals
+              </h2>
+              <div
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "1fr 1fr",
+                  gap: "1.5rem",
+                }}
+              >
+                {[
+                  {
+                    label: "Standard Rental",
+                    items: [
+                      "Monthly rental fee forever",
+                      "Basic filtration only",
+                      "No hydrogen or remineralization",
+                      "Standard tap or lever",
+                      "No warranty on water quality",
+                    ],
+                    accent: "var(--color-ink-mute)",
+                  },
+                  {
+                    label: "pH Prescription Cooler",
+                    items: [
+                      "One-time purchase, owned outright",
+                      "QuadVortex inline filtration",
+                      "Alkaline + H2 infusion included",
+                      "Hygienic paddle-touch dispenser",
+                      "Lifetime warranty",
+                    ],
+                    accent: "var(--color-teal)",
+                  },
+                ].map((col) => (
+                  <div key={col.label}>
+                    <div
+                      style={{
+                        fontSize: "0.875rem",
+                        fontWeight: 700,
+                        color: col.accent,
+                        marginBottom: "1rem",
+                        textTransform: "uppercase",
+                        letterSpacing: "0.08em",
+                      }}
+                    >
+                      {col.label}
+                    </div>
+                    {col.items.map((item) => (
+                      <div
+                        key={item}
+                        style={{
+                          fontSize: "0.9375rem",
+                          color: "var(--color-ink-soft)",
+                          marginBottom: "0.625rem",
+                          paddingBottom: "0.625rem",
+                          borderBottom: "1px solid var(--color-border-soft)",
+                        }}
+                      >
+                        {item}
+                      </div>
+                    ))}
                   </div>
                 ))}
               </div>
-            ))}
+            </div>
+            <PhotoCardGrid
+              columns={2}
+              cards={[
+                {
+                  image: "/images/lifestyle2/svc-service-filtration-glass.jpg",
+                  imageAlt: "Glass of purified water in front of a row of filtration cartridges",
+                  title: "Filtered Inline",
+                  body: "Every pour passes through QuadVortex filtration - no jugs to swap, no bottles to store.",
+                },
+                {
+                  image: "/images/lifestyle2/svc-service-plumber-portrait.jpg",
+                  imageAlt: "Smiling technician in coveralls holding a pipe wrench",
+                  title: "Installed & Serviced",
+                  body: "Licensed installation and ongoing filter service in all 50 states, backed by the lifetime warranty.",
+                },
+              ]}
+            />
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section style={{ background: "var(--color-cream)", padding: "3.5rem 0" }}>
-        <div className="container" style={{ textAlign: "center", maxWidth: "560px" }}>
-          <h2
+      {/* Consultation split */}
+      <section style={{ background: "var(--color-cream)", padding: "4rem 0" }}>
+        <div className="container">
+          <div
             style={{
-              fontFamily: "var(--font-display)",
-              fontSize: "clamp(1.375rem,2.5vw,1.875rem)",
-              color: "var(--color-navy)",
-              marginBottom: "1rem",
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+              gap: "3rem",
+              alignItems: "center",
             }}
           >
-            Replace Your Rental. Own Your Water.
-          </h2>
-          <p style={{ color: "rgba(27,58,107,0.7)", marginBottom: "1.5rem" }}>
-            One call, free water analysis, lifetime warranty. Serving all 50 states.
-          </p>
-          <Link
-            href="/consultation"
-            style={{
-              display: "inline-block",
-              background: "#fff",
-              color: "var(--color-ink)",
-              padding: "0.875rem 2.25rem",
-              fontWeight: 600,
-              textDecoration: "none",
-            }}
-          >
-            Get My Free Quote
-          </Link>
+            <div style={{ position: "relative", aspectRatio: "16 / 10", overflow: "hidden" }}>
+              <Image
+                src="/images/hero/consultation-hero.jpg"
+                alt="Plumber with a clipboard reviewing a quote with a customer in her kitchen"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                style={{ objectFit: "cover" }}
+              />
+            </div>
+            <div>
+              <h2
+                style={{
+                  fontFamily: "var(--font-display)",
+                  fontSize: "clamp(1.375rem,2.5vw,1.875rem)",
+                  color: "var(--color-navy)",
+                  marginBottom: "1rem",
+                }}
+              >
+                Replace Your Rental. Own Your Water.
+              </h2>
+              <p style={{ color: "rgba(27,58,107,0.7)", marginBottom: "1.5rem", lineHeight: 1.7 }}>
+                One call, free water analysis, lifetime warranty. Serving all 50 states.
+              </p>
+              <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
+                <Link href="/consultation" className="btn btn-primary">
+                  Get My Free Quote
+                </Link>
+                <a href={`tel:${BUSINESS.phoneTollFree}`} className="btn btn-outline">
+                  {BUSINESS.phoneTollFree}
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </>

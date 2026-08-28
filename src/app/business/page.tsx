@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { BUSINESS } from "@/lib/business";
+import PageHero from "@/components/ui/PageHero";
+import ImageBand from "@/components/ui/ImageBand";
+import PhotoCardGrid from "@/components/ui/PhotoCardGrid";
 
 export const metadata: Metadata = {
   title: "Business Water Systems | pH Prescription",
@@ -14,110 +18,83 @@ const SECTIONS = [
     desc: "Protect equipment, enhance taste, and give guests the purest water. From ice machines to espresso bars - pH Prescription has the commercial solution.",
     href: "/business/restaurant",
     from: "By consultation",
+    image: "/images/lifestyle2/svc-service-clean-glass.jpg",
+    imageAlt: "Tall glass of ice water beaded with condensation against a teal backdrop",
   },
   {
     title: "Water Coolers",
     desc: "Paddle-touch hot/cold commercial coolers with inline filtration. Alkaline, remineralized, hydrogen-infused water at every workstation.",
     href: "/business/coolers",
     from: "From $2,613.60",
+    image: "/images/lifestyle2/svc-service-glass-fill.jpg",
+    imageAlt: "Employee filling a glass from a dedicated filtered-water faucet",
   },
   {
     title: "Drinking Systems",
     desc: "Under-counter and point-of-use commercial drinking systems - the same doctor-recommended technology, scaled for your business.",
     href: "/business/drinking-systems",
     from: "By consultation",
+    image: "/images/commercial/cfw-dual-ro-faucet-kitchen-sink-v2.jpg",
+    imageAlt: "Stainless double sink with a dedicated reverse osmosis faucet installed beside the main tap",
   },
   {
     title: "Total Home/Business",
     desc: "Whole-facility restructured water from every tap and fixture. Our Premier system transforms the entire water supply of your building.",
     href: "/business/total",
     from: "By consultation",
+    image: "/images/commercial/cfw-commercial-tank-warehouse-install-1-v2.jpg",
+    imageAlt: "Large composite media tank and brine tank installed inside a commercial warehouse",
   },
 ];
 
 const INDUSTRIES = [
-  { name: "Restaurants & Cafes", icon: "☕" },
-  { name: "Hotels & Resorts", icon: "🏨" },
-  { name: "Medical Offices", icon: "🏥" },
-  { name: "Spas & Wellness", icon: "🛁" },
-  { name: "Corporate Offices", icon: "🏢" },
-  { name: "Gyms & Fitness", icon: "💪" },
+  "Restaurants & Cafes",
+  "Hotels & Resorts",
+  "Medical Offices",
+  "Spas & Wellness",
+  "Corporate Offices",
+  "Gyms & Fitness",
+];
+
+const PROCESS = [
+  {
+    eyebrow: "Step 01",
+    title: "Facility Assessment",
+    body: "We test your current water and map your usage before recommending any system - no guesswork, no overselling.",
+    image: "/images/lifestyle2/pa-technician-clipboard.jpg",
+    imageAlt: "Technician in uniform reviewing notes on a clipboard beside a red toolbox in a kitchen",
+  },
+  {
+    eyebrow: "Step 02",
+    title: "Professional Install",
+    body: "Our network of licensed installers delivers professional installation in all 50 states, sized to your facility.",
+    image: "/images/commercial/dwc-installation-real.jpg",
+    imageAlt: "Commercial filtration system being fitted during a real facility installation",
+  },
+  {
+    eyebrow: "Step 03",
+    title: "Ongoing Service",
+    body: "Filter plans and scheduled maintenance keep every system on spec - backed by our lifetime warranty.",
+    image: "/images/commercial/dwc-boiler-feed-water-softening.jpg",
+    imageAlt: "Boiler-feed water softening skid maintained inside a mechanical room",
+  },
 ];
 
 export default function BusinessPage() {
   return (
     <>
-      {/* Hero */}
-      <section
-        style={{
-          background: "#fff",
-          color: "var(--color-ink)",
-          padding: "5rem 0 4rem",
-        }}
-      >
-        <div className="container" style={{ maxWidth: "700px" }}>
-          <div
-            style={{
-              fontSize: "0.8125rem",
-              color: "var(--color-teal)",
-              letterSpacing: "0.1em",
-              textTransform: "uppercase",
-              marginBottom: "1rem",
-            }}
-          >
-            For Your Business
-          </div>
-          <h1
-            style={{
-              fontFamily: "var(--font-display)",
-              fontSize: "clamp(2rem,5vw,3.25rem)",
-              marginBottom: "1.25rem",
-              letterSpacing: "-0.02em",
-            }}
-          >
-            Commercial Water Treatment
-          </h1>
-          <p
-            style={{
-              fontSize: "1.0625rem",
-              color: "var(--color-ink-soft)",
-              lineHeight: 1.75,
-              marginBottom: "2rem",
-            }}
-          >
-            WQA Certified systems built for restaurants, medical offices, hotels, and any facility where water quality directly affects your guests, equipment, and reputation. Same lifetime warranty. Same proprietary QuadVortex technology.
-          </p>
-          <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-            <Link
-              href="/consultation"
-              style={{
-                display: "inline-block",
-                background: "#fff",
-                color: "var(--color-ink)",
-                padding: "0.875rem 2rem",
-                fontWeight: 600,
-                letterSpacing: "0.02em",
-                textDecoration: "none",
-              }}
-            >
-              Request Business Quote
-            </Link>
-            <a
-              href={`tel:${BUSINESS.phoneTollFree}`}
-              style={{
-                display: "inline-block",
-                border: "1px solid var(--color-border-soft)",
-                color: "var(--color-ink)",
-                padding: "0.875rem 2rem",
-                fontWeight: 600,
-                textDecoration: "none",
-              }}
-            >
-              {BUSINESS.phoneTollFree}
-            </a>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="For Your Business"
+        title="Commercial Water"
+        titleAccent="Treatment"
+        subhead="WQA Certified systems built for restaurants, medical offices, hotels, and any facility where water quality directly affects your guests, equipment, and reputation. Same lifetime warranty. Same proprietary QuadVortex technology."
+        image="/images/hero/business-hero.jpg"
+        imageAlt="Rows of membrane filtration units and stainless piping inside a commercial water treatment plant"
+        ctas={[
+          { label: "Request Business Quote", href: "/consultation", variant: "white" },
+          { label: BUSINESS.phoneTollFree, href: `tel:${BUSINESS.phoneTollFree}`, variant: "outline" },
+        ]}
+      />
 
       {/* Solutions grid */}
       <section style={{ background: "var(--color-cream)", padding: "4rem 0" }}>
@@ -141,63 +118,27 @@ export default function BusinessPage() {
           >
             Every system scales to your facility. Free water analysis included with every business quote.
           </p>
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-              gap: "1.5rem",
-            }}
-          >
-            {SECTIONS.map((s) => (
-              <Link
-                key={s.href}
-                href={s.href}
-                style={{ textDecoration: "none" }}
-              >
-                <div
-                  style={{
-                    background: "#fff",
-                    border: "1px solid rgba(27,58,107,0.1)",
-                    padding: "2rem",
-                    height: "100%",
-                    transition: "box-shadow 0.2s",
-                  }}
-                >
-                  <h3
-                    style={{
-                      fontFamily: "var(--font-display)",
-                      fontSize: "1.1875rem",
-                      color: "var(--color-navy)",
-                      marginBottom: "0.75rem",
-                    }}
-                  >
-                    {s.title}
-                  </h3>
-                  <p
-                    style={{
-                      color: "rgba(27,58,107,0.72)",
-                      fontSize: "0.9375rem",
-                      lineHeight: 1.7,
-                      marginBottom: "1.25rem",
-                    }}
-                  >
-                    {s.desc}
-                  </p>
-                  <div
-                    style={{
-                      fontSize: "0.875rem",
-                      color: "var(--color-teal)",
-                      fontWeight: 600,
-                    }}
-                  >
-                    {s.from}
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
+          <PhotoCardGrid
+            columns={2}
+            cards={SECTIONS.map((s) => ({
+              image: s.image,
+              imageAlt: s.imageAlt,
+              eyebrow: s.from,
+              title: s.title,
+              body: s.desc,
+              href: s.href,
+              linkLabel: "Explore",
+            }))}
+          />
         </div>
       </section>
+
+      <ImageBand
+        image="/images/commercial/cfw-commercial-ro-north-south-tanks-v2.jpg"
+        imageAlt="Commercial batch tanks and reverse osmosis equipment inside a production facility"
+        statement="Engineered for every gallon"
+        statementAccent="your facility uses"
+      />
 
       {/* Industries */}
       <section style={{ background: "#fff", padding: "4rem 0" }}>
@@ -219,17 +160,25 @@ export default function BusinessPage() {
               gap: "1rem",
             }}
           >
-            {INDUSTRIES.map((ind) => (
+            {INDUSTRIES.map((name, i) => (
               <div
-                key={ind.name}
+                key={name}
                 style={{
                   border: "1px solid rgba(27,58,107,0.1)",
+                  borderTop: "3px solid var(--color-teal)",
                   padding: "1.5rem",
-                  textAlign: "center",
                 }}
               >
-                <div style={{ fontSize: "2rem", marginBottom: "0.5rem" }}>
-                  {ind.icon}
+                <div
+                  style={{
+                    fontFamily: "var(--font-mono)",
+                    fontSize: "0.7rem",
+                    letterSpacing: "0.16em",
+                    color: "var(--color-teal)",
+                    marginBottom: "0.625rem",
+                  }}
+                >
+                  {String(i + 1).padStart(2, "0")}
                 </div>
                 <div
                   style={{
@@ -238,7 +187,7 @@ export default function BusinessPage() {
                     fontWeight: 600,
                   }}
                 >
-                  {ind.name}
+                  {name}
                 </div>
               </div>
             ))}
@@ -246,7 +195,33 @@ export default function BusinessPage() {
         </div>
       </section>
 
-      {/* Why business trust us */}
+      {/* Process */}
+      <section style={{ background: "var(--color-cream)", padding: "4rem 0" }}>
+        <div className="container">
+          <h2
+            style={{
+              fontFamily: "var(--font-display)",
+              fontSize: "clamp(1.5rem,3vw,2rem)",
+              color: "var(--color-navy)",
+              marginBottom: "2rem",
+            }}
+          >
+            How Commercial Engagements Work
+          </h2>
+          <PhotoCardGrid
+            columns={3}
+            cards={PROCESS.map((p) => ({
+              image: p.image,
+              imageAlt: p.imageAlt,
+              eyebrow: p.eyebrow,
+              title: p.title,
+              body: p.body,
+            }))}
+          />
+        </div>
+      </section>
+
+      {/* Why businesses trust us */}
       <section
         style={{
           background: "#fff",
@@ -254,63 +229,83 @@ export default function BusinessPage() {
           padding: "4rem 0",
         }}
       >
-        <div className="container" style={{ maxWidth: "800px" }}>
-          <h2
-            style={{
-              fontFamily: "var(--font-display)",
-              fontSize: "clamp(1.5rem,3vw,2rem)",
-              marginBottom: "2rem",
-            }}
-          >
-            Why Businesses Choose pH Prescription
-          </h2>
+        <div className="container">
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-              gap: "1.5rem",
+              gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+              gap: "3rem",
+              alignItems: "center",
             }}
           >
-            {[
-              {
-                title: "Free Water Analysis",
-                body: "We test your current water before recommending any system - no guesswork, no overselling.",
-              },
-              {
-                title: "Nationwide Service",
-                body: "Serving all 50 states. Our network of licensed installers means you get professional installation anywhere.",
-              },
-              {
-                title: "Lifetime Warranty",
-                body: "Every commercial system includes our lifetime warranty with licensed plumber installation.",
-              },
-              {
-                title: "20+ Years Commercial Experience",
-                body: "Founded in 2005 by Leo Szymborski, a third-generation plumber with 40+ years of water expertise.",
-              },
-            ].map((item) => (
-              <div key={item.title}>
-                <div
-                  style={{
-                    fontFamily: "var(--font-display)",
-                    fontSize: "1.0625rem",
-                    marginBottom: "0.5rem",
-                    color: "var(--color-teal)",
-                  }}
-                >
-                  {item.title}
-                </div>
-                <p
-                  style={{
-                    color: "var(--color-ink-soft)",
-                    fontSize: "0.9375rem",
-                    lineHeight: 1.7,
-                  }}
-                >
-                  {item.body}
-                </p>
+            <div>
+              <h2
+                style={{
+                  fontFamily: "var(--font-display)",
+                  fontSize: "clamp(1.5rem,3vw,2rem)",
+                  marginBottom: "2rem",
+                }}
+              >
+                Why Businesses Choose pH Prescription
+              </h2>
+              <div
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "1fr 1fr",
+                  gap: "1.5rem",
+                }}
+              >
+                {[
+                  {
+                    title: "Free Water Analysis",
+                    body: "We test your current water before recommending any system - no guesswork, no overselling.",
+                  },
+                  {
+                    title: "Nationwide Service",
+                    body: "Serving all 50 states. Our network of licensed installers means you get professional installation anywhere.",
+                  },
+                  {
+                    title: "Lifetime Warranty",
+                    body: "Every commercial system includes our lifetime warranty with licensed plumber installation.",
+                  },
+                  {
+                    title: "20+ Years Commercial Experience",
+                    body: "Founded in 2005 by Leo Szymborski, a third-generation plumber with 40+ years of water expertise.",
+                  },
+                ].map((item) => (
+                  <div key={item.title}>
+                    <div
+                      style={{
+                        fontFamily: "var(--font-display)",
+                        fontSize: "1.0625rem",
+                        marginBottom: "0.5rem",
+                        color: "var(--color-teal)",
+                      }}
+                    >
+                      {item.title}
+                    </div>
+                    <p
+                      style={{
+                        color: "var(--color-ink-soft)",
+                        fontSize: "0.9375rem",
+                        lineHeight: 1.7,
+                      }}
+                    >
+                      {item.body}
+                    </p>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
+            <div style={{ position: "relative", aspectRatio: "4 / 3", overflow: "hidden" }}>
+              <Image
+                src="/images/commercial/cfw-technician-family-2.jpg"
+                alt="Water treatment technician shaking hands with a client at her front door"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                style={{ objectFit: "cover" }}
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -331,17 +326,7 @@ export default function BusinessPage() {
           <p style={{ color: "rgba(27,58,107,0.7)", marginBottom: "1.5rem" }}>
             Tell us your facility type and usage. We will recommend the right system at the right scale - and back it with a lifetime warranty.
           </p>
-          <Link
-            href="/consultation"
-            style={{
-              display: "inline-block",
-              background: "#fff",
-              color: "var(--color-ink)",
-              padding: "0.875rem 2.25rem",
-              fontWeight: 600,
-              textDecoration: "none",
-            }}
-          >
+          <Link href="/consultation" className="btn btn-primary">
             Request My Business Quote
           </Link>
         </div>

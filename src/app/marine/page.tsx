@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BUSINESS } from "@/lib/business";
+import PageHero from "@/components/ui/PageHero";
+import ImageBand from "@/components/ui/ImageBand";
+import PhotoCardGrid from "@/components/ui/PhotoCardGrid";
 
 export const metadata: Metadata = {
   title: "Marine and RV Water - Saltwater and Brackish Filtration | pH Prescription",
@@ -26,18 +29,30 @@ const SOLUTIONS = [
   {
     heading: "Compact Multi-Stage Filtration for Marine and RV",
     body: "Our marine and RV systems are engineered to fit in confined spaces - under-counter, in-cabinet, or in-line installations. Multi-stage KDF, catalytic carbon, and sediment filtration work together to handle variable input water quality from marinas, campgrounds, and remote hookups.",
+    image: "/images/products-extra/drinking-water-system.jpg",
+    imageAlt:
+      "Compact twin-cartridge filtration system installed inside an open cabinet beneath a double-sink counter",
   },
   {
     heading: "Corrosion and Scale Control",
     body: "Mineral restructuring media neutralizes scale-forming calcium and magnesium without chemicals or salt-based softeners. Protecting plumbing, fixtures, water heaters, and galley appliances from mineral buildup extends service life in saltwater-adjacent environments.",
+    image: "/images/commercial/dw-water-softener.jpg",
+    imageAlt:
+      "Product lineup of water conditioning tanks in gray, black, and almond with digital valves and brine tanks on a white background",
   },
   {
     heading: "Heavy Metal and Chemical Reduction",
     body: "KDF-55 media eliminates lead, mercury, cadmium, and other heavy metals common in marina and campground water supplies. Combined with catalytic carbon, it addresses chlorine, chloramine, VOCs, and industrial chemical traces from harbor and RV park water systems.",
+    image: "/images/lifestyle2/idw-tap-clean-2.jpg",
+    imageAlt:
+      "Man filling a drinking glass from a dedicated slim chrome filtration faucet beside the main galley-style tap",
   },
   {
     heading: "Low-Power, High-Performance Operation",
     body: "Our marine systems are designed for low power draw and operate without electricity for the primary filtration stages. UV add-ons are available where a 12V or 110V power source exists. Systems are rated for continuous use and require no daily maintenance beyond annual filter replacement.",
+    image: "/images/products-extra/whole-home-system.jpg",
+    imageAlt:
+      "Hand tightening a clear inline filter housing with a service wrench next to a water meter on compact plumbing",
   },
 ];
 
@@ -99,65 +114,19 @@ export default function MarinePage() {
       />
 
       {/* Hero */}
-      <section style={{ background: "#fff", color: "var(--color-ink)", padding: "5rem 0 4rem" }}>
-        <div className="container" style={{ maxWidth: "820px" }}>
-          <div style={{ fontSize: "0.8125rem", color: "var(--color-teal)", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "1rem" }}>
-            Marine and RV
-          </div>
-          <h1
-            style={{
-              fontFamily: "var(--font-display)",
-              fontSize: "clamp(2rem,5vw,3.25rem)",
-              marginBottom: "1.25rem",
-              letterSpacing: "-0.02em",
-              lineHeight: 1.1,
-            }}
-          >
-            Marine and RV Water - Saltwater and Brackish Filtration
-          </h1>
-          <p style={{ fontSize: "1.0625rem", color: "var(--color-ink-soft)", lineHeight: 1.8, maxWidth: "600px", marginBottom: "2rem" }}>
-            Compact, low-power filtration systems that handle variable water quality from marinas, campgrounds, and remote hookups - protecting your plumbing and your health wherever you are.
-          </p>
-          <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-            <a
-              href={`tel:${BUSINESS.phone}`}
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                justifyContent: "center",
-                background: "var(--color-navy)",
-                color: "#fff",
-                padding: "0.9375rem 1.75rem",
-                fontSize: "0.8125rem",
-                fontWeight: 700,
-                letterSpacing: "0.06em",
-                textTransform: "uppercase",
-                textDecoration: "none",
-              }}
-            >
-              Request a Marine Consultation
-            </a>
-            <Link
-              href="/consultation"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                justifyContent: "center",
-                border: "2px solid var(--color-navy)",
-                color: "var(--color-navy)",
-                padding: "0.9375rem 1.5rem",
-                fontSize: "0.8125rem",
-                fontWeight: 700,
-                letterSpacing: "0.06em",
-                textTransform: "uppercase",
-                textDecoration: "none",
-              }}
-            >
-              Free Consultation
-            </Link>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Marine and RV"
+        title="Marine and RV Water - Saltwater and"
+        titleAccent="Brackish Filtration"
+        subhead="Compact, low-power filtration systems that handle variable water quality from marinas, campgrounds, and remote hookups - protecting your plumbing and your health wherever you are."
+        image="/images/lifestyle2/idw-ocean-aerial-1.jpg"
+        imageAlt="Aerial view of turquoise ocean water with white foam churning across the surface"
+        minHeight="58vh"
+        ctas={[
+          { label: "Request a Marine Consultation", href: `tel:${BUSINESS.phone}`, variant: "primary" },
+          { label: "Free Consultation", href: "/consultation", variant: "outline" },
+        ]}
+      />
 
       {/* Trust bar */}
       <section style={{ background: "var(--color-navy)", color: "#fff", padding: "2rem 0" }}>
@@ -226,25 +195,32 @@ export default function MarinePage() {
 
       {/* Solutions */}
       <section style={{ background: "var(--color-surface)", padding: "5rem 0" }}>
-        <div className="container" style={{ maxWidth: "900px" }}>
+        <div className="container">
           <div style={{ fontSize: "0.8125rem", color: "var(--color-teal)", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "0.75rem", textAlign: "center" }}>
             The Solution
           </div>
           <h2 style={{ fontFamily: "var(--font-display)", fontSize: "2rem", color: "var(--color-navy)", marginBottom: "3rem", letterSpacing: "-0.02em", textAlign: "center" }}>
             How pH Prescription Solves It
           </h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))", gap: "2rem" }}>
-            {SOLUTIONS.map((s) => (
-              <div key={s.heading} style={{ background: "#fff", padding: "2rem", borderTop: "4px solid var(--color-navy)" }}>
-                <h3 style={{ fontFamily: "var(--font-display)", fontSize: "1.1875rem", color: "var(--color-navy)", marginBottom: "0.875rem", letterSpacing: "-0.01em" }}>
-                  {s.heading}
-                </h3>
-                <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.75, fontSize: "0.9375rem" }}>{s.body}</p>
-              </div>
-            ))}
-          </div>
+          <PhotoCardGrid
+            columns={2}
+            cards={SOLUTIONS.map((s) => ({
+              image: s.image,
+              imageAlt: s.imageAlt,
+              title: s.heading,
+              body: s.body,
+            }))}
+          />
         </div>
       </section>
+
+      {/* Open water band */}
+      <ImageBand
+        image="/images/lifestyle2/idw-water-surface-2.jpg"
+        imageAlt="Sunlit turquoise sea surface with soft bokeh sparkles under a pale sky"
+        statement="Clean water,"
+        statementAccent="any harbor."
+      />
 
       {/* Who This Is For */}
       <section style={{ background: "#fff", padding: "5rem 0" }}>
@@ -309,39 +285,13 @@ export default function MarinePage() {
             We assess your vessel or mobile platform, your typical water sources, and your usage patterns - then configure a system that fits your space, power budget, and water quality goals.
           </p>
           <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", justifyContent: "center" }}>
-            <a
-              href={`tel:${BUSINESS.phone}`}
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                justifyContent: "center",
-                background: "#fff",
-                color: "var(--color-navy)",
-                padding: "0.9375rem 1.75rem",
-                fontSize: "0.8125rem",
-                fontWeight: 700,
-                letterSpacing: "0.06em",
-                textTransform: "uppercase",
-                textDecoration: "none",
-              }}
-            >
+            <a href={`tel:${BUSINESS.phone}`} className="btn btn-white">
               Call {BUSINESS.phone}
             </a>
             <Link
               href="/consultation"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                justifyContent: "center",
-                border: "2px solid rgba(255,255,255,0.6)",
-                color: "#fff",
-                padding: "0.9375rem 1.5rem",
-                fontSize: "0.8125rem",
-                fontWeight: 700,
-                letterSpacing: "0.06em",
-                textTransform: "uppercase",
-                textDecoration: "none",
-              }}
+              className="btn btn-outline"
+              style={{ borderColor: "rgba(255,255,255,0.6)", color: "#fff" }}
             >
               Request a Consultation
             </Link>

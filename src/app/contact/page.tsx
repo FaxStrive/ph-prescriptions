@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { BUSINESS } from "@/lib/business";
+import PageHero from "@/components/ui/PageHero";
+import ImageBand from "@/components/ui/ImageBand";
 
 export const metadata: Metadata = {
   title: "Contact Us | pH Prescription Palm City FL",
@@ -29,17 +31,15 @@ export default function ContactPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-      <section style={{ background: "#fff", color: "var(--color-ink)", padding: "5rem 0 4rem" }}>
-        <div className="container" style={{ maxWidth: "700px" }}>
-          <div style={{ fontSize: "0.8125rem", color: "var(--color-teal)", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "1rem" }}>Get in Touch</div>
-          <h1 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2rem,5vw,3.25rem)", marginBottom: "1.25rem", letterSpacing: "-0.02em" }}>
-            Contact pH Prescription
-          </h1>
-          <p style={{ fontSize: "1.0625rem", color: "var(--color-ink-soft)", lineHeight: 1.75 }}>
-            Ready to find the right water system for your home or business? Reach out by phone, email, or visit our facility in Palm City, Florida.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Get in Touch"
+        title="Contact"
+        titleAccent="pH Prescription"
+        subhead="Ready to find the right water system for your home or business? Reach out by phone, email, or visit our facility in Palm City, Florida."
+        image="/images/lifestyle/family-drinking-kitchen.jpeg"
+        imageAlt="Family enjoying glasses of filtered water together in their kitchen"
+        minHeight="54vh"
+      />
 
       <section style={{ background: "var(--color-cream)" }}>
         <div className="container">
@@ -117,21 +117,21 @@ export default function ContactPage() {
                 <div>
                   <label style={{ display: "block", fontSize: "0.875rem", fontWeight: 600, color: "var(--color-navy)", marginBottom: "0.5rem" }}>Full Name *</label>
                   <input type="text" name="name" required placeholder="Your full name"
-                    style={{ width: "100%", padding: "0.875rem 1rem", border: "1px solid var(--color-border-strong)", fontSize: "0.9375rem", outline: "none", background: "#fff" }} />
+                    style={{ width: "100%", minHeight: "48px", padding: "0.875rem 1rem", border: "1px solid var(--color-border-strong)", fontSize: "0.9375rem", outline: "none", background: "#fff" }} />
                 </div>
                 <div>
                   <label style={{ display: "block", fontSize: "0.875rem", fontWeight: 600, color: "var(--color-navy)", marginBottom: "0.5rem" }}>Phone *</label>
                   <input type="tel" name="phone" required placeholder="Your phone number"
-                    style={{ width: "100%", padding: "0.875rem 1rem", border: "1px solid var(--color-border-strong)", fontSize: "0.9375rem", outline: "none", background: "#fff" }} />
+                    style={{ width: "100%", minHeight: "48px", padding: "0.875rem 1rem", border: "1px solid var(--color-border-strong)", fontSize: "0.9375rem", outline: "none", background: "#fff" }} />
                 </div>
                 <div>
                   <label style={{ display: "block", fontSize: "0.875rem", fontWeight: 600, color: "var(--color-navy)", marginBottom: "0.5rem" }}>ZIP Code</label>
                   <input type="text" name="zip" placeholder="Your ZIP code"
-                    style={{ width: "100%", padding: "0.875rem 1rem", border: "1px solid var(--color-border-strong)", fontSize: "0.9375rem", outline: "none", background: "#fff" }} />
+                    style={{ width: "100%", minHeight: "48px", padding: "0.875rem 1rem", border: "1px solid var(--color-border-strong)", fontSize: "0.9375rem", outline: "none", background: "#fff" }} />
                 </div>
                 <div>
                   <label style={{ display: "block", fontSize: "0.875rem", fontWeight: 600, color: "var(--color-navy)", marginBottom: "0.5rem" }}>Interest</label>
-                  <select name="interest" style={{ width: "100%", padding: "0.875rem 1rem", border: "1px solid var(--color-border-strong)", fontSize: "0.9375rem", outline: "none", background: "#fff" }}>
+                  <select name="interest" style={{ width: "100%", minHeight: "48px", padding: "0.875rem 1rem", border: "1px solid var(--color-border-strong)", fontSize: "0.9375rem", outline: "none", background: "#fff" }}>
                     <option value="">Select an option</option>
                     <option value="residential">Residential System</option>
                     <option value="business">Business System</option>
@@ -143,7 +143,7 @@ export default function ContactPage() {
                 <div style={{ fontSize: "0.8125rem", color: "var(--color-ink-mute)", padding: "0.75rem 1rem", background: "var(--color-teal-soft)", borderLeft: "3px solid var(--color-teal)" }}>
                   By submitting, you agree to receive a follow-up call or email. We respect your privacy.
                 </div>
-                <button type="submit" className="btn btn-primary" style={{ justifyContent: "center" }}>
+                <button type="submit" className="btn btn-primary" style={{ justifyContent: "center", minHeight: "48px" }}>
                   Send Message
                 </button>
               </form>
@@ -151,6 +151,13 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      <ImageBand
+        image="/images/lifestyle2/idw-family-water-3.jpg"
+        imageAlt="Family gathered in the kitchen drinking clean filtered water"
+        statement="Family owned since 2005."
+        statementAccent="Real people answer."
+      />
     </>
   );
 }

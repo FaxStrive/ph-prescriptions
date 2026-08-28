@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BUSINESS } from "@/lib/business";
+import PageHero from "@/components/ui/PageHero";
+import ImageBand from "@/components/ui/ImageBand";
+import PhotoCardGrid from "@/components/ui/PhotoCardGrid";
 
 export const metadata: Metadata = {
   title: "Pool and Spa Water - Advanced Filtration Beyond Chlorine | pH Prescription",
@@ -26,18 +29,29 @@ const SOLUTIONS = [
   {
     heading: "KDF and Catalytic Carbon Filtration",
     body: "KDF media reduces chloramine, bacteria, algae, and heavy metals through an electrolytic reaction. Catalytic carbon handles chlorine, VOCs, and DBPs. Together they reduce chemical demand by 25-40%, lowering operating costs while improving water clarity.",
+    image: "/images/commercial/dw-mechanical-room-hvac.jpg",
+    imageAlt:
+      "Mechanical plant room with commercial pumps and treatment piping serving a large facility",
   },
   {
     heading: "QuadVortex Mineral Restructuring",
     body: "Our QuadVortex vortex system micro-clusters water molecules and neutralizes scale-forming minerals without chemicals or salt. Water feels softer to swimmers, reduces skin and eye irritation, and prevents scale deposition on pool surfaces and equipment.",
+    image: "/images/commercial/dw-case-filtration.jpg",
+    imageAlt: "Dark rippled water surface catching sparkles of golden sunlight",
   },
   {
     heading: "Integration with Existing Circulation Systems",
     body: "Our pool treatment systems are designed to integrate inline with existing pump and filter infrastructure. No pool resurfacing, no plumbing overhaul. Installation typically completes in a single service visit.",
+    image: "/images/commercial/dwc-mechanical-room-hvac.jpg",
+    imageAlt:
+      "Commercial mechanical room with red circulation pumps, insulated piping, and a plate heat exchanger",
   },
   {
     heading: "Commercial Pool and Spa Configurations",
     body: "From residential pools to hotel pools, aquatic centers, and therapeutic spa pools, we configure systems to match flow rate, pool volume, bather load, and local regulatory requirements. Lease and finance options available for commercial installations.",
+    image: "/images/commercial/dwc-hvac-cooling-tower-techs.jpg",
+    imageAlt:
+      "Two technicians in hard hats servicing large rooftop water equipment with a city skyline behind them",
   },
 ];
 
@@ -98,65 +112,18 @@ export default function PoolPage() {
       />
 
       {/* Hero */}
-      <section style={{ background: "#fff", color: "var(--color-ink)", padding: "5rem 0 4rem" }}>
-        <div className="container" style={{ maxWidth: "820px" }}>
-          <div style={{ fontSize: "0.8125rem", color: "var(--color-teal)", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "1rem" }}>
-            Pool and Spa
-          </div>
-          <h1
-            style={{
-              fontFamily: "var(--font-display)",
-              fontSize: "clamp(2rem,5vw,3.25rem)",
-              marginBottom: "1.25rem",
-              letterSpacing: "-0.02em",
-              lineHeight: 1.1,
-            }}
-          >
-            Pool and Spa Water - Advanced Filtration Beyond Chlorine
-          </h1>
-          <p style={{ fontSize: "1.0625rem", color: "var(--color-ink-soft)", lineHeight: 1.8, maxWidth: "600px", marginBottom: "2rem" }}>
-            Reduce chlorine demand by 25-40%, eliminate scale and disinfection byproducts, and deliver water your swimmers and guests actually want to be in.
-          </p>
-          <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-            <a
-              href={`tel:${BUSINESS.phone}`}
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                justifyContent: "center",
-                background: "var(--color-navy)",
-                color: "#fff",
-                padding: "0.9375rem 1.75rem",
-                fontSize: "0.8125rem",
-                fontWeight: 700,
-                letterSpacing: "0.06em",
-                textTransform: "uppercase",
-                textDecoration: "none",
-              }}
-            >
-              Request a Pool Consultation
-            </a>
-            <Link
-              href="/consultation"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                justifyContent: "center",
-                border: "2px solid var(--color-navy)",
-                color: "var(--color-navy)",
-                padding: "0.9375rem 1.5rem",
-                fontSize: "0.8125rem",
-                fontWeight: 700,
-                letterSpacing: "0.06em",
-                textTransform: "uppercase",
-                textDecoration: "none",
-              }}
-            >
-              Free Consultation
-            </Link>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Pool and Spa"
+        title="Pool and Spa Water - Advanced Filtration"
+        titleAccent="Beyond Chlorine"
+        subhead="Reduce chlorine demand by 25-40%, eliminate scale and disinfection byproducts, and deliver water your swimmers and guests actually want to be in."
+        image="/images/lifestyle2/idw-ripple-accent.jpg"
+        imageAlt="Bright pool-blue water surface with sunlight refracting through gentle ripples"
+        ctas={[
+          { label: "Request a Pool Consultation", href: `tel:${BUSINESS.phone}`, variant: "primary" },
+          { label: "Free Consultation", href: "/consultation", variant: "outline" },
+        ]}
+      />
 
       {/* Trust bar */}
       <section style={{ background: "var(--color-navy)", color: "#fff", padding: "2rem 0" }}>
@@ -204,6 +171,14 @@ export default function PoolPage() {
         </div>
       </section>
 
+      {/* Comfort band */}
+      <ImageBand
+        image="/images/lifestyle2/idw-tap-water-2.jpg"
+        imageAlt="Child's hands playing under a stream of clear water filling a white basin"
+        statement="Water that is gentler on"
+        statementAccent="skin and eyes."
+      />
+
       {/* Why Standard Filtration Fails */}
       <section style={{ background: "#fff", padding: "5rem 0" }}>
         <div className="container" style={{ maxWidth: "820px" }}>
@@ -225,23 +200,22 @@ export default function PoolPage() {
 
       {/* Solutions */}
       <section style={{ background: "var(--color-surface)", padding: "5rem 0" }}>
-        <div className="container" style={{ maxWidth: "900px" }}>
+        <div className="container">
           <div style={{ fontSize: "0.8125rem", color: "var(--color-teal)", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "0.75rem", textAlign: "center" }}>
             The Solution
           </div>
           <h2 style={{ fontFamily: "var(--font-display)", fontSize: "2rem", color: "var(--color-navy)", marginBottom: "3rem", letterSpacing: "-0.02em", textAlign: "center" }}>
             How pH Prescription Solves It
           </h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))", gap: "2rem" }}>
-            {SOLUTIONS.map((s) => (
-              <div key={s.heading} style={{ background: "#fff", padding: "2rem", borderTop: "4px solid var(--color-navy)" }}>
-                <h3 style={{ fontFamily: "var(--font-display)", fontSize: "1.1875rem", color: "var(--color-navy)", marginBottom: "0.875rem", letterSpacing: "-0.01em" }}>
-                  {s.heading}
-                </h3>
-                <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.75, fontSize: "0.9375rem" }}>{s.body}</p>
-              </div>
-            ))}
-          </div>
+          <PhotoCardGrid
+            columns={2}
+            cards={SOLUTIONS.map((s) => ({
+              image: s.image,
+              imageAlt: s.imageAlt,
+              title: s.heading,
+              body: s.body,
+            }))}
+          />
         </div>
       </section>
 
@@ -308,39 +282,13 @@ export default function PoolPage() {
             We assess your pool volume, flow rate, source water, and bather load and recommend a system sized for your exact application. Residential and commercial. Lease and finance options available.
           </p>
           <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", justifyContent: "center" }}>
-            <a
-              href={`tel:${BUSINESS.phone}`}
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                justifyContent: "center",
-                background: "#fff",
-                color: "var(--color-navy)",
-                padding: "0.9375rem 1.75rem",
-                fontSize: "0.8125rem",
-                fontWeight: 700,
-                letterSpacing: "0.06em",
-                textTransform: "uppercase",
-                textDecoration: "none",
-              }}
-            >
+            <a href={`tel:${BUSINESS.phone}`} className="btn btn-white">
               Call {BUSINESS.phone}
             </a>
             <Link
               href="/consultation"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                justifyContent: "center",
-                border: "2px solid rgba(255,255,255,0.6)",
-                color: "#fff",
-                padding: "0.9375rem 1.5rem",
-                fontSize: "0.8125rem",
-                fontWeight: 700,
-                letterSpacing: "0.06em",
-                textTransform: "uppercase",
-                textDecoration: "none",
-              }}
+              className="btn btn-outline"
+              style={{ borderColor: "rgba(255,255,255,0.6)", color: "#fff" }}
             >
               Request a Consultation
             </Link>

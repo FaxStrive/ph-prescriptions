@@ -23,7 +23,7 @@ export default function AquapellisPage() {
                 <em style={{ color: "var(--color-teal)" }}>Molecular Hydrogen Shower</em>
               </h1>
               <p style={{ fontSize: "1.0625rem", color: "var(--color-ink-soft)", lineHeight: 1.75, marginBottom: "2rem" }}>
-                The Aquapellis system delivers molecular hydrogen (H2) transdermally - through your skin - with every shower. The same antioxidant science you drink is now absorbed through the body's largest organ, providing whole-body cellular benefit.
+                The Aquapellis system delivers molecular hydrogen (H2) transdermally - through your skin - with every shower. The same antioxidant science you drink is now absorbed through the body&apos;s largest organ, providing whole-body cellular benefit.
               </p>
               <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
                 <a href={`mailto:${BUSINESS.emailAquapellis}`} className="btn btn-primary">Request Aquapellis Quote</a>

@@ -99,7 +99,6 @@ function Hero() {
       <motion.div
         style={reduce ? undefined : { y: contentY }}
         className="max-content"
-        // eslint-disable-next-line react/forbid-dom-props
       >
         <div style={{ position: "relative", flex: 1, display: "flex", alignItems: "center", padding: "clamp(2.5rem, 6vw, 4rem) 0 clamp(1rem, 2vw, 1.5rem)" }}>
           <h1
@@ -289,58 +288,6 @@ function Hero() {
           ))}
         </div>
       </motion.div>
-    </section>
-  );
-}
-
-function TrustStrip() {
-  return (
-    <section
-      style={{
-        background: "var(--color-surface)",
-        borderBottom: "1px solid var(--color-border-soft)",
-        padding: "2rem 0",
-      }}
-    >
-      <div className="max-content">
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))",
-            gap: "1.5rem",
-            textAlign: "center",
-          }}
-        >
-          {STATS.map((s) => (
-            <div key={s.label}>
-              <div
-                style={{
-                  fontFamily: "var(--font-display)",
-                  fontWeight: 400,
-                  fontSize: "clamp(2rem, 4vw, 3rem)",
-                  color: "var(--color-navy)",
-                  lineHeight: 1,
-                  letterSpacing: "-0.02em",
-                }}
-              >
-                {s.value}
-              </div>
-              <div
-                style={{
-                  marginTop: "0.5rem",
-                  fontFamily: "var(--font-mono)",
-                  fontSize: "0.65rem",
-                  letterSpacing: "0.2em",
-                  textTransform: "uppercase",
-                  color: "var(--color-ink-mute)",
-                }}
-              >
-                {s.label}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
     </section>
   );
 }

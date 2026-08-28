@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { BUSINESS } from "@/lib/business";
+import PageHero from "@/components/ui/PageHero";
+import ImageBand from "@/components/ui/ImageBand";
+import PhotoCardGrid from "@/components/ui/PhotoCardGrid";
 
 export const metadata: Metadata = {
   title: "Restaurant & Hospitality Water Solutions | pH Prescription",
   description:
-    "First-class water systems for restaurants, resorts, banquet facilities, spas, wellness centers, and offices. BluPura Italian design with pH Prescription' proprietary filtration. From 5 to 300 people. Lease and finance available.",
+    "First-class water systems for restaurants, resorts, banquet facilities, spas, wellness centers, and offices. BluPura Italian design with pH Prescription&apos;s proprietary filtration. From 5 to 300 people. Lease and finance available.",
 };
 
 const COUNTERTOP_MODELS = [
@@ -70,6 +74,29 @@ const VERTICALS = [
   "Country Clubs",
 ];
 
+const VENUES = [
+  {
+    title: "Restaurants and Bars",
+    image: "/images/lifestyle2/idw-tap-water-1.jpg",
+    imageAlt:
+      "Chef using a commercial pre-rinse sprayer over a stainless-steel sink in a professional kitchen",
+    body: "Front-of-house water service and back-of-house culinary supply from one filtration platform: better-tasting menus, clearer ice, and no bottle inventory.",
+  },
+  {
+    title: "Spas and Wellness Centers",
+    image: "/images/lifestyle2/idw-faucet-modern-1.jpg",
+    imageAlt: "Hands cupped under a falling spray of water droplets in a warm spa bathroom",
+    body: "Serve molecular hydrogen water that matches the wellness promise your guests came for, from treatment rooms to relaxation lounges.",
+  },
+  {
+    title: "Offices and Hospitality Suites",
+    image: "/images/lifestyle2/idw-tap-filter-1.jpg",
+    imageAlt:
+      "Minimalist gray kitchenette with a chrome gooseneck faucet over an undermount stainless sink",
+    body: "Quiet, compact dispensers keep teams and guests hydrated with still, sparkling, or hydrogen-infused water on demand, sized from 5 to 300 people.",
+  },
+];
+
 export default function RestaurantHospitalityPage() {
   const serviceSchema = {
     "@context": "https://schema.org",
@@ -120,96 +147,18 @@ export default function RestaurantHospitalityPage() {
       />
 
       {/* Hero */}
-      <section
-        style={{
-          background: "#fff",
-          color: "var(--color-ink)",
-          padding: "5rem 0 4rem",
-        }}
-      >
-        <div className="container" style={{ maxWidth: "820px" }}>
-          <div
-            style={{
-              fontSize: "0.8125rem",
-              color: "var(--color-teal)",
-              letterSpacing: "0.1em",
-              textTransform: "uppercase",
-              marginBottom: "1rem",
-            }}
-          >
-            Solutions / Restaurant &amp; Hospitality
-          </div>
-          <h1
-            style={{
-              fontFamily: "var(--font-display)",
-              fontSize: "clamp(2rem,5vw,3.25rem)",
-              marginBottom: "1.25rem",
-              letterSpacing: "-0.02em",
-              lineHeight: 1.1,
-            }}
-          >
-            First-Class Water for Restaurants, Resorts, and Hospitality
-          </h1>
-          <p
-            style={{
-              fontSize: "1.0625rem",
-              color: "var(--color-ink-soft)",
-              lineHeight: 1.8,
-              maxWidth: "620px",
-              marginBottom: "0.75rem",
-            }}
-          >
-            Presenting first-class functionality, design, and performance for restaurants, resorts, banquet facilities, spas, wellness centers, and offices. In partnership with BluPura, manufactured in Italy with no compromise on materials or construction quality.
-          </p>
-          <p
-            style={{
-              fontSize: "0.9375rem",
-              color: "var(--color-ink-mute)",
-              marginBottom: "2rem",
-            }}
-          >
-            Configurable from 5 to 300 people. Lease and finance options available.
-          </p>
-          <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-            <a
-              href={`tel:${BUSINESS.phone}`}
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                justifyContent: "center",
-                background: "var(--color-navy)",
-                color: "#fff",
-                padding: "0.9375rem 1.75rem",
-                fontSize: "0.8125rem",
-                fontWeight: 700,
-                letterSpacing: "0.06em",
-                textTransform: "uppercase",
-                textDecoration: "none",
-              }}
-            >
-              Schedule My Complimentary Consultation
-            </a>
-            <Link
-              href="/consultation"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                justifyContent: "center",
-                border: "2px solid var(--color-navy)",
-                color: "var(--color-navy)",
-                padding: "0.9375rem 1.5rem",
-                fontSize: "0.8125rem",
-                fontWeight: 700,
-                letterSpacing: "0.06em",
-                textTransform: "uppercase",
-                textDecoration: "none",
-              }}
-            >
-              Free Consultation
-            </Link>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Solutions / Restaurant & Hospitality"
+        title="First-Class Water for Restaurants, Resorts, and"
+        titleAccent="Hospitality"
+        subhead="Presenting first-class functionality, design, and performance for restaurants, resorts, banquet facilities, spas, wellness centers, and offices. In partnership with BluPura, manufactured in Italy with no compromise on materials or construction quality. Configurable from 5 to 300 people. Lease and finance options available."
+        image="/images/lifestyle2/idw-glass-clear-2.jpg"
+        imageAlt="Hand filling a double-walled designer glass from a matte-black kitchen faucet with a fruit bowl behind"
+        ctas={[
+          { label: "Schedule My Complimentary Consultation", href: `tel:${BUSINESS.phone}`, variant: "primary" },
+          { label: "Free Consultation", href: "/consultation", variant: "outline" },
+        ]}
+      />
 
       {/* Verticals served */}
       <section
@@ -261,11 +210,10 @@ export default function RestaurantHospitalityPage() {
 
       {/* Intro + partnership */}
       <section style={{ background: "var(--color-surface)" }}>
-        <div className="container" style={{ maxWidth: "820px" }}>
+        <div className="container" style={{ maxWidth: "980px" }}>
           <div
+            className="grid grid-cols-1 md:grid-cols-2"
             style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
               gap: "3rem",
               alignItems: "start",
             }}
@@ -291,9 +239,18 @@ export default function RestaurantHospitalityPage() {
               >
                 All BluPura products are 100% designed and manufactured in Italy. Using materials of the highest quality guarantees excellent durability and performance levels that are not only functional and ergonomic, but stylish and modern in design.
               </p>
-              <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.8 }}>
-                Each unit pairs BluPura's hardware with pH Prescription' proprietary filtration systems, delivering the same water quality that our residential and medical clients depend on. Your guests experience it as premium-tasting water, served with the precision your establishment demands.
+              <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.8, marginBottom: "1.5rem" }}>
+                Each unit pairs BluPura&apos;s hardware with pH Prescription&apos;s proprietary filtration systems, delivering the same water quality that our residential and medical clients depend on. Your guests experience it as premium-tasting water, served with the precision your establishment demands.
               </p>
+              <div style={{ position: "relative", aspectRatio: "16 / 10", overflow: "hidden" }}>
+                <Image
+                  src="/images/lifestyle2/aw-faucet-flow.jpg"
+                  alt="Polished chrome single-lever faucet running a clean stream of water in cool light"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 470px"
+                  style={{ objectFit: "cover" }}
+                />
+              </div>
             </div>
             <div
               style={{
@@ -434,8 +391,47 @@ export default function RestaurantHospitalityPage() {
         </div>
       </section>
 
-      {/* Countertop models */}
+      {/* Venues */}
       <section style={{ background: "var(--color-surface)" }}>
+        <div className="container">
+          <div
+            style={{
+              fontSize: "0.8125rem",
+              color: "var(--color-teal)",
+              letterSpacing: "0.1em",
+              textTransform: "uppercase",
+              marginBottom: "0.75rem",
+              textAlign: "center",
+            }}
+          >
+            Where It Works
+          </div>
+          <h2
+            style={{
+              fontFamily: "var(--font-display)",
+              fontSize: "2rem",
+              color: "var(--color-navy)",
+              marginBottom: "3rem",
+              letterSpacing: "-0.02em",
+              textAlign: "center",
+            }}
+          >
+            One Platform, Every Front of House
+          </h2>
+          <PhotoCardGrid
+            columns={3}
+            cards={VENUES.map((v) => ({
+              image: v.image,
+              imageAlt: v.imageAlt,
+              title: v.title,
+              body: v.body,
+            }))}
+          />
+        </div>
+      </section>
+
+      {/* Countertop models */}
+      <section style={{ background: "#fff" }}>
         <div className="container" style={{ maxWidth: "860px" }}>
           <div
             style={{
@@ -483,7 +479,7 @@ export default function RestaurantHospitalityPage() {
               <div
                 key={model.brand}
                 style={{
-                  background: "#fff",
+                  background: "var(--color-surface)",
                   padding: "2rem",
                   borderTop: "4px solid var(--color-navy)",
                 }}
@@ -578,6 +574,14 @@ export default function RestaurantHospitalityPage() {
           </div>
         </div>
       </section>
+
+      {/* Back-of-house band */}
+      <ImageBand
+        image="/images/commercial/dwc-food-processing-water-treatment.jpg"
+        imageAlt="Row of commercial water treatment tanks with digital control valves in a food facility, attended by a worker in protective wear"
+        statement="Built for"
+        statementAccent="back-of-house demands."
+      />
 
       {/* Cool 1 Dispenser */}
       <section style={{ background: "#fff" }}>
@@ -892,40 +896,10 @@ export default function RestaurantHospitalityPage() {
               justifyContent: "center",
             }}
           >
-            <a
-              href={`tel:${BUSINESS.phone}`}
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                justifyContent: "center",
-                background: "var(--color-navy)",
-                color: "#fff",
-                padding: "0.9375rem 1.75rem",
-                fontSize: "0.8125rem",
-                fontWeight: 700,
-                letterSpacing: "0.06em",
-                textTransform: "uppercase",
-                textDecoration: "none",
-              }}
-            >
+            <a href={`tel:${BUSINESS.phone}`} className="btn btn-primary">
               Call Now {BUSINESS.phone}
             </a>
-            <Link
-              href="/consultation"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                justifyContent: "center",
-                border: "2px solid var(--color-navy)",
-                color: "var(--color-navy)",
-                padding: "0.9375rem 1.5rem",
-                fontSize: "0.8125rem",
-                fontWeight: 700,
-                letterSpacing: "0.06em",
-                textTransform: "uppercase",
-                textDecoration: "none",
-              }}
-            >
+            <Link href="/consultation" className="btn btn-outline">
               Get My Free Consultation
             </Link>
           </div>

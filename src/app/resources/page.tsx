@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BUSINESS } from "@/lib/business";
+import PageHero from "@/components/ui/PageHero";
+import ImageBand from "@/components/ui/ImageBand";
 
 export const metadata: Metadata = {
   title: "Resources | pH Prescription Water Systems",
@@ -101,47 +103,14 @@ const RESOURCE_SECTIONS = [
 export default function ResourcesPage() {
   return (
     <>
-      <section
-        style={{
-          background: "#fff",
-          color: "var(--color-ink)",
-          padding: "5rem 0 4rem",
-        }}
-      >
-        <div className="container" style={{ maxWidth: "740px" }}>
-          <div
-            style={{
-              fontSize: "0.8125rem",
-              color: "var(--color-teal)",
-              letterSpacing: "0.1em",
-              textTransform: "uppercase",
-              marginBottom: "1rem",
-            }}
-          >
-            Knowledge Base
-          </div>
-          <h1
-            style={{
-              fontFamily: "var(--font-display)",
-              fontSize: "clamp(2rem,5vw,3.25rem)",
-              marginBottom: "1.25rem",
-              letterSpacing: "-0.02em",
-            }}
-          >
-            Resources
-          </h1>
-          <p
-            style={{
-              fontSize: "1.0625rem",
-              color: "var(--color-ink-soft)",
-              lineHeight: 1.8,
-              maxWidth: "600px",
-            }}
-          >
-            White papers, hydration science, educational videos, warranty terms, and support documentation for pH Prescription clients and partners.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Knowledge Base"
+        title="Resources"
+        subhead="White papers, hydration science, educational videos, warranty terms, and support documentation for pH Prescription clients and partners."
+        image="/images/lifestyle2/idw-people-drinking-2.jpg"
+        imageAlt="People sharing glasses of clean filtered drinking water"
+        minHeight="54vh"
+      />
 
       <section style={{ background: "var(--color-cream)" }}>
         <div className="container" style={{ maxWidth: "820px" }}>
@@ -260,6 +229,13 @@ export default function ResourcesPage() {
           </div>
         </div>
       </section>
+
+      <ImageBand
+        image="/images/lifestyle2/svc-service-mom-baby-kitchen.jpg"
+        imageAlt="Mother holding her baby while filling a glass of filtered water in the kitchen"
+        statement="Learn what is in your water,"
+        statementAccent="then decide what to do about it."
+      />
 
       {/* Video Library */}
       <section style={{ background: "var(--color-surface)", padding: "5rem 0" }}>

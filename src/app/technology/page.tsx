@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { BUSINESS } from "@/lib/business";
+import PageHero from "@/components/ui/PageHero";
+import ImageBand from "@/components/ui/ImageBand";
 
 export const metadata: Metadata = {
   title: "4-Phase Filtration Science and QuadVortex Technology",
@@ -14,6 +17,9 @@ const PHASES = [
     label: "Phase 1",
     title: "KDF-55: Kinetic Degradation Fluxion",
     color: "var(--color-teal)",
+    image: "/images/commercial/dw-city-water-filter.jpg",
+    imageAlt:
+      "Lineup of six whole-house water filtration tanks in black and gray with digital control valves on a white background",
     body: [
       "Water first travels through patented KDF-55, a zinc-copper compound proven to reduce chloramines, chlorine, bacteria, iron, fungus, algae, hydrogen sulfide, and most heavy metals.",
       "KDF-55 neutralizes organic and inorganic mercury, trichloroethylene (TCE), and trihalomethanes (THM). It also inhibits bacterial growth and preserves the fresh state of water throughout the filter bed.",
@@ -31,6 +37,9 @@ const PHASES = [
     label: "Phase 2",
     title: "Catalytic Carbon and Brimac High-Calcium Carbon",
     color: "var(--color-navy)",
+    image: "/images/products-extra/uv-system.jpg",
+    imageAlt:
+      "Carbon block and sediment filter cartridges laid on a wooden board next to a glass of water in a bright kitchen",
     body: [
       "Catalytic carbon retains conventional carbon's ability to absorb contaminants, but it also possesses greatly enhanced capacity to catalyze. It is by catalytic action that chloramines are reduced. These carbons reduce chlorine, heavy metals, and radioactive isotopes on top of fluoride.",
       "Brimac is an industry-approved high-calcium premium carbon, carbonized at 1,472 degrees Fahrenheit under controlled conditions. The result is a Kosher Certified, 100% organic carbon composed of 80% phosphate of calcium, 10% carbon, and 10% calcium carbonate.",
@@ -48,6 +57,9 @@ const PHASES = [
     label: "Phase 3",
     title: "Gemstone Filter Technology: Tourmaline and Garnet",
     color: "var(--color-teal)",
+    image: "/images/lifestyle2/idw-droplets-1.jpg",
+    imageAlt:
+      "Overhead view of concentric ripple rings spreading across a dark teal water surface",
     body: [
       "Tourmaline is the only known mineral to show permanent electrical activity. It carries a negative ORP (oxidation reduction potential), which means it donates electrons rather than stealing them. This property has been studied at universities and research centers worldwide and makes tourmaline uniquely suited for water restructuring.",
       "Garnet, with its high molecular density, is heavier than most other filter media. That density provides stability within the dual media bed, allowing filter-sized garnet granules to capture particulates down to 10 to 20 microns. No other consumer filtration company combines these two gemstones in a single filter stage.",
@@ -65,6 +77,9 @@ const PHASES = [
     label: "Phase 4",
     title: "Mineral Restoration: Magnesium Added Back",
     color: "var(--color-navy)",
+    image: "/images/lifestyle2/idw-glass-clear-1.jpg",
+    imageAlt:
+      "Woman filling a drinking glass with clear water at a brushed-steel kitchen faucet in a white kitchen",
     body: [
       "After removing what harms and restructuring what remains, Phase 4 adds back the essential mineral magnesium. This final step restores the mineral balance that thorough filtration necessarily reduces.",
       "Magnesium supports over 300 enzymatic reactions in the body, and most Americans are deficient in it. Adding it through the water supply rather than supplementation means every glass, every cup of tea, every cooked meal benefits.",
@@ -129,55 +144,22 @@ export default function TechnologyPage() {
       />
 
       {/* Hero */}
-      <section style={{ background: "#fff", color: "var(--color-ink)", padding: "5rem 0 4rem" }}>
-        <div className="container" style={{ maxWidth: "720px" }}>
-          <div
-            style={{
-              fontSize: "0.8125rem",
-              color: "var(--color-teal)",
-              letterSpacing: "0.1em",
-              textTransform: "uppercase",
-              marginBottom: "1rem",
-            }}
-          >
-            Proprietary Technology
-          </div>
-          <h1
-            style={{
-              fontFamily: "var(--font-display)",
-              fontSize: "clamp(2rem,5vw,3.25rem)",
-              marginBottom: "1.25rem",
-              letterSpacing: "-0.02em",
-              lineHeight: 1.15,
-            }}
-          >
-            4-Phase Filtration Science and QuadVortex
-            <sup style={{ fontSize: "0.45em", verticalAlign: "super" }}>&reg;</sup> Technology
-          </h1>
-          <p style={{ fontSize: "1.0625rem", color: "var(--color-ink-soft)", lineHeight: 1.75, marginBottom: "1.25rem" }}>
-            pH Prescription has spent over 20 years developing filtration that goes beyond removing
-            contaminants. Our 4-phase system rebuilds water at the molecular level: KDF-55 and
-            Brimac carbon strip what harms, tourmaline and garnet gemstones restructure what
-            remains, and molecular hydrogen turns every drop into an antioxidant.
-          </p>
-          <p
-            style={{
-              fontSize: "0.875rem",
-              fontStyle: "italic",
-              color: "var(--color-ink-mute)",
-              borderLeft: "3px solid var(--color-teal)",
-              paddingLeft: "1rem",
-            }}
-          >
-            "Anyone can filter water. Very few know how to fix it."
-          </p>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Proprietary Technology"
+        title={"4-Phase Filtration Science and QuadVortex® Technology"}
+        subhead="pH Prescription has spent over 20 years developing filtration that goes beyond removing contaminants. Our 4-phase system rebuilds water at the molecular level: KDF-55 and Brimac carbon strip what harms, tourmaline and garnet gemstones restructure what remains, and molecular hydrogen turns every drop into an antioxidant."
+        image="/images/lifestyle2/idw-water-surface-1.jpg"
+        imageAlt="Golden sunlight glinting across a dark, gently rippled water surface"
+        ctas={[
+          { label: "Schedule Free Water Analysis", href: "/consultation", variant: "primary" },
+          { label: `Call ${BUSINESS.phone}`, href: `tel:${BUSINESS.phone}`, variant: "outline" },
+        ]}
+      />
 
       {/* 4-Phase Section */}
       <section style={{ background: "var(--color-surface)" }}>
         <div className="container">
-          <div style={{ textAlign: "center", marginBottom: "3.5rem" }}>
+          <div style={{ textAlign: "center", marginBottom: "2rem" }}>
             <div
               style={{
                 fontSize: "0.8125rem",
@@ -200,9 +182,24 @@ export default function TechnologyPage() {
               Four Phases of Water Transformation
             </h2>
           </div>
+          <p
+            style={{
+              fontSize: "1.125rem",
+              fontStyle: "italic",
+              fontFamily: "var(--font-display)",
+              color: "var(--color-ink-soft)",
+              textAlign: "center",
+              maxWidth: "480px",
+              margin: "0 auto 3.5rem",
+              borderTop: "3px solid var(--color-teal)",
+              paddingTop: "1.25rem",
+            }}
+          >
+            &ldquo;Anyone can filter water. Very few know how to fix it.&rdquo;
+          </p>
 
           <div style={{ display: "flex", flexDirection: "column", gap: "2rem" }}>
-            {PHASES.map((phase, idx) => (
+            {PHASES.map((phase) => (
               <div
                 key={phase.num}
                 style={{
@@ -251,73 +248,100 @@ export default function TechnologyPage() {
                 </div>
 
                 {/* Content column */}
-                <div style={{ padding: "2rem" }}>
-                  <h3
+                <div style={{ display: "flex", flexDirection: "column" }}>
+                  <div
                     style={{
-                      fontFamily: "var(--font-display)",
-                      fontSize: "1.3125rem",
-                      color: "var(--color-navy)",
-                      marginBottom: "1.25rem",
-                      letterSpacing: "-0.01em",
+                      position: "relative",
+                      width: "100%",
+                      height: "clamp(160px, 22vw, 240px)",
+                      overflow: "hidden",
                     }}
                   >
-                    {phase.title}
-                  </h3>
-                  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "2rem" }}>
-                    <div>
-                      {phase.body.map((para, i) => (
-                        <p
-                          key={i}
-                          style={{
-                            color: "var(--color-ink-soft)",
-                            lineHeight: 1.75,
-                            fontSize: "0.9375rem",
-                            marginBottom: i < phase.body.length - 1 ? "0.875rem" : 0,
-                          }}
-                        >
-                          {para}
-                        </p>
-                      ))}
-                    </div>
+                    <Image
+                      src={phase.image}
+                      alt={phase.imageAlt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 1000px"
+                      style={{ objectFit: "cover" }}
+                    />
                     <div
+                      aria-hidden
                       style={{
-                        background: "var(--color-surface)",
-                        padding: "1.25rem",
-                        alignSelf: "start",
+                        position: "absolute",
+                        inset: 0,
+                        background:
+                          "linear-gradient(to right, rgba(30,15,60,0.28) 0%, transparent 55%)",
+                      }}
+                    />
+                  </div>
+                  <div style={{ padding: "2rem" }}>
+                    <h3
+                      style={{
+                        fontFamily: "var(--font-display)",
+                        fontSize: "1.3125rem",
+                        color: "var(--color-navy)",
+                        marginBottom: "1.25rem",
+                        letterSpacing: "-0.01em",
                       }}
                     >
-                      <div
-                        style={{
-                          fontSize: "0.75rem",
-                          fontWeight: 700,
-                          textTransform: "uppercase",
-                          letterSpacing: "0.08em",
-                          color: phase.color,
-                          marginBottom: "0.75rem",
-                        }}
-                      >
-                        Key Specs
-                      </div>
-                      <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
-                        {phase.specs.map((spec) => (
-                          <li
-                            key={spec}
+                      {phase.title}
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: "2rem" }}>
+                      <div>
+                        {phase.body.map((para, i) => (
+                          <p
+                            key={i}
                             style={{
-                              display: "flex",
-                              gap: "0.5rem",
-                              alignItems: "flex-start",
-                              marginBottom: "0.5rem",
-                              fontSize: "0.875rem",
                               color: "var(--color-ink-soft)",
+                              lineHeight: 1.75,
+                              fontSize: "0.9375rem",
+                              marginBottom: i < phase.body.length - 1 ? "0.875rem" : 0,
                             }}
                           >
-                            <span style={{ color: phase.color, flexShrink: 0, marginTop: "0.1em" }}>
-                              &#10003;
-                            </span>
-                            {spec}
-                          </li>
+                            {para}
+                          </p>
                         ))}
-                      </ul>
+                      </div>
+                      <div
+                        style={{
+                          background: "var(--color-surface)",
+                          padding: "1.25rem",
+                          alignSelf: "start",
+                        }}
+                      >
+                        <div
+                          style={{
+                            fontSize: "0.75rem",
+                            fontWeight: 700,
+                            textTransform: "uppercase",
+                            letterSpacing: "0.08em",
+                            color: phase.color,
+                            marginBottom: "0.75rem",
+                          }}
+                        >
+                          Key Specs
+                        </div>
+                        <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                          {phase.specs.map((spec) => (
+                            <li
+                              key={spec}
+                              style={{
+                                display: "flex",
+                                gap: "0.5rem",
+                                alignItems: "flex-start",
+                                marginBottom: "0.5rem",
+                                fontSize: "0.875rem",
+                                color: "var(--color-ink-soft)",
+                              }}
+                            >
+                              <span style={{ color: phase.color, flexShrink: 0, marginTop: "0.1em" }}>
+                                &#10003;
+                              </span>
+                              {spec}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -327,13 +351,20 @@ export default function TechnologyPage() {
         </div>
       </section>
 
+      {/* Statement band */}
+      <ImageBand
+        image="/images/lifestyle2/idw-ripple-2.jpg"
+        imageAlt="Wide expanse of deep blue open water with fine ripples stretching to the horizon"
+        statement="Not just stripped."
+        statementAccent="It's rebuilt."
+      />
+
       {/* QuadVortex Section */}
       <section style={{ background: "#fff" }}>
         <div className="container">
           <div
+            className="grid grid-cols-1 lg:grid-cols-2"
             style={{
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr",
               gap: "4rem",
               alignItems: "center",
             }}
@@ -363,7 +394,7 @@ export default function TechnologyPage() {
                 Proprietary Technology
               </h2>
               <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.8, marginBottom: "1rem" }}>
-                QuadVortex is the registered trademark that identifies pH Prescription'
+                QuadVortex is the registered trademark that identifies pH Prescription&apos;s
                 four-phase integrated filtration approach. It is the architecture that holds the
                 four phases together as a single engineered system rather than four separate
                 products bolted in sequence.
@@ -398,12 +429,29 @@ export default function TechnologyPage() {
                     lineHeight: 1.5,
                   }}
                 >
-                  "Not Just Stripped. It's Rebuilt." When a harmful element is removed, it is
+                  &ldquo;Not Just Stripped. It&apos;s Rebuilt.&rdquo; When a harmful element is removed, it is
                   replaced with something beneficial.
                 </p>
               </div>
             </div>
             <div>
+              <div
+                style={{
+                  position: "relative",
+                  aspectRatio: "4 / 3",
+                  overflow: "hidden",
+                  background: "var(--color-surface)",
+                  marginBottom: "1.5rem",
+                }}
+              >
+                <Image
+                  src="/images/commercial/dw-whole-house-ro.jpg"
+                  alt="Frame-mounted multi-stage reverse osmosis system with sediment and carbon pre-filters, pressure gauges, and stainless membrane housings"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  style={{ objectFit: "cover" }}
+                />
+              </div>
               <div
                 style={{
                   background: "var(--color-surface)",
@@ -492,54 +540,76 @@ export default function TechnologyPage() {
             </p>
           </div>
 
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-              gap: "1.5rem",
-            }}
-          >
-            {[
-              {
-                title: "Selective Antioxidant",
-                body: "H2 neutralizes the most damaging free radicals, specifically hydroxyl radicals, while leaving beneficial oxidative signals intact. Most antioxidants are non-selective and can interfere with normal cell signaling. Molecular hydrogen is not.",
-              },
-              {
-                title: "Cell-Permeable",
-                body: "H2 is the smallest molecule in existence. It crosses cell membranes and reaches mitochondria directly. Larger antioxidant molecules cannot do this. This makes H2 active where cellular energy is produced, not just in the bloodstream.",
-              },
-              {
-                title: "Naturally Occurring",
-                body: "Molecular hydrogen is colorless and odorless. It is produced naturally in the gut by certain bacteria and is present in trace amounts in many natural spring waters. Infusing it into filtered water restores a property pristine water sources carry.",
-              },
-              {
-                title: "Reduces Chronic Oxidative Stress",
-                body: "Oxidative stress from accumulated free radicals is a recognized driver of inflammation, cellular aging, and disease. By neutralizing the most damaging free radicals selectively, H2-infused water provides ongoing antioxidant support with every glass.",
-              },
-            ].map((item) => (
+          <div className="grid grid-cols-1 lg:grid-cols-3" style={{ gap: "1.5rem" }}>
+            <div
+              style={{
+                position: "relative",
+                overflow: "hidden",
+                minHeight: "280px",
+              }}
+            >
+              <Image
+                src="/images/products-extra/business-complete.jpg"
+                alt="Glass of purified water in sharp focus on a counter with a multi-cartridge filtration system softly blurred behind it"
+                fill
+                sizes="(max-width: 1024px) 100vw, 33vw"
+                style={{ objectFit: "cover" }}
+              />
               <div
-                key={item.title}
+                aria-hidden
                 style={{
-                  background: "rgba(255,255,255,0.07)",
-                  padding: "1.75rem",
-                  borderTop: "3px solid var(--color-teal)",
+                  position: "absolute",
+                  inset: 0,
+                  background: "linear-gradient(to top, rgba(30,15,60,0.45) 0%, transparent 50%)",
                 }}
-              >
-                <h3
+              />
+            </div>
+            <div
+              className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2"
+              style={{ gap: "1.5rem" }}
+            >
+              {[
+                {
+                  title: "Selective Antioxidant",
+                  body: "H2 neutralizes the most damaging free radicals, specifically hydroxyl radicals, while leaving beneficial oxidative signals intact. Most antioxidants are non-selective and can interfere with normal cell signaling. Molecular hydrogen is not.",
+                },
+                {
+                  title: "Cell-Permeable",
+                  body: "H2 is the smallest molecule in existence. It crosses cell membranes and reaches mitochondria directly. Larger antioxidant molecules cannot do this. This makes H2 active where cellular energy is produced, not just in the bloodstream.",
+                },
+                {
+                  title: "Naturally Occurring",
+                  body: "Molecular hydrogen is colorless and odorless. It is produced naturally in the gut by certain bacteria and is present in trace amounts in many natural spring waters. Infusing it into filtered water restores a property pristine water sources carry.",
+                },
+                {
+                  title: "Reduces Chronic Oxidative Stress",
+                  body: "Oxidative stress from accumulated free radicals is a recognized driver of inflammation, cellular aging, and disease. By neutralizing the most damaging free radicals selectively, H2-infused water provides ongoing antioxidant support with every glass.",
+                },
+              ].map((item) => (
+                <div
+                  key={item.title}
                   style={{
-                    fontFamily: "var(--font-display)",
-                    fontSize: "1.0625rem",
-                    color: "#fff",
-                    marginBottom: "0.75rem",
+                    background: "rgba(255,255,255,0.07)",
+                    padding: "1.75rem",
+                    borderTop: "3px solid var(--color-teal)",
                   }}
                 >
-                  {item.title}
-                </h3>
-                <p style={{ color: "rgba(255,255,255,0.72)", fontSize: "0.9rem", lineHeight: 1.75 }}>
-                  {item.body}
-                </p>
-              </div>
-            ))}
+                  <h3
+                    style={{
+                      fontFamily: "var(--font-display)",
+                      fontSize: "1.0625rem",
+                      color: "#fff",
+                      marginBottom: "0.75rem",
+                    }}
+                  >
+                    {item.title}
+                  </h3>
+                  <p style={{ color: "rgba(255,255,255,0.72)", fontSize: "0.9rem", lineHeight: 1.75 }}>
+                    {item.body}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
 
           <p
@@ -584,7 +654,7 @@ export default function TechnologyPage() {
             </h2>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "2.5rem" }}>
+          <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: "2.5rem" }}>
             <div>
               <h3
                 style={{
@@ -635,33 +705,54 @@ export default function TechnologyPage() {
           </div>
 
           <div
+            className="grid grid-cols-1 md:grid-cols-[280px_1fr]"
             style={{
               marginTop: "2.5rem",
               background: "var(--color-surface)",
-              padding: "2rem",
               borderLeft: "4px solid var(--color-teal)",
+              overflow: "hidden",
             }}
           >
-            <h3
-              style={{
-                fontFamily: "var(--font-display)",
-                fontSize: "1rem",
-                color: "var(--color-navy)",
-                marginBottom: "0.75rem",
-              }}
-            >
-              Micro-Clustering: Water That Absorbs More Easily
-            </h3>
-            <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.8, fontSize: "0.9375rem" }}>
-              Tap water molecules cluster in groups of 11 to 20 molecules. Glacial spring water
-              clusters at 4 to 6 molecules per group. Smaller clusters pass through cell membranes
-              faster and improve cell-to-cell communication. The mineral and electrical activity in
-              Phases 3 and 4 moves the cluster size of pH Prescription water toward the smaller
-              profile found in high-altitude spring water.
-            </p>
+            <div style={{ position: "relative", minHeight: "220px" }}>
+              <Image
+                src="/images/lifestyle2/idw-tap-pouring-1.jpg"
+                alt="Tall glass of water standing on a reflective surface in front of a softly blurred under-sink filtration system"
+                fill
+                sizes="(max-width: 768px) 100vw, 280px"
+                style={{ objectFit: "cover" }}
+              />
+            </div>
+            <div style={{ padding: "2rem" }}>
+              <h3
+                style={{
+                  fontFamily: "var(--font-display)",
+                  fontSize: "1rem",
+                  color: "var(--color-navy)",
+                  marginBottom: "0.75rem",
+                }}
+              >
+                Micro-Clustering: Water That Absorbs More Easily
+              </h3>
+              <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.8, fontSize: "0.9375rem" }}>
+                Tap water molecules cluster in groups of 11 to 20 molecules. Glacial spring water
+                clusters at 4 to 6 molecules per group. Smaller clusters pass through cell membranes
+                faster and improve cell-to-cell communication. The mineral and electrical activity in
+                Phases 3 and 4 moves the cluster size of pH Prescription water toward the smaller
+                profile found in high-altitude spring water.
+              </p>
+            </div>
           </div>
         </div>
       </section>
+
+      {/* Verification band */}
+      <ImageBand
+        image="/images/commercial/dw-water-testing-lab.jpg"
+        imageAlt="Laboratory pipette releasing a drop of water into a test tube surrounded by glassware in cool blue light"
+        statement="Measured, tested,"
+        statementAccent="verified."
+        height="clamp(240px, 32vw, 400px)"
+      />
 
       {/* FAQ Section */}
       <section style={{ background: "var(--color-surface)" }}>
@@ -739,48 +830,63 @@ export default function TechnologyPage() {
       </section>
 
       {/* CTA */}
-      <section style={{ background: "#fff", textAlign: "center" }}>
-        <div className="container" style={{ maxWidth: "640px" }}>
+      <section style={{ background: "#fff" }}>
+        <div className="container" style={{ maxWidth: "980px" }}>
           <div
-            style={{
-              fontSize: "0.8125rem",
-              color: "var(--color-teal)",
-              letterSpacing: "0.1em",
-              textTransform: "uppercase",
-              marginBottom: "0.75rem",
-            }}
+            className="grid grid-cols-1 md:grid-cols-2"
+            style={{ alignItems: "center", gap: "0", boxShadow: "0 2px 24px rgba(0,0,0,0.08)" }}
           >
-            Start Here
-          </div>
-          <h2
-            style={{
-              fontFamily: "var(--font-display)",
-              fontSize: "clamp(1.75rem,3.5vw,2.25rem)",
-              color: "var(--color-navy)",
-              marginBottom: "1rem",
-              letterSpacing: "-0.02em",
-            }}
-          >
-            Get My Free Water Analysis
-          </h2>
-          <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.75, marginBottom: "2rem" }}>
-            We test your current water, show you exactly what is in it, and recommend the right
-            4-phase system for your home or business. No obligation.
-          </p>
-          <div
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              gap: "1rem",
-              justifyContent: "center",
-            }}
-          >
-            <Link href="/consultation" className="btn btn-primary">
-              Schedule Free Water Analysis
-            </Link>
-            <a href={`tel:${BUSINESS.phone}`} className="btn btn-outline">
-              Call {BUSINESS.phone}
-            </a>
+            <div style={{ position: "relative", minHeight: "300px", height: "100%" }}>
+              <Image
+                src="/images/commercial/aw-pfas-test.jpg"
+                alt="Hand comparing a home water test strip against a color chart beside a glass of water on a kitchen counter"
+                fill
+                sizes="(max-width: 768px) 100vw, 490px"
+                style={{ objectFit: "cover" }}
+              />
+            </div>
+            <div style={{ padding: "clamp(2rem, 5vw, 3.5rem)" }}>
+              <div
+                style={{
+                  fontSize: "0.8125rem",
+                  color: "var(--color-teal)",
+                  letterSpacing: "0.1em",
+                  textTransform: "uppercase",
+                  marginBottom: "0.75rem",
+                }}
+              >
+                Start Here
+              </div>
+              <h2
+                style={{
+                  fontFamily: "var(--font-display)",
+                  fontSize: "clamp(1.75rem,3.5vw,2.25rem)",
+                  color: "var(--color-navy)",
+                  marginBottom: "1rem",
+                  letterSpacing: "-0.02em",
+                }}
+              >
+                Get My Free Water Analysis
+              </h2>
+              <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.75, marginBottom: "2rem" }}>
+                We test your current water, show you exactly what is in it, and recommend the right
+                4-phase system for your home or business. No obligation.
+              </p>
+              <div
+                style={{
+                  display: "flex",
+                  flexWrap: "wrap",
+                  gap: "1rem",
+                }}
+              >
+                <Link href="/consultation" className="btn btn-primary">
+                  Schedule Free Water Analysis
+                </Link>
+                <a href={`tel:${BUSINESS.phone}`} className="btn btn-outline">
+                  Call {BUSINESS.phone}
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>

@@ -325,6 +325,44 @@ export default function BookPage() {
         </div>
       </section>
 
+      {/* Author photo */}
+      <section style={{ background: "#fff", padding: "5rem 0 1rem" }}>
+        <div className="container" style={{ maxWidth: "860px" }}>
+          <figure style={{ margin: 0, display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "3rem", alignItems: "center" }}>
+            <div style={{ position: "relative", width: "100%", maxWidth: "420px", aspectRatio: "2 / 3", margin: "0 auto", overflow: "hidden", background: "var(--color-surface)" }}>
+              <Image
+                src="/images/book/leo-book-yacht.jpg"
+                alt="Leo Szymborski holding a copy of H2O: Health 2 Overcome aboard the H2O Leo in Key West, Florida"
+                fill
+                sizes="(max-width: 768px) 100vw, 420px"
+                style={{ objectFit: "cover" }}
+              />
+            </div>
+            <figcaption>
+              <div
+                style={{
+                  fontSize: "0.75rem",
+                  color: "var(--color-teal)",
+                  letterSpacing: "0.1em",
+                  textTransform: "uppercase",
+                  marginBottom: "1rem",
+                }}
+              >
+                A Florida Story
+              </div>
+              <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.8, marginBottom: "1rem" }}>
+                Leo with H2O: Health 2 Overcome in Key West. The water that made him sick as a child in industrial
+                New Jersey is the same substance that built his health, his family business, and this book.
+              </p>
+              <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.8, margin: 0 }}>
+                The memoir moves from the shadow of chemical plants to the 10,000 square foot Palm City facility
+                where every pH Prescription system is built today.
+              </p>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
       {/* Editorial Reviews */}
       <section style={{ background: "#fff" }}>
         <div className="container" style={{ maxWidth: "860px" }}>
@@ -696,7 +734,7 @@ export default function BookPage() {
               marginBottom: "1.75rem",
             }}
           >
-            The claims in the book are not Leo's alone. Seven physicians and researchers have reviewed the technology and science behind pH Prescription and added their professional endorsement.
+            The claims in the book are not Leo&apos;s alone. Seven physicians and researchers have reviewed the technology and science behind pH Prescription and added their professional endorsement.
           </p>
           <Link
             href="/experts"

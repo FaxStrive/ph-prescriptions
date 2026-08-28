@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { BUSINESS } from "@/lib/business";
+import PageHero from "@/components/ui/PageHero";
 
 export const metadata: Metadata = {
   title: "Medical-Grade Water Solutions | pH Prescription",
@@ -12,6 +14,9 @@ const USE_CASES = [
   {
     label: "Dialysis Centers",
     heading: "Dialysis Water Treatment",
+    image: "/images/commercial/dwc-st108-critical-water-filtration.jpg",
+    imageAlt:
+      "Critical water treatment room with control panel, dosing tank, media vessels, and a commercial reverse osmosis skid",
     body: "Dialysis requires water purity levels far exceeding standard municipal supply. Our systems deliver ultra-low contaminant water with multi-stage filtration that removes heavy metals, chloramines, bacteria, and endotoxins. Consistent purity on every treatment cycle.",
     specs: [
       "Multi-stage reverse osmosis with re-mineralization",
@@ -23,6 +28,9 @@ const USE_CASES = [
   {
     label: "Dental Practices",
     heading: "Dental Office Water Systems",
+    image: "/images/lifestyle2/idw-ripple-1.jpg",
+    imageAlt:
+      "Laboratory pipette suspending a single drop of water above a test tube in blue clinical light",
     body: "Dental unit waterlines require measurable microbial control. Our systems provide purified, re-mineralized water for patient rinsing, handpiece cooling, and procedure prep. Consistently clean water protects your patients and meets CDC waterline quality guidelines.",
     specs: [
       "Meets CDC dental waterline quality benchmarks",
@@ -34,6 +42,9 @@ const USE_CASES = [
   {
     label: "Medical Imaging",
     heading: "Imaging and Lab Water Supply",
+    image: "/images/commercial/dwc-lab-scientist-sample.jpg",
+    imageAlt:
+      "Gloved lab technician dispensing a water sample from a pipette onto a glass slide beside a petri dish",
     body: "Medical imaging equipment and laboratory processes demand consistent water purity to avoid mineral scale, contamination, and equipment damage. Our systems protect imaging equipment while delivering reliably pure process water.",
     specs: [
       "Scale-free mineral reduction for equipment longevity",
@@ -45,6 +56,9 @@ const USE_CASES = [
   {
     label: "Sterile Prep",
     heading: "Sterile Preparation Environments",
+    image: "/images/commercial/dwc-process-manufacturing-pure-water.jpg",
+    imageAlt:
+      "Twin fiberglass treatment tanks with copper supply piping and a stainless housing in a facility utility room",
     body: "Central sterile supply and surgical prep require water free of particulates, bacteria, and chemical contaminants. Our 4-phase QuadVortex filtration system produces water suitable for instrument washing, autoclaving, and clean-room support.",
     specs: [
       "4-phase QuadVortex filtration (KDF-55, Catalytic Carbon, Tourmaline, H2)",
@@ -98,87 +112,18 @@ export default function MedicalPage() {
       />
 
       {/* Hero */}
-      <section
-        style={{
-          background: "#fff",
-          color: "var(--color-ink)",
-          padding: "5rem 0 4rem",
-        }}
-      >
-        <div className="container" style={{ maxWidth: "820px" }}>
-          <div
-            style={{
-              fontSize: "0.8125rem",
-              color: "var(--color-teal)",
-              letterSpacing: "0.1em",
-              textTransform: "uppercase",
-              marginBottom: "1rem",
-            }}
-          >
-            Solutions / Medical
-          </div>
-          <h1
-            style={{
-              fontFamily: "var(--font-display)",
-              fontSize: "clamp(2rem,5vw,3.25rem)",
-              marginBottom: "1.25rem",
-              letterSpacing: "-0.02em",
-              lineHeight: 1.1,
-            }}
-          >
-            Medical-Grade Water for Clinical Environments
-          </h1>
-          <p
-            style={{
-              fontSize: "1.0625rem",
-              color: "var(--color-ink-soft)",
-              lineHeight: 1.8,
-              maxWidth: "600px",
-              marginBottom: "2rem",
-            }}
-          >
-            Dialysis centers, dental practices, imaging facilities, and sterile-prep rooms all require water that municipal supply cannot reliably deliver. pH Prescription builds systems to match each clinical application.
-          </p>
-          <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-            <a
-              href={`tel:${BUSINESS.phone}`}
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                justifyContent: "center",
-                background: "var(--color-navy)",
-                color: "#fff",
-                padding: "0.9375rem 1.75rem",
-                fontSize: "0.8125rem",
-                fontWeight: 700,
-                letterSpacing: "0.06em",
-                textTransform: "uppercase",
-                textDecoration: "none",
-              }}
-            >
-              Request My Facility Consultation
-            </a>
-            <Link
-              href="/consultation"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                justifyContent: "center",
-                border: "2px solid var(--color-navy)",
-                color: "var(--color-navy)",
-                padding: "0.9375rem 1.5rem",
-                fontSize: "0.8125rem",
-                fontWeight: 700,
-                letterSpacing: "0.06em",
-                textTransform: "uppercase",
-                textDecoration: "none",
-              }}
-            >
-              Free Consultation
-            </Link>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Solutions / Medical"
+        title="Medical-Grade Water for"
+        titleAccent="Clinical Environments"
+        subhead="Dialysis centers, dental practices, imaging facilities, and sterile-prep rooms all require water that municipal supply cannot reliably deliver. pH Prescription builds systems to match each clinical application."
+        image="/images/commercial/dwc-medical-grade-water-filtration.jpg"
+        imageAlt="Medical facility water treatment room with media tanks, storage tank, and reverse osmosis cart beside large windows"
+        ctas={[
+          { label: "Request My Facility Consultation", href: `tel:${BUSINESS.phone}`, variant: "primary" },
+          { label: "Free Consultation", href: "/consultation", variant: "outline" },
+        ]}
+      />
 
       {/* Trust bar */}
       <section
@@ -236,7 +181,7 @@ export default function MedicalPage() {
 
       {/* Use cases */}
       <section style={{ background: "var(--color-surface)" }}>
-        <div className="container" style={{ maxWidth: "900px" }}>
+        <div className="container" style={{ maxWidth: "980px" }}>
           <div
             style={{
               fontSize: "0.8125rem",
@@ -275,90 +220,99 @@ export default function MedicalPage() {
           </p>
 
           <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))",
-              gap: "2rem",
-            }}
+            className="grid grid-cols-1 md:grid-cols-2"
+            style={{ gap: "2rem" }}
           >
             {USE_CASES.map((uc) => (
               <div
                 key={uc.label}
                 style={{
                   background: "#fff",
-                  padding: "2rem",
                   borderTop: "4px solid var(--color-navy)",
+                  display: "flex",
+                  flexDirection: "column",
                 }}
               >
-                <div
-                  style={{
-                    fontSize: "0.6875rem",
-                    color: "var(--color-teal)",
-                    letterSpacing: "0.12em",
-                    textTransform: "uppercase",
-                    marginBottom: "0.625rem",
-                    fontWeight: 600,
-                  }}
-                >
-                  {uc.label}
+                <div style={{ position: "relative", aspectRatio: "16 / 9", overflow: "hidden" }}>
+                  <Image
+                    src={uc.image}
+                    alt={uc.imageAlt}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 480px"
+                    style={{ objectFit: "cover" }}
+                  />
                 </div>
-                <h3
-                  style={{
-                    fontFamily: "var(--font-display)",
-                    fontSize: "1.3125rem",
-                    color: "var(--color-navy)",
-                    marginBottom: "0.875rem",
-                    letterSpacing: "-0.015em",
-                  }}
-                >
-                  {uc.heading}
-                </h3>
-                <p
-                  style={{
-                    color: "var(--color-ink-soft)",
-                    lineHeight: 1.75,
-                    fontSize: "0.9375rem",
-                    marginBottom: "1.25rem",
-                  }}
-                >
-                  {uc.body}
-                </p>
-                <ul
-                  style={{
-                    listStyle: "none",
-                    padding: 0,
-                    margin: 0,
-                    display: "flex",
-                    flexDirection: "column",
-                    gap: "0.5rem",
-                  }}
-                >
-                  {uc.specs.map((spec) => (
-                    <li
-                      key={spec}
-                      style={{
-                        display: "flex",
-                        gap: "0.6rem",
-                        fontSize: "0.875rem",
-                        color: "var(--color-ink-soft)",
-                        lineHeight: 1.5,
-                        alignItems: "flex-start",
-                      }}
-                    >
-                      <span
+                <div style={{ padding: "2rem" }}>
+                  <div
+                    style={{
+                      fontSize: "0.6875rem",
+                      color: "var(--color-teal)",
+                      letterSpacing: "0.12em",
+                      textTransform: "uppercase",
+                      marginBottom: "0.625rem",
+                      fontWeight: 600,
+                    }}
+                  >
+                    {uc.label}
+                  </div>
+                  <h3
+                    style={{
+                      fontFamily: "var(--font-display)",
+                      fontSize: "1.3125rem",
+                      color: "var(--color-navy)",
+                      marginBottom: "0.875rem",
+                      letterSpacing: "-0.015em",
+                    }}
+                  >
+                    {uc.heading}
+                  </h3>
+                  <p
+                    style={{
+                      color: "var(--color-ink-soft)",
+                      lineHeight: 1.75,
+                      fontSize: "0.9375rem",
+                      marginBottom: "1.25rem",
+                    }}
+                  >
+                    {uc.body}
+                  </p>
+                  <ul
+                    style={{
+                      listStyle: "none",
+                      padding: 0,
+                      margin: 0,
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: "0.5rem",
+                    }}
+                  >
+                    {uc.specs.map((spec) => (
+                      <li
+                        key={spec}
                         style={{
-                          color: "var(--color-teal)",
-                          flexShrink: 0,
-                          marginTop: "0.15em",
-                          fontWeight: 700,
+                          display: "flex",
+                          gap: "0.6rem",
+                          fontSize: "0.875rem",
+                          color: "var(--color-ink-soft)",
+                          lineHeight: 1.5,
+                          alignItems: "flex-start",
                         }}
                       >
-                        +
-                      </span>
-                      {spec}
-                    </li>
-                  ))}
-                </ul>
+                        <span
+                          style={{
+                            color: "var(--color-teal)",
+                            flexShrink: 0,
+                            marginTop: "0.15em",
+                            fontWeight: 700,
+                          }}
+                        >
+                          +
+                        </span>
+                        {spec}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             ))}
           </div>
@@ -367,11 +321,10 @@ export default function MedicalPage() {
 
       {/* Technology Bridge */}
       <section style={{ background: "#fff" }}>
-        <div className="container" style={{ maxWidth: "820px" }}>
+        <div className="container" style={{ maxWidth: "980px" }}>
           <div
+            className="grid grid-cols-1 md:grid-cols-2"
             style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
               gap: "3rem",
               alignItems: "center",
             }}
@@ -406,82 +359,110 @@ export default function MedicalPage() {
                   marginBottom: "1rem",
                 }}
               >
-                Every medical application draws from the same foundation: pH Prescription' proprietary 4-phase filtration process. KDF-55 handles heavy metals and chloramines. Catalytic and Brimac carbon address VOCs, fluoride, and radioactive isotopes. Tourmaline and garnet gemstones restructure the water at a mineral level. Finally, molecular hydrogen infusion delivers cell-permeable antioxidant benefits.
+                Every medical application draws from the same foundation: pH Prescription&apos;s proprietary 4-phase filtration process. KDF-55 handles heavy metals and chloramines. Catalytic and Brimac carbon address VOCs, fluoride, and radioactive isotopes. Tourmaline and garnet gemstones restructure the water at a mineral level. Finally, molecular hydrogen infusion delivers cell-permeable antioxidant benefits.
               </p>
-              <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.8 }}>
+              <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.8, marginBottom: "1.5rem" }}>
                 For medical applications, we layer additional stages as the application requires: UV sterilization, sub-micron filtration, and deionization options for the most demanding environments.
               </p>
-            </div>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                gap: "1rem",
-              }}
-            >
-              {[
-                { num: "01", label: "KDF-55", desc: "Heavy metals, chloramines, bacteria" },
-                { num: "02", label: "Catalytic Carbon", desc: "VOCs, fluoride, isotopes" },
-                { num: "03", label: "Tourmaline & Garnet", desc: "Mineral restructuring" },
-                { num: "04", label: "Molecular Hydrogen", desc: "Cellular antioxidant delivery" },
-              ].map((phase) => (
-                <div
-                  key={phase.num}
-                  style={{
-                    display: "flex",
-                    gap: "1.25rem",
-                    alignItems: "flex-start",
-                    padding: "1rem",
-                    background: "var(--color-surface)",
-                  }}
-                >
-                  <span
-                    style={{
-                      fontFamily: "var(--font-mono)",
-                      fontSize: "0.65rem",
-                      color: "var(--color-teal)",
-                      letterSpacing: "0.12em",
-                      textTransform: "uppercase",
-                      paddingTop: "0.15em",
-                      flexShrink: 0,
-                    }}
-                  >
-                    {phase.num}
-                  </span>
-                  <div>
-                    <div
-                      style={{
-                        fontFamily: "var(--font-display)",
-                        fontSize: "1rem",
-                        color: "var(--color-navy)",
-                        marginBottom: "0.25rem",
-                      }}
-                    >
-                      {phase.label}
-                    </div>
-                    <div
-                      style={{
-                        fontSize: "0.8375rem",
-                        color: "var(--color-ink-soft)",
-                      }}
-                    >
-                      {phase.desc}
-                    </div>
-                  </div>
-                </div>
-              ))}
-              <Link
-                href="/technology"
+              <div
                 style={{
-                  color: "var(--color-teal)",
-                  fontSize: "0.875rem",
-                  fontWeight: 600,
-                  textDecoration: "none",
-                  marginTop: "0.5rem",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "1rem",
                 }}
               >
-                Full technology overview &rarr;
-              </Link>
+                {[
+                  { num: "01", label: "KDF-55", desc: "Heavy metals, chloramines, bacteria" },
+                  { num: "02", label: "Catalytic Carbon", desc: "VOCs, fluoride, isotopes" },
+                  { num: "03", label: "Tourmaline & Garnet", desc: "Mineral restructuring" },
+                  { num: "04", label: "Molecular Hydrogen", desc: "Cellular antioxidant delivery" },
+                ].map((phase) => (
+                  <div
+                    key={phase.num}
+                    style={{
+                      display: "flex",
+                      gap: "1.25rem",
+                      alignItems: "flex-start",
+                      padding: "1rem",
+                      background: "var(--color-surface)",
+                    }}
+                  >
+                    <span
+                      style={{
+                        fontFamily: "var(--font-mono)",
+                        fontSize: "0.65rem",
+                        color: "var(--color-teal)",
+                        letterSpacing: "0.12em",
+                        textTransform: "uppercase",
+                        paddingTop: "0.15em",
+                        flexShrink: 0,
+                      }}
+                    >
+                      {phase.num}
+                    </span>
+                    <div>
+                      <div
+                        style={{
+                          fontFamily: "var(--font-display)",
+                          fontSize: "1rem",
+                          color: "var(--color-navy)",
+                          marginBottom: "0.25rem",
+                        }}
+                      >
+                        {phase.label}
+                      </div>
+                      <div
+                        style={{
+                          fontSize: "0.8375rem",
+                          color: "var(--color-ink-soft)",
+                        }}
+                      >
+                        {phase.desc}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+                <Link
+                  href="/technology"
+                  style={{
+                    color: "var(--color-teal)",
+                    fontSize: "0.875rem",
+                    fontWeight: 600,
+                    textDecoration: "none",
+                    marginTop: "0.5rem",
+                  }}
+                >
+                  Full technology overview &rarr;
+                </Link>
+              </div>
+            </div>
+            <div>
+              <div
+                style={{
+                  position: "relative",
+                  aspectRatio: "1 / 1",
+                  overflow: "hidden",
+                  border: "1px solid var(--color-border-soft)",
+                }}
+              >
+                <Image
+                  src="/images/products-extra/clinical-purification.jpg"
+                  alt="pH Prescription infographic titled Clinical Purification in Your Kitchen showing the Ultimate Purified Drinking System with callouts for toxin removal, pH balance, molecular hydrogen enrichment, mineral infusion, hydration, and doctor recommendation"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 490px"
+                  style={{ objectFit: "cover" }}
+                />
+              </div>
+              <p
+                style={{
+                  marginTop: "0.75rem",
+                  fontSize: "0.8125rem",
+                  color: "var(--color-ink-mute)",
+                  fontStyle: "italic",
+                }}
+              >
+                The same clinical purification standard, from facility skids to point-of-use systems.
+              </p>
             </div>
           </div>
         </div>
@@ -614,39 +595,13 @@ export default function MedicalPage() {
               justifyContent: "center",
             }}
           >
-            <a
-              href={`tel:${BUSINESS.phone}`}
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                justifyContent: "center",
-                background: "#fff",
-                color: "var(--color-navy)",
-                padding: "0.9375rem 1.75rem",
-                fontSize: "0.8125rem",
-                fontWeight: 700,
-                letterSpacing: "0.06em",
-                textTransform: "uppercase",
-                textDecoration: "none",
-              }}
-            >
+            <a href={`tel:${BUSINESS.phone}`} className="btn btn-white">
               Call {BUSINESS.phone}
             </a>
             <Link
               href="/consultation"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                justifyContent: "center",
-                border: "2px solid rgba(255,255,255,0.6)",
-                color: "#fff",
-                padding: "0.9375rem 1.5rem",
-                fontSize: "0.8125rem",
-                fontWeight: 700,
-                letterSpacing: "0.06em",
-                textTransform: "uppercase",
-                textDecoration: "none",
-              }}
+              className="btn btn-outline"
+              style={{ borderColor: "rgba(255,255,255,0.6)", color: "#fff" }}
             >
               Request a Consultation
             </Link>
