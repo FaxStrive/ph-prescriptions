@@ -6,6 +6,8 @@ import Image from "next/image";
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { Shield, Award, Droplets, Phone, CheckCircle2, Star, ArrowUpRight, ArrowRight } from "lucide-react";
 import { BUSINESS, PRODUCTS, DOCTORS } from "@/lib/business";
+import { SystemBreakdown } from "@/components/breakdown/SystemBreakdown";
+import { ro1100Config } from "@/lib/ro1100Config";
 import ServiceSelector from "@/components/sections/ServiceSelector";
 import DoctorTestimonials from "@/components/sections/DoctorTestimonials";
 
@@ -1000,6 +1002,7 @@ export default function HomePage() {
       <Products />
       <VideoDivider />
       <Doctors />
+      <SystemBreakdown config={ro1100Config} />
       <Testimonials />
       <CTABand />
     </>
