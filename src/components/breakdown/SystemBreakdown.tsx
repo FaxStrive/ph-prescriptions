@@ -37,6 +37,7 @@ export function SystemBreakdown({ config }: SystemBreakdownProps) {
 
   const sectionRef = useRef<HTMLDivElement>(null);
   const stageRef = useRef<HTMLDivElement>(null);
+  const progressRef = useRef(0);
   const reduceMotionRef = useRef(false);
   const rafRef = useRef<number>(0);
 
@@ -63,11 +64,10 @@ export function SystemBreakdown({ config }: SystemBreakdownProps) {
       const raw = (window.scrollY - sectionTop) / (sectionHeight - vh);
       const fraction = clamp(raw, 0, 1);
 
-      // Slow zoom across the whole chapter run so the footage breathes
-      // instead of sitting in a static box. Skipped under reduced motion.
-      if (stageRef.current && !reduceMotionRef.current) {
-        stageRef.current.style.transform = `scale(${(1.08 + 0.14 * fraction).toFixed(4)})`;
-      }
+      // Global progress drives a gentle crop-zoom inside the scrubber
+      // (baked into the canvas draw, not a CSS transform, so it never
+      // softens the bitmap). Skipped under reduced motion.
+      progressRef.current = reduceMotionRef.current ? 0 : fraction;
 
       const stepProgress = fraction * N;
       const newStepIdx = clamp(Math.floor(stepProgress), 0, N - 1);
@@ -146,8 +146,7 @@ export function SystemBreakdown({ config }: SystemBreakdownProps) {
               // borders regardless of viewport shape. Width is capped so the
               // box never exceeds the 100vh sticky viewport.
               aspectRatio: "1544 / 864",
-              width: "min(100%, 175vh)",
-              transform: "scale(1.08)",
+              width: "min(100%, 175vh, 100rem)",
               maskImage:
                 "linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%), linear-gradient(to bottom, transparent 0%, black 9%, black 78%, transparent 96%)",
               WebkitMaskImage:
@@ -160,6 +159,7 @@ export function SystemBreakdown({ config }: SystemBreakdownProps) {
               stepId={currentStep.id}
               frameCount={currentStep.frameCount}
               activeFrame={frameIdx}
+              progressRef={progressRef}
             />
             {shouldPreload && (
               <FootageScrubber

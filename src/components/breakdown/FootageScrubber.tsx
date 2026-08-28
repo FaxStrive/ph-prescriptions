@@ -21,6 +21,8 @@ interface FootageScrubberProps {
   frameCount: number;
   /** 0-based index of the frame to show. */
   activeFrame: number;
+  /** Global section progress 0..1; drives a gentle crop-zoom in the draw. */
+  progressRef?: React.RefObject<number>;
   /** When true, render nothing and just warm the frame cache. */
   hidden?: boolean;
 }
@@ -69,6 +71,7 @@ export function FootageScrubber({
   stepId,
   frameCount,
   activeFrame,
+  progressRef,
   hidden = false,
 }: FootageScrubberProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -114,10 +117,17 @@ export function FootageScrubber({
       }
       const ctx = canvas.getContext("2d");
       if (!ctx) return;
-      // contain-fit (frames and stage share the same ratio, so this fills)
-      const scale = Math.min(canvas.width / pick.naturalWidth, canvas.height / pick.naturalHeight);
-      const dw = pick.naturalWidth * scale, dh = pick.naturalHeight * scale;
-      ctx.drawImage(pick, (canvas.width - dw) / 2, (canvas.height - dh) / 2, dw, dh);
+      ctx.imageSmoothingEnabled = true;
+      ctx.imageSmoothingQuality = "high";
+      // Crop-zoom baked into the single draw: zoom grows gently with scroll
+      // progress. One high-quality resample straight to the backing store -
+      // no CSS transform on top, which is what read as blur.
+      const zoom = 1.02 + 0.1 * (progressRef?.current ?? 0);
+      const sw = pick.naturalWidth / zoom;
+      const sh = pick.naturalHeight / zoom;
+      const sx = (pick.naturalWidth - sw) / 2;
+      const sy = (pick.naturalHeight - sh) / 2;
+      ctx.drawImage(pick, sx, sy, sw, sh, 0, 0, canvas.width, canvas.height);
       lastPaintedRef.current = pick;
     };
 
