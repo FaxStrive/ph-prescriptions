@@ -3,25 +3,66 @@
 /**
  * FootageScrubber
  *
- * Renders a stack of 64 WebP frames for one breakdown step.
- * The frame at `activeFrame` paints on top; the previously shown frame stays
- * visible underneath it, so a frame that has not finished decoding never
- * leaves a blank hole (frames are opaque white-ground images, so the stack
- * is seamless). Opacity is set inline (no CSS transition) for instant
- * switching.
+ * Canvas-based frame scrubber. Frames decode into a module-level cache and
+ * the canvas paints the best available frame:
+ *   exact frame -> nearest decoded frame in the step -> last painted bitmap.
+ * The canvas is NEVER cleared without something drawable, so neither fast
+ * scrubbing nor a chapter change can blank the stage (the old <img>-stack
+ * approach rewrote 64 srcs on every chapter swap, which blanked the visible
+ * element until the new file decoded - the source of the flashing).
  *
  * Frame files live at: /breakdown/ro1100/{stepId}/f-001.webp ... f-064.webp
  */
 
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 
 interface FootageScrubberProps {
   stepId: string;
   frameCount: number;
   /** 0-based index of the frame to show. */
   activeFrame: number;
-  /** When true, the whole scrubber is invisible (used for preloading). */
+  /** When true, render nothing and just warm the frame cache. */
   hidden?: boolean;
+}
+
+type CacheEntry = { img: HTMLImageElement; ready: boolean };
+
+const frameCache = new Map<string, CacheEntry>();
+
+function frameSrc(stepId: string, i: number) {
+  return `/breakdown/ro1100/${stepId}/f-${String(i + 1).padStart(3, "0")}.webp`;
+}
+
+function ensureFrame(stepId: string, i: number, onReady?: () => void): CacheEntry {
+  const key = `${stepId}/${i}`;
+  let entry = frameCache.get(key);
+  if (!entry) {
+    const img = new Image();
+    img.decoding = "async";
+    entry = { img, ready: false };
+    frameCache.set(key, entry);
+    const done = () => {
+      entry!.ready = true;
+      onReady?.();
+    };
+    img.src = frameSrc(stepId, i);
+    if (typeof img.decode === "function") {
+      img.decode().then(done, done);
+    } else {
+      img.onload = done;
+      img.onerror = done;
+    }
+  } else if (!entry.ready && onReady) {
+    const img = entry.img;
+    if (typeof img.decode === "function") {
+      img.decode().then(onReady, onReady);
+    }
+  }
+  return entry;
+}
+
+function warmStep(stepId: string, frameCount: number) {
+  for (let i = 0; i < frameCount; i++) ensureFrame(stepId, i);
 }
 
 export function FootageScrubber({
@@ -30,45 +71,78 @@ export function FootageScrubber({
   activeFrame,
   hidden = false,
 }: FootageScrubberProps) {
-  // The frame shown on the previous render sticks around underneath the
-  // active frame, covering the decode gap when activeFrame moves fast.
-  const prevFrameRef = useRef(activeFrame);
-  const prevFrame = prevFrameRef.current;
-  if (prevFrame !== activeFrame) {
-    // Deliberately updated during render: we want the value from the last
-    // committed render to survive exactly one render as the underlay.
-    prevFrameRef.current = activeFrame;
-  }
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const lastPaintedRef = useRef<HTMLImageElement | null>(null);
+  // Tracks the latest requested frame so a late decode never paints a stale one.
+  const wantRef = useRef({ stepId, activeFrame });
+
+  useEffect(() => {
+    wantRef.current = { stepId, activeFrame };
+
+    if (hidden) {
+      warmStep(stepId, frameCount);
+      return;
+    }
+
+    const paint = () => {
+      const canvas = canvasRef.current;
+      if (!canvas) return;
+      const want = wantRef.current;
+
+      // Best available: exact frame, else nearest decoded frame in the step.
+      let pick: HTMLImageElement | null = null;
+      const exact = frameCache.get(`${want.stepId}/${want.activeFrame}`);
+      if (exact?.ready) {
+        pick = exact.img;
+      } else {
+        for (let d = 1; d < frameCount && !pick; d++) {
+          const lo = frameCache.get(`${want.stepId}/${want.activeFrame - d}`);
+          if (lo?.ready) { pick = lo.img; break; }
+          const hi = frameCache.get(`${want.stepId}/${want.activeFrame + d}`);
+          if (hi?.ready) { pick = hi.img; break; }
+        }
+      }
+      if (!pick) pick = lastPaintedRef.current;
+      if (!pick) return; // nothing drawable yet - leave whatever is on canvas
+
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      const w = canvas.clientWidth, h = canvas.clientHeight;
+      if (w === 0 || h === 0) return;
+      if (canvas.width !== Math.round(w * dpr) || canvas.height !== Math.round(h * dpr)) {
+        canvas.width = Math.round(w * dpr);
+        canvas.height = Math.round(h * dpr);
+      }
+      const ctx = canvas.getContext("2d");
+      if (!ctx) return;
+      // contain-fit (frames and stage share the same ratio, so this fills)
+      const scale = Math.min(canvas.width / pick.naturalWidth, canvas.height / pick.naturalHeight);
+      const dw = pick.naturalWidth * scale, dh = pick.naturalHeight * scale;
+      ctx.drawImage(pick, (canvas.width - dw) / 2, (canvas.height - dh) / 2, dw, dh);
+      lastPaintedRef.current = pick;
+    };
+
+    // Load the active frame (repaint when it decodes), pull neighbors ahead,
+    // and warm the whole step in the background.
+    ensureFrame(stepId, activeFrame, paint);
+    for (let d = 1; d <= 6; d++) {
+      if (activeFrame + d < frameCount) ensureFrame(stepId, activeFrame + d, undefined);
+      if (activeFrame - d >= 0) ensureFrame(stepId, activeFrame - d, undefined);
+    }
+    warmStep(stepId, frameCount);
+    paint();
+
+    const onResize = () => paint();
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, [stepId, frameCount, activeFrame, hidden]);
+
+  if (hidden) return null;
 
   return (
-    <div
-      className="absolute inset-0"
-      style={{ opacity: hidden ? 0 : 1 }}
+    <canvas
+      ref={canvasRef}
+      className="absolute inset-0 w-full h-full"
       aria-hidden="true"
-    >
-      {Array.from({ length: frameCount }, (_, i) => {
-        const isActive = i === activeFrame;
-        const isPrev = i === prevFrame && !isActive;
-        return (
-          <img
-            key={i}
-            src={`/breakdown/ro1100/${stepId}/f-${String(i + 1).padStart(3, "0")}.webp`}
-            alt=""
-            aria-hidden="true"
-            style={{
-              opacity: isActive || isPrev ? 1 : 0,
-              zIndex: isActive ? 2 : isPrev ? 1 : 0,
-            }}
-            className="absolute inset-0 w-full h-full object-contain"
-            /* Eager: every frame of the mounted step is needed within one
-               scroll gesture; lazy-loading them is what caused blank frames
-               mid-scrub. Each webp is small and the next step preloads in a
-               hidden scrubber already. */
-            loading="eager"
-            decoding="async"
-          />
-        );
-      })}
-    </div>
+    />
   );
 }
