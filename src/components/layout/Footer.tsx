@@ -74,6 +74,27 @@ export default function Footer() {
             </nav>
           </div>
 
+          {/* Resources */}
+          <div>
+            <h3 style={{ color: "var(--color-ink)", fontSize: "0.8125rem", fontFamily: "var(--font-sans)", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "1rem" }}>Resources</h3>
+            <nav aria-label="Footer Resources" style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+              {[
+                ["Blog", "/blog"],
+                ["H2O: Health 2 Overcome", "/h2o-health"],
+                ["FAQ", "/faq"],
+                ["Technology", "/technology"],
+                ["Doctor Endorsements", "/about/doctors"],
+                ["Free Consultation", "/consultation"],
+              ].map(([label, href]) => (
+                <Link key={href} href={href} style={{ color: "var(--color-ink-mute)", textDecoration: "none", fontSize: "0.875rem", transition: "color 0.2s" }}
+                  onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = "var(--color-teal)")}
+                  onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = "var(--color-ink-mute)")}>
+                  {label}
+                </Link>
+              ))}
+            </nav>
+          </div>
+
           {/* Company */}
           <div>
             <h3 style={{ color: "var(--color-ink)", fontSize: "0.8125rem", fontFamily: "var(--font-sans)", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "1rem" }}>Company</h3>
@@ -81,11 +102,7 @@ export default function Footer() {
               {[
                 ["Our Story", "/about"],
                 ["About Leo", "/about/leo"],
-                ["Doctor Endorsements", "/about/doctors"],
                 ["Community Care", "/about/community"],
-                ["Technology", "/technology"],
-                ["FAQ", "/faq"],
-                ["Free Consultation", "/consultation"],
                 ["Contact", "/contact"],
               ].map(([label, href]) => (
                 <Link key={href} href={href} style={{ color: "var(--color-ink-mute)", textDecoration: "none", fontSize: "0.875rem", transition: "color 0.2s" }}

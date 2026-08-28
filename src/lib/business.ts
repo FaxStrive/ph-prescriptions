@@ -1,3 +1,5 @@
+// TODO: Shopify — integrate Storefront API for live product/pricing data in future phase
+
 export const BUSINESS = {
   name: "pH Prescription",
   tagline: "Water That Works for Your Health",
@@ -598,3 +600,7 @@ export const DOCTORS = [
     specialty: "Medicine",
   },
 ] as const;
+
+// TODO: Shopify — integrate Storefront API for live product/pricing data in future phase
+// When ready: use @shopify/storefront-api-client with SHOPIFY_STOREFRONT_TOKEN env var
+// to fetch real inventory, pricing, and cart functionality from the Shopify store.

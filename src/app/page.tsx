@@ -2,11 +2,14 @@
 
 import { useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { Shield, Award, Droplets, Phone, CheckCircle2, Star, ArrowUpRight, ArrowRight } from "lucide-react";
 import { BUSINESS, PRODUCTS, DOCTORS } from "@/lib/business";
 import { SystemBreakdown } from "@/components/breakdown/SystemBreakdown";
 import { ro1100Config } from "@/lib/ro1100Config";
+import ServiceSelector from "@/components/sections/ServiceSelector";
+import DoctorTestimonials from "@/components/sections/DoctorTestimonials";
 
 const STATS = [
   { value: "40+", label: "Years Experience" },
@@ -339,6 +342,47 @@ function TrustStrip() {
               </div>
             </div>
           ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function LifestyleImage() {
+  return (
+    <section style={{ position: "relative", overflow: "hidden", height: "clamp(240px, 35vw, 480px)" }}>
+      <Image
+        src="/images/lifestyle/family-kitchen.jpeg"
+        alt="Family enjoying clean water from a pH Prescription system"
+        fill
+        style={{ objectFit: "cover" }}
+        priority={false}
+        sizes="100vw"
+      />
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          background: "linear-gradient(to right, rgba(59,36,102,0.7) 0%, rgba(59,36,102,0.2) 60%, transparent 100%)",
+          display: "flex",
+          alignItems: "center",
+        }}
+      >
+        <div className="max-content" style={{ position: "relative" }}>
+          <p
+            style={{
+              fontFamily: "var(--font-display)",
+              fontWeight: 400,
+              fontSize: "clamp(1.5rem, 4vw, 2.75rem)",
+              lineHeight: 1.2,
+              letterSpacing: "-0.02em",
+              color: "#fff",
+              maxWidth: "20ch",
+            }}
+          >
+            Clean water,{" "}
+            <span className="italic-accent" style={{ color: "#B9E3EF" }}>every glass.</span>
+          </p>
         </div>
       </div>
     </section>
@@ -951,6 +995,9 @@ export default function HomePage() {
         }}
       />
       <Hero />
+      <ServiceSelector />
+      <DoctorTestimonials />
+      <LifestyleImage />
       <Pillars />
       <Products />
       <VideoDivider />
