@@ -13,6 +13,16 @@ const nextConfig: NextConfig = {
         destination: "/experts",
         permanent: true,
       },
+      {
+        source: "/medical",
+        destination: "/solutions/medical",
+        permanent: true,
+      },
+      {
+        source: "/solutions/pool-marine",
+        destination: "/pool",
+        permanent: true,
+      },
     ];
   },
 };
