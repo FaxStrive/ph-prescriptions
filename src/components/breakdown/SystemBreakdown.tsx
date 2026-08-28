@@ -122,7 +122,7 @@ export function SystemBreakdown({ config }: SystemBreakdownProps) {
     >
       <div
         className="sticky top-0 overflow-hidden"
-        style={{ height: "100vh", background: "#0d0d1a" }}
+        style={{ height: "100vh", background: "#fff" }}
       >
         {/* ── Frame canvas ── */}
         <div className="absolute inset-0 flex items-center justify-center">
@@ -148,7 +148,7 @@ export function SystemBreakdown({ config }: SystemBreakdownProps) {
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 [mask-image:radial-gradient(ellipse_70%_60%_at_50%_50%,transparent_40%,black_100%)]"
-          style={{ background: "#0d0d1a" }}
+          style={{ background: "#fff" }}
         />
 
         {/* ── Content overlay ── */}
@@ -170,7 +170,7 @@ export function SystemBreakdown({ config }: SystemBreakdownProps) {
                   fontWeight: 700,
                   letterSpacing: "0.2em",
                   textTransform: "uppercase",
-                  color: "#7ecbff",
+                  color: "var(--color-teal)",
                   marginBottom: "0.5rem",
                 }}
               >
@@ -181,7 +181,7 @@ export function SystemBreakdown({ config }: SystemBreakdownProps) {
                 style={{
                   fontSize: "clamp(1.5rem, 4vw, 2.5rem)",
                   fontWeight: 700,
-                  color: "#fff",
+                  color: "var(--color-ink)",
                   marginBottom: "0.5rem",
                   lineHeight: 1.1,
                 }}
@@ -193,7 +193,7 @@ export function SystemBreakdown({ config }: SystemBreakdownProps) {
               {contentStep.description && (
                 <p
                   style={{
-                    color: "rgba(255,255,255,0.65)",
+                    color: "var(--color-ink-soft)",
                     fontSize: "0.9375rem",
                     marginBottom: "1.25rem",
                     maxWidth: "28rem",
@@ -218,9 +218,9 @@ export function SystemBreakdown({ config }: SystemBreakdownProps) {
                         fontWeight: 600,
                         letterSpacing: "0.22em",
                         textTransform: "uppercase",
-                        color: "#fff",
-                        border: "1px solid rgba(255,255,255,0.18)",
-                        borderRadius: "9999px",
+                        color: "var(--color-ink)",
+                        border: "1px solid var(--color-border-strong)",
+                        background: "rgba(255,255,255,0.85)",
                       }}
                     >
                       {chip}
@@ -248,8 +248,8 @@ export function SystemBreakdown({ config }: SystemBreakdownProps) {
                   width: isActive ? 8 : 5,
                   height: isActive ? 8 : 5,
                   background: isActive
-                    ? "#7ecbff"
-                    : "rgba(255,255,255,0.18)",
+                    ? "var(--color-navy)"
+                    : "var(--color-border-strong)",
                 }}
               />
             );
@@ -264,7 +264,7 @@ export function SystemBreakdown({ config }: SystemBreakdownProps) {
             fontWeight: 700,
             letterSpacing: "0.2em",
             textTransform: "uppercase",
-            color: "rgba(255,255,255,0.3)",
+            color: "var(--color-ink-mute)",
           }}
           aria-hidden="true"
         >

@@ -4,11 +4,16 @@
  * FootageScrubber
  *
  * Renders a stack of 64 WebP frames for one breakdown step.
- * Only the frame at `activeFrame` (0-based) is visible; all others are
- * opacity:0. Opacity is set inline (no CSS transition) for instant switching.
+ * The frame at `activeFrame` paints on top; the previously shown frame stays
+ * visible underneath it, so a frame that has not finished decoding never
+ * leaves a blank hole (frames are opaque white-ground images, so the stack
+ * is seamless). Opacity is set inline (no CSS transition) for instant
+ * switching.
  *
  * Frame files live at: /breakdown/ro1100/{stepId}/f-001.webp ... f-064.webp
  */
+
+import { useRef } from "react";
 
 interface FootageScrubberProps {
   stepId: string;
@@ -25,6 +30,16 @@ export function FootageScrubber({
   activeFrame,
   hidden = false,
 }: FootageScrubberProps) {
+  // The frame shown on the previous render sticks around underneath the
+  // active frame, covering the decode gap when activeFrame moves fast.
+  const prevFrameRef = useRef(activeFrame);
+  const prevFrame = prevFrameRef.current;
+  if (prevFrame !== activeFrame) {
+    // Deliberately updated during render: we want the value from the last
+    // committed render to survive exactly one render as the underlay.
+    prevFrameRef.current = activeFrame;
+  }
+
   return (
     <div
       className="absolute inset-0"
@@ -32,18 +47,24 @@ export function FootageScrubber({
       aria-hidden="true"
     >
       {Array.from({ length: frameCount }, (_, i) => {
-        const num = String(i + 1).padStart(3, "0");
+        const isActive = i === activeFrame;
+        const isPrev = i === prevFrame && !isActive;
         return (
           <img
             key={i}
-            src={`/breakdown/ro1100/${stepId}/f-${num}.webp`}
+            src={`/breakdown/ro1100/${stepId}/f-${String(i + 1).padStart(3, "0")}.webp`}
             alt=""
             aria-hidden="true"
-            style={{ opacity: i === activeFrame ? 1 : 0 }}
+            style={{
+              opacity: isActive || isPrev ? 1 : 0,
+              zIndex: isActive ? 2 : isPrev ? 1 : 0,
+            }}
             className="absolute inset-0 w-full h-full object-contain"
-            /* First two frames load eagerly so the step starts without a blank
-               flash; the rest defer until the browser is idle. */
-            loading={i <= 1 ? "eager" : "lazy"}
+            /* Eager: every frame of the mounted step is needed within one
+               scroll gesture; lazy-loading them is what caused blank frames
+               mid-scrub. Each webp is small and the next step preloads in a
+               hidden scrubber already. */
+            loading="eager"
             decoding="async"
           />
         );
