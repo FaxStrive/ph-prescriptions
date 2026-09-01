@@ -31,13 +31,39 @@ function clamp(v: number, lo: number, hi: number) {
   return Math.max(lo, Math.min(hi, v));
 }
 
+/**
+ * Directed camera path per chapter, interpolated across the chapter's scroll
+ * travel and baked into the canvas draw. The generated clips for the middle
+ * chapters barely move (static product, subtle wobble), so the player
+ * supplies the cinematography: push-ins, pull-backs and lateral drifts.
+ * x/y are pan offsets in [-1, 1] of the crop slack at the current zoom.
+ */
+type CameraPath = { z0: number; z1: number; x0: number; x1: number; y0: number; y1: number };
+
+const CAMERA_PATHS: Record<string, CameraPath> = {
+  intro: { z0: 1.02, z1: 1.1, x0: 0, x1: 0, y0: 0, y1: 0 },
+  micron: { z0: 1.12, z1: 1.26, x0: -0.55, x1: 0.45, y0: 0.1, y1: -0.1 },
+  gac: { z0: 1.26, z1: 1.1, x0: 0.5, x1: -0.5, y0: -0.1, y1: 0.1 },
+  cbc: { z0: 1.1, z1: 1.26, x0: -0.5, x1: 0.4, y0: -0.15, y1: 0.15 },
+  membrane: { z0: 1.08, z1: 1.28, x0: 0.25, x1: -0.3, y0: 0, y1: 0.12 },
+  remineral: { z0: 1.24, z1: 1.08, x0: -0.4, x1: 0.4, y0: 0.12, y1: -0.1 },
+  coconut: { z0: 1.08, z1: 1.26, x0: 0.4, x1: -0.4, y0: -0.1, y1: 0.05 },
+  outro: { z0: 1.1, z1: 1.02, x0: 0, x1: 0, y0: 0, y1: 0 },
+};
+
+const DEFAULT_PATH: CameraPath = { z0: 1.05, z1: 1.18, x0: -0.3, x1: 0.3, y0: 0, y1: 0 };
+
+function easeInOut(t: number) {
+  return t * t * (3 - 2 * t);
+}
+
 export function SystemBreakdown({ config }: SystemBreakdownProps) {
   const { steps } = config;
   const N = steps.length;
 
   const sectionRef = useRef<HTMLDivElement>(null);
   const stageRef = useRef<HTMLDivElement>(null);
-  const progressRef = useRef(0);
+  const cameraRef = useRef({ z: 1.02, px: 0, py: 0 });
   const reduceMotionRef = useRef(false);
   const rafRef = useRef<number>(0);
 
@@ -64,11 +90,6 @@ export function SystemBreakdown({ config }: SystemBreakdownProps) {
       const raw = (window.scrollY - sectionTop) / (sectionHeight - vh);
       const fraction = clamp(raw, 0, 1);
 
-      // Global progress drives a gentle crop-zoom inside the scrubber
-      // (baked into the canvas draw, not a CSS transform, so it never
-      // softens the bitmap). Skipped under reduced motion.
-      progressRef.current = reduceMotionRef.current ? 0 : fraction;
-
       const stepProgress = fraction * N;
       const newStepIdx = clamp(Math.floor(stepProgress), 0, N - 1);
       const frameProgress = stepProgress - newStepIdx;
@@ -80,6 +101,19 @@ export function SystemBreakdown({ config }: SystemBreakdownProps) {
         0,
         frameCount - 1,
       );
+
+      // Interpolate this chapter's camera path across its scroll travel.
+      if (reduceMotionRef.current) {
+        cameraRef.current = { z: 1.02, px: 0, py: 0 };
+      } else {
+        const path = CAMERA_PATHS[step.id] ?? DEFAULT_PATH;
+        const t = easeInOut(clamp(frameProgress, 0, 1));
+        cameraRef.current = {
+          z: path.z0 + (path.z1 - path.z0) * t,
+          px: path.x0 + (path.x1 - path.x0) * t,
+          py: path.y0 + (path.y1 - path.y0) * t,
+        };
+      }
 
       let newContentStepIdx = contentStepIdxRef.current;
       if (!step.contentless) {
@@ -159,7 +193,7 @@ export function SystemBreakdown({ config }: SystemBreakdownProps) {
               stepId={currentStep.id}
               frameCount={currentStep.frameCount}
               activeFrame={frameIdx}
-              progressRef={progressRef}
+              cameraRef={cameraRef}
             />
             {shouldPreload && (
               <FootageScrubber

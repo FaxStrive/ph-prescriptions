@@ -21,8 +21,8 @@ interface FootageScrubberProps {
   frameCount: number;
   /** 0-based index of the frame to show. */
   activeFrame: number;
-  /** Global section progress 0..1; drives a gentle crop-zoom in the draw. */
-  progressRef?: React.RefObject<number>;
+  /** Camera state from the parent: zoom plus pan offsets in [-1, 1]. */
+  cameraRef?: React.RefObject<{ z: number; px: number; py: number }>;
   /** When true, render nothing and just warm the frame cache. */
   hidden?: boolean;
 }
@@ -71,7 +71,7 @@ export function FootageScrubber({
   stepId,
   frameCount,
   activeFrame,
-  progressRef,
+  cameraRef,
   hidden = false,
 }: FootageScrubberProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -119,14 +119,16 @@ export function FootageScrubber({
       if (!ctx) return;
       ctx.imageSmoothingEnabled = true;
       ctx.imageSmoothingQuality = "high";
-      // Crop-zoom baked into the single draw: zoom grows gently with scroll
-      // progress. One high-quality resample straight to the backing store -
-      // no CSS transform on top, which is what read as blur.
-      const zoom = 1.02 + 0.1 * (progressRef?.current ?? 0);
-      const sw = pick.naturalWidth / zoom;
-      const sh = pick.naturalHeight / zoom;
-      const sx = (pick.naturalWidth - sw) / 2;
-      const sy = (pick.naturalHeight - sh) / 2;
+      // Camera crop baked into the single draw: the parent interpolates a
+      // directed pan/zoom path per chapter. One high-quality resample
+      // straight to the backing store - no CSS transform on top.
+      const cam = cameraRef?.current ?? { z: 1.02, px: 0, py: 0 };
+      const sw = pick.naturalWidth / cam.z;
+      const sh = pick.naturalHeight / cam.z;
+      const slackX = (pick.naturalWidth - sw) / 2;
+      const slackY = (pick.naturalHeight - sh) / 2;
+      const sx = slackX * (1 + Math.max(-1, Math.min(1, cam.px)));
+      const sy = slackY * (1 + Math.max(-1, Math.min(1, cam.py)));
       ctx.drawImage(pick, sx, sy, sw, sh, 0, 0, canvas.width, canvas.height);
       lastPaintedRef.current = pick;
     };
