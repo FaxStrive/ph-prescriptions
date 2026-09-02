@@ -40,14 +40,17 @@ function clamp(v: number, lo: number, hi: number) {
  */
 type CameraPath = { z0: number; z1: number; x0: number; x1: number; y0: number; y1: number };
 
+// Chapters with regenerated camera-move footage (membrane, remineral,
+// coconut, cbc) get only a whisper of drift - their clips carry the motion.
+// gac still runs the old wobble footage, so it keeps the strong player move.
 const CAMERA_PATHS: Record<string, CameraPath> = {
   intro: { z0: 1.02, z1: 1.1, x0: 0, x1: 0, y0: 0, y1: 0 },
   micron: { z0: 1.12, z1: 1.26, x0: -0.55, x1: 0.45, y0: 0.1, y1: -0.1 },
   gac: { z0: 1.26, z1: 1.1, x0: 0.5, x1: -0.5, y0: -0.1, y1: 0.1 },
-  cbc: { z0: 1.1, z1: 1.26, x0: -0.5, x1: 0.4, y0: -0.15, y1: 0.15 },
-  membrane: { z0: 1.08, z1: 1.28, x0: 0.25, x1: -0.3, y0: 0, y1: 0.12 },
-  remineral: { z0: 1.24, z1: 1.08, x0: -0.4, x1: 0.4, y0: 0.12, y1: -0.1 },
-  coconut: { z0: 1.08, z1: 1.26, x0: 0.4, x1: -0.4, y0: -0.1, y1: 0.05 },
+  cbc: { z0: 1.03, z1: 1.1, x0: -0.15, x1: 0.15, y0: 0, y1: 0.05 },
+  membrane: { z0: 1.02, z1: 1.08, x0: 0.08, x1: -0.08, y0: 0, y1: 0.04 },
+  remineral: { z0: 1.08, z1: 1.02, x0: -0.12, x1: 0.12, y0: 0.05, y1: 0 },
+  coconut: { z0: 1.02, z1: 1.09, x0: 0.12, x1: -0.12, y0: -0.04, y1: 0.02 },
   outro: { z0: 1.1, z1: 1.02, x0: 0, x1: 0, y0: 0, y1: 0 },
 };
 
