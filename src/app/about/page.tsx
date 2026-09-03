@@ -105,10 +105,9 @@ export default function AboutPage() {
                 Mission
               </span>
               <p style={{ fontSize: "1rem", lineHeight: 1.75, color: "var(--color-ink-soft)" }}>
-                We are committed to providing the highest quality purification and filtering products, systems and
-                technology of water in the most cost-effective way for residential and commercial businesses such as
-                offices, medical facilities, food service, salons, spas, hospitality, marine and all industries
-                needing finely filtered water.
+                Water that works for your health. We build systems that filter what should not be there,
+                restore the minerals that should, and enhance water with molecular hydrogen - for homes,
+                businesses, and every industry that depends on healthy water.
               </p>
             </div>
             <div>
@@ -126,8 +125,8 @@ export default function AboutPage() {
                 Vision
               </span>
               <p style={{ fontSize: "1rem", lineHeight: 1.75, color: "var(--color-ink-soft)" }}>
-                Our vision is to innovate and create technology that, at reasonable cost, can supply the most
-                finely filtered and healthiest water for all.
+                A world where every tap delivers water that actively supports the body - clean,
+                mineral-rich, and hydrogen-enhanced, at a price any family can reach.
               </p>
             </div>
             <div>
@@ -249,39 +248,31 @@ export default function AboutPage() {
                 and system design, Leo has dedicated his life to transforming the way we think about and interact
                 with water.
               </p>
-              <p style={{ marginBottom: "1.25rem" }}>
-                His journey began in the industrial landscape of New Jersey, where he grew up in the shadow of
-                chemical plants. Born with chronic health issues and struggling in school, Leo was mislabeled as
-                &ldquo;dumb&rdquo; by teachers who failed to recognize his dyslexia. It was not until later in life that he
-                learned the truth, unlocking a deeper understanding of the resilience and determination that had
-                carried him through those early challenges.
-              </p>
-              <p style={{ marginBottom: "1.25rem" }}>
-                Being underestimated became his superpower. Leo learned to trust his instincts, developing an
-                expertise in water science that no classroom could have taught. His personal experience of being
-                poisoned by the water he drank as a child became the driving force behind pH Prescription.
-              </p>
               <p style={{ marginBottom: "1.5rem" }}>
                 Today, pH Prescription is headquartered in a 10,000 square foot facility in Palm City, Florida,
                 serving customers across all 50 states and internationally. The company&apos;s Aquapellis brand
                 extends the same water health science to personal care products.
               </p>
-              <Link
-                href="/book"
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: "0.5rem",
-                  fontFamily: "var(--font-mono)",
-                  fontSize: "0.7rem",
-                  letterSpacing: "0.12em",
-                  textTransform: "uppercase",
-                  color: "var(--color-teal)",
-                  textDecoration: "none",
-                }}
-              >
-                Read Leo&apos;s memoir: H2O: Health 2 Overcome &rarr;
-              </Link>
+              <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
+                <Link href="/about/leo" className="btn btn-primary">Read Leo&apos;s Full Story</Link>
+                <Link
+                  href="/book"
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "0.5rem",
+                    fontFamily: "var(--font-mono)",
+                    fontSize: "0.7rem",
+                    letterSpacing: "0.12em",
+                    textTransform: "uppercase",
+                    color: "var(--color-teal)",
+                    textDecoration: "none",
+                    alignSelf: "center",
+                  }}
+                >
+                  His memoir: H2O: Health 2 Overcome &rarr;
+                </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -598,7 +589,7 @@ export default function AboutPage() {
             Our Brands
           </h2>
           <p style={{ fontSize: "1rem", lineHeight: 1.75, color: "var(--color-ink-soft)", marginBottom: "1.5rem" }}>
-            pH Prescription is the water filtration company. Aquapellis is our personal care brand, extending
+            pH Prescription is a water wellness technology company. Aquapellis is our personal care brand, extending
             finely filtered water technology to showers, skincare, and hair health. Both brands are built on the
             same science and the same commitment to water that actively supports the body.
           </p>
