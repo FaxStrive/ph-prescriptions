@@ -35,7 +35,7 @@ export default function PrivacyPage() {
         {[
           {
             heading: "1. Who We Are",
-            body: `pH Prescription ("we," "us," or "our") is a water treatment company located at ${BUSINESS.address.full}. We operate the website phprescription.com. Questions about this policy may be directed to ${BUSINESS.email}.`,
+            body: `pH Prescription ("we," "us," or "our") is a water wellness technology company located at ${BUSINESS.address.full}. We operate the website phprescription.com. Questions about this policy may be directed to ${BUSINESS.email}.`,
           },
           {
             heading: "2. Information We Collect",

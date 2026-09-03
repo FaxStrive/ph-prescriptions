@@ -4,7 +4,7 @@ import { BUSINESS, DOCTORS } from "@/lib/business";
 
 export const metadata: Metadata = {
   title: "Why pH Prescription? | Point of Difference",
-  description: "What separates pH Prescription from every other water filtration company. QuadVortex technology, lifetime warranty, WQA certified, Made in USA, 7+ doctor endorsements, and 40+ years of experience.",
+  description: "What separates pH Prescription from ordinary water filtration companies. QuadVortex technology, lifetime warranty, WQA certified, Made in USA, 7+ doctor endorsements, and 40+ years of experience.",
 };
 
 export default function PointOfDifferencePage() {
