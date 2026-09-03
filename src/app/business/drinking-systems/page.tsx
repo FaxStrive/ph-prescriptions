@@ -207,7 +207,7 @@ export default function BusinessDrinkingSystemsPage() {
               marginBottom: "1rem",
             }}
           >
-            Free Water Analysis for Your Facility
+            A Free Consultation for Your Facility
           </h2>
           <p
             style={{
@@ -215,7 +215,7 @@ export default function BusinessDrinkingSystemsPage() {
               marginBottom: "1.75rem",
             }}
           >
-            We test first, then recommend. No overselling. Licensed installation. Lifetime warranty. Nationwide.
+            We consult first, then recommend. No overselling. Licensed installation. Lifetime warranty. Nationwide.
           </p>
           <Link href="/consultation" className="btn btn-primary">
             Request My Commercial Quote

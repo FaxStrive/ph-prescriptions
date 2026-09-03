@@ -213,11 +213,11 @@ export default function PointOfDifferencePage() {
             See the Difference Yourself
           </h2>
           <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.75, marginBottom: "2rem" }}>
-            Start with a free water analysis. We will test your current water, show you exactly what is in it, and let you decide whether our systems are right for you. No pressure. No commitment.
+            Start with a free consultation. We will review your local water quality with you, show you exactly what is in it, and let you decide whether our systems are right for you. No pressure. No commitment.
           </p>
           <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
             <Link href="/consultation" className="btn btn-primary">
-              Free Water Analysis
+              Free Consultation
             </Link>
             <a href={`tel:${BUSINESS.phoneTollFree}`} className="btn btn-primary">
               Call {BUSINESS.phoneTollFree}

@@ -6,7 +6,7 @@ import ImageBand from "@/components/ui/ImageBand";
 
 export const metadata: Metadata = {
   title: "Free Water Consultation | pH Prescription",
-  description: "Schedule a free water analysis and consultation with pH Prescription. We test your water and recommend the right system for your home or business.",
+  description: "Schedule a free water consultation with pH Prescription. We review your water quality with you and recommend the right system for your home or business.",
 };
 
 export default function ConsultationPage() {
@@ -14,9 +14,9 @@ export default function ConsultationPage() {
     <>
       <PageHero
         eyebrow="No Cost, No Obligation"
-        title="Free Water Analysis"
+        title="Free Water Consultation"
         titleAccent="& Consultation"
-        subhead="Schedule a complimentary water analysis. We test what is in your water, explain exactly what we find, and recommend the right solution for your home or business - with no obligation to purchase."
+        subhead="Schedule a complimentary consultation. We review your local water quality together, explain exactly what is in it, and recommend the right solution for your home or business - with no obligation to purchase."
         image="/images/lifestyle/consultation.jpg"
         imageAlt="Water specialist reviewing test results with a homeowner during a consultation"
         minHeight="54vh"
@@ -33,7 +33,7 @@ export default function ConsultationPage() {
               <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
                 {[
                   { step: "1", title: "Submit Your Request", desc: "Fill out the form with your name, phone, and zip code. We will reach out within 24 hours." },
-                  { step: "2", title: "Water Analysis", desc: "Our team tests your current water supply and identifies contaminants, pH levels, and mineral content." },
+                  { step: "2", title: "Water Review", desc: "We go through your municipal water report or well test results together and identify contaminants, pH levels, and mineral content." },
                   { step: "3", title: "System Recommendation", desc: "We walk you through the results and recommend the right pH Prescription system for your specific water and needs." },
                   { step: "4", title: "No-Pressure Decision", desc: "Take all the time you need. There is zero obligation. If you are ready, we handle installation from start to finish." },
                 ].map((item) => (
@@ -99,7 +99,7 @@ export default function ConsultationPage() {
                   </span>
                 </div>
                 <button type="submit" className="btn btn-primary" style={{ justifyContent: "center", padding: "1rem 2rem", fontSize: "1rem" }}>
-                  Get My Free Water Analysis
+                  Get My Free Consultation
                 </button>
                 <p style={{ fontSize: "0.8125rem", color: "var(--color-ink-mute)", textAlign: "center" }}>
                   We call back within 24 hours. No spam, no pressure.

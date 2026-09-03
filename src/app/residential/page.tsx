@@ -49,8 +49,8 @@ const SECTIONS = [
 const PROCESS = [
   {
     eyebrow: "Step 01",
-    title: "Free Water Analysis",
-    body: "We test your water first and recommend the right system with no obligation - no guesswork, no overselling.",
+    title: "Free Consultation",
+    body: "We review your water quality and usage first and recommend the right system with no obligation - no guesswork, no overselling.",
     image: "/images/commercial/cfw-water-test-kit-system.jpg",
     imageAlt: "Professional water analysis test kit in a carrying case",
   },
@@ -81,7 +81,7 @@ export default function ResidentialPage() {
         video="/video/water-stream.mp4"
         image="/images/hero/residential-hero.jpg"
         ctas={[
-          { label: "Free Water Analysis", href: "/consultation", variant: "white" },
+          { label: "Free Consultation", href: "/consultation", variant: "white" },
           { label: `Call ${BUSINESS.phone}`, href: `tel:${BUSINESS.phone}`, variant: "outline" },
         ]}
       />
@@ -148,7 +148,7 @@ export default function ResidentialPage() {
                 WQA Certified. Made in USA. Lifetime warranty with licensed plumber installation - the same standard on every system we sell.
               </p>
               <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-                <Link href="/consultation" className="btn btn-primary">Free Water Analysis</Link>
+                <Link href="/consultation" className="btn btn-primary">Free Consultation</Link>
                 <a href={`tel:${BUSINESS.phone}`} className="btn btn-outline">Call {BUSINESS.phone}</a>
               </div>
             </div>

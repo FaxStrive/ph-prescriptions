@@ -145,10 +145,10 @@ export default function NutraceuticalsPage() {
             Start With Your Water
           </h2>
           <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.75, marginBottom: "2rem" }}>
-            Every nutraceutical consultation begins with a free water analysis. Understanding what your water is doing first shapes what supplementation makes sense. Schedule a consultation and we will test your water at no cost.
+            Every nutraceutical consultation begins with a free water review. Understanding what your water is doing first shapes what supplementation makes sense. Schedule a consultation and we will review your water quality with you at no cost.
           </p>
           <Link href="/consultation" className="btn btn-primary">
-            Schedule Free Water Analysis
+            Schedule a Free Consultation
           </Link>
         </div>
       </section>

@@ -60,7 +60,7 @@ const PROCESS = [
   {
     eyebrow: "Step 01",
     title: "Facility Assessment",
-    body: "We test your current water and map your usage before recommending any system - no guesswork, no overselling.",
+    body: "We review your water quality data and map your usage before recommending any system - no guesswork, no overselling.",
     image: "/images/lifestyle2/pa-technician-clipboard.jpg",
     imageAlt: "Technician in uniform reviewing notes on a clipboard beside a red toolbox in a kitchen",
   },
@@ -116,7 +116,7 @@ export default function BusinessPage() {
               maxWidth: "560px",
             }}
           >
-            Every system scales to your facility. Free water analysis included with every business quote.
+            Every system scales to your facility. Free water consultation included with every business quote.
           </p>
           <PhotoCardGrid
             columns={2}
@@ -257,8 +257,8 @@ export default function BusinessPage() {
               >
                 {[
                   {
-                    title: "Free Water Analysis",
-                    body: "We test your current water before recommending any system - no guesswork, no overselling.",
+                    title: "Free Water Consultation",
+                    body: "We review your water quality data before recommending any system - no guesswork, no overselling.",
                   },
                   {
                     title: "Nationwide Service",
@@ -321,7 +321,7 @@ export default function BusinessPage() {
               marginBottom: "1rem",
             }}
           >
-            Get a Free Business Water Analysis
+            Get a Free Business Consultation
           </h2>
           <p style={{ color: "rgba(27,58,107,0.7)", marginBottom: "1.5rem" }}>
             Tell us your facility type and usage. We will recommend the right system at the right scale - and back it with a lifetime warranty.

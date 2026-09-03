@@ -37,9 +37,9 @@ const TESTIMONIALS = [
 ];
 
 const PILLARS = [
-  { icon: Shield, title: "Up to 99% Contaminant Removal", desc: "QuadVortex filtration removes bacteria, heavy metals, chlorine, fluoride, pharmaceuticals and more." },
+  { icon: Award, title: "Molecular Hydrogen Infused", desc: "H2 infusion - the most studied selective antioxidant in water science - is built into every system." },
   { icon: Droplets, title: "Alkaline & Re-Mineralized", desc: "Restores healthy pH balance and adds back essential minerals stripped by conventional filtration." },
-  { icon: Award, title: "Molecular Hydrogen Infused", desc: "H2 infusion - the most powerful antioxidant known to science - is built into every system." },
+  { icon: Shield, title: "Up to 99% Contaminant Removal", desc: "QuadVortex filtration removes bacteria, heavy metals, chlorine, fluoride, pharmaceuticals and more." },
   { icon: CheckCircle2, title: "Lifetime Warranty", desc: "Every system carries a lifetime warranty when installed by a licensed plumber." },
 ];
 
@@ -168,7 +168,7 @@ function Hero() {
                 color: "rgba(255,255,255,0.55)",
               }}
             >
-              Free water analysis · Endorsed by 7+ physicians
+              Molecular hydrogen technology · Endorsed by 7+ physicians
             </p>
           </div>
           <Link
@@ -340,7 +340,7 @@ function Pillars() {
       <div className="max-content">
         <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,820px)_1fr]" style={{ gap: "3.5rem", marginBottom: "4rem", alignItems: "center" }}>
           <div>
-            <span className="eyebrow" style={{ color: "var(--color-navy)" }}>Why pH Prescription</span>
+            <span className="eyebrow" style={{ color: "var(--color-navy)" }}>Beyond Filtration</span>
             <h2
               style={{
                 marginTop: "1rem",
@@ -352,9 +352,9 @@ function Pillars() {
                 color: "var(--color-ink)",
               }}
             >
-              Tap water carries up to 316 contaminants.
+              Clean water is only the beginning.
               <br />
-              <span className="italic-accent" style={{ color: "var(--color-teal)" }}>We remove them.</span>
+              <span className="italic-accent" style={{ color: "var(--color-teal)" }}>We filter it. Remineralize it. Enhance it with molecular hydrogen.</span>
             </h2>
             <p
               style={{
@@ -365,8 +365,12 @@ function Pillars() {
                 maxWidth: "60ch",
               }}
             >
-              Our proprietary QuadVortex technology filters what nobody else bothers to, then re-mineralizes your water and infuses molecular hydrogen - the same science that seven physicians put their names behind.
+              Tap water can carry up to 316 contaminants, and removing them is just step one. Our proprietary QuadVortex technology restores the minerals conventional filtration strips out, then infuses molecular hydrogen - the selective antioxidant behind our research partnership with Dr. Tyler LeBaron of the Molecular Hydrogen Institute, and the science seven physicians put their names behind.
             </p>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem", marginTop: "1.75rem" }}>
+              <Link href="/technology" className="btn btn-primary">Explore the Science</Link>
+              <Link href="/blog" className="btn btn-outline">Visit the Learning Center</Link>
+            </div>
           </div>
           <div className="hidden lg:block" style={{ position: "relative", aspectRatio: "4 / 3", overflow: "hidden" }}>
             <Image
@@ -763,6 +767,109 @@ function Doctors() {
   );
 }
 
+const ECOSYSTEM = [
+  {
+    image: "/products/pH-WMS-900-CO-v4-600x600.jpg",
+    imageAlt: "pH Prescription whole home QuadVortex water system with twin tanks",
+    title: "Whole Home Water",
+    body: "Every tap, shower and appliance runs on finely filtered, re-mineralized water.",
+    href: "/residential/total-home",
+  },
+  {
+    image: "/images/lifestyle2/idw-tap-glass-2.jpg",
+    imageAlt: "Glass of hydrogen-infused drinking water filled at the kitchen tap",
+    title: "Hydrogen Drinking Water",
+    body: "Under-sink systems that filter, remineralize and infuse molecular hydrogen into every glass.",
+    href: "/residential/drinking-systems",
+  },
+  {
+    image: "/images/lifestyle2/svc-service-shower.jpg",
+    imageAlt: "Shower running with filtered hydrogen-infused water",
+    title: "Hydrogen Shower",
+    body: "Aquapellis delivers molecular hydrogen through the skin with every shower.",
+    href: "/aquapellis",
+  },
+];
+
+function EcosystemTrio() {
+  return (
+    <section style={{ background: "#fff", padding: "clamp(4rem, 8vw, 6.5rem) 0" }}>
+      <div className="max-content">
+        <div style={{ textAlign: "center", marginBottom: "3rem" }}>
+          <span className="eyebrow" style={{ color: "var(--color-navy)" }}>One Ecosystem</span>
+          <h2
+            style={{
+              marginTop: "1rem",
+              fontFamily: "var(--font-display)",
+              fontWeight: 400,
+              fontSize: "clamp(2rem, 4.5vw, 3rem)",
+              lineHeight: 1.1,
+              letterSpacing: "-0.03em",
+              color: "var(--color-ink)",
+            }}
+          >
+            Water wellness, <span className="italic-accent" style={{ color: "var(--color-teal)" }}>whole home to every glass.</span>
+          </h2>
+          <p style={{ marginTop: "1rem", color: "var(--color-ink-soft)", fontSize: "1.0625rem", lineHeight: 1.7, maxWidth: "56ch", marginLeft: "auto", marginRight: "auto" }}>
+            Three ways into the same system of health: whole home water, hydrogen drinking water, and the hydrogen shower.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 reveal-stagger" style={{ gap: "1.75rem" }}>
+          {ECOSYSTEM.map((e) => (
+            <Link key={e.href} href={e.href} className="photo-card" style={{ display: "block", textDecoration: "none" }}>
+              <div className="photo-card-img" style={{ position: "relative", aspectRatio: "4 / 3", overflow: "hidden", background: "var(--color-surface)" }}>
+                <Image src={e.image} alt={e.imageAlt} fill sizes="(max-width: 768px) 100vw, 33vw" style={{ objectFit: "cover", transition: "transform 0.6s cubic-bezier(0.22,1,0.36,1)" }} />
+              </div>
+              <h3 style={{ marginTop: "1.25rem", fontFamily: "var(--font-display)", fontWeight: 400, fontSize: "1.5rem", letterSpacing: "-0.015em", color: "var(--color-ink)" }}>{e.title}</h3>
+              <p style={{ marginTop: "0.5rem", fontSize: "0.9375rem", lineHeight: 1.65, color: "var(--color-ink-soft)" }}>{e.body}</p>
+              <span style={{ display: "inline-block", marginTop: "0.75rem", fontFamily: "var(--font-mono)", fontSize: "0.7rem", letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--color-navy)", borderBottom: "1px solid var(--color-navy)", paddingBottom: "0.2rem" }}>
+                Explore &rarr;
+              </span>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function FounderSection() {
+  return (
+    <section style={{ background: "var(--color-surface)", padding: "clamp(4rem, 8vw, 6.5rem) 0" }}>
+      <div className="max-content">
+        <div className="grid grid-cols-1 md:grid-cols-[280px_1fr]" style={{ gap: "3rem", alignItems: "center" }}>
+          <div style={{ position: "relative", aspectRatio: "3 / 4", overflow: "hidden", background: "#fff", maxWidth: "280px" }}>
+            <Image src="/images/team/leo-szymborski.jpg" alt="Leo Szymborski, founder of pH Prescription" fill sizes="280px" style={{ objectFit: "cover" }} />
+          </div>
+          <div>
+            <span className="eyebrow" style={{ color: "var(--color-navy)" }}>The Founder</span>
+            <h2
+              style={{
+                marginTop: "1rem",
+                fontFamily: "var(--font-display)",
+                fontWeight: 400,
+                fontSize: "clamp(1.875rem, 4vw, 2.75rem)",
+                lineHeight: 1.1,
+                letterSpacing: "-0.025em",
+                color: "var(--color-ink)",
+              }}
+            >
+              Leo Szymborski built this company <span className="italic-accent" style={{ color: "var(--color-teal)" }}>to heal himself first.</span>
+            </h2>
+            <p style={{ marginTop: "1.25rem", fontSize: "1.0625rem", lineHeight: 1.75, color: "var(--color-ink-soft)", maxWidth: "62ch" }}>
+              Over 20 years ago, a life-threatening illness sent Leo searching for how water could help the body heal itself. That search became four decades of water science, a 10,000 sq ft American manufacturing facility, systems endorsed by leading physicians, and a #1 Amazon best-selling book on water and health.
+            </p>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem", marginTop: "1.75rem" }}>
+              <Link href="/about/leo" className="btn btn-primary">Read Leo&apos;s Story</Link>
+              <Link href="/book" className="btn btn-outline">H2O: Health 2 Overcome</Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 const MARQUEE_ROW_A = [
   { src: "/images/installations/kitchen-install-technician.jpg", alt: "Technician completing a kitchen water system install" },
   { src: "/images/lifestyle2/idw-family-water-1.jpg", alt: "Family enjoying filtered water together in the kitchen" },
@@ -981,7 +1088,7 @@ function CTABand() {
           Ready to transform <span className="italic-accent" style={{ color: "#B9E3EF" }}>your water?</span>
         </h2>
         <p style={{ marginTop: "1.25rem", fontSize: "1rem", lineHeight: 1.7, color: "rgba(255,255,255,0.85)" }}>
-          Book a free water analysis and consultation. Residential and commercial. All fifty states. No pressure.
+          Book a free consultation. Residential and commercial. All fifty states. No pressure.
         </p>
         <div
           style={{
@@ -1042,12 +1149,14 @@ export default function HomeClient() {
   return (
     <>
       <Hero />
-      <ServiceSelector />
-      <DoctorTestimonials />
-      <LifestyleImage />
       <Pillars />
+      <EcosystemTrio />
+      <DoctorTestimonials />
+      <ServiceSelector />
+      <LifestyleImage />
       <Products />
       <VideoDivider />
+      <FounderSection />
       <Doctors />
       <SystemBreakdown config={ro1100Config} />
       <InstallMarquee />

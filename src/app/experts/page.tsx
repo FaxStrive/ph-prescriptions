@@ -342,11 +342,11 @@ export default function ExpertsPage() {
               letterSpacing: "-0.02em",
             }}
           >
-            Get My Free Water Analysis
+            Get My Free Consultation
           </h2>
           <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.75, marginBottom: "2rem" }}>
             The same systems these doctors use are available for your home or business. We
-            start with a free water analysis so you know exactly what is in your water and
+            start with a free consultation so you know exactly what is in your water and
             which system addresses it.
           </p>
           <div
@@ -358,7 +358,7 @@ export default function ExpertsPage() {
             }}
           >
             <Link href="/consultation" className="btn btn-primary">
-              Schedule Free Water Analysis
+              Schedule a Free Consultation
             </Link>
             <a href={`tel:${BUSINESS.phone}`} className="btn btn-outline">
               Call {BUSINESS.phone}

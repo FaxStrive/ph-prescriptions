@@ -99,7 +99,7 @@ export default function TotalHomePage() {
             One System. Every Outlet.
           </h2>
           <p style={{ color: "var(--color-ink-soft)", marginBottom: "1.5rem", lineHeight: 1.7 }}>
-            Start with a free water analysis and get a quote specified for your home&apos;s plumbing, water quality, and usage.
+            Start with a free consultation and get a quote specified for your home&apos;s plumbing, water quality, and usage.
           </p>
           <Link href="/consultation" className="btn btn-primary">Get a Custom Quote</Link>
         </div>

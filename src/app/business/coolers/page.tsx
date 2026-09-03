@@ -351,7 +351,7 @@ export default function CoolersPage() {
                 Replace Your Rental. Own Your Water.
               </h2>
               <p style={{ color: "rgba(27,58,107,0.7)", marginBottom: "1.5rem", lineHeight: 1.7 }}>
-                One call, free water analysis, lifetime warranty. Serving all 50 states.
+                One call, free consultation, lifetime warranty. Serving all 50 states.
               </p>
               <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
                 <Link href="/consultation" className="btn btn-primary">

@@ -148,7 +148,7 @@ export default function RestaurantPage() {
                   lineHeight: 1.7,
                 }}
               >
-                From single-restaurant installs to multi-property hotel chains, our systems are sized and specified for your exact usage profile. Free water analysis before every recommendation.
+                From single-restaurant installs to multi-property hotel chains, our systems are sized and specified for your exact usage profile. A free water consultation before every recommendation.
               </p>
               <ul style={{ listStyle: "none", padding: 0, margin: "0 0 2rem" }}>
                 {APPLICATIONS.map((app) => (

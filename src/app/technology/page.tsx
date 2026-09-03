@@ -151,7 +151,7 @@ export default function TechnologyPage() {
         image="/images/lifestyle2/idw-water-surface-1.jpg"
         imageAlt="Golden sunlight glinting across a dark, gently rippled water surface"
         ctas={[
-          { label: "Schedule Free Water Analysis", href: "/consultation", variant: "primary" },
+          { label: "Schedule a Free Consultation", href: "/consultation", variant: "primary" },
           { label: `Call ${BUSINESS.phone}`, href: `tel:${BUSINESS.phone}`, variant: "outline" },
         ]}
       />
@@ -866,10 +866,10 @@ export default function TechnologyPage() {
                   letterSpacing: "-0.02em",
                 }}
               >
-                Get My Free Water Analysis
+                Get My Free Consultation
               </h2>
               <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.75, marginBottom: "2rem" }}>
-                We test your current water, show you exactly what is in it, and recommend the right
+                We review your local water quality data with you, walk through exactly what is in it, and recommend the right
                 4-phase system for your home or business. No obligation.
               </p>
               <div
@@ -880,7 +880,7 @@ export default function TechnologyPage() {
                 }}
               >
                 <Link href="/consultation" className="btn btn-primary">
-                  Schedule Free Water Analysis
+                  Schedule a Free Consultation
                 </Link>
                 <a href={`tel:${BUSINESS.phone}`} className="btn btn-outline">
                   Call {BUSINESS.phone}
