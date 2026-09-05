@@ -18,8 +18,33 @@ export const metadata: Metadata = {
  * same way: set LEO_VIDEO to a YouTube embed URL when the 60-90 second
  * "Meet Leo" video is produced and the player appears in place.
  */
-const MEDIA_APPEARANCES: { show: string; topic: string; href: string; kind: "watch" | "listen" }[] = [];
-const LEO_VIDEO: string | null = null;
+const MEDIA_APPEARANCES: { show: string; topic: string; href: string; kind: "watch" | "listen" }[] = [
+  {
+    show: "Interview with Jake Paul",
+    topic: "Leo on water, health, and why athletes choose hydrogen water",
+    href: "https://www.youtube.com/watch?v=3it1-O26hE4",
+    kind: "watch",
+  },
+  {
+    show: "Work Ready Podcast",
+    topic: "Clean isn't enough: the science behind water that actually heals the body",
+    href: "https://www.youtube.com/watch?v=5mzAckVxLbI",
+    kind: "watch",
+  },
+  {
+    show: "In Conversation with Dr. Nathan Bryan",
+    topic: "Why the doctor calls it the best whole house water filter on the market",
+    href: "https://www.youtube.com/watch?v=FxWHSMHg93Q",
+    kind: "watch",
+  },
+  {
+    show: "Keynote",
+    topic: "How to remove harmful toxins from water",
+    href: "https://www.youtube.com/watch?v=KPhqiKwnMO4",
+    kind: "watch",
+  },
+];
+const LEO_VIDEO: string | null = "https://www.youtube-nocookie.com/embed/gUFjvjYVMTI";
 
 export default function AboutLeoPage() {
   return (
@@ -165,7 +190,7 @@ export default function AboutLeoPage() {
               <div style={{ position: "relative", aspectRatio: "16 / 9", marginTop: "2rem", background: "var(--color-surface)" }}>
                 <iframe
                   src={LEO_VIDEO}
-                  title="Meet Leo Szymborski"
+                  title="How pH Prescription was created - Leo Szymborski"
                   style={{ position: "absolute", inset: 0, width: "100%", height: "100%", border: 0 }}
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
@@ -192,12 +217,11 @@ export default function AboutLeoPage() {
                   </a>
                 ))}
               </div>
-            ) : (
-              <p style={{ marginTop: "1.5rem", color: "var(--color-ink-soft)", fontSize: "1rem", lineHeight: 1.75 }}>
-                Leo speaks with podcasts, practitioners, and media about molecular hydrogen and what healthy water really means. Appearances will be collected here as they publish. For interviews and press, reach the team at{" "}
-                <a href={`mailto:${BUSINESS.email}`} style={{ color: "var(--color-teal)", textDecoration: "none" }}>{BUSINESS.email}</a>.
-              </p>
-            )}
+            ) : null}
+            <p style={{ marginTop: "1.75rem", color: "var(--color-ink-mute)", fontSize: "0.9375rem", lineHeight: 1.7 }}>
+              For interviews and press, reach the team at{" "}
+              <a href={`mailto:${BUSINESS.email}`} style={{ color: "var(--color-teal)", textDecoration: "none" }}>{BUSINESS.email}</a>.
+            </p>
           </div>
         </div>
       </section>
