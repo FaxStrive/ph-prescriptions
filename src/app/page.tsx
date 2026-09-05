@@ -40,6 +40,11 @@ export default function HomePage() {
               addressCountry: "US",
             },
             foundingDate: BUSINESS.founded,
+            sameAs: [
+              BUSINESS.social.facebook,
+              BUSINESS.social.instagram,
+              BUSINESS.social.youtube,
+            ],
           }),
         }}
       />

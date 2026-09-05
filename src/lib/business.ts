@@ -22,8 +22,9 @@ export const BUSINESS = {
   yearsExperience: "40+",
   certifications: ["WQA Certified", "Made in USA"],
   social: {
-    facebook: "",
-    youtube: "",
+    facebook: "https://www.facebook.com/pHAlkalineWater/",
+    instagram: "https://www.instagram.com/phprescription",
+    youtube: "https://www.youtube.com/@phprescription4483",
   },
 } as const;
 
