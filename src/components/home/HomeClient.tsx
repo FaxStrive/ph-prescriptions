@@ -5,7 +5,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { Shield, Award, Droplets, Phone, CheckCircle2, Star, ArrowUpRight, ArrowRight } from "lucide-react";
-import { BUSINESS, PRODUCTS, DOCTORS } from "@/lib/business";
+import { BUSINESS, PRODUCTS, DOCTORS, isPurchasable } from "@/lib/business";
+import { productShopUrl } from "@/lib/shopify";
 import { SystemBreakdown } from "@/components/breakdown/SystemBreakdown";
 import { ro1100Config } from "@/lib/ro1100Config";
 import ServiceSelector from "@/components/sections/ServiceSelector";
@@ -408,6 +409,23 @@ function Pillars() {
   );
 }
 
+// Shared by the two product card CTAs so the Buy Now link out is visually identical
+// to the Get Quote link it replaces.
+const PRODUCT_CTA_STYLE = {
+  display: "inline-flex",
+  alignItems: "center",
+  gap: "0.4rem",
+  background: "var(--color-navy)",
+  color: "#fff",
+  padding: "0.625rem 1.125rem",
+  fontSize: "0.75rem",
+  fontWeight: 600,
+  letterSpacing: "0.06em",
+  textTransform: "uppercase",
+  textDecoration: "none",
+  transition: "background 0.2s",
+} as const;
+
 function Products() {
   return (
     <section style={{ background: "var(--color-surface)", padding: "clamp(4rem, 8vw, 7rem) 0" }}>
@@ -461,6 +479,11 @@ function Products() {
         >
           {PRODUCTS.map((p, i) => {
             const featured = i === 0;
+            // Phase 1 Shopify: single priced products link out to the store by slug
+            // once NEXT_PUBLIC_SHOPIFY_STORE_URL is set, otherwise the quote CTA stays.
+            const shopUrl = isPurchasable(p.price)
+              ? productShopUrl(p.slug)
+              : null;
             return (
               <article
                 key={p.sku}
@@ -573,27 +596,27 @@ function Products() {
                     >
                       {p.price}
                     </span>
-                    <Link
-                      href="/consultation"
-                      style={{
-                        display: "inline-flex",
-                        alignItems: "center",
-                        gap: "0.4rem",
-                        background: "var(--color-navy)",
-                        color: "#fff",
-                        padding: "0.625rem 1.125rem",
-                        fontSize: "0.75rem",
-                        fontWeight: 600,
-                        letterSpacing: "0.06em",
-                        textTransform: "uppercase",
-                        textDecoration: "none",
-                        transition: "background 0.2s",
-                      }}
-                      onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.background = "var(--color-navy-dark)")}
-                      onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.background = "var(--color-navy)")}
-                    >
-                      Get Quote <ArrowUpRight size={13} />
-                    </Link>
+                    {shopUrl ? (
+                      <a
+                        href={shopUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={PRODUCT_CTA_STYLE}
+                        onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.background = "var(--color-navy-dark)")}
+                        onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.background = "var(--color-navy)")}
+                      >
+                        Buy Now <ArrowUpRight size={13} />
+                      </a>
+                    ) : (
+                      <Link
+                        href="/consultation"
+                        style={PRODUCT_CTA_STYLE}
+                        onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.background = "var(--color-navy-dark)")}
+                        onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.background = "var(--color-navy)")}
+                      >
+                        Get Quote <ArrowUpRight size={13} />
+                      </Link>
+                    )}
                   </div>
                 </div>
               </article>
