@@ -57,7 +57,9 @@ export const PRODUCTS = [
     price: "$9,244.25",
     badge: "Whole Home",
     description: "Prevent unwanted toxins and impurities before they enter your home with our twin-tank high-capacity Total Home Multi-Phase Enhanced Finely Filtered Water System. This 2-Part System extends health and wellness for your family and keeps water lines to appliances clean.",
-    slug: "total-home-system",
+    // Same product as the pH-WH-3500-CO entry in PRODUCTS_ALL, so it has to carry the
+    // same slug: the slug is now the Shopify product handle.
+    slug: "total-home-premier",
     image: "/products/pH-WH-3500-CO-v2.jpg",
   },
   {
