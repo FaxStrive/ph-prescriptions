@@ -1,11 +1,44 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { PRODUCTS_ALL } from "@/lib/business";
+import { PRODUCTS_ALL, isPurchasable, type Product } from "@/lib/business";
+import { productShopUrl } from "@/lib/shopify";
 import PageHero from "@/components/ui/PageHero";
 
 function categoryId(category: string) {
   return category.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+}
+
+/**
+ * Phase 1 Shopify CTA: products with a single dollar price link out to the store by
+ * slug. While NEXT_PUBLIC_SHOPIFY_STORE_URL is unset this renders nothing, so the
+ * catalogue looks exactly as it does today and the consultation CTA below carries
+ * every enquiry.
+ */
+function BuyNowLink({ product }: { product: Product }) {
+  const shopUrl = isPurchasable(product.price)
+    ? productShopUrl(product.slug)
+    : null;
+  if (!shopUrl) return null;
+
+  return (
+    <a
+      href={shopUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="btn btn-primary"
+      style={{
+        marginTop: "1rem",
+        width: "100%",
+        fontSize: "0.8125rem",
+        padding: "0.75rem 1rem",
+        letterSpacing: "0.06em",
+        textTransform: "uppercase",
+      }}
+    >
+      Buy Now
+    </a>
+  );
 }
 
 export const metadata: Metadata = {
@@ -36,10 +69,14 @@ export default function ProductsPage() {
 
   return (
     <>
+      <h1 style={{ position: "absolute", width: "1px", height: "1px", overflow: "hidden", clip: "rect(0,0,0,0)", whiteSpace: "nowrap" }}>
+        Water Filtration Systems, Filters and Accessories
+      </h1>
       {/* Hero */}
       <PageHero
         eyebrow="Product Catalogue"
         title="Our Complete Product Catalogue"
+        titleAs="h2"
         subhead="46 systems, filters, and accessories - WQA Certified, Made in USA"
         image="/images/lifestyle2/svc-service-tap-closeup.jpg"
         imageAlt="Man filling a tall glass with fresh water from a brushed-steel gooseneck kitchen faucet"
@@ -266,6 +303,7 @@ export default function ProductsPage() {
                         >
                           {product.price}
                         </div>
+                        <BuyNowLink product={product} />
                       </div>
                     </div>
                   ))}
