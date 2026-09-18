@@ -69,10 +69,14 @@ export default function ProductsPage() {
 
   return (
     <>
+      <h1 style={{ position: "absolute", width: "1px", height: "1px", overflow: "hidden", clip: "rect(0,0,0,0)", whiteSpace: "nowrap" }}>
+        Water Filtration Systems, Filters and Accessories
+      </h1>
       {/* Hero */}
       <PageHero
         eyebrow="Product Catalogue"
         title="Our Complete Product Catalogue"
+        titleAs="h2"
         subhead="46 systems, filters, and accessories - WQA Certified, Made in USA"
         image="/images/lifestyle2/svc-service-tap-closeup.jpg"
         imageAlt="Man filling a tall glass with fresh water from a brushed-steel gooseneck kitchen faucet"
