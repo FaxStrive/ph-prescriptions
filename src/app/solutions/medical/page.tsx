@@ -7,7 +7,7 @@ import PageHero from "@/components/ui/PageHero";
 export const metadata: Metadata = {
   title: "Medical-Grade Water Solutions | pH Prescription",
   description:
-    "Ultra-pure water systems for dialysis centers, dental practices, medical imaging facilities, and sterile-prep environments. 30+ Year WQA Member. Serving medical facilities across all 50 states.",
+    "Ultra-pure water systems for dialysis centers, dental practices, medical imaging facilities, and sterile-prep environments. Backed by our founder's 30+ years as a WQA member. Serving medical facilities across all 50 states.",
 };
 
 const USE_CASES = [

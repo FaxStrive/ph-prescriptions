@@ -70,7 +70,7 @@ export default function PointOfDifferencePage() {
               },
               {
                 heading: "30+ Year WQA Member, Made in USA",
-                body: "Founder Leo Szymborski has been a member of the Water Quality Association for 30+ years. The WQA is the independent body that sets the standard for the water treatment industry. Our systems are manufactured in the United States, not overseas. Most filter brands sold online are made in China to price-competitive specifications. Our Made in USA commitment and three decades of WQA membership reflect the same standard we apply to every build.",
+                body: "Our founder, Leo Szymborski, has been a member of the Water Quality Association - the trade association that sets the standard for the water treatment industry - for more than 30 years. Our systems are manufactured in the United States, not overseas. Most filter brands sold online are made in China to price-competitive specifications.",
               },
               {
                 heading: "7+ Doctor Endorsements - Independent, Not Paid",
