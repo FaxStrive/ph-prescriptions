@@ -129,7 +129,7 @@ export default function PoolPage() {
       <section style={{ background: "var(--color-navy)", color: "#fff", padding: "2rem 0" }}>
         <div className="container">
           <div style={{ display: "flex", gap: "2.5rem", flexWrap: "wrap", alignItems: "center", justifyContent: "center" }}>
-            {["WQA Certified", "Made in USA", "Founder with 40+ Years in Water Treatment", "Residential and Commercial", "Integrates with Existing Equipment"].map((item) => (
+            {["30+ Year WQA Member", "Made in USA", "Founder with 40+ Years in Water Treatment", "Residential and Commercial", "Integrates with Existing Equipment"].map((item) => (
               <span
                 key={item}
                 style={{

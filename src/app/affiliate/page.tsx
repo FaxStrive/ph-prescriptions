@@ -218,7 +218,7 @@ export default function AffiliatePage() {
                 body: "Access to product information, educational materials, and support from the pH Prescription team to help you explain the systems to your clients.",
               },
               {
-                title: "WQA-Certified Products",
+                title: "30+ Years of WQA Membership Behind Every Product",
                 body: "You are referring clients to independently certified, USA-made products backed by a lifetime warranty. Your reputation stays protected.",
               },
               {

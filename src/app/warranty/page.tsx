@@ -5,7 +5,7 @@ import { BUSINESS } from "@/lib/business";
 export const metadata: Metadata = {
   title: "Lifetime Warranty | pH Prescription",
   description:
-    "pH Prescription lifetime warranty - what is covered, how to register, and how to file a warranty claim. WQA Certified systems backed for life with licensed installation.",
+    "pH Prescription lifetime warranty - what is covered, how to register, and how to file a warranty claim. 30+ Year WQA Member systems backed for life with licensed installation.",
 };
 
 export default function WarrantyPage() {

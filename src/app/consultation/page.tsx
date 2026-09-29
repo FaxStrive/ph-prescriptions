@@ -95,7 +95,7 @@ export default function ConsultationPage() {
                 <div style={{ padding: "0.75rem 1rem", background: "var(--color-teal-soft)", display: "flex", gap: "0.625rem", alignItems: "flex-start" }}>
                   <CheckCircle2 size={15} style={{ color: "var(--color-teal)", marginTop: "0.15rem", flexShrink: 0 }} />
                   <span style={{ fontSize: "0.8125rem", color: "var(--color-ink-soft)", lineHeight: 1.6 }}>
-                    4.9 stars. WQA Certified. Lifetime warranty. No obligation.
+                    4.9 stars. 30+ Year WQA Member. Lifetime warranty. No obligation.
                   </span>
                 </div>
                 <button type="submit" className="btn btn-primary" style={{ justifyContent: "center", padding: "1rem 2rem", fontSize: "1rem" }}>

@@ -4,7 +4,7 @@ import { BUSINESS, DOCTORS } from "@/lib/business";
 
 export const metadata: Metadata = {
   title: "Why pH Prescription? | Point of Difference",
-  description: "What separates pH Prescription from ordinary water filtration companies. QuadVortex technology, lifetime warranty, WQA certified, Made in USA, 7+ doctor endorsements, and 40+ years of experience.",
+  description: "What separates pH Prescription from ordinary water filtration companies. QuadVortex technology, lifetime warranty, 30+ year WQA member, Made in USA, 7+ doctor endorsements, and 40+ years of experience.",
 };
 
 export default function PointOfDifferencePage() {
@@ -69,8 +69,8 @@ export default function PointOfDifferencePage() {
                 body: "We back every system with a lifetime warranty when installed by a licensed plumber. This is one of the strongest warranty positions in the water treatment industry. Competitors typically offer 1 to 5 year warranties. Ours has no expiration. The lifetime warranty reflects our confidence in the build quality and our commitment to standing behind every client long term.",
               },
               {
-                heading: "WQA Certified, Made in USA",
-                body: "Our systems are certified by the Water Quality Association - the independent body that sets the standard for the industry. They are manufactured in the United States, not overseas. Most filter brands sold online are made in China to price-competitive specifications. WQA certification means an independent lab verified the claims.",
+                heading: "30+ Year WQA Member, Made in USA",
+                body: "Founder Leo Szymborski has been a member of the Water Quality Association for 30+ years. The WQA is the independent body that sets the standard for the water treatment industry. Our systems are manufactured in the United States, not overseas. Most filter brands sold online are made in China to price-competitive specifications. Our Made in USA commitment and three decades of WQA membership reflect the same standard we apply to every build.",
               },
               {
                 heading: "7+ Doctor Endorsements - Independent, Not Paid",

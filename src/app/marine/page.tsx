@@ -132,7 +132,7 @@ export default function MarinePage() {
       <section style={{ background: "var(--color-navy)", color: "#fff", padding: "2rem 0" }}>
         <div className="container">
           <div style={{ display: "flex", gap: "2.5rem", flexWrap: "wrap", alignItems: "center", justifyContent: "center" }}>
-            {["WQA Certified", "Made in USA", "Compact for Marine Use", "Low Power Draw", "Variable Water Quality Rated"].map((item) => (
+            {["30+ Year WQA Member", "Made in USA", "Compact for Marine Use", "Low Power Draw", "Variable Water Quality Rated"].map((item) => (
               <span
                 key={item}
                 style={{
