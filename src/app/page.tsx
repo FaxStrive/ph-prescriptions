@@ -5,7 +5,7 @@ import HomeClient from "@/components/home/HomeClient";
 export const metadata: Metadata = {
   title: "pH Prescription | Doctor-Recommended Water Health Systems | Palm City FL",
   description:
-    "Doctor-recommended water filtration, alkaline and hydrogen-infused systems for home and business. WQA Certified, Made in USA, serving all 50 states since 2005.",
+    "Doctor-recommended water filtration, alkaline and hydrogen-infused systems for home and business. 30+ Year WQA Member, Made in USA, serving all 50 states since 2005.",
   alternates: { canonical: "/" },
   openGraph: {
     title: "pH Prescription | Water That Works for Your Health",

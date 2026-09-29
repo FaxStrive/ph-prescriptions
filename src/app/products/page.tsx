@@ -11,7 +11,7 @@ function categoryId(category: string) {
 export const metadata: Metadata = {
   title: "All Products | pH Prescription Water Systems",
   description:
-    "Complete product catalogue: 46 water filtration systems, filters, and accessories. WQA Certified, Made in USA. Drinking systems, whole-home systems, UV disinfection, shower filters, and more.",
+    "Complete product catalogue: 46 water filtration systems, filters, and accessories. 30+ Year WQA Member, Made in USA. Drinking systems, whole-home systems, UV disinfection, shower filters, and more.",
 };
 
 const CATEGORY_ORDER = [
@@ -40,7 +40,7 @@ export default function ProductsPage() {
       <PageHero
         eyebrow="Product Catalogue"
         title="Our Complete Product Catalogue"
-        subhead="46 systems, filters, and accessories - WQA Certified, Made in USA"
+        subhead="46 systems, filters, and accessories - 30+ Year WQA Member, Made in USA"
         image="/images/lifestyle2/svc-service-tap-closeup.jpg"
         imageAlt="Man filling a tall glass with fresh water from a brushed-steel gooseneck kitchen faucet"
         minHeight="52vh"
@@ -110,7 +110,7 @@ export default function ProductsPage() {
               justifyContent: "center",
             }}
           >
-            {["WQA Certified", "Made in USA", "40+ Years in Water Systems", "Doctor-Recommended", "Ships to All 50 States"].map(
+            {["30+ Year WQA Member", "Made in USA", "40+ Years in Water Systems", "Doctor-Recommended", "Ships to All 50 States"].map(
               (item) => (
                 <span
                   key={item}

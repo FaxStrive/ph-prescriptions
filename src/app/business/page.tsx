@@ -9,7 +9,7 @@ import PhotoCardGrid from "@/components/ui/PhotoCardGrid";
 export const metadata: Metadata = {
   title: "Business Water Systems | pH Prescription",
   description:
-    "Commercial water treatment for restaurants, offices, and facilities. WQA Certified systems with lifetime warranties. Serving all 50 states.",
+    "Commercial water treatment for restaurants, offices, and facilities. 30+ Year WQA Member systems with lifetime warranties. Serving all 50 states.",
 };
 
 const SECTIONS = [
@@ -87,7 +87,7 @@ export default function BusinessPage() {
         eyebrow="For Your Business"
         title="Commercial Water"
         titleAccent="Treatment"
-        subhead="WQA Certified systems built for restaurants, medical offices, hotels, and any facility where water quality directly affects your guests, equipment, and reputation. Same lifetime warranty. Same proprietary QuadVortex technology."
+        subhead="30+ Year WQA Member systems built for restaurants, medical offices, hotels, and any facility where water quality directly affects your guests, equipment, and reputation. Same lifetime warranty. Same proprietary QuadVortex technology."
         image="/images/hero/business-hero.jpg"
         imageAlt="Rows of membrane filtration units and stainless piping inside a commercial water treatment plant"
         ctas={[
