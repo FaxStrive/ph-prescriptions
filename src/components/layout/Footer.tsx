@@ -34,7 +34,7 @@ export default function Footer() {
               pH Prescription
             </div>
             <p style={{ fontSize: "0.875rem", lineHeight: 1.7, marginBottom: "1.25rem" }}>
-              30+ Year WQA Member water health systems since {BUSINESS.founded}. Made in USA. Serving all 50 states and international clients from Palm City, FL.
+              Water health systems since {BUSINESS.founded}, from a founder who has been a WQA member for 30+ years. Made in USA. Serving all 50 states and international clients from Palm City, FL.
             </p>
             <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem", fontSize: "0.875rem" }}>
               <a href={`tel:${BUSINESS.phone}`} style={{ color: "var(--color-teal)", textDecoration: "none", display: "flex", alignItems: "center", gap: "0.5rem", paddingBlock: "0.35rem" }}>
