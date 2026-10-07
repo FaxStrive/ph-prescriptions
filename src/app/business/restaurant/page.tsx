@@ -8,7 +8,7 @@ import ImageBand from "@/components/ui/ImageBand";
 export const metadata: Metadata = {
   title: "Restaurant & Hospitality Water Systems | pH Prescription",
   description:
-    "Commercial water treatment for restaurants, hotels, and hospitality. Protect equipment, improve beverage taste, and deliver a premium guest experience with WQA Certified systems.",
+    "Commercial water treatment for restaurants, hotels, and hospitality. Protect equipment, improve beverage taste, and deliver a premium guest experience with 30+ Year WQA Member systems.",
 };
 
 const BENEFITS = [
@@ -48,7 +48,7 @@ export default function RestaurantPage() {
         eyebrow="For Your Business"
         title="Restaurant & Hospitality"
         titleAccent="Water Treatment"
-        subhead="Water quality is a kitchen variable most operators overlook. pH Prescription delivers WQA Certified commercial systems that protect equipment, improve every dish and beverage, and give your guests the water quality they deserve."
+        subhead="Water quality is a kitchen variable most operators overlook. pH Prescription delivers 30+ Year WQA Member commercial systems that protect equipment, improve every dish and beverage, and give your guests the water quality they deserve."
         image="/images/hero/hospitality-hero.jpg"
         imageAlt="Row of water glasses being filled in sequence for table service"
         ctas={[

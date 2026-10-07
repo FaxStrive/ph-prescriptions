@@ -34,7 +34,7 @@ export default function Footer() {
               pH Prescription
             </div>
             <p style={{ fontSize: "0.875rem", lineHeight: 1.7, marginBottom: "1.25rem" }}>
-              WQA Certified water health systems since {BUSINESS.founded}. Made in USA. Serving all 50 states and international clients from Palm City, FL.
+              Water health systems since {BUSINESS.founded}, from a founder who has been a WQA member for 30+ years. Made in USA. Serving all 50 states and international clients from Palm City, FL.
             </p>
             <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem", fontSize: "0.875rem" }}>
               <a href={`tel:${BUSINESS.phone}`} style={{ color: "var(--color-teal)", textDecoration: "none", display: "flex", alignItems: "center", gap: "0.5rem", paddingBlock: "0.35rem" }}>
@@ -144,7 +144,7 @@ export default function Footer() {
 
         {/* Bottom */}
         <div style={{ borderTop: "1px solid var(--color-border-soft)", paddingTop: "1.5rem", display: "flex", flexWrap: "wrap", justifyContent: "space-between", gap: "0.75rem", fontSize: "0.8125rem" }}>
-          <span>&copy; {year} pH Prescription. All rights reserved. WQA Certified. Made in USA.</span>
+          <span>&copy; {year} pH Prescription. All rights reserved. 30+ Year WQA Member. Made in USA.</span>
           <div style={{ display: "flex", gap: "1.5rem" }}>
             <Link href="/privacy" style={{ color: "var(--color-ink-mute)", textDecoration: "none" }}>Privacy Policy</Link>
             <Link href="/terms" style={{ color: "var(--color-ink-mute)", textDecoration: "none" }}>Terms</Link>

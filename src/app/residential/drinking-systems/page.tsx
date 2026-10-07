@@ -51,7 +51,7 @@ export default function DrinkingSystemsPage() {
             <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}>
               <div style={{ background: "#fff", color: "var(--color-ink)", padding: "2rem" }}>
                 <h3 style={{ fontFamily: "var(--font-display)", fontSize: "1.25rem", marginBottom: "1rem" }}>Why These Systems?</h3>
-                {["Non-electric - no power required", "Removes up to 99% of contaminants", "Alkalizes to pH 8.0-9.5", "Re-mineralizes with essential trace minerals", "Infuses molecular hydrogen (H2)", "WQA Certified, Made in USA", "Lifetime warranty with licensed plumber install", "Fits under standard kitchen sink"].map((p) => (
+                {["Non-electric - no power required", "Removes up to 99% of contaminants", "Alkalizes to pH 8.0-9.5", "Re-mineralizes with essential trace minerals", "Infuses molecular hydrogen (H2)", "30+ Year WQA Member, Made in USA", "Lifetime warranty with licensed plumber install", "Fits under standard kitchen sink"].map((p) => (
                   <div key={p} style={{ display: "flex", gap: "0.625rem", padding: "0.5rem 0", borderBottom: "1px solid var(--color-border-soft)", fontSize: "0.875rem", color: "var(--color-ink-soft)" }}>
                     <span style={{ color: "var(--color-teal)" }}>+</span> {p}
                   </div>

@@ -157,7 +157,7 @@ function Hero() {
                 color: "rgba(255,255,255,0.85)",
               }}
             >
-              WQA Certified · Lifetime Warranty · 50 States
+              30+ Year WQA Member · Lifetime Warranty · 50 States
             </p>
             <p
               style={{
@@ -447,7 +447,7 @@ function Products() {
               Every system, <span className="italic-accent" style={{ color: "var(--color-teal)" }}>properly specified.</span>
             </h2>
             <p style={{ marginTop: "1rem", fontSize: "1rem", lineHeight: 1.7, color: "var(--color-ink-soft)" }}>
-              From compact under-sink drinking systems to whole-home restructured water - WQA Certified, Made in USA, backed by lifetime warranty.
+              From compact under-sink drinking systems to whole-home restructured water - 30+ Year WQA Member, Made in USA, backed by lifetime warranty.
             </p>
           </div>
           <Link
@@ -680,7 +680,7 @@ function VideoDivider() {
             color: "rgba(255,255,255,0.75)",
           }}
         >
-          WQA Certified · Made in USA · Lifetime warranty
+          30+ Year WQA Member · Made in USA · Lifetime warranty
         </p>
       </div>
     </section>

@@ -24,7 +24,7 @@ export const BUSINESS = {
   founderName: "Leo Szymborski",
   warehouseSqFt: "10,000",
   yearsExperience: "40+",
-  certifications: ["WQA Certified", "Made in USA"],
+  certifications: ["30+ Year WQA Member", "Made in USA"],
   social: {
     facebook: "https://www.facebook.com/pHAlkalineWater/",
     instagram: "https://www.instagram.com/phprescription",

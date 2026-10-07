@@ -9,7 +9,7 @@ import PhotoCardGrid from "@/components/ui/PhotoCardGrid";
 export const metadata: Metadata = {
   title: "Total Business Water Systems | pH Prescription",
   description:
-    "Whole-facility restructured water treatment for commercial buildings. Every tap, every fixture, every shower. WQA Certified. Lifetime warranty. Pricing by consultation.",
+    "Whole-facility restructured water treatment for commercial buildings. Every tap, every fixture, every shower. 30+ Year WQA Member. Lifetime warranty. Pricing by consultation.",
 };
 
 export default function BusinessTotalPage() {

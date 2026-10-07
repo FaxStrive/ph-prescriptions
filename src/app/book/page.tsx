@@ -32,7 +32,7 @@ export default function BookPage() {
       url: BUSINESS.url,
     },
     description:
-      "Third-generation plumber turned water health advocate. Founder of pH Prescription. 40+ years in water systems. WQA Certified water specialist.",
+      "Third-generation plumber turned water health advocate. Founder of pH Prescription. 40+ years in water systems. 30+ year WQA member and water specialist.",
     knowsAbout: [
       "Water Quality",
       "Molecular Hydrogen Therapy",
@@ -291,7 +291,7 @@ export default function BookPage() {
                   marginBottom: "1rem",
                 }}
               >
-                Third-generation plumber. Founder of pH Prescription. 40+ years in water systems and installation. WQA Certified water specialist. Health advocate and researcher.
+                Third-generation plumber. Founder of pH Prescription. 40+ years in water systems and installation. 30+ year WQA member and water specialist. Health advocate and researcher.
               </p>
               <p
                 style={{

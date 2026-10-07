@@ -8,7 +8,7 @@ import PhotoCardGrid from "@/components/ui/PhotoCardGrid";
 export const metadata: Metadata = {
   title: "Business Drinking Water Systems | pH Prescription",
   description:
-    "Commercial under-counter and point-of-use drinking water systems. QuadVortex filtration, alkaline, remineralized, hydrogen-infused. WQA Certified. Lifetime warranty.",
+    "Commercial under-counter and point-of-use drinking water systems. QuadVortex filtration, alkaline, remineralized, hydrogen-infused. 30+ Year WQA Member. Lifetime warranty.",
 };
 
 const APPLICATIONS = [
@@ -45,7 +45,7 @@ export default function BusinessDrinkingSystemsPage() {
         eyebrow="Business / Drinking Systems"
         title="Commercial Drinking"
         titleAccent="Water Systems"
-        subhead="The same doctor-recommended QuadVortex technology from our residential line, scaled for commercial usage. Under-counter, point-of-use, and high-volume configurations. WQA Certified. Lifetime warranty. All 50 states."
+        subhead="The same doctor-recommended QuadVortex technology from our residential line, scaled for commercial usage. Under-counter, point-of-use, and high-volume configurations. 30+ Year WQA Member. Lifetime warranty. All 50 states."
         image="/images/hero/office-hero.jpg"
         imageAlt="Technician preparing a multi-stage reverse osmosis unit for installation, red toolbox at his side"
         ctas={[

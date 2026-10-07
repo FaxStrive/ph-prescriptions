@@ -9,7 +9,7 @@ import PhotoCardGrid from "@/components/ui/PhotoCardGrid";
 export const metadata: Metadata = {
   title: "About pH Prescription | Founded 2005, Palm City FL",
   description:
-    "pH Prescription was founded in 2005 by Leo Szymborski in Palm City, FL. WQA Certified water health systems made in the USA. 40+ years experience. Serving all 50 states.",
+    "pH Prescription was founded in 2005 by Leo Szymborski in Palm City, FL. 30+ Year WQA Member water health systems made in the USA. 40+ years experience. Serving all 50 states.",
 };
 
 const TEAM_MEMBERS = [

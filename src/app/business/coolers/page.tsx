@@ -40,7 +40,7 @@ export default function CoolersPage() {
         eyebrow="Business / Water Coolers"
         title="Commercial"
         titleAccent="Water Coolers"
-        subhead="Replace your water cooler rental with a WQA Certified system that delivers alkaline, remineralized, hydrogen-infused water - hot or cold - from a hygienic paddle-touch dispenser. Made in USA. Lifetime warranty."
+        subhead="Replace your water cooler rental with a 30+ Year WQA Member system that delivers alkaline, remineralized, hydrogen-infused water - hot or cold - from a hygienic paddle-touch dispenser. Made in USA. Lifetime warranty."
         image="/images/hero/php-new-hero.jpg"
         imageAlt="Fresh water streaming from a modern black dispenser spout into the light"
         ctas={[

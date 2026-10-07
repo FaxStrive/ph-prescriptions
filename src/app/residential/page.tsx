@@ -8,7 +8,7 @@ import PhotoCardGrid from "@/components/ui/PhotoCardGrid";
 
 export const metadata: Metadata = {
   title: "Residential Water Systems | pH Prescription",
-  description: "Residential drinking systems, whole-home water treatment, shower systems, and UV enhancements. WQA Certified, Made in USA, lifetime warranty.",
+  description: "Residential drinking systems, whole-home water treatment, shower systems, and UV enhancements. 30+ Year WQA Member, Made in USA, lifetime warranty.",
 };
 
 const SECTIONS = [
@@ -64,7 +64,7 @@ const PROCESS = [
   {
     eyebrow: "Step 03",
     title: "Lifetime Warranty",
-    body: "WQA Certified systems, Made in USA, and covered for life with ongoing service and filter plans.",
+    body: "30+ Year WQA Member systems, Made in USA, and covered for life with ongoing service and filter plans.",
     image: "/images/hero/maintenance-hero.jpg",
     imageAlt: "Smiling service technician taking notes on a clipboard during a maintenance visit",
   },
@@ -77,7 +77,7 @@ export default function ResidentialPage() {
         eyebrow="For Your Home"
         title="Residential Water"
         titleAccent="Systems"
-        subhead="From under-sink drinking systems to whole-home transformation - WQA Certified, Made in USA, lifetime warranty with licensed plumber installation."
+        subhead="From under-sink drinking systems to whole-home transformation - 30+ Year WQA Member, Made in USA, lifetime warranty with licensed plumber installation."
         video="/video/water-stream.mp4"
         image="/images/hero/residential-hero.jpg"
         ctas={[
@@ -145,7 +145,7 @@ export default function ResidentialPage() {
                 From new construction to decades-old plumbing, every install is specified for the house it serves. We size the system to your water quality, your fixture count, and how your family actually uses water.
               </p>
               <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.8, marginBottom: "1.75rem" }}>
-                WQA Certified. Made in USA. Lifetime warranty with licensed plumber installation - the same standard on every system we sell.
+                30+ Year WQA Member. Made in USA. Lifetime warranty with licensed plumber installation - the same standard on every system we sell.
               </p>
               <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
                 <Link href="/consultation" className="btn btn-primary">Free Consultation</Link>

@@ -248,7 +248,7 @@ Stage 4 - Re-mineralization and hydrogen infusion: Filtered water passes through
 
 The result is water that has been thoroughly cleaned, had essential minerals restored, and been enriched with molecular hydrogen - moving from merely filtered to actively health-supportive.
 
-pH Prescription systems are manufactured at the company's Palm City, Florida facility, which holds WQA certification. All systems carry a lifetime warranty when installed by a licensed plumber.`,
+pH Prescription systems are manufactured at the company's Palm City, Florida facility. Founder Leo Szymborski has been a Water Quality Association (WQA) member for more than 30 years. All systems carry a lifetime warranty when installed by a licensed plumber.`,
   },
   {
     slug: "how-ph-prescription-was-created",
