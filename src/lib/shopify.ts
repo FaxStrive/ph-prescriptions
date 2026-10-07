@@ -21,3 +21,11 @@ export function productShopUrl(handle: string): string | null {
   if (!SHOPIFY_STORE_URL || !handle) return null;
   return `${SHOPIFY_STORE_URL}/products/${handle}`;
 }
+
+/**
+ * The store base URL for the "Shop" links in the header and footer. Returns null when
+ * the env var is unset, so those links are not rendered at all until the store is live.
+ */
+export function shopHomeUrl(): string | null {
+  return SHOPIFY_STORE_URL || null;
+}
