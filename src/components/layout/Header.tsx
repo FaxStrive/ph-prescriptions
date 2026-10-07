@@ -7,6 +7,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X, Phone, ChevronDown, MapPin, Clock } from "lucide-react";
 import { BUSINESS } from "@/lib/business";
+import { shopHomeUrl } from "@/lib/shopify";
 
 type NavPanelItem = { label: string; href: string; description: string };
 type NavItem = {
@@ -92,6 +93,8 @@ const NAV: NavItem[] = [
 ];
 
 export default function Header() {
+  // Store base URL; null (no Shop link) until NEXT_PUBLIC_SHOPIFY_STORE_URL is set.
+  const shopUrl = shopHomeUrl();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openPanel, setOpenPanel] = useState<string | null>(null);
@@ -296,6 +299,35 @@ export default function Header() {
                     </li>
                   );
                 })}
+                {shopUrl && (
+                  <li style={{ position: "relative" }}>
+                    <a
+                      href={shopUrl}
+                      onMouseEnter={() => setOpenPanel(null)}
+                      style={{
+                        background: "transparent",
+                        border: "none",
+                        padding: "1.5rem 0",
+                        cursor: "pointer",
+                        fontFamily: "var(--font-sans)",
+                        fontSize: "0.75rem",
+                        fontWeight: 600,
+                        letterSpacing: "0.04em",
+                        textTransform: "uppercase",
+                        color: "var(--color-ink)",
+                        display: "inline-flex",
+                        alignItems: "center",
+                        gap: "0.375rem",
+                        transition: "color 0.2s",
+                        position: "relative",
+                        textDecoration: "none",
+                        whiteSpace: "nowrap",
+                      }}
+                    >
+                      Shop
+                    </a>
+                  </li>
+                )}
               </ul>
             </nav>
 
@@ -591,6 +623,26 @@ export default function Header() {
                     ))}
                   </div>
                 ))}
+                {shopUrl && (
+                  <a
+                    href={shopUrl}
+                    onClick={() => setMobileOpen(false)}
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      minHeight: "52px",
+                      padding: "0.75rem 0",
+                      fontFamily: "var(--font-display)",
+                      fontSize: "1.375rem",
+                      letterSpacing: "-0.015em",
+                      color: "var(--color-ink)",
+                      textDecoration: "none",
+                      borderBottom: "1px solid var(--color-border-soft)",
+                    }}
+                  >
+                    Shop
+                  </a>
+                )}
               </nav>
               <div style={{ padding: "1.25rem", borderTop: "1px solid var(--color-border-soft)", display: "flex", flexDirection: "column", gap: "0.75rem" }}>
                 <Link

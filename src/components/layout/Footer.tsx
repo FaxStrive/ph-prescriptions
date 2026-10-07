@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { BUSINESS } from "@/lib/business";
+import { shopHomeUrl } from "@/lib/shopify";
 
 const SOCIAL_LINKS = [
   {
@@ -24,6 +25,8 @@ const SOCIAL_LINKS = [
 
 export default function Footer() {
   const year = new Date().getFullYear();
+  // Store base URL; null (no Shop link) until NEXT_PUBLIC_SHOPIFY_STORE_URL is set.
+  const shopUrl = shopHomeUrl();
   return (
     <footer style={{ background: "#fff", color: "var(--color-ink-soft)" }}>
       <div className="container" style={{ padding: "4rem 1.5rem 2rem" }}>
@@ -112,6 +115,7 @@ export default function Footer() {
                 ["Technology", "/technology"],
                 ["Doctor Endorsements", "/experts"],
                 ["Free Consultation", "/consultation"],
+                ...(shopUrl ? [["Shop", shopUrl]] : []),
               ].map(([label, href]) => (
                 <Link key={href} href={href} style={{ color: "var(--color-ink-mute)", textDecoration: "none", fontSize: "0.875rem", transition: "color 0.2s", paddingBlock: "0.4rem" }}
                   onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = "var(--color-teal)")}

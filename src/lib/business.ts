@@ -1,4 +1,8 @@
-// TODO: Shopify - integrate Storefront API for live product/pricing data in future phase
+// Shopify, phase 1 (live): every product links out to its page on the Shopify store
+// by slug, but only while NEXT_PUBLIC_SHOPIFY_STORE_URL is set. See src/lib/shopify.ts
+// for the link builder and isPurchasable below for which products get a Buy Now link.
+// Shopify, phase 2 (future): read live pricing, inventory, and cart from the Storefront
+// API instead of the hand maintained price strings in this file.
 
 export const BUSINESS = {
   name: "pH Prescription",
@@ -53,7 +57,9 @@ export const PRODUCTS = [
     price: "$9,244.25",
     badge: "Whole Home",
     description: "Prevent unwanted toxins and impurities before they enter your home with our twin-tank high-capacity Total Home Multi-Phase Enhanced Finely Filtered Water System. This 2-Part System extends health and wellness for your family and keeps water lines to appliances clean.",
-    slug: "total-home-system",
+    // Same product as the pH-WH-3500-CO entry in PRODUCTS_ALL, so it has to carry the
+    // same slug: the slug is now the Shopify product handle.
+    slug: "total-home-premier",
     image: "/products/pH-WH-3500-CO-v2.jpg",
   },
   {
@@ -95,6 +101,17 @@ export type Product = {
   image: string;
   slug: string;
 };
+
+/**
+ * Phase 1 Shopify rule: a product can be bought online only when its price is a
+ * single dollar amount. "Call for pricing" and ranges such as "$2,613.60 - $3,484.80"
+ * need a conversation first, so those keep the consultation CTA. The Shopify product
+ * handle is the product slug.
+ */
+export function isPurchasable(price: string): boolean {
+  if (price.includes(" - ")) return false;
+  return /^\$\d{1,3}(,\d{3})*(\.\d{2})?$/.test(price.trim());
+}
 
 export const PRODUCTS_ALL: Product[] = [
   // Drinking Systems
@@ -615,6 +632,9 @@ export const DOCTORS = [
   },
 ] as const;
 
-// TODO: Shopify - integrate Storefront API for live product/pricing data in future phase
-// When ready: use @shopify/storefront-api-client with SHOPIFY_STOREFRONT_TOKEN env var
-// to fetch real inventory, pricing, and cart functionality from the Shopify store.
+// Shopify, phase 1 (live): the prices above are maintained by hand here, and each
+// purchasable product links out to its Shopify product page by slug whenever
+// NEXT_PUBLIC_SHOPIFY_STORE_URL is set. See isPurchasable above for the rule.
+// Shopify, phase 2 (future): fetch live pricing, inventory, and cart from the Storefront
+// API (@shopify/storefront-api-client with a SHOPIFY_STOREFRONT_TOKEN env var) so the
+// price strings in this file no longer have to be kept in sync by hand.

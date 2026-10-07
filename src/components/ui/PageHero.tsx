@@ -11,6 +11,7 @@ export default function PageHero({
   eyebrow,
   title,
   titleAccent,
+  titleAs: TitleTag = "h1",
   subhead,
   image,
   imageAlt,
@@ -21,6 +22,7 @@ export default function PageHero({
   eyebrow: string;
   title: string;
   titleAccent?: string;
+  titleAs?: "h1" | "h2";
   subhead?: string;
   image?: string;
   imageAlt?: string;
@@ -99,7 +101,7 @@ export default function PageHero({
           >
             {eyebrow}
           </span>
-          <h1
+          <TitleTag
             style={{
               fontFamily: "var(--font-display)",
               fontWeight: 400,
@@ -115,7 +117,7 @@ export default function PageHero({
                 <em className="italic-accent" style={{ color: "#B9E3EF" }}>{titleAccent}</em>
               </>
             ) : null}
-          </h1>
+          </TitleTag>
           {subhead ? (
             <p
               style={{
