@@ -115,6 +115,7 @@ export default function Footer() {
                 ["Technology", "/technology"],
                 ["Doctor Endorsements", "/experts"],
                 ["Free Consultation", "/consultation"],
+                ["Affiliate Program", "/affiliate"],
                 ...(shopUrl ? [["Shop", shopUrl]] : []),
               ].map(([label, href]) => (
                 <Link key={href} href={href} style={{ color: "var(--color-ink-mute)", textDecoration: "none", fontSize: "0.875rem", transition: "color 0.2s", paddingBlock: "0.4rem" }}
