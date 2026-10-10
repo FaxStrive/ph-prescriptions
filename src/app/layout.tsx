@@ -3,6 +3,7 @@ import { Open_Sans, Fraunces } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import ReferralPassthrough from "@/components/ReferralPassthrough";
 import { BUSINESS } from "@/lib/business";
 
 const openSans = Open_Sans({
@@ -49,6 +50,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <main style={{ paddingTop: "72px" }}>{children}</main>
         <Footer />
+        <ReferralPassthrough />
       </body>
     </html>
   );

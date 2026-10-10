@@ -72,6 +72,7 @@ const NAV: NavItem[] = [
         { label: "About Leo", href: "/about/leo", description: "Founder Leo Szymborski" },
         { label: "Doctor Endorsements", href: "/experts", description: "7+ physicians on record" },
         { label: "Community Care", href: "/about/community", description: "How we give back" },
+        { label: "Affiliate Program", href: "/affiliate", description: "Refer clients. Earn commissions." },
       ],
     },
   },
