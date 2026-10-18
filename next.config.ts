@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { legacyRedirects } from "./src/lib/legacy-redirects";
 
 const nextConfig: NextConfig = {
   async redirects() {
@@ -23,6 +24,7 @@ const nextConfig: NextConfig = {
         destination: "/pool",
         permanent: true,
       },
+      ...legacyRedirects(process.env.NEXT_PUBLIC_SHOPIFY_STORE_URL ?? ""),
     ];
   },
 };
