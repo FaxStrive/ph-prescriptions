@@ -24,7 +24,7 @@ login area, AffiliateWP, lives inside the WordPress site).
 | Buy Now | 40 Buy Now buttons on the website open the matching store product |
 | Affiliate links | A visitor who lands with `?sca_ref=<code>` keeps that code on every Buy Now click into the store |
 | Affiliate app | UpPromote is installed on the store |
-| Old URLs | Redirects for every old WordPress page, blog post, product and product category are built into this site (`src/lib/legacy-redirects.ts`), so old links keep working after the domain moves |
+| Old URLs | Redirects for every old WordPress page, blog post, product and product category are built into this site (`next.config.ts`), so old links keep working after the domain moves |
 | Claims | Invented customer quotes removed, every claim checked against pH Prescription's own published material |
 
 ## 1. Leo (owner): only the owner can do these
