@@ -8,13 +8,13 @@ import PhotoCardGrid from "@/components/ui/PhotoCardGrid";
 
 export const metadata: Metadata = {
   title: "Residential Water Systems | pH Prescription",
-  description: "Residential drinking systems, whole-home water treatment, shower systems, and UV enhancements. 30+ Year WQA Member, Made in USA, lifetime warranty.",
+  description: "Residential drinking systems, whole-home water treatment, shower systems, and UV enhancements. 30+ Year WQA Member, Made in USA, 5-Year Warranty.",
 };
 
 const SECTIONS = [
   {
     title: "Drinking Systems",
-    desc: "Under-sink reverse osmosis with QuadVortex technology. Removes up to 99% of contaminants, alkalizes, remineralizes, and infuses molecular hydrogen.",
+    desc: "Under-sink drinking systems that reduce up to 99% of toxins, remineralize, raise pH, and infuse molecular hydrogen.",
     href: "/residential/drinking-systems",
     from: "Starting from $985",
     image: "/images/lifestyle2/pa-ro-kitchen-sink.jpg",
@@ -30,7 +30,7 @@ const SECTIONS = [
   },
   {
     title: "Showers & Tubs",
-    desc: "Aquapellis molecular hydrogen shower systems for transdermal H2 therapy. Compatible with existing plumbing.",
+    desc: "Aquapellis molecular hydrogen shower systems that infuse hydrogen transdermally.",
     href: "/residential/showers",
     from: "By consultation",
     image: "/images/lifestyle2/svc-service-shower-hands.jpg",
@@ -57,14 +57,14 @@ const PROCESS = [
   {
     eyebrow: "Step 02",
     title: "Licensed Installation",
-    body: "Every system is installed by a licensed plumber - the workmanship that backs our lifetime warranty.",
+    body: "pH Prescription recommends a licensed plumber for installation, which the warranty requires. We can recommend one for you.",
     image: "/images/hero/installation-hero.jpg",
     imageAlt: "Licensed plumber installing an inline whole-house water filter on copper supply lines",
   },
   {
     eyebrow: "Step 03",
-    title: "Lifetime Warranty",
-    body: "30+ Year WQA Member systems, Made in USA, and covered for life with ongoing service and filter plans.",
+    title: "5-Year Warranty",
+    body: "Five-year warranty on residential systems when installed by a licensed plumber, plus a lifetime warranty on parts with the Replenishment Program.",
     image: "/images/hero/maintenance-hero.jpg",
     imageAlt: "Smiling service technician taking notes on a clipboard during a maintenance visit",
   },
@@ -77,7 +77,7 @@ export default function ResidentialPage() {
         eyebrow="For Your Home"
         title="Residential Water"
         titleAccent="Systems"
-        subhead="From under-sink drinking systems to whole-home transformation - 30+ Year WQA Member, Made in USA, lifetime warranty with licensed plumber installation."
+        subhead="From under-sink drinking systems to whole-home transformation. 30+ Year WQA Member. Made in USA. 5-Year Warranty with licensed plumber installation."
         video="/video/water-stream.mp4"
         image="/images/hero/residential-hero.jpg"
         ctas={[
@@ -92,7 +92,7 @@ export default function ResidentialPage() {
             Four Ways to Transform Your Water
           </h2>
           <p style={{ color: "var(--color-ink-soft)", maxWidth: "560px", marginBottom: "2.5rem", lineHeight: 1.7 }}>
-            Every system is built around the same QuadVortex process - choose the coverage that fits your home.
+            Choose the system that fits your home.
           </p>
           <PhotoCardGrid
             columns={2}
@@ -145,7 +145,7 @@ export default function ResidentialPage() {
                 From new construction to decades-old plumbing, every install is specified for the house it serves. We size the system to your water quality, your fixture count, and how your family actually uses water.
               </p>
               <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.8, marginBottom: "1.75rem" }}>
-                30+ Year WQA Member. Made in USA. Lifetime warranty with licensed plumber installation - the same standard on every system we sell.
+                30+ Year WQA Member. Made in USA. Five-year warranty on residential systems when installed by a licensed plumber, plus a lifetime warranty on parts with the Replenishment Program.
               </p>
               <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
                 <Link href="/consultation" className="btn btn-primary">Free Consultation</Link>

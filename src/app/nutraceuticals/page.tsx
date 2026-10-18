@@ -6,34 +6,22 @@ import ImageBand from "@/components/ui/ImageBand";
 import PhotoCardGrid from "@/components/ui/PhotoCardGrid";
 
 export const metadata: Metadata = {
-  title: "Nutraceuticals | pH Prescription pHP New Product Line",
-  description: "Targeted nutrition supplements that complement pH Prescription water systems. Mineral repletion, hydrogen-boosting, and cellular support. Part of the pHP New product line.",
+  title: "Nutraceuticals | pH Prescription",
+  description: "N101 Nitric Oxide Lozenges and N.O. Beetz Nitric Oxide Infusion Sticks, developed by Dr. Nathan S. Bryan.",
 };
 
 const PILLARS = [
   {
-    title: "Mineral Repletion",
-    body: "Modern diets and demineralized water leave most people depleted in essential minerals. Our mineral formulations restore what filtration and the food supply remove.",
-    image: "/images/products-extra/residential-card.jpg",
-    imageAlt: "Woman drinking a glass of water while leaning against the counter in a bright white kitchen",
+    title: "N101 Nitric Oxide Lozenges",
+    body: "Developed by Dr. Nathan S. Bryan, N101 Nitric Oxide Lozenges boost natural N.O. production rapidly as they dissolve. $79.99.",
+    image: "/products/N1o1-Lozenge-hero.jpg",
+    imageAlt: "N101 Nitric Oxide Lozenges",
   },
   {
-    title: "Hydrogen-Boosting Supplements",
-    body: "Hydrogen tablets and formulations that generate molecular H2 internally, extending the benefits of our hydrogen-infused water systems.",
-    image: "/images/products-extra/home-system-promo.jpg",
-    imageAlt: "pH Prescription promotional graphic for doctor-recommended alkaline water with molecular hydrogen showing a multi-stage home filtration system",
-  },
-  {
-    title: "Cellular Hydration Support",
-    body: "Electrolyte complexes designed to work with structured water, improving cellular uptake and reducing the gap between water consumed and water actually used by your cells.",
-    image: "/images/lifestyle2/idw-kitchen-faucet-1.jpg",
-    imageAlt: "Woman rinsing a plate under a professional-style spring faucet in a bright farmhouse kitchen",
-  },
-  {
-    title: "pH-Supportive Nutrition",
-    body: "Alkaline-forming supplements that complement the pH-balanced water our systems produce. Targeted for clients with specific acidic load concerns.",
-    image: "/images/lifestyle2/idw-tap-modern-1.jpg",
-    imageAlt: "Man testing the water temperature with his hand under a modern chrome bathroom faucet",
+    title: "N.O. Beetz Nitric Oxide Infusion Sticks",
+    body: "The brainchild of Dr. Nathan S. Bryan. Pour one packet into 2-3 ounces of finely filtered water once a day to naturally boost Nitric Oxide production. $79.99.",
+    image: "/products/no-beetz-hero.jpg",
+    imageAlt: "N.O. Beetz Nitric Oxide Infusion Sticks",
   },
 ];
 
@@ -41,9 +29,9 @@ export default function NutraceuticalsPage() {
   return (
     <>
       <PageHero
-        eyebrow="pHP New Product Line"
+        eyebrow="pHP New"
         title="Nutraceuticals"
-        subhead="Targeted nutritional supplements that work alongside our water systems to support mineral repletion, cellular hydration, and hydrogen-boosting at the cellular level."
+        subhead="N101 Nitric Oxide Lozenges and N.O. Beetz Nitric Oxide Infusion Sticks, developed by Dr. Nathan S. Bryan."
         image="/images/commercial/dw-reverse-osmosis-install.jpg"
         imageAlt="Man filling a glass with sparkling-clear water from a dedicated drinking-water faucet at a kitchen sink"
         minHeight="56vh"
@@ -65,16 +53,13 @@ export default function NutraceuticalsPage() {
                 letterSpacing: "-0.02em",
               }}
             >
-              Water and Nutrition Work Together
+              Nitric Oxide Support
             </h2>
             <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.8, marginBottom: "1rem" }}>
-              Our water systems are the foundation of cellular hydration. But water alone does not replenish every mineral your body needs, and it cannot replace targeted nutritional support for specific health goals.
-            </p>
-            <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.8, marginBottom: "1rem" }}>
-              The pHP New nutraceutical line was developed to complement our filtration and hydrogen-infusion systems. Each supplement is selected to work with properly structured, mineralized water to maximize cellular uptake and effectiveness.
+              Nitric Oxide is produced naturally by the human body and is one of the most important molecules for blood vessel health. Both products were developed by Dr. Nathan S. Bryan, an internationally recognized biochemist and physiologist.
             </p>
             <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.8 }}>
-              These are not mass-market vitamins. Availability is consultation-based because Leo and his team match supplementation to each client&apos;s water quality data, health profile, and goals. No online cart. Every order starts with a conversation.
+              These statements have not been evaluated by the Food and Drug Administration. These products are not intended to diagnose, treat, cure or prevent any disease.
             </p>
           </div>
 
@@ -115,10 +100,10 @@ export default function NutraceuticalsPage() {
                 marginBottom: "0.75rem",
               }}
             >
-              Consultation-Based Availability
+              Availability
             </h3>
             <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.8, marginBottom: "1.25rem" }}>
-              pHP New nutraceuticals are not sold online. We match each client to specific formulations based on their water test results, health history, and goals. To inquire about availability or to order, contact us directly.
+              N101 Nitric Oxide Lozenges and N.O. Beetz Nitric Oxide Infusion Sticks are $79.99 each. To inquire about availability or to order, contact us directly.
             </p>
             <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
               <a href={`tel:${BUSINESS.phoneTollFree}`} className="btn btn-primary">
@@ -142,10 +127,10 @@ export default function NutraceuticalsPage() {
               letterSpacing: "-0.02em",
             }}
           >
-            Start With Your Water
+            Have Questions?
           </h2>
           <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.75, marginBottom: "2rem" }}>
-            Every nutraceutical consultation begins with a free water review. Understanding what your water is doing first shapes what supplementation makes sense. Schedule a consultation and we will review your water quality with you at no cost.
+            Contact us for a free consultation.
           </p>
           <Link href="/consultation" className="btn btn-primary">
             Schedule a Free Consultation

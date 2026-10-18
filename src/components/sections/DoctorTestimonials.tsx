@@ -4,7 +4,7 @@ import Link from "next/link";
 const FEATURED_DOCTORS = [
   {
     name: "Dr. Nathan Bryan, PhD",
-    credential: "Molecular Biologist - Nitric Oxide Researcher",
+    credential: "PhD, Nitric Oxide Researcher",
     photo: "/doctors/dr-bryan.jpg",
     quote:
       "People get sick for two reasons and two reasons only: 1. their body is missing essential nutrients and 2. their body is exposed to toxins, both orally and transdermally, both prevent the body from performing optimally. I use pH Prescription and Aquapellis finely filtered systems and recommend them as I have researched and studied them since 2018.",
@@ -12,10 +12,10 @@ const FEATURED_DOCTORS = [
   },
   {
     name: "Dr. Jerry Tennant, MD",
-    credential: "Founder, Tennant Institute for Integrative and Natural Medicine",
+    credential: "MD, MD(H), MD(P), Author of Healing is Voltage",
     photo: "/doctors/dr-tennant.jpg",
     quote:
-      "An international lecturer and published author, Dr. Tennant has dedicated his career to understanding how the body heals. He holds over 12 patents and practices in Dallas, Texas - and recommends pH Prescription's finely filtered systems for their approach to complete water quality.",
+      "Finding water that is pure and free from contaminants and is alkaline with a small cluster size has been difficult. Finally! The solution is pH Prescription! It measures better than any water I have tested, is affordable and outperforms any other brand. I use pH Prescription in my home and office and recommend it to my patients.",
     link: "/experts",
   },
 ];

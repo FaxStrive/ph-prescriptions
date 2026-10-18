@@ -147,7 +147,7 @@ export default function ProductsPage() {
               justifyContent: "center",
             }}
           >
-            {["30+ Year WQA Member", "Made in USA", "40+ Years in Water Systems", "Doctor-Recommended", "Ships to All 50 States"].map(
+            {["30+ Year WQA Member", "Made in USA", "Founder: 40+ Years in Water Treatment", "Doctor-Recommended", "Serving All 50 States"].map(
               (item) => (
                 <span
                   key={item}

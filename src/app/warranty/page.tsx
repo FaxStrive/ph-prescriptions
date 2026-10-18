@@ -3,9 +3,9 @@ import Link from "next/link";
 import { BUSINESS } from "@/lib/business";
 
 export const metadata: Metadata = {
-  title: "Lifetime Warranty | pH Prescription",
+  title: "5-Year Warranty | pH Prescription",
   description:
-    "pH Prescription lifetime warranty - what is covered, how to register, and how to file a warranty claim. 30+ Year WQA Member systems backed for life with licensed installation.",
+    "The pH Prescription five-year warranty on residential systems installed by a licensed plumber: what is covered, what is not, and how to register your product. Plus a lifetime warranty on parts with the Replenishment Program.",
 };
 
 export default function WarrantyPage() {
@@ -39,7 +39,7 @@ export default function WarrantyPage() {
               letterSpacing: "-0.02em",
             }}
           >
-            Lifetime Warranty
+            5-Year Warranty
           </h1>
           <p
             style={{
@@ -49,7 +49,7 @@ export default function WarrantyPage() {
               marginBottom: "2rem",
             }}
           >
-            Every pH Prescription system is backed by a lifetime warranty on manufacturing defects when installed by a licensed plumber. We build systems that last - and we stand behind them.
+            Five-year warranty on residential systems when installed by a licensed plumber, plus a lifetime warranty on parts with the Replenishment Program. pH Prescription will replace defective product, subject to the conditions below.
           </p>
           <a
             href={`tel:${BUSINESS.phone}`}
@@ -89,11 +89,11 @@ export default function WarrantyPage() {
                 What Is Covered
               </h2>
               {[
-                "Manufacturing defects in materials and workmanship",
-                "System components under normal operating conditions",
-                "Membranes, housings, and filtration stages",
-                "QuadVortex module and alkalizing cartridge housing",
-                "All systems installed by a licensed plumber",
+                "Replacement of defective product for five years",
+                "Defects in manufacture and materials in a pH Prescription water treatment system supplied for installation into domestic premises in the United States",
+                "Residential installations done by a licensed plumber",
+                "If an identical replacement product is not available, pH Prescription may replace the defective product with a similar quality product",
+                "A lifetime warranty on parts with the Replenishment Program",
               ].map((item) => (
                 <div
                   key={item}
@@ -133,12 +133,12 @@ export default function WarrantyPage() {
                 What Is Not Covered
               </h2>
               {[
-                "Damage from improper installation (non-licensed installer)",
-                "Damage from misuse or modification of the system",
-                "Consumable filter replacements (periodic maintenance items)",
-                "Damage from failure to perform recommended maintenance",
-                "Cosmetic damage that does not affect performance",
-                "Damage from water pressure outside specified ranges",
+                "Commercial installations: this warranty applies to residential installations only",
+                "Claims from anyone other than the original purchaser",
+                "Installations outside the United States",
+                "Installations not done by a licensed plumber: the warranty is null and void",
+                "Casualty loss due to Acts of God and other claims such as, without limitation, hurricanes, tornadoes, earthquakes, fires or floods",
+                "Shipping cost and labor installation cost for the replacement product",
               ].map((item) => (
                 <div
                   key={item}
@@ -192,16 +192,16 @@ export default function WarrantyPage() {
           >
             {[
               {
-                step: "Register Your System",
-                body: `Register your system within 30 days of installation to activate your lifetime warranty. Contact us at ${BUSINESS.email} or ${BUSINESS.phone} with your system model number, installation date, and licensed plumber information.`,
+                step: "Register Your Product",
+                body: `Protect your investment by registering your pH Prescription product. Contact us at ${BUSINESS.email} or ${BUSINESS.phone} with your name, address, date of purchase, model number and serial number.`,
               },
               {
                 step: "File a Claim",
-                body: `If you experience a manufacturing defect, contact us at ${BUSINESS.phone} (local) or ${BUSINESS.phoneTollFree} (toll free). Have your system model number and installation date ready. We will diagnose the issue and arrange repair or replacement.`,
+                body: `Contact us at ${BUSINESS.phone} (local) or ${BUSINESS.phoneTollFree} (toll free). Any claim must include a copy of valid proof of purchase showing the date and place of purchase.`,
               },
               {
-                step: "Emergency Service",
-                body: `For urgent water system issues, call our emergency line at ${BUSINESS.phoneEmergency}. We will work to dispatch a licensed service professional as quickly as possible.`,
+                step: "Emergency Line",
+                body: `Emergency: ${BUSINESS.phoneEmergency}.`,
               },
             ].map((card) => (
               <div
@@ -253,7 +253,7 @@ export default function WarrantyPage() {
               marginBottom: "1.25rem",
             }}
           >
-            Maintaining Your Warranty
+            Replenishment Program and Licensed Installation
           </h2>
           <p
             style={{
@@ -262,7 +262,7 @@ export default function WarrantyPage() {
               marginBottom: "1.25rem",
             }}
           >
-            To keep your lifetime warranty in force, replace filter cartridges on schedule (typically every 12 months depending on your water quality and usage) and have any major service performed by a licensed plumber. We can recommend filter replacement intervals specific to your water profile.
+            pH Prescription also offers a lifetime warranty on parts and a 20% discount on filters when you enroll in our Replenishment Program.
           </p>
           <p
             style={{
@@ -271,7 +271,7 @@ export default function WarrantyPage() {
               fontSize: "0.9375rem",
             }}
           >
-            Replacement filters and maintenance kits are available directly from pH Prescription. Contact us to set up an annual service plan.
+            If you do not use a licensed plumber for your installation, your warranty is null and void. If you need one, contact pH Prescription with your location and the equipment purchased, and we will recommend a licensed plumber for you to contact.
           </p>
           <div
             style={{

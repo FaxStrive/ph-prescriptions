@@ -16,14 +16,14 @@ export default function AquapellisPage() {
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_420px]" style={{ gap: "3.5rem", alignItems: "center" }}>
             <div style={{ maxWidth: "740px" }}>
               <div style={{ fontSize: "0.8125rem", color: "var(--color-teal)", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "1rem" }}>
-                A pH Prescription Brand
+                Our Sister Company
               </div>
               <h1 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2rem,5vw,3.25rem)", marginBottom: "1.25rem", letterSpacing: "-0.02em" }}>
                 Aquapellis<br />
                 <em style={{ color: "var(--color-teal)" }}>Molecular Hydrogen Shower</em>
               </h1>
               <p style={{ fontSize: "1.0625rem", color: "var(--color-ink-soft)", lineHeight: 1.75, marginBottom: "2rem" }}>
-                The Aquapellis system delivers molecular hydrogen (H2) transdermally - through your skin - with every shower. The same antioxidant science you drink is now absorbed through the body&apos;s largest organ, providing whole-body cellular benefit.
+                The Aquapellis technology infuses molecular hydrogen (H2) transdermally with every shower, to promote the finest inter-cellular hydration available today.
               </p>
               <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
                 <a href={`mailto:${BUSINESS.emailAquapellis}`} className="btn btn-primary">Request Aquapellis Quote</a>
@@ -55,15 +55,14 @@ export default function AquapellisPage() {
                 Transdermal H2 Therapy
               </h2>
               <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.8, marginBottom: "1.25rem" }}>
-                Molecular hydrogen is the smallest molecule in the universe - small enough to pass directly through skin cells. Aquapellis infuses your shower water with therapeutic concentrations of H2, delivering antioxidant benefit to every cell in your body during your daily routine.
+                With over 3,000 research and scientific papers, molecular hydrogen (H2) has been extensively studied. Unlike conventional antioxidants, hydrogen is selective, helping neutralize the most damaging toxic free radicals while preserving the beneficial oxidative signals the body needs. Aquapellis infuses your shower water with the highest concentration of hydrogen molecules for optimum body performance.
               </p>
               <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.8, marginBottom: "1.75rem" }}>
                 Recommended for athletes, wellness practitioners, medical professionals, and anyone serious about their health and longevity.
               </p>
               <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
                 {[
-                  "Molecular hydrogen infused at therapeutic concentrations",
-                  "Compatible with existing plumbing - no major renovation",
+                  "Infuses water with the highest concentration of hydrogen molecules",
                   "Customized for residential, commercial, and hospitality environments",
                   "Vital Impact variant for military and first responders ($7,999)",
                   "Contact info@aquapellis.com or 888-728-2783 for pricing",
@@ -103,7 +102,7 @@ export default function AquapellisPage() {
           <div className="grid grid-cols-1 sm:grid-cols-3" style={{ gap: "1.5rem" }}>
             {[
               { src: "/products/aquapellis-residential-v2.jpg", label: "Residential", caption: "Custom-fit for any home shower" },
-              { src: "/products/aquapellis-molecular-hydrogen.jpg", label: "Molecular Hydrogen", caption: "H2 infused at therapeutic concentrations" },
+              { src: "/products/aquapellis-molecular-hydrogen.jpg", label: "Molecular Hydrogen", caption: "Highest concentration of hydrogen molecules" },
               { src: "/products/aquapellis-vital-impact-main-v2.jpg", label: "Vital Impact", caption: "Built for military and first responders" },
             ].map((img) => (
               <figure key={img.src} style={{ margin: 0 }}>
@@ -126,7 +125,7 @@ export default function AquapellisPage() {
             Ready to Upgrade Your Shower?
           </h2>
           <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.75, marginBottom: "2rem" }}>
-            Contact our Aquapellis team for a custom quote. All systems are professionally installed with full support.
+            Contact our Aquapellis team for a complimentary consultation and a custom quote.
           </p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem", justifyContent: "center" }}>
             <a href={`mailto:${BUSINESS.emailAquapellis}`} className="btn btn-primary">Email info@aquapellis.com</a>

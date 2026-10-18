@@ -39,7 +39,7 @@ export default function PrivacyPage() {
           },
           {
             heading: "2. Information We Collect",
-            body: `We collect information you provide directly - such as your name, phone number, email address, and ZIP code when you request a consultation, submit a contact form, or register for a warranty. We also collect standard website analytics data (pages visited, session duration, device type) through cookies and similar technologies. We do not sell or rent your personal information.`,
+            body: `We collect information you provide directly - such as your name, phone number, email address, and ZIP code when you request a consultation, submit a contact form, or register for a warranty. We also collect online and network activity information, such as your interaction with our website and the webpages you visit, through cookies and similar technologies.`,
           },
           {
             heading: "3. How We Use Your Information",
@@ -47,11 +47,11 @@ export default function PrivacyPage() {
           },
           {
             heading: "4. Sharing Your Information",
-            body: `We do not sell your personal information. We may share it with licensed plumbers and installers in our network when scheduling your installation, and with service providers who help us operate our business (email, analytics, CRM) under confidentiality agreements. We may also disclose information when required by law.`,
+            body: `We may share your personal information with our corporate brands and affiliates, and with service providers who perform services on our behalf, such as processing credit card payments, fulfilling orders, website hosting, analytics, advertising and marketing services, and installation and repair services. We may work with third-party advertising companies to serve advertisements on our behalf. We may share information with third-party installation partners with your consent, and we may disclose information when required by law.`,
           },
           {
             heading: "5. Cookies",
-            body: `Our website uses cookies to remember your preferences and understand how pages are used. You can disable cookies in your browser settings, though some site features may not function correctly. We do not use cookies for targeted advertising.`,
+            body: `We use different types of cookies on our website, including performance cookies, functional cookies and targeting cookies. You can disable cookies in your browser settings, though some site features may not function correctly.`,
           },
           {
             heading: "6. Data Security",
@@ -62,15 +62,11 @@ export default function PrivacyPage() {
             body: `You may request access to, correction of, or deletion of personal information we hold about you. To exercise these rights, contact us at ${BUSINESS.email} or ${BUSINESS.phone}. We will respond within 30 days.`,
           },
           {
-            heading: "8. Children",
-            body: `Our website is not directed to children under 13. We do not knowingly collect personal information from children under 13. If you believe we have inadvertently collected such information, please contact us.`,
-          },
-          {
-            heading: "9. Changes to This Policy",
+            heading: "8. Changes to This Policy",
             body: `We may update this privacy policy from time to time. The updated date at the top of this page reflects when the policy was last revised. Continued use of our website after changes constitutes acceptance of the revised policy.`,
           },
           {
-            heading: "10. Contact Us",
+            heading: "9. Contact Us",
             body: `pH Prescription\n${BUSINESS.address.full}\nPhone: ${BUSINESS.phone}\nToll Free: ${BUSINESS.phoneTollFree}\nEmail: ${BUSINESS.email}`,
           },
         ].map((section) => (

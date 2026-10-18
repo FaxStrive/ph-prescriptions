@@ -15,7 +15,7 @@ export default function TotalHomePage() {
         eyebrow="Residential"
         title="Total Home"
         titleAccent="Restructured Water"
-        subhead="Our Premier Total Home System (pH-WH-3500-CO) transforms every water outlet in your home - every faucet, shower, and appliance. QuadVortex filtration, alkalizing, remineralizing, and hydrogen infusion for the whole house. From $9,244.25."
+        subhead="Our Premier Total Home System (pH-WH-3500-CO) is a twin-tank, multi-phase finely filtered water system for every faucet, shower, and appliance in your home, paired with the Ultimate Purified Drinking System. From $9,244.25."
         image="/images/hero/home-solutions-hero.jpg"
         imageAlt="Woman filling a glass of water at the sink of a bright modern kitchen"
         ctas={[
@@ -29,8 +29,8 @@ export default function TotalHomePage() {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "3rem", alignItems: "center" }}>
             <div>
               <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.625rem,3vw,2.125rem)", color: "var(--color-navy)", marginBottom: "1.25rem" }}>What Is Included</h2>
-              <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.8, marginBottom: "1.25rem" }}>The Total Home Premier Restructured Water System is the most comprehensive water solution pH Prescription offers. Every water source in your home - showers, baths, kitchen, laundry, outdoor - is treated with the full QuadVortex process. Point-of-entry installation means every drop of water entering your home is filtered, structured, alkalized, remineralized, and hydrogen-infused.</p>
-              <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.8, marginBottom: "2rem" }}>Whole-home restructured water benefits extend beyond drinking - your skin, hair, and appliances all benefit from truly clean water. Lifetime warranty with licensed plumber installation.</p>
+              <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.8, marginBottom: "1.25rem" }}>The Total Home Premier is a twin-tank, high-capacity, multi-phase finely filtered water system, paired with the Ultimate Purified Drinking System. Point-of-entry installation means the water entering your home is filtered before it reaches your taps, showers, and appliances. QuadVortex WMS is our patent-pending vortex water-restructuring unit, built with a Fibonacci-designed four-vortex path and rare-earth magnets. It is included with some Total Home Premier bundles and recommended with all Total Home systems.</p>
+              <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.8, marginBottom: "2rem" }}>Whole-home restructured water benefits extend beyond drinking - your skin, hair, and appliances all benefit from truly clean water. Five-year warranty on residential systems when installed by a licensed plumber, plus a lifetime warranty on parts with the Replenishment Program.</p>
               <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
                 <Link href="/consultation" className="btn btn-primary">Get a Custom Quote</Link>
                 <a href={`tel:${BUSINESS.phone}`} className="btn btn-outline">Call {BUSINESS.phone}</a>
@@ -86,7 +86,7 @@ export default function TotalHomePage() {
                 imageAlt: "Twin treatment tanks and brine tank installed neatly along a backyard fence line",
                 eyebrow: "Clean Install",
                 title: "Professionally Plumbed",
-                body: "Licensed plumbers route, mount, and pressure-test the full system - the workmanship behind the lifetime warranty.",
+                body: "pH Prescription recommends a licensed plumber for installation, which the warranty requires.",
               },
             ]}
           />

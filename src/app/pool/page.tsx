@@ -6,9 +6,9 @@ import ImageBand from "@/components/ui/ImageBand";
 import PhotoCardGrid from "@/components/ui/PhotoCardGrid";
 
 export const metadata: Metadata = {
-  title: "Pool and Spa Water - Advanced Filtration Beyond Chlorine | pH Prescription",
+  title: "Pool and Spa Water Without Harsh Chemicals | pH Prescription",
   description:
-    "Advanced pool and spa water treatment systems. Reduce chlorine demand 25-40% while improving water clarity and guest comfort. Integrates with existing pool circulation systems.",
+    "pH Prescription and our sister company, Aquapellis, have partnered with Exceptional Water Systems for crystal-clear pool water without harsh chemicals. Contact us for a complimentary consultation.",
 };
 
 const PROBLEMS = [
@@ -20,35 +20,35 @@ const PROBLEMS = [
 
 const WHY_FAILS = [
   "Standard cartridge and sand filters remove particulates but do not address dissolved chemicals, chloramine, or hardness minerals",
-  "Chemical shock treatment temporarily addresses chloramine but introduces additional chemical load and requires 24-48 hours of pool downtime",
+  "Chemical shock treatment temporarily addresses chloramine but introduces additional chemical load",
   "UV-only systems require chlorine backup and do not address mineral scale or chemical byproducts in the water column",
   "Ion exchange softeners designed for drinking water are not rated for pool volumes or continuous high-flow applications",
 ];
 
 const SOLUTIONS = [
   {
-    heading: "KDF and Catalytic Carbon Filtration",
-    body: "KDF media reduces chloramine, bacteria, algae, and heavy metals through an electrolytic reaction. Catalytic carbon handles chlorine, VOCs, and DBPs. Together they reduce chemical demand by 25-40%, lowering operating costs while improving water clarity.",
+    heading: "pH Prescription Filter Technology",
+    body: "pH Prescription provides innovative filter technology that removes harmful materials and infuses water with vital beneficial elements.",
     image: "/images/commercial/dw-mechanical-room-hvac.jpg",
     imageAlt:
       "Mechanical plant room with commercial pumps and treatment piping serving a large facility",
   },
   {
-    heading: "QuadVortex Mineral Restructuring",
-    body: "Our QuadVortex vortex system micro-clusters water molecules and neutralizes scale-forming minerals without chemicals or salt. Water feels softer to swimmers, reduces skin and eye irritation, and prevents scale deposition on pool surfaces and equipment.",
+    heading: "Ultra-Fine Bubble Technology",
+    body: "Exceptional Water Systems specializes in providing crystal-clear pool water without harsh chemicals that affect your skin, hair, eyes and respiratory system, using Ultra-Fine Bubble Technology.",
     image: "/images/commercial/dw-case-filtration.jpg",
     imageAlt: "Dark rippled water surface catching sparkles of golden sunlight",
   },
   {
-    heading: "Integration with Existing Circulation Systems",
-    body: "Our pool treatment systems are designed to integrate inline with existing pump and filter infrastructure. No pool resurfacing, no plumbing overhaul. Installation typically completes in a single service visit.",
+    heading: "The Right Blend of Systems",
+    body: "Exceptional Water Systems will ensure we better understand your needs to craft the right blend of systems and equipment to increase sanitation, safety and efficiency.",
     image: "/images/commercial/dwc-mechanical-room-hvac.jpg",
     imageAlt:
       "Commercial mechanical room with red circulation pumps, insulated piping, and a plate heat exchanger",
   },
   {
-    heading: "Commercial Pool and Spa Configurations",
-    body: "From residential pools to hotel pools, aquatic centers, and therapeutic spa pools, we configure systems to match flow rate, pool volume, bather load, and local regulatory requirements. Lease and finance options available for commercial installations.",
+    heading: "Residential and Commercial Pools",
+    body: "Together, we provide pool water, both residential and commercial, that people with hypoallergenic skin issues can now enjoy as they experience silky soft water and feel refreshed without smelling like chlorine.",
     image: "/images/commercial/dwc-hvac-cooling-tower-techs.jpg",
     imageAlt:
       "Two technicians in hard hats servicing large rooftop water equipment with a city skyline behind them",
@@ -68,15 +68,15 @@ const WHO_FOR = [
 const FAQS = [
   {
     q: "Will your system replace chlorine entirely?",
-    a: "Our system significantly reduces the amount of chlorine required to maintain safe pool water - typically 25-40% less. Most pool operators and regulatory authorities require a minimum residual chlorine level for bather safety, so we reduce chemical demand rather than eliminate it entirely. The result is water that is gentler on skin and eyes with fewer disinfection byproducts.",
+    a: "Exceptional Water Systems specializes in providing crystal-clear pool water without harsh chemicals. Contact us for a complimentary consultation to discuss what is right for your pool.",
   },
   {
-    q: "How does your system integrate with my existing pool equipment?",
-    a: "Our systems are designed to fit inline on the return line from your existing filter, before the water re-enters the pool. No structural changes to the pool itself are required. Most residential installations complete in a few hours. Commercial installations are assessed individually for flow rate and plumbing configuration.",
+    q: "How is a pool system configured?",
+    a: "Exceptional Water Systems will ensure we better understand your needs to craft the right blend of systems and equipment. Contact us for a complimentary consultation.",
   },
   {
     q: "What is the maintenance requirement after installation?",
-    a: "KDF and catalytic carbon media typically last 3-5 years depending on pool volume, bather load, and source water quality. Our team will assess your system and provide a maintenance schedule at installation. Filter media replenishment is available through our Replenishment Program.",
+    a: "pH Prescription offers a Replenishment Program that you can opt into for savings on regular filter replenishment. Contact us for a complimentary consultation.",
   },
 ];
 
@@ -86,7 +86,7 @@ export default function PoolPage() {
     "@type": "Service",
     name: "Pool and Spa Water Treatment Systems",
     description:
-      "Advanced pool and spa water treatment. Reduces chlorine demand 25-40% while improving water clarity and guest comfort.",
+      "Pool water treatment with Exceptional Water Systems, for crystal-clear pool water without harsh chemicals.",
     provider: {
       "@type": "LocalBusiness",
       name: BUSINESS.name,
@@ -114,9 +114,9 @@ export default function PoolPage() {
       {/* Hero */}
       <PageHero
         eyebrow="Pool and Spa"
-        title="Pool and Spa Water - Advanced Filtration"
-        titleAccent="Beyond Chlorine"
-        subhead="Reduce chlorine demand by 25-40%, eliminate scale and disinfection byproducts, and deliver water your swimmers and guests actually want to be in."
+        title="Pool and Spa Water"
+        titleAccent="Without Harsh Chemicals"
+        subhead="pH Prescription and our sister company, Aquapellis, have partnered with Exceptional Water Systems for crystal-clear pool water without harsh chemicals that affect your skin, hair, eyes and respiratory system."
         image="/images/lifestyle2/idw-ripple-accent.jpg"
         imageAlt="Bright pool-blue water surface with sunlight refracting through gentle ripples"
         ctas={[
@@ -129,7 +129,7 @@ export default function PoolPage() {
       <section style={{ background: "var(--color-navy)", color: "#fff", padding: "2rem 0" }}>
         <div className="container">
           <div style={{ display: "flex", gap: "2.5rem", flexWrap: "wrap", alignItems: "center", justifyContent: "center" }}>
-            {["30+ Year WQA Member", "Made in USA", "Founder with 40+ Years in Water Treatment", "Residential and Commercial", "Integrates with Existing Equipment"].map((item) => (
+            {["30+ Year WQA Member", "Founder with 40+ Years in Water Treatment", "Residential and Commercial"].map((item) => (
               <span
                 key={item}
                 style={{
@@ -279,7 +279,7 @@ export default function PoolPage() {
             Get a Pool Water Assessment
           </h2>
           <p style={{ color: "rgba(255,255,255,0.8)", lineHeight: 1.75, marginBottom: "2rem" }}>
-            We assess your pool volume, flow rate, source water, and bather load and recommend a system sized for your exact application. Residential and commercial. Lease and finance options available.
+            We assess your pool volume, flow rate, source water, and bather load and recommend a system sized for your exact application. Residential and commercial.
           </p>
           <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", justifyContent: "center" }}>
             <a href={`tel:${BUSINESS.phone}`} className="btn btn-white">

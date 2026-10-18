@@ -8,25 +8,25 @@ import PhotoCardGrid from "@/components/ui/PhotoCardGrid";
 export const metadata: Metadata = {
   title: "Business Drinking Water Systems | pH Prescription",
   description:
-    "Commercial under-counter and point-of-use drinking water systems. QuadVortex filtration, alkaline, remineralized, hydrogen-infused. 30+ Year WQA Member. Lifetime warranty.",
+    "Commercial under-counter and point-of-use drinking water systems. 30+ Year WQA Member. Serving all 50 states.",
 };
 
 const APPLICATIONS = [
   {
     name: "Office Break Rooms",
-    desc: "Replace bottled water programs with inline filtered water at the sink. Saves thousands annually for mid-size offices.",
+    desc: "Replace bottled water programs with inline filtered water at the sink.",
     image: "/images/hero/health-supplements-hero.jpg",
     imageAlt: "Woman drinking a glass of water at a table set with fresh fruit and vegetables",
   },
   {
     name: "Medical & Dental Offices",
-    desc: "Ultra-pure water for patient hydration and clinical applications. Doctor-recommended systems trusted by physicians nationwide.",
+    desc: "Water for patient hydration and office functions. Doctor-recommended systems.",
     image: "/images/business/medical-healthcare.jpg",
     imageAlt: "Doctor in a white coat consulting with a patient at her desk",
   },
   {
     name: "Gyms & Fitness Centers",
-    desc: "High-volume under-counter systems for member hydration stations. Alkaline water supports faster recovery.",
+    desc: "High-volume under-counter systems for member hydration stations.",
     image: "/images/industries/fitness.jpg",
     imageAlt: "Athlete in workout gear drinking from a water bottle under a clear sky",
   },
@@ -45,7 +45,7 @@ export default function BusinessDrinkingSystemsPage() {
         eyebrow="Business / Drinking Systems"
         title="Commercial Drinking"
         titleAccent="Water Systems"
-        subhead="The same doctor-recommended QuadVortex technology from our residential line, scaled for commercial usage. Under-counter, point-of-use, and high-volume configurations. 30+ Year WQA Member. Lifetime warranty. All 50 states."
+        subhead="Doctor-recommended drinking systems from our residential line, scaled for commercial usage. Under-counter, point-of-use, and high-volume configurations. 30+ Year WQA Member. All 50 states."
         image="/images/hero/office-hero.jpg"
         imageAlt="Technician preparing a multi-stage reverse osmosis unit for installation, red toolbox at his side"
         ctas={[
@@ -82,19 +82,19 @@ export default function BusinessDrinkingSystemsPage() {
                   maxWidth: "560px",
                 }}
               >
-                Commercial configurations of our residential technology - same four-stage process, higher daily output.
+                Commercial configurations of our residential drinking system technology.
               </p>
               <div style={{ display: "grid", gap: "1.25rem" }}>
                 {[
                   {
                     step: "01",
                     name: "Reverse Osmosis",
-                    desc: "Removes up to 99% of contaminants including heavy metals, chlorine, fluoride, and micro-organisms.",
+                    desc: "Reduces up to 99% of fluoride, lead, mercury, chlorine, bacteria, and pharmaceutical drugs.",
                   },
                   {
                     step: "02",
                     name: "Alkalizing",
-                    desc: "Raises pH to 8.5-9.5 through an alkalizing cartridge - no electricity required.",
+                    desc: "Raises pH to 8.5-9.7.",
                   },
                   {
                     step: "03",
@@ -104,7 +104,7 @@ export default function BusinessDrinkingSystemsPage() {
                   {
                     step: "04",
                     name: "Hydrogen Infusion",
-                    desc: "QuadVortex molecular hydrogen infusion. Antioxidant-rich water at every pour.",
+                    desc: "Molecular hydrogen infusion, up to 1.3 ppm. Antioxidant-rich water at every pour.",
                   },
                 ].map((s) => (
                   <div
@@ -215,7 +215,7 @@ export default function BusinessDrinkingSystemsPage() {
               marginBottom: "1.75rem",
             }}
           >
-            We consult first, then recommend. No overselling. Licensed installation. Lifetime warranty. Nationwide.
+            We consult first, then recommend. No overselling. Serving all 50 states.
           </p>
           <Link href="/consultation" className="btn btn-primary">
             Request My Commercial Quote

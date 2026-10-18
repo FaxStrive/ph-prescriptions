@@ -8,7 +8,7 @@ import PhotoCardGrid from "@/components/ui/PhotoCardGrid";
 
 export const metadata: Metadata = {
   title: "Residential Drinking Water Systems | pH Prescription",
-  description: "Under-sink reverse osmosis and QuadVortex drinking water systems. Removes up to 99% of contaminants, adds alkalinity, remineralizes, and infuses molecular hydrogen. From $985.",
+  description: "Under-sink drinking water systems that reduce up to 99% of toxins, raise pH, remineralize, and infuse molecular hydrogen. From $985.",
 };
 
 export default function DrinkingSystemsPage() {
@@ -18,7 +18,7 @@ export default function DrinkingSystemsPage() {
         eyebrow="Residential"
         title="Drinking Water"
         titleAccent="Systems"
-        subhead="Doctor-recommended under-sink systems that filter, alkalize, remineralize, and infuse molecular hydrogen. Non-electric. Lifetime warranty with licensed plumber installation."
+        subhead="Doctor-recommended under-sink systems that filter, alkalize, remineralize, and infuse molecular hydrogen. 5-Year Warranty with licensed plumber installation."
         image="/images/hero/drinking-water-hero.jpg"
         imageAlt="Glass pitcher and cup of purified water on a kitchen counter with a reverse osmosis system in the background"
         ctas={[
@@ -33,8 +33,8 @@ export default function DrinkingSystemsPage() {
             <div>
               <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.625rem,3vw,2.125rem)", color: "var(--color-navy)", marginBottom: "1.25rem" }}>Our Drinking Systems</h2>
               {[
-                { name: "Ultimate Purified Drinking System", sku: "pH-RO-1100", price: "$1,747", badge: "#1 Doctor Recommended", desc: "Flagship 4-stage system. QuadVortex reverse osmosis, alkalizing cartridge, remineralization, and H2 infusion. Installs under any sink without electricity." },
-                { name: "Finely Filtered Compact Drinking System", sku: "pH-UC-700", price: "$985", badge: "Most Popular", desc: "High-performance compact filtration. Removes up to 99% of contaminants in a smaller footprint. Non-electric, fits existing plumbing." },
+                { name: "Ultimate Purified Drinking System", sku: "pH-RO-1100", price: "$1,747", badge: "#1 Doctor Recommended", desc: "Flagship 6-phase system. Reverse osmosis, remineralization, and molecular hydrogen. Non-electric and easily fitted to your existing plumbing." },
+                { name: "Finely Filtered Compact Drinking System", sku: "pH-UC-700", price: "$985", badge: "Best Value", desc: "Our best value for finely filtered water in a compact under-counter model that filters and mineralizes water, reducing up to 99% of chemicals like chlorine, chloramines, fluoride, heavy metals and many other toxins." },
               ].map((p) => (
                 <div key={p.sku} style={{ background: "#fff", padding: "1.75rem", marginBottom: "1.5rem", border: "1px solid var(--color-border-soft)", borderTop: "3px solid var(--color-teal)" }}>
                   <div style={{ fontSize: "0.75rem", color: "var(--color-teal)", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.08em" }}>{p.badge}</div>
@@ -51,7 +51,7 @@ export default function DrinkingSystemsPage() {
             <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}>
               <div style={{ background: "#fff", color: "var(--color-ink)", padding: "2rem" }}>
                 <h3 style={{ fontFamily: "var(--font-display)", fontSize: "1.25rem", marginBottom: "1rem" }}>Why These Systems?</h3>
-                {["Non-electric - no power required", "Removes up to 99% of contaminants", "Alkalizes to pH 8.0-9.5", "Re-mineralizes with essential trace minerals", "Infuses molecular hydrogen (H2)", "30+ Year WQA Member, Made in USA", "Lifetime warranty with licensed plumber install", "Fits under standard kitchen sink"].map((p) => (
+                {["Removes up to 99% of contaminants", "Raises pH to 8.5-9.7", "Re-mineralizes with essential trace minerals", "Infuses molecular hydrogen (H2)", "30+ Year WQA Member, Made in USA", "5-Year Warranty with licensed plumber install", "Fits under standard kitchen sink"].map((p) => (
                   <div key={p} style={{ display: "flex", gap: "0.625rem", padding: "0.5rem 0", borderBottom: "1px solid var(--color-border-soft)", fontSize: "0.875rem", color: "var(--color-ink-soft)" }}>
                     <span style={{ color: "var(--color-teal)" }}>+</span> {p}
                   </div>
@@ -90,10 +90,10 @@ export default function DrinkingSystemsPage() {
                 Installed Under Your Sink, Out of Sight
               </h2>
               <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.8, marginBottom: "1.25rem" }}>
-                Both systems tuck into a standard kitchen cabinet and connect to your existing plumbing - no electricity, no countertop clutter. A licensed plumber handles the entire install, which is what lets us back every system with a lifetime warranty.
+                Both systems tuck into a standard kitchen cabinet and connect to your existing plumbing, with no countertop clutter. pH Prescription recommends a licensed plumber for installation, which the warranty requires.
               </p>
               <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.8 }}>
-                From first glass onward, your water is filtered, alkalized to pH 8.0-9.5, remineralized, and infused with molecular hydrogen.
+                From first glass onward, your water is filtered, raised to pH 8.5-9.7, remineralized, and infused with molecular hydrogen.
               </p>
             </div>
           </div>
@@ -119,7 +119,7 @@ export default function DrinkingSystemsPage() {
                 image: "/images/lifestyle2/pa-enjoy-pure-water.jpg",
                 imageAlt: "Cupped hands catching a stream of clean water in the sunlight",
                 title: "Clean at the Source",
-                body: "QuadVortex reverse osmosis strips heavy metals, chlorine, fluoride, and micro-organisms before the water reaches your glass.",
+                body: "Reverse osmosis reduces lead, mercury, chlorine, fluoride, and micro-organisms before the water reaches your glass.",
               },
               {
                 image: "/images/lifestyle2/svc-service-kitchen-tap.jpg",

@@ -34,31 +34,26 @@ const VIDEOS = [
   { title: "Alkaline Home Water Systems - pH Prescription Reviews", videoId: "IV2_iY8bwXA" },
   { title: "Arlo Guthrie Testimonial - Alkaline Home Water Systems by pH Prescription", videoId: "CycJNbMHhNM" },
   { title: "Best Alkaline Water Filter System Reviews", videoId: "8dPyBSJrBvA" },
-  { title: "Alkaline Water Filter System Reviews - PH Prescription Water Filters", videoId: "fPXom2fBWCM" },
+  { title: "Alkaline Water Filter System Reviews - pH Prescription Water Filters", videoId: "fPXom2fBWCM" },
 ];
 
 const RESOURCE_SECTIONS = [
   {
-    title: "White Papers",
-    description: "Technical documentation on molecular hydrogen therapy, QuadVortex filtration technology, mineral repletion, and alkaline pH research available upon request.",
-    items: [
-      "Molecular Hydrogen: Peer-Reviewed Research Summary",
-      "QuadVortex Technology: Filtration, Restructuring, and H2 Infusion",
-      "The Case for Mineral Repletion in Modern Water Systems",
-      "Alkaline pH and Cellular Health: What the Research Actually Says",
-    ],
-    note: "White papers are available upon request. Contact us to receive the full documentation.",
-    action: { label: `Request White Papers: ${BUSINESS.email}`, href: `mailto:${BUSINESS.email}?subject=White Paper Request` },
+    title: "White Papers and Support Documents",
+    description: "White papers and support documents are available on request.",
+    items: [] as string[],
+    note: "",
+    action: { label: `Request Documents: ${BUSINESS.email}`, href: `mailto:${BUSINESS.email}?subject=Document Request` },
     borderColor: "var(--color-teal)",
   },
   {
     title: "Hydration Science & Technology",
     description: "The science behind what pH Prescription systems do and why it matters for human health.",
     items: [
-      "How molecular hydrogen reaches cells and mitochondria",
-      "The four-stage QuadVortex process explained",
-      "Why water source and mineral content matter for cellular uptake",
-      "pH and alkalinity: the difference between chemical and mineral alkalinity",
+      "Health benefits of hydrogen water",
+      "Why finely filtered water?",
+      "The phases of filtration",
+      "What is in your water?",
     ],
     note: "For a deeper technical consultation, schedule a free call with our team.",
     action: { label: "Schedule Free Consultation", href: "/consultation" },
@@ -74,29 +69,16 @@ const RESOURCE_SECTIONS = [
   },
   {
     title: "Warranty Information",
-    description: "Every pH Prescription system is backed by our warranty program when installed by a licensed plumber. Contact us for full warranty details.",
+    description: "Five-year warranty on residential systems when installed by a licensed plumber, plus a lifetime warranty on parts with the Replenishment Program.",
     items: [
-      "Lifetime warranty coverage with licensed plumber installation",
-      "What is covered and what voids the warranty",
-      "How to register your warranty after installation",
-      "Warranty service process and contact",
+      "Replacement of defective product for five years",
+      "What is covered and what is not",
+      "How to register your product",
+      "How to file a claim",
     ],
     note: "Read the full warranty terms before installation.",
     action: { label: "View Warranty Terms", href: "/warranty" },
     borderColor: "var(--color-gold)",
-  },
-  {
-    title: "Support Documentation",
-    description: "Installation manuals, maintenance guides, and troubleshooting support for pH Prescription systems.",
-    items: [
-      "Installation manuals (available per model)",
-      "Maintenance schedules and filter replacement guides",
-      "Troubleshooting common questions",
-      "How to reach our technical support team",
-    ],
-    note: "Manuals are provided at time of purchase and are available by request.",
-    action: { label: `Request Documentation: ${BUSINESS.email}`, href: `mailto:${BUSINESS.email}?subject=Support Documentation Request` },
-    borderColor: "var(--color-slate)",
   },
 ];
 
@@ -144,32 +126,34 @@ export default function ResourcesPage() {
                 >
                   {section.description}
                 </p>
-                <ul
-                  style={{
-                    listStyle: "none",
-                    padding: 0,
-                    margin: "0 0 1.25rem 0",
-                    display: "flex",
-                    flexDirection: "column",
-                    gap: "0.375rem",
-                  }}
-                >
-                  {section.items.map((item) => (
-                    <li
-                      key={item}
-                      style={{
-                        color: "var(--color-ink-soft)",
-                        fontSize: "0.9rem",
-                        display: "flex",
-                        alignItems: "flex-start",
-                        gap: "0.5rem",
-                      }}
-                    >
-                      <span style={{ color: section.borderColor, fontWeight: 700, marginTop: "0.05rem", flexShrink: 0 }}>--</span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+                {section.items.length > 0 && (
+                  <ul
+                    style={{
+                      listStyle: "none",
+                      padding: 0,
+                      margin: "0 0 1.25rem 0",
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: "0.375rem",
+                    }}
+                  >
+                    {section.items.map((item) => (
+                      <li
+                        key={item}
+                        style={{
+                          color: "var(--color-ink-soft)",
+                          fontSize: "0.9rem",
+                          display: "flex",
+                          alignItems: "flex-start",
+                          gap: "0.5rem",
+                        }}
+                      >
+                        <span style={{ color: section.borderColor, fontWeight: 700, marginTop: "0.05rem", flexShrink: 0 }}>--</span>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                )}
                 {section.note && (
                   <p
                     style={{
@@ -279,7 +263,7 @@ export default function ResourcesPage() {
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "repeat(auto-fill, minmax(480px, 1fr))",
+              gridTemplateColumns: "repeat(auto-fill, minmax(min(100%, 480px), 1fr))",
               gap: "2rem",
             }}
           >

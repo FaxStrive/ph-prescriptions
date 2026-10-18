@@ -66,7 +66,7 @@ export const ro1100Config: BreakdownConfig = {
       frameCount: 64,
       label: "Membrane pH-RO 75 GPD",
       description:
-        "Reverse osmosis at a 1:1 waste-to-product ratio - the most efficient on the market.",
+        "Reverse osmosis at a 1:1 waste-to-product ratio, compared with up to 5:1 for other membranes.",
       chips: ["Reverse Osmosis", "75 GPD", "1:1 Ratio", "Cartridge 4"],
     },
     {

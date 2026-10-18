@@ -4,7 +4,7 @@ import { useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
-import { Shield, Award, Droplets, Phone, CheckCircle2, Star, ArrowUpRight, ArrowRight } from "lucide-react";
+import { Shield, Award, Droplets, Phone, CheckCircle2, ArrowUpRight, ArrowRight } from "lucide-react";
 import { BUSINESS, PRODUCTS, DOCTORS, isPurchasable } from "@/lib/business";
 import { productShopUrl } from "@/lib/shopify";
 import { SystemBreakdown } from "@/components/breakdown/SystemBreakdown";
@@ -13,35 +13,34 @@ import ServiceSelector from "@/components/sections/ServiceSelector";
 import DoctorTestimonials from "@/components/sections/DoctorTestimonials";
 
 const STATS = [
-  { value: "40+", label: "Years Experience" },
-  { value: "7+", label: "Doctor Endorsements" },
+  { value: "40+", label: "Years Founder Experience" },
+  { value: "7", label: "Doctors & Health Experts" },
   { value: "2005", label: "Founded" },
   { value: "50", label: "States Served" },
 ];
 
+// Verbatim endorsements from the doctors' quotes on the original phprescription.com
+// homepage. Only real, attributed words go here: no invented customer reviews.
 const TESTIMONIALS = [
   {
-    name: "Sarah M.",
-    location: "Palm City, FL",
-    text: "Our whole-home system changed everything. Water tastes clean, my skin is better, and I finally feel confident about what my family drinks every day.",
+    name: "Dr. Josh Axe, DC, DNM, CNS",
+    text: "Water is the essence of life and high quality water is critical to proper hydration. I have been using pH Prescription Total Home water/drinking system for the past six years. I love it! It's the best investment you can make and I recommend pH Prescription to friends and clients.",
   },
   {
-    name: "Dr. Robert K.",
-    location: "Stuart, FL",
-    text: "I recommend pH Prescription to my patients. The science behind their QuadVortex technology is sound and the results are measurable.",
+    name: "Dr. Debra DeMarta, MD, FACS",
+    text: "We use pH Prescription products to assure the best results for our patients. In our practice of colorectal and rectal surgery, we need the purest water to treat our patients.",
   },
   {
-    name: "James T.",
-    location: "Hobe Sound, FL",
-    text: "Leo and his team are true professionals. 10,000 sq ft warehouse, everything made in the USA, and the lifetime warranty gives real peace of mind.",
+    name: "Dr. Walter Gil, M.D.",
+    text: "Thanks to pH Prescription and dedicated master of water, Leo Szymborski, who has managed to excel at water quality with masterful purification and detoxification systems.",
   },
 ];
 
 const PILLARS = [
-  { icon: Award, title: "Molecular Hydrogen Infused", desc: "H2 infusion - the most studied selective antioxidant in water science - is built into every system." },
+  { icon: Award, title: "Molecular Hydrogen Infused", desc: "Molecular hydrogen is a selective antioxidant with over 3,000 published research papers. Our drinking systems infuse it into your water." },
   { icon: Droplets, title: "Alkaline & Re-Mineralized", desc: "Restores healthy pH balance and adds back essential minerals stripped by conventional filtration." },
-  { icon: Shield, title: "Up to 99% Contaminant Removal", desc: "QuadVortex filtration removes bacteria, heavy metals, chlorine, fluoride, pharmaceuticals and more." },
-  { icon: CheckCircle2, title: "Lifetime Warranty", desc: "Every system carries a lifetime warranty when installed by a licensed plumber." },
+  { icon: Shield, title: "Up to 99% Contaminant Removal", desc: "Our multi-phase drinking and Total Home systems reduce up to 99% of fluoride, lead, mercury, chlorine, bacteria and pharmaceuticals." },
+  { icon: CheckCircle2, title: "5-Year Warranty", desc: "Five-year warranty on residential systems when installed by a licensed plumber, plus a lifetime warranty on parts with the Replenishment Program." },
 ];
 
 function Hero() {
@@ -157,7 +156,7 @@ function Hero() {
                 color: "rgba(255,255,255,0.85)",
               }}
             >
-              30+ Year WQA Member · Lifetime Warranty · 50 States
+              30+ Year WQA Member · 5-Year Warranty · 50 States
             </p>
             <p
               style={{
@@ -169,7 +168,7 @@ function Hero() {
                 color: "rgba(255,255,255,0.55)",
               }}
             >
-              Molecular hydrogen technology · Endorsed by 7+ physicians
+              Molecular hydrogen technology · Endorsed by 7 doctors, dentists and health experts
             </p>
           </div>
           <Link
@@ -366,7 +365,7 @@ function Pillars() {
                 maxWidth: "60ch",
               }}
             >
-              Tap water can carry up to 316 contaminants, and removing them is just step one. Our proprietary QuadVortex technology restores the minerals conventional filtration strips out, then infuses molecular hydrogen - the selective antioxidant behind our research partnership with Dr. Tyler LeBaron of the Molecular Hydrogen Institute, and the science seven physicians put their names behind.
+              75% of US homes have tap water containing contaminants that exceed safe water limits, and removing them is just step one. Our drinking systems add back minerals and infuse molecular hydrogen, the selective antioxidant that Tyler LeBaron, Founder of the Molecular Hydrogen Institute, speaks to.
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem", marginTop: "1.75rem" }}>
               <Link href="/technology" className="btn btn-primary">Explore the Science</Link>
@@ -447,7 +446,7 @@ function Products() {
               Every system, <span className="italic-accent" style={{ color: "var(--color-teal)" }}>properly specified.</span>
             </h2>
             <p style={{ marginTop: "1rem", fontSize: "1rem", lineHeight: 1.7, color: "var(--color-ink-soft)" }}>
-              From compact under-sink drinking systems to whole-home restructured water - 30+ Year WQA Member, Made in USA, backed by lifetime warranty.
+              From compact under-sink drinking systems to whole-home restructured water. 30+ Year WQA Member. Made in USA. 5-Year Warranty.
             </p>
           </div>
           <Link
@@ -680,7 +679,7 @@ function VideoDivider() {
             color: "rgba(255,255,255,0.75)",
           }}
         >
-          30+ Year WQA Member · Made in USA · Lifetime warranty
+          30+ Year WQA Member · Made in USA · 5-Year Warranty
         </p>
       </div>
     </section>
@@ -705,7 +704,7 @@ function Doctors() {
                 color: "var(--color-ink)",
               }}
             >
-              Endorsed by <span className="italic-accent" style={{ color: "var(--color-teal)" }}>leading physicians.</span>
+              Endorsed by <span className="italic-accent" style={{ color: "var(--color-teal)" }}>doctors and health experts.</span>
             </h2>
             <p style={{ marginTop: "1rem", color: "var(--color-ink-soft)", fontSize: "1rem", lineHeight: 1.7 }}>
               Seven doctors, dentists and researchers have put their names behind pH Prescription systems.
@@ -880,7 +879,7 @@ function FounderSection() {
               Leo Szymborski built this company <span className="italic-accent" style={{ color: "var(--color-teal)" }}>to heal himself first.</span>
             </h2>
             <p style={{ marginTop: "1.25rem", fontSize: "1.0625rem", lineHeight: 1.75, color: "var(--color-ink-soft)", maxWidth: "62ch" }}>
-              Over 20 years ago, a life-threatening illness sent Leo searching for how water could help the body heal itself. That search became four decades of water science, a 10,000 sq ft American manufacturing facility, systems endorsed by leading physicians, and a #1 Amazon best-selling book on water and health.
+              Over 20 years ago, a life-threatening illness sent Leo searching for how water could help the body heal itself. That search became four decades of water science, a 10,000 sq ft American manufacturing facility, systems endorsed by doctors and health experts, and a #1 best-selling book on water and health.
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem", marginTop: "1.75rem" }}>
               <Link href="/about/leo" className="btn btn-primary">Read Leo&apos;s Story</Link>
@@ -938,7 +937,7 @@ function InstallMarquee() {
           Installed across <span className="italic-accent" style={{ color: "var(--color-teal)" }}>all fifty states.</span>
         </h2>
         <p style={{ marginTop: "0.875rem", color: "var(--color-ink-soft)", fontSize: "1rem", lineHeight: 1.7, maxWidth: "52ch", marginLeft: "auto", marginRight: "auto" }}>
-          Real systems, real kitchens, real families. Every install backed by our warranty program.
+          Real systems, real kitchens, real families.
         </p>
       </div>
       <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
@@ -980,7 +979,7 @@ function Testimonials() {
     <section style={{ background: "var(--color-surface)", padding: "clamp(4rem, 8vw, 7rem) 0" }}>
       <div className="max-content">
         <div style={{ textAlign: "center", marginBottom: "3.5rem" }}>
-          <span className="eyebrow" style={{ color: "var(--color-navy)" }}>What Customers Say</span>
+          <span className="eyebrow" style={{ color: "var(--color-navy)" }}>Endorsements</span>
           <h2
             style={{
               marginTop: "1rem",
@@ -992,7 +991,7 @@ function Testimonials() {
               color: "var(--color-ink)",
             }}
           >
-            Five stars. <span className="italic-accent" style={{ color: "var(--color-teal)" }}>Every install.</span>
+            Doctors on the record. <span className="italic-accent" style={{ color: "var(--color-teal)" }}>In their words.</span>
           </h2>
         </div>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.5rem" }}>
@@ -1009,11 +1008,6 @@ function Testimonials() {
                 gap: "1.25rem",
               }}
             >
-              <div style={{ display: "flex", gap: "0.25rem" }}>
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <Star key={i} size={14} style={{ color: "#F5B841", fill: "#F5B841" }} />
-                ))}
-              </div>
               <p
                 style={{
                   fontFamily: "var(--font-display)",
@@ -1038,9 +1032,6 @@ function Testimonials() {
                 >
                   {t.name}
                 </cite>
-                <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.65rem", letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--color-ink-mute)" }}>
-                  {t.location}
-                </span>
               </footer>
             </blockquote>
           ))}

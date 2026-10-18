@@ -9,7 +9,7 @@ import PhotoCardGrid from "@/components/ui/PhotoCardGrid";
 export const metadata: Metadata = {
   title: "Restaurant & Hospitality Water Solutions | pH Prescription",
   description:
-    "First-class water systems for restaurants, resorts, banquet facilities, spas, wellness centers, and offices. BluPura Italian design with pH Prescription&apos;s proprietary filtration. From 5 to 300 people. Lease and finance available.",
+    "First-class water systems for restaurants, resorts, banquet facilities, spas, wellness centers, and offices. BluPura Italian design with pH Prescription's proprietary filtration. From 5 to 300 people. Lease and finance available.",
 };
 
 const COUNTERTOP_MODELS = [
@@ -787,7 +787,7 @@ export default function RestaurantHospitalityPage() {
                   fontSize: "0.9375rem",
                 }}
               >
-                Eliminate the cost, waste, and storage demands of single-use plastic bottles. Our systems supply still, sparkling, and molecular hydrogen water on demand, from a permanent fixture that pays for itself in operational savings.
+                Eliminate the cost, waste, and storage demands of single-use plastic bottles. Our systems supply still, sparkling, and molecular hydrogen water on demand.
               </p>
             </div>
             <div>
@@ -855,7 +855,7 @@ export default function RestaurantHospitalityPage() {
                   fontSize: "0.9375rem",
                 }}
               >
-                Professional water service without upfront capital commitment. Lease and finance arrangements are available for all systems. Ask about terms when you schedule your complimentary consultation.
+                Lease and finance options are available for these hospitality models. Ask about terms when you schedule your complimentary consultation.
               </p>
             </div>
           </div>

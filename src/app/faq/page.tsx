@@ -124,7 +124,7 @@ const FAQS = [
   },
   {
     q: "Why are point-of-use finely filtered water systems by pH Prescription better than bottled water?",
-    a: "Using a pH Prescription system helps the environment by removing massive amounts of plastic waste. Consider: the US consumes about 30 billion bottles of water per year; making those bottles requires about 17 million barrels of oil; less than 20% of plastic bottles are recycled; plastic bottles take hundreds of years to degrade. Each bottle also requires additional energy to fill, pack, transport, chill, and dispose of. A pH Prescription system at home eliminates all of this while providing superior water quality at a fraction of the long-term cost.",
+    a: "Using a pH Prescription system helps the environment by removing massive amounts of plastic waste. Consider: the US consumes about 30 billion bottles of water per year; making those bottles requires about 17 million barrels of oil; less than 20% of plastic bottles are recycled; plastic bottles take hundreds of years to degrade. Each bottle also requires additional energy to fill, pack, transport, chill, and dispose of. A pH Prescription system at home eliminates all of this while being more cost effective and convenient than other filters or bottled water.",
   },
   {
     q: "Do you have an entry level water filtration system?",

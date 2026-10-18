@@ -6,7 +6,7 @@ import { BUSINESS } from "@/lib/business";
 export const metadata: Metadata = {
   title: "Doctors and Researchers Who Recommend Our Water Systems",
   description:
-    "Eight physicians, dentists, and researchers who use and endorse pH Prescription water filtration systems in their homes, offices, and clinical practices.",
+    "Eight doctors, dentists and health experts who use and recommend pH Prescription water.",
 };
 
 interface Doctor {
@@ -24,10 +24,10 @@ const DOCTORS: Doctor[] = [
   {
     name: "Dr. Mark A. Breiner",
     credentials: "DDS, Author of Whole Body Dentistry",
-    specialty: "Holistic Dentistry",
+    specialty: "Dentistry",
     photo: "/doctors/dr-breiner.jpg",
     photoAlt: "Dr. Mark A. Breiner, DDS",
-    bio: "Dr. Mark A. Breiner is a holistic dentist and author of Whole Body Dentistry, a foundational text in biological and integrative dental medicine. He practices in Trumbull, Connecticut, and has devoted decades to understanding the connection between oral health and total-body wellness. Dr. Breiner was among the first practitioners to formally describe the three requirements for healthy drinking water: free of contaminants, alkaline, and micro-clustered.",
+    bio: "Dr. Mark A. Breiner, DDS, is the author of Whole Body Dentistry.",
     quote:
       "It took Leo a few frustrating years to develop this unit, and I congratulate him. His sink-top unit is superior to an ionizer because it alkalizes the water in a more natural way, using minerals. It also removes 90 to 92% of the fluoride. It does all this for hundreds of dollars, not thousands.",
   },
@@ -44,7 +44,7 @@ const DOCTORS: Doctor[] = [
   {
     name: "Dr. Jerry Tennant",
     credentials: "MD, MD(H), MD(P), Author of Healing is Voltage",
-    specialty: "Integrative Medicine",
+    specialty: "Medicine",
     photo: "/doctors/dr-tennant.jpg",
     photoAlt: "Dr. Jerry Tennant, MD",
     bio: "Dr. Jerry Tennant was accepted into the University of Texas Southwestern Medical School in 1960 at age 19 and graduated in the top ten of his class. He co-founded the outpatient Ophthalmic Surgery Society and was one of the first surgeons in the US to place intraocular lenses after cataract surgery. He later received a Degree of Doctor of Natural Medicine from the World Organization of Natural Medical Practitioners. He is the author of Healing is Voltage, which establishes the connection between cellular voltage, pH, and chronic disease.",
@@ -57,14 +57,14 @@ const DOCTORS: Doctor[] = [
     specialty: "Dentistry",
     photo: "/doctors/steve-evans.jpg",
     photoAlt: "Steve Evans, DDS",
-    bio: "Steve Evans is a dental practitioner who has worked alongside Leo Szymborski and pH Prescription for a number of years. He has integrated pH Prescription water into every aspect of his practice, from patient hydration and irrigation to office functions, and uses it throughout his home. He has linked to pH Prescription from his practice website to inform his patients about the benefits of structured alkaline water.",
+    bio: "Steve Evans is a dental practitioner who has known Leo Szymborski and pH Prescription for a number of years. He has integrated pH Prescription water into every aspect of his practice, from patient hydration and irrigation to office functions, and uses it throughout his home. He has linked to pH Prescription from his practice website to inform his patients about the benefits of structured alkaline water.",
     quote:
       "We only use water produced through pH products in our practice and home. Starting with a water cooler in our office, we give water to patients before and after treatments. We only use pH Prescription water for all office functions, including irrigation. The scientific validation provided to us has been outstanding, as well as the integrity of Leo and products produced by pH Prescription.",
   },
   {
     name: "Dr. Nathan Bryan",
     credentials: "PhD, Molecular Medicine Researcher",
-    specialty: "Molecular Hydrogen and Nitric Oxide Research",
+    specialty: "Nitric Oxide Research",
     photo: "/doctors/dr-bryan.jpg",
     photoAlt: "Dr. Nathan Bryan, PhD",
     bio: "Dr. Nathan Bryan earned his undergraduate degree in Biochemistry from the University of Texas at Austin and his doctoral degree from Louisiana State University School of Medicine, where he received the Dean's Award for Excellence in Research. He was recruited to the University of Texas Health Science Center at Houston by Ferid Murad, the 1998 Nobel Laureate in Medicine and Physiology. Dr. Bryan holds more than a dozen US and international patents in the nitric oxide field and is the founder of HumanN. He began working directly with pH Prescription and Aquapellis in 2018.",
@@ -74,10 +74,10 @@ const DOCTORS: Doctor[] = [
   {
     name: "Dr. Josh Axe",
     credentials: "DC, DNM, CNS",
-    specialty: "Clinical Nutrition and Natural Medicine",
+    specialty: "Natural Medicine",
     photo: "/doctors/dr-axe.jpg",
     photoAlt: "Dr. Josh Axe, DC, DNM, CNS",
-    bio: "Dr. Josh Axe is a doctor of chiropractic, doctor of natural medicine, and certified clinical nutritionist. He is a widely recognized authority in functional nutrition, natural medicine, and the relationship between water quality and human performance. He has published extensively on the science of hydrogenated water and its role in reducing oxidative stress and supporting athletic recovery.",
+    bio: "Dr. Josh Axe, DC, DNM, CNS, uses a pH Prescription Total Home water and drinking system and recommends pH Prescription to friends and clients.",
     quote:
       "With water being the essence of all life, it's important to ensure we consume the best quality of water to provide proper hydration. Hydrogenated water can enhance the absorption of hydrogen in the body, which is thought to enhance energy levels, decrease inflammation and support muscle recovery. Studies have found that it could reduce oxidative stress, promote heart health, improve mood and enhance physical performance. I use pH Prescription for my healthy water.",
   },
@@ -87,7 +87,7 @@ const DOCTORS: Doctor[] = [
     specialty: "Clinical Medicine and Health Rejuvenation",
     photo: "/doctors/dr-gil.jpg",
     photoAlt: "Dr. Walter Gil, M.D.",
-    bio: "Dr. Walter Gil is a board-certified MD with 35 years of experience in clinical medicine, with a focused interest in health and rejuvenation. He has evaluated pH Prescription water systems within the context of integrative patient care and has incorporated them as a core recommendation for patients where water contaminants are identified as a contributing health factor.",
+    bio: "Dr. Walter Gil is a board-certified MD with 35 years of experience in clinical medicine and an interest in health and rejuvenation.",
     quote:
       "Leo Szymborski has managed to excel at water quality with masterful purification and detoxification systems. He has applied water to health and rejuvenation, making a natural product best for hydration, medical and nutritional purpose, while allowing the natural ingredients to remain. Those cases in which contaminants are shown to be a contributing factor, pH Prescription is the ONLY choice.",
   },
@@ -157,14 +157,7 @@ export default function ExpertsPage() {
               marginBottom: "1rem",
             }}
           >
-            pH Prescription is endorsed by physicians, surgeons, dentists, and research
-            scientists who have independently evaluated our systems and use them in their homes,
-            offices, and clinical practices.
-          </p>
-          <p style={{ fontSize: "0.9375rem", color: "var(--color-ink-mute)", lineHeight: 1.7 }}>
-            These are not paid spokespeople. They are practitioners who found our water and
-            reached out to tell us, or researchers who evaluated the science and chose to align
-            with it.
+            Doctors, dentists and health experts who use and recommend pH Prescription water.
           </p>
         </div>
       </section>

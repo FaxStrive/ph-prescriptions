@@ -28,9 +28,9 @@ export const metadata: Metadata = {
     template: `%s | ${BUSINESS.name}`,
   },
   description:
-    "Water filtration, alkaline, and hydrogen-infused systems for residential and commercial use, from a founder who has been a WQA member for 30+ years. Founded 2005, Palm City FL. Serving all 50 states. #1 Doctor Recommended.",
+    "Water filtration, alkaline, and hydrogen-infused systems for residential and commercial use. 30+ Year WQA Member. Founded 2005, Palm City FL. Serving all 50 states. #1 Doctor Recommended Drinking System.",
   keywords:
-    "water filtration Palm City FL, alkaline water system, hydrogen water, QuadVortex water filter, whole home water treatment Florida, reverse osmosis drinking system",
+    "water filtration Palm City FL, alkaline water system, hydrogen water, WMS QuadVortex water restructuring, whole home water treatment Florida, reverse osmosis drinking system",
   metadataBase: new URL("https://phprescription.com"),
   alternates: { canonical: "/" },
   openGraph: {

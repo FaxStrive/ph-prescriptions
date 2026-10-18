@@ -47,15 +47,15 @@ export default function TermsPage() {
           },
           {
             heading: "4. Installation",
-            body: `Many pH Prescription systems require installation by a licensed plumber. Our lifetime warranty applies only when the system is installed by a licensed plumber. We maintain a network of licensed installers in all 50 states. We are not responsible for damage caused by improper installation performed by unlicensed individuals.`,
+            body: `pH Prescription recommends that you use a licensed plumber for installation of our equipment. If you do not use a licensed plumber, your warranty is null and void and we are not responsible for any issues related to our product. If you need a licensed plumber, contact us with your location and the equipment purchased, and we will recommend one.`,
           },
           {
             heading: "5. Warranty",
-            body: `Our systems come with a lifetime warranty on manufacturing defects when installed by a licensed plumber. The warranty does not cover damage from misuse, modification, failure to perform required maintenance, or installation by an unlicensed person. Full warranty terms are available at phprescription.com/warranty.`,
+            body: `pH Prescription offers a five-year warranty on residential systems when installed by a licensed plumber, and will replace defective product subject to the conditions on our warranty page. The warranty applies to residential installations only, to the original purchaser only, and to systems supplied for installation into domestic premises in the United States only. We also offer a lifetime warranty on parts with the Replenishment Program. Full warranty terms are available at phprescription.com/warranty.`,
           },
           {
             heading: "6. Returns and Refunds",
-            body: `Returns are accepted within 30 days of delivery for uninstalled systems in original condition. Installed systems may not be returned. Contact us at ${BUSINESS.email} or ${BUSINESS.phone} to initiate a return. Return shipping is the customer's responsibility unless the return is due to our error.`,
+            body: `The item must be in its original unused condition to be returned, unless there is a manufacturer defect. You must notify us and return the item within 30 days of your purchase. Email ${BUSINESS.email} to request a refund. Your package must include a signed letter stating the reason for your return and the original receipt. Items that are opened cannot be returned. Merchandise that has been used or altered will not be accepted for return or exchange. Return shipping costs are the responsibility of the sender. Returned items must have a return authorization label and will be evaluated and tested, and a refund granted according to the assessment.`,
           },
           {
             heading: "7. Limitation of Liability",
@@ -71,7 +71,7 @@ export default function TermsPage() {
           },
           {
             heading: "10. Governing Law",
-            body: `These terms are governed by the laws of the State of Florida without regard to its conflict of law provisions. Any dispute arising from these terms shall be resolved in the courts of Martin County, Florida.`,
+            body: `These terms are governed by the laws of the State of Florida without regard to its conflict of law provisions. Any action seeking legal or equitable relief arising out of or relating to this website shall be brought only in the courts of the State of Florida or the United States Southern District of Florida.`,
           },
           {
             heading: "11. Contact",

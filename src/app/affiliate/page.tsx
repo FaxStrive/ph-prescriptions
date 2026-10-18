@@ -4,7 +4,7 @@ import { BUSINESS } from "@/lib/business";
 
 export const metadata: Metadata = {
   title: "Affiliate & Partner Program | pH Prescription",
-  description: "Partner with pH Prescription as an affiliate, referral partner, or distributor. Ideal for health practitioners, plumbers, naturopaths, dentists, and wellness centers.",
+  description: "Partner with pH Prescription as an affiliate. Ideal for health practitioners, plumbers, naturopaths, dentists, and wellness centers.",
 };
 
 export default function AffiliatePage() {
@@ -84,10 +84,10 @@ export default function AffiliatePage() {
                 How the Program Works
               </h2>
               <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.8, marginBottom: "1rem" }}>
-                The pH Prescription affiliate program is commission-based. When you refer a client who purchases a system, you earn a referral commission. There is no inventory to hold, no order fulfillment responsibility, and no minimum sales volume required to stay active.
+                The pH Prescription affiliate program is commission-based. When you refer a client who purchases a system, you earn a referral commission. There is no inventory to hold and no order fulfillment responsibility. Affiliate accounts showing no activity or sales in 90 days are deactivated.
               </p>
               <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.8, marginBottom: "1rem" }}>
-                All orders, consultations, and installations are handled by pH Prescription. Your role is the introduction. Our team takes the conversation from there.
+                pH Prescription handles the questions, the calls, and the shipping. Your role is the introduction. Our team takes the conversation from there.
               </p>
               <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.8 }}>
                 Commission structure and tracking details are discussed during the application conversation. Contact us to start that discussion.
@@ -207,23 +207,23 @@ export default function AffiliatePage() {
             {[
               {
                 title: "Commission on Referrals",
-                body: "Earn a commission on every client you refer who purchases a system. No caps on the number of referrals you can submit.",
+                body: "Earn a commission on every client you refer who purchases a system.",
               },
               {
                 title: "No Inventory Required",
-                body: "You refer. We handle everything else: consultation, order, installation coordination, and after-sale support.",
+                body: "You refer. pH Prescription handles the questions, the calls, and the shipping.",
               },
               {
                 title: "Marketing Support",
                 body: "Access to product information, educational materials, and support from the pH Prescription team to help you explain the systems to your clients.",
               },
               {
-                title: "30+ Years of WQA Membership Behind Every Product",
-                body: "You are referring clients to USA-made products backed by a lifetime warranty and our founder's 30+ years as a Water Quality Association member. Your reputation stays protected.",
+                title: "30+ Year WQA Member",
+                body: "Family owned and operated, founded in 2005 and headquartered in Palm City, Florida.",
               },
               {
-                title: "Doctor-Endorsed Science",
-                body: "7+ independent medical professionals endorse our systems. That gives you credible third-party validation when recommending to health-conscious clients.",
+                title: "Doctor Endorsements",
+                body: "Endorsed by 7 doctors, dentists and health experts.",
               },
               {
                 title: "Dedicated Partner Contact",
@@ -268,7 +268,7 @@ export default function AffiliatePage() {
             Apply to the Program
           </h2>
           <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.75, marginBottom: "2rem" }}>
-            Send us a brief introduction: who you are, your practice or business, and why you think pH Prescription is a fit for your clients. We review every application personally.
+            Send us a brief introduction: who you are, your practice or business, and why you think pH Prescription is a fit for your clients.
           </p>
           <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
             <a href={`mailto:${BUSINESS.email}?subject=Affiliate Program Application`} className="btn btn-primary">
@@ -279,7 +279,7 @@ export default function AffiliatePage() {
             </a>
           </div>
           <p style={{ color: "var(--color-ink-mute)", fontSize: "0.8125rem", marginTop: "1.5rem" }}>
-            We respond to all applications within 2 business days.
+            Affiliate submissions are reviewed on Fridays. Expect an email response within 7-10 business days.
           </p>
         </div>
       </section>

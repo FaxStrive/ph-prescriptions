@@ -54,9 +54,9 @@ const NAV: NavItem[] = [
       eyebrow: "Specialty Applications",
       headline: "Precision water for every environment.",
       items: [
-        { label: "Pool & Spa", href: "/pool", description: "Chlorine-free pool water" },
+        { label: "Pool & Spa", href: "/pool", description: "Pool water without harsh chemicals" },
         { label: "Marine & RV", href: "/marine", description: "Boats, yachts & travel" },
-        { label: "Medical", href: "/solutions/medical", description: "Dialysis, dental & sterile prep" },
+        { label: "Medical", href: "/solutions/medical", description: "Used in medical applications, including kidney dialysis" },
         { label: "Restaurant & Hospitality", href: "/solutions/restaurant-hospitality", description: "Restaurants, resorts & spas" },
       ],
     },
@@ -70,7 +70,7 @@ const NAV: NavItem[] = [
       items: [
         { label: "Our Story", href: "/about", description: "Founded 2005 · Palm City FL" },
         { label: "About Leo", href: "/about/leo", description: "Founder Leo Szymborski" },
-        { label: "Doctor Endorsements", href: "/experts", description: "7+ physicians on record" },
+        { label: "Doctor Endorsements", href: "/experts", description: "7 doctors, dentists & health experts" },
         { label: "Community Care", href: "/about/community", description: "How we give back" },
         { label: "Affiliate Program", href: "/affiliate", description: "Refer clients. Earn commissions." },
       ],
@@ -170,7 +170,7 @@ export default function Header() {
               <span
                 style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem", opacity: 0.85 }}
               >
-                <Clock size={12} /> Mon-Fri 8am-5pm ET
+                <Clock size={12} /> Mon-Fri 9am-5pm ET
               </span>
             </div>
             <div style={{ display: "flex", alignItems: "center", gap: "1.75rem" }}>
