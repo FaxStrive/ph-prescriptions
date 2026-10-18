@@ -9,7 +9,7 @@ import PhotoCardGrid from "@/components/ui/PhotoCardGrid";
 export const metadata: Metadata = {
   title: "Commercial Water Coolers | pH Prescription",
   description:
-    "Alkaline, hydrogen-infused commercial water coolers with paddle-touch dispensing. Hot/cold. Made in USA. From $2,613.60. Lifetime warranty with licensed installation.",
+    "Commercial hot/cold water coolers with minimal-touch paddle dispensing and four filtration options. USA final assembly and quality control. From $2,613.60.",
 };
 
 const COOLER = PRODUCTS.find((p) => p.slug === "business-water-cooler")!;
@@ -17,19 +17,15 @@ const COOLER = PRODUCTS.find((p) => p.slug === "business-water-cooler")!;
 const FEATURES = [
   {
     title: "Paddle-Touch Dispensing",
-    body: "Hands-free hygienic dispensing - tap with a cup, bottle, or the back of your hand. Ideal for high-traffic environments.",
+    body: "A minimal-touch paddle delivery system that is sanitary, with no plastic bottles. The paddle press supports most sports bottles as well as coffee pots.",
   },
   {
     title: "Hot & Cold",
-    body: "Instant hot water for teas, soups, and hot beverages. Chilled filtered water always ready. No plumbing rerouting required for most installations.",
+    body: "Dispenses hot and cold water consistently, with a hot water safety lock.",
   },
   {
-    title: "Inline Filtration",
-    body: "Removes chlorine, sediment, VOCs, and other contaminants right at the point of dispense. Your team drinks the same quality as our residential clients.",
-  },
-  {
-    title: "QuadVortex Technology",
-    body: "Water passes through our proprietary QuadVortex module - alkalized, remineralized, and hydrogen-infused before it reaches the spout.",
+    title: "Four Filtration Options",
+    body: "Choose 3-phase filtration, reverse osmosis, 3-phase plus alkaline, or reverse osmosis plus alkaline.",
   },
 ];
 
@@ -40,7 +36,7 @@ export default function CoolersPage() {
         eyebrow="Business / Water Coolers"
         title="Commercial"
         titleAccent="Water Coolers"
-        subhead="Replace your water cooler rental with a 30+ Year WQA Member system that delivers alkaline, remineralized, hydrogen-infused water - hot or cold - from a hygienic paddle-touch dispenser. Made in USA. Lifetime warranty."
+        subhead="A hot and cold commercial water cooler from a 30+ Year WQA Member, with a minimal-touch paddle dispenser and your choice of four filtration systems. USA final assembly and quality control."
         image="/images/hero/php-new-hero.jpg"
         imageAlt="Fresh water streaming from a modern black dispenser spout into the light"
         ctas={[
@@ -234,35 +230,24 @@ export default function CoolersPage() {
                   marginBottom: "2rem",
                 }}
               >
-                vs. Standard Water Cooler Rentals
+                Cooler Options
               </h2>
               <div
                 style={{
                   display: "grid",
-                  gridTemplateColumns: "1fr 1fr",
+                  gridTemplateColumns: "1fr",
                   gap: "1.5rem",
                 }}
               >
                 {[
                   {
-                    label: "Standard Rental",
-                    items: [
-                      "Monthly rental fee forever",
-                      "Basic filtration only",
-                      "No hydrogen or remineralization",
-                      "Standard tap or lever",
-                      "No warranty on water quality",
-                    ],
-                    accent: "var(--color-ink-mute)",
-                  },
-                  {
                     label: "pH Prescription Cooler",
                     items: [
-                      "One-time purchase, owned outright",
-                      "QuadVortex inline filtration",
-                      "Alkaline + H2 infusion included",
-                      "Hygienic paddle-touch dispenser",
-                      "Lifetime warranty",
+                      "Four filtration systems to choose from",
+                      "Minimal-touch paddle dispenser",
+                      "Hot and cold water",
+                      "Available in black or white",
+                      "Leasing options by the month available",
                     ],
                     accent: "var(--color-teal)",
                   },
@@ -304,14 +289,14 @@ export default function CoolersPage() {
                 {
                   image: "/images/lifestyle2/svc-service-filtration-glass.jpg",
                   imageAlt: "Glass of purified water in front of a row of filtration cartridges",
-                  title: "Filtered Inline",
-                  body: "Every pour passes through QuadVortex filtration - no jugs to swap, no bottles to store.",
+                  title: "Filtered Water",
+                  body: "Available with four filtration systems, with no plastic bottles to swap or store.",
                 },
                 {
                   image: "/images/lifestyle2/svc-service-plumber-portrait.jpg",
                   imageAlt: "Smiling technician in coveralls holding a pipe wrench",
-                  title: "Installed & Serviced",
-                  body: "Licensed installation and ongoing filter service in all 50 states, backed by the lifetime warranty.",
+                  title: "Licensed Installation",
+                  body: "pH Prescription recommends a licensed plumber for installation.",
                 },
               ]}
             />
@@ -348,10 +333,10 @@ export default function CoolersPage() {
                   marginBottom: "1rem",
                 }}
               >
-                Replace Your Rental. Own Your Water.
+                Request Your Cooler Quote
               </h2>
               <p style={{ color: "rgba(27,58,107,0.7)", marginBottom: "1.5rem", lineHeight: 1.7 }}>
-                One call, free consultation, lifetime warranty. Serving all 50 states.
+                One call, free consultation. Serving all 50 states. Leasing options by the month available.
               </p>
               <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
                 <Link href="/consultation" className="btn btn-primary">

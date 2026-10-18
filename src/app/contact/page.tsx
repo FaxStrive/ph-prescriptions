@@ -6,7 +6,7 @@ import ImageBand from "@/components/ui/ImageBand";
 
 export const metadata: Metadata = {
   title: "Contact Us | pH Prescription Palm City FL",
-  description: "Contact pH Prescription by phone, email, or visit our 10,000 sq ft facility in Palm City, FL. Available for residential and commercial water system consultations.",
+  description: "Contact pH Prescription by phone or email from Palm City, FL. Available for residential and commercial water system consultations.",
 };
 
 export default function ContactPage() {
@@ -35,7 +35,7 @@ export default function ContactPage() {
         eyebrow="Get in Touch"
         title="Contact"
         titleAccent="pH Prescription"
-        subhead="Ready to find the right water system for your home or business? Reach out by phone, email, or visit our facility in Palm City, Florida."
+        subhead="Ready to find the right water system for your home or business? Reach out by phone or email."
         image="/images/lifestyle/family-drinking-kitchen.jpeg"
         imageAlt="Family enjoying glasses of filtered water together in their kitchen"
         minHeight="54vh"
@@ -43,7 +43,7 @@ export default function ContactPage() {
 
       <section style={{ background: "var(--color-cream)" }}>
         <div className="container">
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "4rem", alignItems: "start" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 320px), 1fr))", gap: "clamp(2.5rem, 6vw, 4rem)", alignItems: "start" }}>
             {/* Contact info */}
             <div>
               <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.5rem,3vw,2rem)", color: "var(--color-navy)", marginBottom: "2rem" }}>
@@ -93,9 +93,7 @@ export default function ContactPage() {
                   <div>
                     <div style={{ fontWeight: 600, color: "var(--color-navy)", marginBottom: "0.375rem" }}>Hours</div>
                     <div style={{ color: "var(--color-ink-soft)", lineHeight: 1.7, fontSize: "0.9375rem" }}>
-                      Monday - Friday: 9:00 AM - 5:00 PM ET<br />
-                      Saturday: By appointment<br />
-                      Emergency line available 24/7
+                      Monday - Friday: 9:00 AM - 5:00 PM ET
                     </div>
                   </div>
                 </div>

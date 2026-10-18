@@ -5,7 +5,7 @@ import PageHero from "@/components/ui/PageHero";
 import ImageBand from "@/components/ui/ImageBand";
 import PhotoCardGrid from "@/components/ui/PhotoCardGrid";
 
-export const metadata: Metadata = { title: "Shower & Tub Water Systems | pH Prescription", description: "Aquapellis molecular hydrogen shower systems for residential use. Transdermal H2 therapy from every shower. Contact for pricing." };
+export const metadata: Metadata = { title: "Shower & Tub Water Systems | pH Prescription", description: "Aquapellis molecular hydrogen shower systems for residential use. Molecular hydrogen infused transdermally with every shower. Contact for pricing." };
 
 export default function ShowersPage() {
   return (
@@ -14,7 +14,7 @@ export default function ShowersPage() {
         eyebrow="Residential"
         title="Showers"
         titleAccent="& Tubs"
-        subhead="The Aquapellis shower system delivers molecular hydrogen transdermally with every shower. Every shower becomes a therapeutic H2 treatment session. No electricity, compatible with existing plumbing."
+        subhead="The Aquapellis shower system infuses molecular hydrogen transdermally with every shower."
         image="/images/hero/shower-bath-hero.jpg"
         imageAlt="Woman rinsing under a shower with her arm raised, eyes closed"
         ctas={[
@@ -30,8 +30,8 @@ export default function ShowersPage() {
               <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.5rem,3vw,2rem)", color: "var(--color-navy)", marginBottom: "1.25rem", letterSpacing: "-0.02em" }}>
                 Beyond a Shower Filter
               </h2>
-              <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.8, marginBottom: "1.5rem" }}>Standard shower filters remove chlorine. Aquapellis goes further - infusing your shower water with therapeutic molecular hydrogen (H2) that penetrates skin cells directly. Athletes, health-conscious families, and those dealing with skin conditions report measurable improvements in skin hydration, recovery, and overall wellbeing.</p>
-              <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.8, marginBottom: "2rem" }}>The residential Aquapellis system is customized for your home&apos;s plumbing configuration. Contact our Aquapellis team at info@aquapellis.com or 888-728-2783 for a custom quote.</p>
+              <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.8, marginBottom: "1.5rem" }}>Standard shower filters remove chlorine. Aquapellis goes further, using proprietary technology that infuses water with the highest concentration of hydrogen molecules for optimum body performance.</p>
+              <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.8, marginBottom: "2rem" }}>The Aquapellis shower system is customized and priced by consultation. Contact our Aquapellis team at info@aquapellis.com or 888-728-2783 for a custom quote.</p>
               <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
                 <Link href="/aquapellis" className="btn btn-primary">Learn About Aquapellis</Link>
                 <a href="mailto:info@aquapellis.com" className="btn btn-outline">Contact Aquapellis Team</a>
@@ -63,21 +63,21 @@ export default function ShowersPage() {
                 imageAlt: "Laboratory pipette releasing a drop of water into a glass vessel",
                 eyebrow: "The Science",
                 title: "Transdermal H2 Delivery",
-                body: "Molecular hydrogen is small enough to cross the skin barrier - so a shower becomes a whole-body H2 session.",
+                body: "Aquapellis technology infuses molecular hydrogen transdermally, to promote the finest inter-cellular hydration.",
               },
               {
                 image: "/images/lifestyle2/svc-service-tech-friendly.jpg",
                 imageAlt: "Technician shaking hands with a homeowner in her kitchen, toolbox on the counter",
                 eyebrow: "The Spec",
                 title: "Customized to Your Plumbing",
-                body: "Every residential Aquapellis is configured for your home's plumbing - no electricity required, no remodel needed.",
+                body: "Aquapellis is a customized shower system for residential, commercial, and hospitality use, priced by consultation.",
               },
               {
                 image: "/images/lifestyle2/svc-service-tech-door.jpg",
                 imageAlt: "Service technician arriving at a front door carrying a toolbox and folder",
                 eyebrow: "The Install",
-                title: "Handled Door to Drain",
-                body: "The Aquapellis team scopes, quotes, and coordinates professional installation with your existing shower or tub.",
+                title: "Start With a Consultation",
+                body: "Contact the Aquapellis team for a complimentary consultation at info@aquapellis.com or 888-728-2783.",
               },
             ]}
           />

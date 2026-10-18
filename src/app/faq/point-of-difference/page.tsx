@@ -4,7 +4,7 @@ import { BUSINESS, DOCTORS } from "@/lib/business";
 
 export const metadata: Metadata = {
   title: "Why pH Prescription? | Point of Difference",
-  description: "What separates pH Prescription from ordinary water filtration companies. QuadVortex technology, lifetime warranty, 30+ year WQA member, Made in USA, 7+ doctor endorsements, and 40+ years of experience.",
+  description: "What sets pH Prescription apart: a complete approach to filtration, built around health, rebuilt rather than just stripped, with proprietary filtration media that comes from over 40 years of real-world experience in the Northeast.",
 };
 
 export default function PointOfDifferencePage() {
@@ -47,7 +47,7 @@ export default function PointOfDifferencePage() {
               maxWidth: "600px",
             }}
           >
-            There are hundreds of water filtration companies. Here is what separates pH Prescription from every other option on the market, and why the doctors and practitioners who endorse us stand behind that distinction.
+            Anyone can filter water. Very few know how to fix it.
           </p>
         </div>
       </section>
@@ -57,32 +57,32 @@ export default function PointOfDifferencePage() {
           <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
             {[
               {
-                heading: "QuadVortex Technology - Proprietary, Not Off-the-Shelf",
-                body: "Standard water filters only remove contaminants. Every major competitor stops there. pH Prescription systems do four things: filter up to 99% of contaminants, restructure water molecules at the vortex stage, restore alkaline pH through mineral re-introduction, and infuse therapeutic concentrations of molecular hydrogen. No other consumer-available system does all four. The QuadVortex process is proprietary and is not available under any other brand.",
+                heading: "Beyond Basic Filtration",
+                body: "Most water filtration systems do one job. We take a complete and total approach to water filtration. We not only use the highest quality filtration media in our equipment, but we complete the cycle of filtration by not only reducing contaminants but improving the overall quality, feel, and function of your water throughout the entire home.",
               },
               {
-                heading: "Non-Electric - No Power Required",
-                body: "Our systems require no electricity to operate. That means no operating cost, no EMF concern, no power-outage vulnerability, and simpler installation in almost any location. Most competitors rely on electric pumps, UV lights, or ionizers that fail when the power does.",
+                heading: "Built Around Health",
+                body: "This isn't just plumbing, it's wellness. When it comes to your water filtration, we consider every point of use and its effect on health and longevity: drinking, cooking, bathing, and daily bathing exposure. We take this approach because water impacts far more than what you drink.",
               },
               {
-                heading: "Lifetime Warranty With Licensed Plumber Install",
-                body: "We back every system with a lifetime warranty when installed by a licensed plumber. This is one of the strongest warranty positions in the water treatment industry. Competitors typically offer 1 to 5 year warranties. Ours has no expiration. The lifetime warranty reflects our confidence in the build quality and our commitment to standing behind every client long term.",
+                heading: "Not Just Stripped, It's Rebuilt",
+                body: "Many systems remove some contaminants, but stop there. Our approach focuses on balance. When a harmful element is removed, we replace that with something beneficial. Depending on the system, that may include purification, mineral support, and performance enhancements. The goal: to create 'better water', life enhancing water.",
               },
               {
-                heading: "30+ Year WQA Member, Made in USA",
-                body: "Our founder, Leo Szymborski, has been a member of the Water Quality Association - the trade association that sets the standard for the water treatment industry - for more than 30 years. Our systems are manufactured in the United States, not overseas. Most filter brands sold online are made in China to price-competitive specifications.",
+                heading: "Proprietary Filtration Technology",
+                body: "At the core of our filtration systems is something you won't find anywhere else: our proprietary filtration media. This wasn't developed in theory. It comes from over 40 years of real-world experience cleaning up highly contaminated water systems and toxic wells throughout the Northeast, including New Jersey, Delaware, New York, and Pennsylvania. That experience exposed the limitations of standard filtration and drove the need to create something better. We don't disclose the exact formulation of our proprietary filtration media.",
               },
               {
-                heading: "7+ Doctor Endorsements - Independent, Not Paid",
-                body: "The medical professionals who endorse pH Prescription are independent practitioners who evaluated our systems and concluded the science is sound. They are not paid spokespeople. They use our systems in their own practices and recommend them to patients.",
+                heading: "Whole-Home Thinking",
+                body: "Water affects everything: from your skin to the air you breathe, to your appliances, and even your daily routine. We design systems around total water exposure, not water coming out of just one faucet, creating a more complete, holistic and protective home environment.",
               },
               {
-                heading: "40+ Years of Experience, Family-Owned Since 2005",
-                body: `Leo Szymborski is a third-generation plumber with more than ${BUSINESS.yearsExperience} years in water systems. pH Prescription was founded in ${BUSINESS.founded} as a family business. Every client interacts with people who have been in this industry their whole lives, not a sales team hired to move product.`,
+                heading: "Built From Real Experience",
+                body: "pH Prescription was built in the field not in theory. Decades of hands-on experience, real-world problem solving, and personal commitment shape every system we design. No two water sources are the same, so we don't believe in one-size-fits-all solutions.",
               },
               {
-                heading: "Local, Reachable, Accountable",
-                body: `We are based in Palm City, Florida with a ${BUSINESS.warehouseSqFt} sq ft warehouse and direct-contact support. When you call ${BUSINESS.phone}, you reach someone who knows your system. There is no ticket queue, no overseas support center, no call deflection.`,
+                heading: "Personalized Systems to Meet Your Water Profile",
+                body: "We start with your water, not a product. Your location, water source, and filtration goals all matter. Whether it's issues with chlorine, hardness, VOCs, or full-home treatment, we tailor solutions to fit your exact needs. Because premium water should never be guesswork.",
               },
             ].map((item, i) => (
               <details
@@ -155,7 +155,7 @@ export default function PointOfDifferencePage() {
               fontSize: "1rem",
             }}
           >
-            Independent medical professionals who evaluated and stand behind our systems
+            Doctors, dentists and health experts who use and recommend pH Prescription water
           </p>
           <div
             style={{

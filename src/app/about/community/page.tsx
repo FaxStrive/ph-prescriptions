@@ -26,13 +26,13 @@ export default function CommunityPage() {
         <div className="container">
           <div style={{ maxWidth: "760px", margin: "0 auto" }}>
             <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.85, fontSize: "1.0625rem", marginBottom: "1.5rem" }}>
-              Clean water is a right, not a luxury. That belief drives our business and our community work. Since {BUSINESS.founded}, we have partnered with local organizations, supported families in need, and educated our neighbors about the water they drink every day.
+              As a family owned and operated business in southeast Florida, pH Prescription understands the importance of community and the importance of helping those in need. Our belief is that through partnerships with organizations that share our core values, mission and passion, together we can assist people to live healthier lives through clean water.
             </p>
             <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.85, fontSize: "1.0625rem", marginBottom: "1.5rem" }}>
-              Our community care efforts include educational outreach about water quality, support for local health initiatives, and our Affiliate Program that empowers wellness practitioners, doctors, and community leaders to bring better water to more people.
+              Our Community Care goal is to support like-minded organizations so that together we may have a deeper impact on the quality of life that finely filtered water brings to those who otherwise would not have access. pH Prescription helps Operation 300, a non-profit organization that provides support to Gold Star families and mentorship to children of the fallen, honoring the sacrifice of those who have given their all for our freedom, and promoting patriotism and service in our communities since 2012.
             </p>
             <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.85, fontSize: "1.0625rem", marginBottom: "1.5rem" }}>
-              To learn more about our community programs, partner with us, or bring a water education event to your organization, contact us directly.
+              For more information about Community Care, contact us at {BUSINESS.email}.
             </p>
           </div>
         </div>
@@ -88,7 +88,7 @@ export default function CommunityPage() {
                 imageAlt: "Four pH Prescription team members standing together at the company trade show booth",
                 eyebrow: "The Team",
                 title: "The Crew Behind the Booth",
-                body: "Family and long-time team members staff every event ourselves - the same people who build and support the systems.",
+                body: "The pH Prescription team at the company trade show booth.",
               },
               {
                 image: "/images/lifestyle2/idw-family-water-4.jpg",

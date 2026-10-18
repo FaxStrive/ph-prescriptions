@@ -5,67 +5,20 @@ import { BUSINESS } from "@/lib/business";
 import PageHero from "@/components/ui/PageHero";
 
 export const metadata: Metadata = {
-  title: "Medical-Grade Water Solutions | pH Prescription",
+  title: "Water Systems for Medical Applications | pH Prescription",
   description:
-    "Ultra-pure water systems for dialysis centers, dental practices, medical imaging facilities, and sterile-prep environments. Backed by our founder's 30+ years as a WQA member. Serving medical facilities across all 50 states.",
+    "pH Prescription systems are used in medical applications, including kidney dialysis. 30+ Year WQA Member. Serving all 50 states. Contact us for a complimentary consultation.",
 };
 
 const USE_CASES = [
   {
-    label: "Dialysis Centers",
-    heading: "Dialysis Water Treatment",
+    label: "Medical Applications",
+    heading: "Kidney Dialysis",
     image: "/images/commercial/dwc-st108-critical-water-filtration.jpg",
     imageAlt:
       "Critical water treatment room with control panel, dosing tank, media vessels, and a commercial reverse osmosis skid",
-    body: "Dialysis requires water purity levels far exceeding standard municipal supply. Our systems deliver ultra-low contaminant water with multi-stage filtration that removes heavy metals, chloramines, bacteria, and endotoxins. Consistent purity on every treatment cycle.",
-    specs: [
-      "Multi-stage reverse osmosis with re-mineralization",
-      "KDF-55 heavy metal and chloramine removal",
-      "UV sterilization option for bacterial control",
-      "NSF-rated filtration media throughout",
-    ],
-  },
-  {
-    label: "Dental Practices",
-    heading: "Dental Office Water Systems",
-    image: "/images/lifestyle2/idw-ripple-1.jpg",
-    imageAlt:
-      "Laboratory pipette suspending a single drop of water above a test tube in blue clinical light",
-    body: "Dental unit waterlines require measurable microbial control. Our systems provide purified, re-mineralized water for patient rinsing, handpiece cooling, and procedure prep. Consistently clean water protects your patients and meets CDC waterline quality guidelines.",
-    specs: [
-      "Meets CDC dental waterline quality benchmarks",
-      "Chloramine and heavy metal elimination",
-      "Molecular hydrogen infusion option available",
-      "Under-counter and point-of-use configurations",
-    ],
-  },
-  {
-    label: "Medical Imaging",
-    heading: "Imaging and Lab Water Supply",
-    image: "/images/commercial/dwc-lab-scientist-sample.jpg",
-    imageAlt:
-      "Gloved lab technician dispensing a water sample from a pipette onto a glass slide beside a petri dish",
-    body: "Medical imaging equipment and laboratory processes demand consistent water purity to avoid mineral scale, contamination, and equipment damage. Our systems protect imaging equipment while delivering reliably pure process water.",
-    specs: [
-      "Scale-free mineral reduction for equipment longevity",
-      "Consistent TDS output with monitoring options",
-      "Whole-facility or point-of-use configurations",
-      "Preventive maintenance plans available",
-    ],
-  },
-  {
-    label: "Sterile Prep",
-    heading: "Sterile Preparation Environments",
-    image: "/images/commercial/dwc-process-manufacturing-pure-water.jpg",
-    imageAlt:
-      "Twin fiberglass treatment tanks with copper supply piping and a stainless housing in a facility utility room",
-    body: "Central sterile supply and surgical prep require water free of particulates, bacteria, and chemical contaminants. Our 4-phase QuadVortex filtration system produces water suitable for instrument washing, autoclaving, and clean-room support.",
-    specs: [
-      "4-phase QuadVortex filtration (KDF-55, Catalytic Carbon, Tourmaline, H2)",
-      "Sub-micron particulate removal",
-      "UV enhancement for pathogen control",
-      "Compatible with sterilization and autoclave supply",
-    ],
+    body: "Leo Szymborski designs water systems used globally in homes, businesses, and even medical applications like kidney dialysis.",
+    specs: [] as string[],
   },
 ];
 
@@ -73,9 +26,9 @@ export default function MedicalPage() {
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: "Medical-Grade Water Systems",
+    name: "Water Systems for Medical Applications",
     description:
-      "Ultra-pure water filtration systems designed for dialysis centers, dental practices, medical imaging facilities, and sterile-prep environments.",
+      "Water systems used in medical applications, including kidney dialysis.",
     provider: {
       "@type": "LocalBusiness",
       name: BUSINESS.name,
@@ -114,9 +67,9 @@ export default function MedicalPage() {
       {/* Hero */}
       <PageHero
         eyebrow="Solutions / Medical"
-        title="Medical-Grade Water for"
-        titleAccent="Clinical Environments"
-        subhead="Dialysis centers, dental practices, imaging facilities, and sterile-prep rooms all require water that municipal supply cannot reliably deliver. pH Prescription builds systems to match each clinical application."
+        title="Water Systems for"
+        titleAccent="Medical Applications"
+        subhead="pH Prescription systems are used in medical applications, including kidney dialysis. Contact us for a complimentary consultation."
         image="/images/commercial/dwc-medical-grade-water-filtration.jpg"
         imageAlt="Medical facility water treatment room with media tanks, storage tank, and reverse osmosis cart beside large windows"
         ctas={[
@@ -145,8 +98,7 @@ export default function MedicalPage() {
           >
             {[
               "30+ Year WQA Member",
-              "Made in USA",
-              "40+ Years in Water Systems",
+              "Founder: 40+ Years in Water Treatment",
               "Serving All 50 States",
               "Doctor-Recommended Technology",
             ].map((item) => (
@@ -192,7 +144,7 @@ export default function MedicalPage() {
               textAlign: "center",
             }}
           >
-            Clinical Applications
+            Medical Applications
           </div>
           <h2
             style={{
@@ -204,7 +156,7 @@ export default function MedicalPage() {
               textAlign: "center",
             }}
           >
-            Built for the Demands of Medical Practice
+            Used in Medical Applications
           </h2>
           <p
             style={{
@@ -216,12 +168,12 @@ export default function MedicalPage() {
               margin: "0 auto 3rem",
             }}
           >
-            Each use case has distinct purity requirements. We engineer to the application, not to a general spec.
+            Contact us for a complimentary consultation.
           </p>
 
           <div
-            className="grid grid-cols-1 md:grid-cols-2"
-            style={{ gap: "2rem" }}
+            className="grid grid-cols-1"
+            style={{ gap: "2rem", maxWidth: "560px", margin: "0 auto" }}
           >
             {USE_CASES.map((uc) => (
               <div
@@ -276,42 +228,44 @@ export default function MedicalPage() {
                   >
                     {uc.body}
                   </p>
-                  <ul
-                    style={{
-                      listStyle: "none",
-                      padding: 0,
-                      margin: 0,
-                      display: "flex",
-                      flexDirection: "column",
-                      gap: "0.5rem",
-                    }}
-                  >
-                    {uc.specs.map((spec) => (
-                      <li
-                        key={spec}
-                        style={{
-                          display: "flex",
-                          gap: "0.6rem",
-                          fontSize: "0.875rem",
-                          color: "var(--color-ink-soft)",
-                          lineHeight: 1.5,
-                          alignItems: "flex-start",
-                        }}
-                      >
-                        <span
+                  {uc.specs.length > 0 && (
+                    <ul
+                      style={{
+                        listStyle: "none",
+                        padding: 0,
+                        margin: 0,
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: "0.5rem",
+                      }}
+                    >
+                      {uc.specs.map((spec) => (
+                        <li
+                          key={spec}
                           style={{
-                            color: "var(--color-teal)",
-                            flexShrink: 0,
-                            marginTop: "0.15em",
-                            fontWeight: 700,
+                            display: "flex",
+                            gap: "0.6rem",
+                            fontSize: "0.875rem",
+                            color: "var(--color-ink-soft)",
+                            lineHeight: 1.5,
+                            alignItems: "flex-start",
                           }}
                         >
-                          +
-                        </span>
-                        {spec}
-                      </li>
-                    ))}
-                  </ul>
+                          <span
+                            style={{
+                              color: "var(--color-teal)",
+                              flexShrink: 0,
+                              marginTop: "0.15em",
+                              fontWeight: 700,
+                            }}
+                          >
+                            +
+                          </span>
+                          {spec}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
               </div>
             ))}
@@ -350,7 +304,7 @@ export default function MedicalPage() {
                   letterSpacing: "-0.02em",
                 }}
               >
-                4-Phase QuadVortex Filtration
+                Our Filtration Media
               </h2>
               <p
                 style={{
@@ -359,10 +313,7 @@ export default function MedicalPage() {
                   marginBottom: "1rem",
                 }}
               >
-                Every medical application draws from the same foundation: pH Prescription&apos;s proprietary 4-phase filtration process. KDF-55 handles heavy metals and chloramines. Catalytic and Brimac carbon address VOCs, fluoride, and radioactive isotopes. Tourmaline and garnet gemstones restructure the water at a mineral level. Finally, molecular hydrogen infusion delivers cell-permeable antioxidant benefits.
-              </p>
-              <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.8, marginBottom: "1.5rem" }}>
-                For medical applications, we layer additional stages as the application requires: UV sterilization, sub-micron filtration, and deionization options for the most demanding environments.
+                pH Prescription systems are built on our proprietary filter medias. KDF-55 is proven to reduce chloramines, chlorine, bacteria, and most heavy metals. Catalytic carbon filters out chloramines, PFOS, pesticides, and herbicides. Brimac carbon is NSF 61 approved and removes chlorine, heavy metals, and radioactive isotopes in addition to fluoride.
               </p>
               <div
                 style={{
@@ -372,10 +323,10 @@ export default function MedicalPage() {
                 }}
               >
                 {[
-                  { num: "01", label: "KDF-55", desc: "Heavy metals, chloramines, bacteria" },
-                  { num: "02", label: "Catalytic Carbon", desc: "VOCs, fluoride, isotopes" },
-                  { num: "03", label: "Tourmaline & Garnet", desc: "Mineral restructuring" },
-                  { num: "04", label: "Molecular Hydrogen", desc: "Cellular antioxidant delivery" },
+                  { num: "01", label: "KDF-55", desc: "Chloramines, chlorine, bacteria, most heavy metals" },
+                  { num: "02", label: "Catalytic Carbon", desc: "Chloramines, PFOS, pesticides, herbicides" },
+                  { num: "03", label: "Brimac Carbon", desc: "NSF 61 approved. Chlorine, heavy metals, radioactive isotopes, fluoride" },
+                  { num: "04", label: "Garnet", desc: "Filters down to 10-20 micron particulates" },
                 ].map((phase) => (
                   <div
                     key={phase.num}
@@ -461,7 +412,7 @@ export default function MedicalPage() {
                   fontStyle: "italic",
                 }}
               >
-                The same clinical purification standard, from facility skids to point-of-use systems.
+                The Ultimate Purified Drinking System.
               </p>
             </div>
           </div>
@@ -481,7 +432,7 @@ export default function MedicalPage() {
               textAlign: "center",
             }}
           >
-            The Technology is Physician-Reviewed
+            Doctor Endorsements
           </h2>
           <p
             style={{
@@ -491,7 +442,7 @@ export default function MedicalPage() {
               lineHeight: 1.75,
             }}
           >
-            Seven physicians and researchers have reviewed and endorsed the science behind pH Prescription systems. Our medical clients are not taking our word alone.
+            Seven doctors, dentists and researchers have put their names behind pH Prescription systems.
           </p>
           <div
             style={{
@@ -501,9 +452,9 @@ export default function MedicalPage() {
             }}
           >
             {[
-              { name: "Dr. Debra DeMarta, MD, FACS", specialty: "Board-Certified Colorectal Surgeon" },
+              { name: "Dr. Debra DeMarta, MD, FACS", specialty: "MD, FACS, Colorectal Surgeon" },
               { name: "Dr. Jerry Tennant, MD", specialty: "Author, Healing is Voltage" },
-              { name: "Dr. Nathan Bryan, PhD", specialty: "Molecular Medicine Researcher" },
+              { name: "Dr. Nathan Bryan, PhD", specialty: "PhD, Nitric Oxide Researcher" },
               { name: "Dr. Mark A. Breiner, DDS", specialty: "Author, Whole Body Dentistry" },
             ].map((doc) => (
               <div
@@ -585,7 +536,7 @@ export default function MedicalPage() {
               marginBottom: "2rem",
             }}
           >
-            Every medical facility has different purity requirements, flow rates, and installation constraints. We assess your environment and configure a system that meets it. Lease and finance options available.
+            Contact us for a complimentary consultation.
           </p>
           <div
             style={{

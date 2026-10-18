@@ -6,9 +6,9 @@ import ImageBand from "@/components/ui/ImageBand";
 import PhotoCardGrid from "@/components/ui/PhotoCardGrid";
 
 export const metadata: Metadata = {
-  title: "Marine and RV Water - Saltwater and Brackish Filtration | pH Prescription",
+  title: "Marine and RV Water Systems | pH Prescription",
   description:
-    "Compact, low-power marine and RV water filtration systems for saltwater and brackish environments. Reduces TDS, controls corrosion and scaling. Designed for vessels and mobile platforms.",
+    "Customized marine and RV water systems, from desalination to finely filtered drinking, cooking and bathing. Contact us for a complimentary consultation.",
 };
 
 const PROBLEMS = [
@@ -42,14 +42,14 @@ const SOLUTIONS = [
   },
   {
     heading: "Heavy Metal and Chemical Reduction",
-    body: "KDF-55 media eliminates lead, mercury, cadmium, and other heavy metals common in marina and campground water supplies. Combined with catalytic carbon, it addresses chlorine, chloramine, VOCs, and industrial chemical traces from harbor and RV park water systems.",
+    body: "KDF-55 media is proven to reduce chloramines, chlorine, bacteria, iron, and most heavy metals. Catalytic carbon filters out chloramines, PFOS, pesticides, and herbicides.",
     image: "/images/lifestyle2/idw-tap-clean-2.jpg",
     imageAlt:
       "Man filling a drinking glass from a dedicated slim chrome filtration faucet beside the main galley-style tap",
   },
   {
-    heading: "Low-Power, High-Performance Operation",
-    body: "Our marine systems are designed for low power draw and operate without electricity for the primary filtration stages. UV add-ons are available where a 12V or 110V power source exists. Systems are rated for continuous use and require no daily maintenance beyond annual filter replacement.",
+    heading: "Customized for Your Vessel",
+    body: "pH Prescription will design a system curated for your marine or recreational vehicle, from desalination to finely filtered drinking, cooking and bathing. Contact us for a complimentary consultation.",
     image: "/images/products-extra/whole-home-system.jpg",
     imageAlt:
       "Hand tightening a clear inline filter housing with a service wrench next to a water meter on compact plumbing",
@@ -70,15 +70,15 @@ const WHO_FOR = [
 const FAQS = [
   {
     q: "Can your systems handle saltwater input?",
-    a: "Our marine filtration systems are designed for brackish and variable-salinity marina water, not open-ocean seawater desalination. For open-ocean applications, a reverse osmosis watermaker is the required technology - we can integrate our multi-stage pre-filtration with watermaker systems to extend membrane life and improve output quality. Contact us to discuss your specific water source and application.",
+    a: "pH Prescription designs a customized system for your boat, yacht or RV, from desalination to finely filtered drinking, cooking and bathing. Contact us for a complimentary consultation to discuss your specific water source and application.",
   },
   {
-    q: "How much space does the system require?",
-    a: "Our compact under-counter drinking systems require as little as 12 inches of vertical clearance and 6 inches of horizontal space. Whole-vessel treatment systems vary by configuration. We work with your vessel layout during the assessment to identify the best installation location and plumbing path.",
+    q: "How is a marine or RV system configured?",
+    a: "pH Prescription will design a system curated for your marine or recreational vehicle. Contact us for a complimentary consultation.",
   },
   {
     q: "What is the filter replacement schedule for a marine system?",
-    a: "Filter replacement intervals depend on usage volume, input water quality, and which stages your system includes. In typical liveaboard use with marina water, primary filters last 6-12 months. We provide a maintenance schedule at installation and offer our Replenishment Program for convenient, scheduled filter delivery.",
+    a: "Filter replacement intervals depend on usage volume, input water quality, and which stages your system includes. pH Prescription offers a Replenishment Program that you can opt into for savings on regular filter replenishment.",
   },
 ];
 
@@ -88,7 +88,7 @@ export default function MarinePage() {
     "@type": "Service",
     name: "Marine and RV Water Filtration Systems",
     description:
-      "Compact, low-power water filtration for marine vessels and RVs. Handles saltwater and brackish environments with multi-stage filtration.",
+      "Customized water systems for your boat, yacht or RV, from desalination to finely filtered drinking, cooking and bathing.",
     provider: {
       "@type": "LocalBusiness",
       name: BUSINESS.name,
@@ -116,9 +116,9 @@ export default function MarinePage() {
       {/* Hero */}
       <PageHero
         eyebrow="Marine and RV"
-        title="Marine and RV Water - Saltwater and"
-        titleAccent="Brackish Filtration"
-        subhead="Compact, low-power filtration systems that handle variable water quality from marinas, campgrounds, and remote hookups - protecting your plumbing and your health wherever you are."
+        title="Marine and RV Water"
+        titleAccent="Systems"
+        subhead="Customized systems for your boat, yacht or RV. From desalination to finely filtered drinking, cooking and bathing."
         image="/images/lifestyle2/idw-ocean-aerial-1.jpg"
         imageAlt="Aerial view of turquoise ocean water with white foam churning across the surface"
         minHeight="58vh"
@@ -132,7 +132,7 @@ export default function MarinePage() {
       <section style={{ background: "var(--color-navy)", color: "#fff", padding: "2rem 0" }}>
         <div className="container">
           <div style={{ display: "flex", gap: "2.5rem", flexWrap: "wrap", alignItems: "center", justifyContent: "center" }}>
-            {["30+ Year WQA Member", "Made in USA", "Compact for Marine Use", "Low Power Draw", "Variable Water Quality Rated"].map((item) => (
+            {["30+ Year WQA Member", "Compact for Marine Use"].map((item) => (
               <span
                 key={item}
                 style={{

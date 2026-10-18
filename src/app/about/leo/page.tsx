@@ -8,7 +8,7 @@ import ImageBand from "@/components/ui/ImageBand";
 export const metadata: Metadata = {
   title: "About Leo Szymborski | Founder of pH Prescription",
   description:
-    "Leo Szymborski founded pH Prescription in 2005. A third-generation plumber with 40+ years in water systems, Leo authored the best-selling H2O: Health 2 Overcome and built a water wellness technology company endorsed by physicians.",
+    "Leo Szymborski founded pH Prescription in 2005. A third-generation plumber with 40+ years in water systems, Leo authored the best-selling H2O: Health 2 Overcome and built a water wellness technology company endorsed by doctors and health experts.",
 };
 
 /**
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 const MEDIA_APPEARANCES: { show: string; topic: string; href: string; kind: "watch" | "listen" }[] = [
   {
     show: "Interview with Jake Paul",
-    topic: "Leo on water, health, and why athletes choose hydrogen water",
+    topic: "Why a well-known Athlete chose Aquapellis to aid in his health and recovery",
     href: "https://www.youtube.com/watch?v=3it1-O26hE4",
     kind: "watch",
   },
@@ -32,8 +32,8 @@ const MEDIA_APPEARANCES: { show: string; topic: string; href: string; kind: "wat
     kind: "watch",
   },
   {
-    show: "In Conversation with Dr. Nathan Bryan",
-    topic: "Why the doctor calls it the best whole house water filter on the market",
+    show: "Dr. Nathan Bryan",
+    topic: "Video title: Best Whole House Water Filter on the Market",
     href: "https://www.youtube.com/watch?v=FxWHSMHg93Q",
     kind: "watch",
   },
@@ -75,10 +75,10 @@ export default function AboutLeoPage() {
               A third-generation plumber, Leo spent decades on job sites learning exactly what travels through the pipes that supply the water we drink, bathe in, and cook with. What he discovered was not reassuring. When a life-threatening illness later sent him searching for how water could help the body heal itself, those two threads became one.
             </p>
             <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.85, fontSize: "1.0625rem", marginBottom: "1.25rem" }}>
-              In 2005, Leo founded pH Prescription in Palm City, Florida, with a single mission: to create water systems that go beyond filtration and restore water to its healthiest natural state. Over {BUSINESS.yearsExperience} years he developed the proprietary QuadVortex technology that filters, alkalizes, remineralizes, and infuses molecular hydrogen into every drop.
+              In 2005, Leo founded pH Prescription in Palm City, Florida, with a single mission: to create water systems that go beyond filtration and restore water to its healthiest natural state. His proprietary filtration media comes from {BUSINESS.yearsExperience} years of real-world experience cleaning up highly contaminated water systems and toxic wells throughout the Northeast.
             </p>
             <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.85, fontSize: "1.0625rem", marginBottom: "1.25rem" }}>
-              Today pH Prescription manufactures in a 10,000 square foot American facility, serves all 50 states, and carries the endorsements of leading physicians and researchers who recommend the systems to their own patients.
+              Today pH Prescription manufactures in a 10,000 square foot American facility, serves all 50 states, and carries the endorsements of doctors, dentists and health experts.
             </p>
           </div>
         </div>
@@ -147,7 +147,7 @@ export default function AboutLeoPage() {
             <div style={{ position: "relative", aspectRatio: "2 / 3", maxWidth: "260px", boxShadow: "0 12px 32px rgba(30,15,60,0.18)" }}>
               <Image
                 src="/products/H2O-book-cover-top-seller-v2.jpg"
-                alt="H2O: Health 2 Overcome book cover by Leo Szymborski, #1 Amazon Best Seller"
+                alt="H2O: Health 2 Overcome book cover by Leo Szymborski, #1 Best Seller"
                 fill
                 unoptimized
                 sizes="260px"
@@ -160,7 +160,7 @@ export default function AboutLeoPage() {
                 H2O: Health 2 Overcome
               </h2>
               <p style={{ marginTop: "1.25rem", color: "var(--color-ink-soft)", lineHeight: 1.8, fontSize: "1.0625rem" }}>
-                Leo wrote H2O: Health 2 Overcome because the story behind pH Prescription is not a business story. It is the story of how water made him sick, and how understanding water made him well. The book became a #1 Amazon Best Seller and lays out, in plain language, the science of filtration, remineralization, and molecular hydrogen that his systems are built on.
+                Leo wrote H2O: Health 2 Overcome because the story behind pH Prescription is not a business story. It is the story of how water made him sick, and how understanding water made him well. The book is the inspirational memoir of pH Prescription founder Leo G. Szymborski, whose story is one of illness, trauma, loss, learning disabilities, and the overwhelming drive to rise above and thrive as a family man and entrepreneur. It is a #1 Best Seller.
               </p>
               <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem", marginTop: "1.75rem" }}>
                 <Link href="/book" className="btn btn-primary">About the Book</Link>

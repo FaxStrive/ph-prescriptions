@@ -9,7 +9,7 @@ import PhotoCardGrid from "@/components/ui/PhotoCardGrid";
 export const metadata: Metadata = {
   title: "Business Water Systems | pH Prescription",
   description:
-    "Commercial water treatment for restaurants, offices, and facilities. 30+ Year WQA Member systems with lifetime warranties. Serving all 50 states.",
+    "Commercial water treatment for restaurants, offices, and facilities. 30+ Year WQA Member. Serving all 50 states.",
 };
 
 const SECTIONS = [
@@ -23,7 +23,7 @@ const SECTIONS = [
   },
   {
     title: "Water Coolers",
-    desc: "Paddle-touch hot/cold commercial coolers with inline filtration. Alkaline, remineralized, hydrogen-infused water at every workstation.",
+    desc: "Paddle-touch hot/cold commercial coolers, available with four filtration options including reverse osmosis and alkaline.",
     href: "/business/coolers",
     from: "From $2,613.60",
     image: "/images/lifestyle2/svc-service-glass-fill.jpg",
@@ -67,14 +67,14 @@ const PROCESS = [
   {
     eyebrow: "Step 02",
     title: "Professional Install",
-    body: "Our network of licensed installers delivers professional installation in all 50 states, sized to your facility.",
+    body: "pH Prescription recommends a licensed plumber for installation, sized to your facility.",
     image: "/images/commercial/dwc-installation-real.jpg",
     imageAlt: "Commercial filtration system being fitted during a real facility installation",
   },
   {
     eyebrow: "Step 03",
     title: "Ongoing Service",
-    body: "Filter plans and scheduled maintenance keep every system on spec - backed by our lifetime warranty.",
+    body: "Filter replacement keeps every system on spec.",
     image: "/images/commercial/dwc-boiler-feed-water-softening.jpg",
     imageAlt: "Boiler-feed water softening skid maintained inside a mechanical room",
   },
@@ -87,7 +87,7 @@ export default function BusinessPage() {
         eyebrow="For Your Business"
         title="Commercial Water"
         titleAccent="Treatment"
-        subhead="30+ Year WQA Member systems built for restaurants, medical offices, hotels, and any facility where water quality directly affects your guests, equipment, and reputation. Same lifetime warranty. Same proprietary QuadVortex technology."
+        subhead="Systems from a 30+ Year WQA Member, built for restaurants, medical offices, hotels, and any facility where water quality directly affects your guests, equipment, and reputation."
         image="/images/hero/business-hero.jpg"
         imageAlt="Rows of membrane filtration units and stainless piping inside a commercial water treatment plant"
         ctas={[
@@ -262,11 +262,7 @@ export default function BusinessPage() {
                   },
                   {
                     title: "Nationwide Service",
-                    body: "Serving all 50 states. Our network of licensed installers means you get professional installation anywhere.",
-                  },
-                  {
-                    title: "Lifetime Warranty",
-                    body: "Every commercial system includes our lifetime warranty with licensed plumber installation.",
+                    body: "Serving all 50 states.",
                   },
                   {
                     title: "20+ Years Commercial Experience",
@@ -324,7 +320,7 @@ export default function BusinessPage() {
             Get a Free Business Consultation
           </h2>
           <p style={{ color: "rgba(27,58,107,0.7)", marginBottom: "1.5rem" }}>
-            Tell us your facility type and usage. We will recommend the right system at the right scale - and back it with a lifetime warranty.
+            Tell us your facility type and usage. We will recommend the right system at the right scale.
           </p>
           <Link href="/consultation" className="btn btn-primary">
             Request My Business Quote

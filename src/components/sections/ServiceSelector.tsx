@@ -34,7 +34,7 @@ const SERVICES = [
       </svg>
     ),
     title: "Medical",
-    description: "Dialysis-grade purity for clinical environments",
+    description: "Used in medical applications, including kidney dialysis",
     href: "/solutions/medical",
   },
   {
@@ -58,7 +58,7 @@ const SERVICES = [
       </svg>
     ),
     title: "Pool",
-    description: "Mineral-balanced, chlorine-free pool water",
+    description: "Pool water without harsh chemicals",
     href: "/pool",
   },
   {

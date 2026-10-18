@@ -6,9 +6,9 @@ import PageHero from "@/components/ui/PageHero";
 import ImageBand from "@/components/ui/ImageBand";
 
 export const metadata: Metadata = {
-  title: "4-Phase Filtration Science and QuadVortex Technology",
+  title: "4-Phase Filtration Science | pH Prescription",
   description:
-    "Learn how pH Prescription' 4-phase filtration process uses KDF-55, Brimac coconut carbon, tourmaline and garnet gemstones, and molecular hydrogen to rebuild your water from the ground up.",
+    "Learn how the pH Prescription 4-phase filtration process uses KDF-55, Brimac high-calcium carbon, tourmaline and garnet gemstones, and magnesium to rebuild your water.",
 };
 
 const PHASES = [
@@ -63,7 +63,7 @@ const PHASES = [
     body: [
       "Tourmaline is the only known mineral to show permanent electrical activity. It carries a negative ORP (oxidation reduction potential), which means it donates electrons rather than stealing them. This property has been studied at universities and research centers worldwide and makes tourmaline uniquely suited for water restructuring.",
       "Garnet, with its high molecular density, is heavier than most other filter media. That density provides stability within the dual media bed, allowing filter-sized garnet granules to capture particulates down to 10 to 20 microns. No other consumer filtration company combines these two gemstones in a single filter stage.",
-      "Together, tourmaline and garnet deliver powerful filtering media that standard carbon systems cannot replicate. The negative ORP they produce means the water leaving Phase 3 is already an antioxidant before molecular hydrogen is added in Phase 4.",
+      "Together, tourmaline and garnet provide powerful filtering, and tourmaline is the only mineral to show permanent electrical activity, with a negative ORP (oxidation reduction potential).",
     ],
     specs: [
       "Tourmaline: permanent natural electrical activity",
@@ -82,7 +82,6 @@ const PHASES = [
       "Woman filling a drinking glass with clear water at a brushed-steel kitchen faucet in a white kitchen",
     body: [
       "After removing what harms and restructuring what remains, Phase 4 adds back the essential mineral magnesium. This final step restores the mineral balance that thorough filtration necessarily reduces.",
-      "Magnesium supports over 300 enzymatic reactions in the body, and most Americans are deficient in it. Adding it through the water supply rather than supplementation means every glass, every cup of tea, every cooked meal benefits.",
       "The result is water that is not just stripped of contaminants but rebuilt to a composition closer to pristine glacial sources: clean, slightly alkaline, mineral-rich, and micro-clustered for optimal cellular absorption.",
     ],
     specs: [
@@ -97,7 +96,7 @@ const PHASES = [
 const TECH_FAQS = [
   {
     q: "What is QuadVortex technology?",
-    a: "QuadVortex is pH Prescription' proprietary system that combines the four filtration phases above into one integrated whole-home and drinking-water platform. The name reflects the four-stage vortex structure that moves water through each medium in sequence, ensuring every phase is fully active before the water reaches your tap. It is a registered trademark and the core of our Total Home Premier system.",
+    a: "QuadVortex WMS is our patent-pending vortex water-restructuring unit, built with a Fibonacci-designed four-vortex path and rare-earth magnets. It is included with some Total Home Premier bundles and recommended with all Total Home systems.",
   },
   {
     q: "Why don't you use an ionizer to raise pH?",
@@ -109,7 +108,7 @@ const TECH_FAQS = [
   },
   {
     q: "What is molecular hydrogen and why does it matter?",
-    a: "Molecular hydrogen (H2) is the smallest molecule in existence, small enough to cross cell membranes and enter mitochondria directly. It is a selective antioxidant: it neutralizes the most damaging free radicals while leaving beneficial oxidative signals the body uses for normal signaling. Over 3,000 research and scientific papers have been published on molecular hydrogen in the past decade (source: Aquapellis Molecular Hydrogen Brochure, /docs/aquapellis-molecular-hydrogen-brochure.pdf).",
+    a: "Molecular hydrogen (H2) is a selective antioxidant: it helps neutralize the most damaging toxic free radicals while preserving the beneficial oxidative signals the body needs to function properly. With over 3,000 research and scientific papers, it has been extensively studied for its ability to support the body by reducing chronic oxidative stress (source: Aquapellis Molecular Hydrogen Brochure, /docs/aquapellis-molecular-hydrogen-brochure.pdf).",
   },
   {
     q: "What is ORP and why is negative ORP good?",
@@ -117,7 +116,7 @@ const TECH_FAQS = [
   },
   {
     q: "Do I need electricity to run a pH Prescription drinking system?",
-    a: "No. Our under-sink drinking systems are entirely non-electric. Water pressure drives the filtration process through each phase. No power outlet, no electricity, no ongoing power cost. The system fits existing plumbing and requires only a licensed plumber for installation.",
+    a: "The Ultimate Purified Drinking System raises pH without ionization or electricity, and Dr. Mark A. Breiner describes it as non-electric and easily fitted to existing plumbing. pH Prescription recommends a licensed plumber for installation.",
   },
   {
     q: "How does Brimac compare to standard activated carbon?",
@@ -146,7 +145,7 @@ export default function TechnologyPage() {
       {/* Hero */}
       <PageHero
         eyebrow="Proprietary Technology"
-        title={"4-Phase Filtration Science and QuadVortex® Technology"}
+        title={"4-Phase Filtration Science"}
         subhead="pH Prescription has spent over 20 years developing filtration that goes beyond removing contaminants. Our 4-phase system rebuilds water at the molecular level: KDF-55 and Brimac carbon strip what harms, tourmaline and garnet gemstones restructure what remains, and molecular hydrogen turns every drop into an antioxidant."
         image="/images/lifestyle2/idw-water-surface-1.jpg"
         imageAlt="Golden sunlight glinting across a dark, gently rippled water surface"
@@ -390,28 +389,19 @@ export default function TechnologyPage() {
                   letterSpacing: "-0.02em",
                 }}
               >
-                QuadVortex<sup style={{ fontSize: "0.5em" }}>&reg;</sup>: Our Registered
-                Proprietary Technology
+                WMS QuadVortex for Total Home Systems
               </h2>
               <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.8, marginBottom: "1rem" }}>
-                QuadVortex is the registered trademark that identifies pH Prescription&apos;s
-                four-phase integrated filtration approach. It is the architecture that holds the
-                four phases together as a single engineered system rather than four separate
-                products bolted in sequence.
+                QuadVortex WMS is our patent-pending vortex water-restructuring unit, built with a
+                Fibonacci-designed four-vortex path and rare-earth magnets. It is included with
+                some Total Home Premier bundles and recommended with all Total Home systems.
               </p>
               <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.8, marginBottom: "1rem" }}>
-                The QuadVortex platform is built on over 40 years of real-world experience
+                Our proprietary filtration media comes from over 40 years of real-world experience
                 cleaning up highly contaminated water systems and toxic wells across New Jersey,
                 Delaware, New York, and Pennsylvania. Founder Leo Szymborski is a third-generation
-                plumber and pipefitter who applied that industrial remediation background to
-                residential and commercial water health starting in 2005.
-              </p>
-              <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.8, marginBottom: "1.5rem" }}>
-                Unlike systems built around a single proprietary media or a single stage, QuadVortex
-                was engineered so each phase amplifies the next. KDF-55 primes the water for Brimac
-                carbon. Brimac carbon removes what KDF-55 starts. Gemstones restructure what both
-                leave behind. Magnesium restores what restructuring reduces. Every stage is
-                necessary. None is redundant.
+                plumber and pipefitter who applied that experience to residential and commercial
+                water health starting in 2005.
               </p>
               <div
                 style={{
@@ -522,12 +512,11 @@ export default function TechnologyPage() {
                 marginBottom: "1rem",
               }}
             >
-              Molecular Hydrogen: The Smallest and Most Cell-Permeable Antioxidant
+              Molecular Hydrogen: A Selective Antioxidant
             </h2>
             <p style={{ color: "rgba(255,255,255,0.78)", maxWidth: "640px", margin: "0 auto", lineHeight: 1.75 }}>
-              Molecular hydrogen (H2) is the most researched development in water science over
-              the past decade. Over 3,000 scientific papers have been published on molecular
-              hydrogen (source: Aquapellis Molecular Hydrogen Brochure,{" "}
+              Molecular hydrogen (H2) has been extensively studied, with over 3,000 research and
+              scientific papers (source: Aquapellis Molecular Hydrogen Brochure,{" "}
               <a
                 href="/docs/aquapellis-molecular-hydrogen-brochure.pdf"
                 style={{ color: "var(--color-teal-light)", textDecoration: "underline" }}
@@ -571,15 +560,15 @@ export default function TechnologyPage() {
               {[
                 {
                   title: "Selective Antioxidant",
-                  body: "H2 neutralizes the most damaging free radicals, specifically hydroxyl radicals, while leaving beneficial oxidative signals intact. Most antioxidants are non-selective and can interfere with normal cell signaling. Molecular hydrogen is not.",
+                  body: "Unlike conventional antioxidants, hydrogen is selective. It helps neutralize the most damaging toxic free radicals while preserving the beneficial oxidative signals the body needs to function properly.",
                 },
                 {
-                  title: "Cell-Permeable",
-                  body: "H2 is the smallest molecule in existence. It crosses cell membranes and reaches mitochondria directly. Larger antioxidant molecules cannot do this. This makes H2 active where cellular energy is produced, not just in the bloodstream.",
+                  title: "Extensively Studied",
+                  body: "With over 3,000 research and scientific papers, molecular hydrogen has been extensively studied for its ability to support the body.",
                 },
                 {
                   title: "Naturally Occurring",
-                  body: "Molecular hydrogen is colorless and odorless. It is produced naturally in the gut by certain bacteria and is present in trace amounts in many natural spring waters. Infusing it into filtered water restores a property pristine water sources carry.",
+                  body: "Molecular hydrogen is a naturally occurring, colorless, odorless gas.",
                 },
                 {
                   title: "Reduces Chronic Oxidative Stress",
@@ -697,9 +686,7 @@ export default function TechnologyPage() {
               </p>
               <p style={{ color: "var(--color-ink-soft)", lineHeight: 1.8, fontSize: "0.9375rem" }}>
                 The combination of tourmaline and garnet in a single stage is not found in any
-                other consumer filtration product. It is proprietary to pH Prescription and is
-                the reason Phase 3 output carries a measurably different ORP profile from
-                Phase 2 output.
+                other consumer filtration product. It is proprietary to pH Prescription.
               </p>
             </div>
           </div>

@@ -9,58 +9,20 @@ import PhotoCardGrid from "@/components/ui/PhotoCardGrid";
 export const metadata: Metadata = {
   title: "About pH Prescription | Founded 2005, Palm City FL",
   description:
-    "pH Prescription was founded in 2005 by Leo Szymborski in Palm City, FL. 30+ Year WQA Member water health systems made in the USA. 40+ years experience. Serving all 50 states.",
+    "pH Prescription was founded in 2005 by Leo Szymborski in Palm City, FL. 30+ Year WQA Member. Made in the USA. Founder with 40+ years of experience in water treatment. Serving all 50 states.",
 };
 
-const TEAM_MEMBERS = [
-  {
-    name: "Leo G. Szymborski",
-    title: "President / Founder",
-    photo: "/images/team/leo-szymborski.jpg",
-    bio: "Nationally recognized water innovator with over 40 years of hands-on experience in water treatment, purification, and system design.",
-  },
-  {
-    name: "Leann Szymborski",
-    title: "Team Member",
-    photo: "/images/team/leann-szymborski.jpg",
-    bio: "Part of the founding family behind pH Prescription's mission to make genuinely healthy water accessible.",
-  },
-  {
-    name: "Aida Aloian",
-    title: "Team Member",
-    photo: "/images/team/aida-aloian.jpg",
-    bio: "Dedicated to helping customers find the right water solution for their home or business.",
-  },
-  {
-    name: "Leo Szymborski Jr.",
-    title: "Team Member",
-    photo: "/images/team/leo-szymborski-jr.jpg",
-    bio: "Second-generation water specialist continuing the family's commitment to water health.",
-  },
-  {
-    name: "Walker Wayne Baker Jr.",
-    title: "Team Member",
-    photo: "/images/team/walker-baker.jpg",
-    bio: "Supporting pH Prescription customers with expertise in system selection and installation.",
-  },
-  {
-    name: "Alison Howland",
-    title: "Team Member",
-    photo: "/images/team/alison-howland.jpg",
-    bio: "Committed to customer success and the pH Prescription mission of healthy water for every environment.",
-  },
-  {
-    name: "Dean Szymborski",
-    title: "Team Member",
-    photo: "/images/team/dean-szymborski.jpg",
-    bio: "Bringing water treatment expertise to every customer interaction.",
-  },
-  {
-    name: "James Caulfield",
-    title: "Team Member",
-    photo: "/images/team/james-caulfield.jpg",
-    bio: "Part of the pH Prescription team helping customers access genuinely healthy water.",
-  },
+// Titles come from the team members' own email signatures. Everyone else is shown
+// by name and photo only.
+const TEAM_MEMBERS: { name: string; title?: string; photo: string }[] = [
+  { name: "Leo G. Szymborski", title: "President/Founder", photo: "/images/team/leo-szymborski.jpg" },
+  { name: "LeAnn Szymborski", title: "Vice President/COO", photo: "/images/team/leann-szymborski.jpg" },
+  { name: "Aida Aloian", photo: "/images/team/aida-aloian.jpg" },
+  { name: "Leo Szymborski Jr.", photo: "/images/team/leo-szymborski-jr.jpg" },
+  { name: "Walker Wayne Baker Jr.", photo: "/images/team/walker-baker.jpg" },
+  { name: "Alison Howland", title: "Brand Manager", photo: "/images/team/alison-howland.jpg" },
+  { name: "Dean Szymborski", photo: "/images/team/dean-szymborski.jpg" },
+  { name: "James Caulfield", photo: "/images/team/james-caulfield.jpg" },
 ];
 
 export default function AboutPage() {
@@ -250,8 +212,8 @@ export default function AboutPage() {
               </p>
               <p style={{ marginBottom: "1.5rem" }}>
                 Today, pH Prescription is headquartered in a 10,000 square foot facility in Palm City, Florida,
-                serving customers across all 50 states and internationally. The company&apos;s Aquapellis brand
-                extends the same water health science to personal care products.
+                serving customers across all 50 states and internationally. Aquapellis is the sister company of
+                pH Prescription.
               </p>
               <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
                 <Link href="/about/leo" className="btn btn-primary">Read Leo&apos;s Full Story</Link>
@@ -304,18 +266,17 @@ export default function AboutPage() {
                   marginBottom: "0.75rem",
                 }}
               >
-                Clinical Endorsements
+                Doctor Endorsements
               </span>
               <p style={{ margin: 0, fontSize: "0.9375rem", lineHeight: 1.7, color: "var(--color-ink-soft)" }}>
-                The science behind our systems carries the independent endorsement of practicing physicians and
-                researchers who use pH Prescription water themselves.
+                Doctors and health experts who use and recommend pH Prescription water.
               </p>
             </div>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "1.75rem", alignItems: "center" }}>
               {[
                 { name: "Dr. Debra DeMarta", cred: "MD, FACS", photo: "/images/team/deborah-demarta.jpg", alt: "Portrait of Dr. Debra DeMarta, endorsing physician" },
                 { name: "Dr. Jerry Tennant", cred: "MD, MD(H)", photo: "/images/team/dr-jerry-tennant.png", alt: "Portrait of Dr. Jerry Tennant, endorsing physician" },
-                { name: "Dr. Nathan Bryan", cred: "PhD", photo: "/images/team/dr-nathan-bryan.png", alt: "Portrait of Dr. Nathan Bryan, molecular biologist" },
+                { name: "Dr. Nathan Bryan", cred: "PhD", photo: "/images/team/dr-nathan-bryan.png", alt: "Portrait of Dr. Nathan Bryan, PhD, nitric oxide researcher" },
               ].map((doc) => (
                 <div key={doc.name} style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
                   <div
@@ -436,23 +397,22 @@ export default function AboutPage() {
                   >
                     {member.name}
                   </span>
-                  <span
-                    style={{
-                      display: "block",
-                      fontFamily: "var(--font-mono)",
-                      fontSize: "0.6rem",
-                      letterSpacing: "0.1em",
-                      textTransform: "uppercase",
-                      color: "var(--color-ink-mute)",
-                      marginTop: "0.2rem",
-                    }}
-                  >
-                    {member.title}
-                  </span>
+                  {member.title && (
+                    <span
+                      style={{
+                        display: "block",
+                        fontFamily: "var(--font-mono)",
+                        fontSize: "0.6rem",
+                        letterSpacing: "0.1em",
+                        textTransform: "uppercase",
+                        color: "var(--color-ink-mute)",
+                        marginTop: "0.2rem",
+                      }}
+                    >
+                      {member.title}
+                    </span>
+                  )}
                 </div>
-                <p style={{ margin: 0, fontSize: "0.875rem", lineHeight: 1.6, color: "var(--color-ink-soft)" }}>
-                  {member.bio}
-                </p>
               </div>
             ))}
           </div>
@@ -472,9 +432,9 @@ export default function AboutPage() {
           >
             {[
               { value: "2005", label: "Founded" },
-              { value: "40+", label: "Years Experience" },
+              { value: "40+", label: "Years Founder Experience" },
               { value: "50", label: "States Served" },
-              { value: "7+", label: "Doctor Endorsements" },
+              { value: "7", label: "Doctors & Health Experts" },
               { value: "10,000 sq ft", label: "USA Facility" },
             ].map((stat) => (
               <div key={stat.label}>
@@ -586,12 +546,11 @@ export default function AboutPage() {
               marginBottom: "1rem",
             }}
           >
-            Our Brands
+            Our Sister Company
           </h2>
           <p style={{ fontSize: "1rem", lineHeight: 1.75, color: "var(--color-ink-soft)", marginBottom: "1.5rem" }}>
-            pH Prescription is a water wellness technology company. Aquapellis is our personal care brand, extending
-            finely filtered water technology to showers, skincare, and hair health. Both brands are built on the
-            same science and the same commitment to water that actively supports the body.
+            pH Prescription and our sister company, Aquapellis, bring molecular hydrogen to the shower with the
+            Aquapellis Shower System.
           </p>
           <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
             <Link

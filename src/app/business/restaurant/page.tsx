@@ -8,7 +8,7 @@ import ImageBand from "@/components/ui/ImageBand";
 export const metadata: Metadata = {
   title: "Restaurant & Hospitality Water Systems | pH Prescription",
   description:
-    "Commercial water treatment for restaurants, hotels, and hospitality. Protect equipment, improve beverage taste, and deliver a premium guest experience with 30+ Year WQA Member systems.",
+    "Commercial water treatment for restaurants, hotels, and hospitality. Protect equipment, improve beverage taste, and deliver a premium guest experience. 30+ Year WQA Member.",
 };
 
 const BENEFITS = [
@@ -18,7 +18,7 @@ const BENEFITS = [
   },
   {
     title: "Equipment Protection",
-    body: "Hard water and chlorine destroy commercial equipment. Our systems eliminate scale buildup in steamers, dishwashers, ice machines, and espresso equipment - extending their lifespan significantly.",
+    body: "Our systems help extend the life of appliances.",
   },
   {
     title: "Guest Experience",
@@ -26,7 +26,7 @@ const BENEFITS = [
   },
   {
     title: "Operational Savings",
-    body: "Fewer service calls, longer equipment life, and reduced bottled water purchasing. Most restaurant clients see a measurable ROI within the first year.",
+    body: "Fewer service calls, longer equipment life, and reduced bottled water purchasing.",
   },
 ];
 
@@ -48,7 +48,7 @@ export default function RestaurantPage() {
         eyebrow="For Your Business"
         title="Restaurant & Hospitality"
         titleAccent="Water Treatment"
-        subhead="Water quality is a kitchen variable most operators overlook. pH Prescription delivers 30+ Year WQA Member commercial systems that protect equipment, improve every dish and beverage, and give your guests the water quality they deserve."
+        subhead="Water quality is a kitchen variable most operators overlook. Systems from a 30+ Year WQA Member that protect equipment, improve every dish and beverage, and give your guests the water quality they deserve."
         image="/images/hero/hospitality-hero.jpg"
         imageAlt="Row of water glasses being filled in sequence for table service"
         ctas={[
@@ -220,7 +220,6 @@ export default function RestaurantPage() {
                   "Free water quality analysis for your location",
                   "System sizing based on your daily usage",
                   "Installation by a licensed plumber in your area",
-                  "Lifetime warranty on every system",
                   "Ongoing service and filter replacement plans",
                 ].map((item) => (
                   <div
@@ -293,7 +292,7 @@ export default function RestaurantPage() {
               lineHeight: 1.7,
             }}
           >
-            We analyze your water, specify the right system, and back every install with a lifetime warranty. All 50 states.
+            We analyze your water and specify the right system. All 50 states.
           </p>
           <Link href="/consultation" className="btn btn-primary">
             Get My Free Business Quote

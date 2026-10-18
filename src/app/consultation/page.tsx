@@ -24,7 +24,7 @@ export default function ConsultationPage() {
 
       <section style={{ background: "var(--color-cream)" }}>
         <div className="container">
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "4rem", alignItems: "start" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 320px), 1fr))", gap: "clamp(2.5rem, 6vw, 4rem)", alignItems: "start" }}>
             {/* Benefits */}
             <div>
               <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.625rem,3vw,2.125rem)", color: "var(--color-navy)", marginBottom: "1.5rem" }}>
@@ -32,10 +32,10 @@ export default function ConsultationPage() {
               </h2>
               <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
                 {[
-                  { step: "1", title: "Submit Your Request", desc: "Fill out the form with your name, phone, and zip code. We will reach out within 24 hours." },
+                  { step: "1", title: "Submit Your Request", desc: "Fill out the form with your name, phone, and zip code. We will reach out during business hours." },
                   { step: "2", title: "Water Review", desc: "We go through your municipal water report or well test results together and identify contaminants, pH levels, and mineral content." },
                   { step: "3", title: "System Recommendation", desc: "We walk you through the results and recommend the right pH Prescription system for your specific water and needs." },
-                  { step: "4", title: "No-Pressure Decision", desc: "Take all the time you need. There is zero obligation. If you are ready, we handle installation from start to finish." },
+                  { step: "4", title: "No-Pressure Decision", desc: "Take all the time you need. There is zero obligation. pH Prescription recommends a licensed plumber for installation, and can recommend one for you." },
                 ].map((item) => (
                   <div key={item.step} style={{ display: "flex", gap: "1.25rem", alignItems: "flex-start" }}>
                     <div style={{
@@ -95,14 +95,14 @@ export default function ConsultationPage() {
                 <div style={{ padding: "0.75rem 1rem", background: "var(--color-teal-soft)", display: "flex", gap: "0.625rem", alignItems: "flex-start" }}>
                   <CheckCircle2 size={15} style={{ color: "var(--color-teal)", marginTop: "0.15rem", flexShrink: 0 }} />
                   <span style={{ fontSize: "0.8125rem", color: "var(--color-ink-soft)", lineHeight: 1.6 }}>
-                    4.9 stars. 30+ Year WQA Member. Lifetime warranty. No obligation.
+                    30+ Year WQA Member. 5-Year Warranty. No obligation.
                   </span>
                 </div>
                 <button type="submit" className="btn btn-primary" style={{ justifyContent: "center", padding: "1rem 2rem", fontSize: "1rem" }}>
                   Get My Free Consultation
                 </button>
                 <p style={{ fontSize: "0.8125rem", color: "var(--color-ink-mute)", textAlign: "center" }}>
-                  We call back within 24 hours. No spam, no pressure.
+                  We call back during business hours. No spam, no pressure.
                 </p>
               </form>
             </div>
