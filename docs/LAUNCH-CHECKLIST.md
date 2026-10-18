@@ -18,14 +18,14 @@ login area, AffiliateWP, lives inside the WordPress site).
 
 | Item | State |
 |---|---|
-| Store design | Finished, theme check 0 errors, the theme on the store matches `main` |
+| Store design | Finished, theme check 0 errors, the theme on the store matches `main`. Claims fixes for the store are in FaxStrive/ph-prescriptions-shopify PR #12 |
 | Products | 40 products with prices, photos, SKUs and descriptions, handles equal to the website's product slugs |
-| Website | 56 pages, every page, link and image returns 200, every page fits a 375 px phone screen |
+| Website | 55 pages plus the brochure PDF; every page, link and image returns 200; every page fits a 375 px phone screen once PR #13 is merged |
 | Buy Now | 40 Buy Now buttons on the website open the matching store product |
 | Affiliate links | A visitor who lands with `?sca_ref=<code>` keeps that code on every Buy Now click into the store |
 | Affiliate app | UpPromote is installed on the store |
 | Old URLs | Redirects for every old WordPress page, blog post, product and product category are built into this site (`next.config.ts`), so old links keep working after the domain moves |
-| Claims | Invented customer quotes removed, every claim checked against pH Prescription's own published material |
+| Claims | Every claim checked against pH Prescription's own published material (PR #13 on this repo, PR #12 on the store repo). Invented customer quotes removed. Warranty corrected to the client's terms: five years on residential systems, lifetime on parts with the Replenishment Program |
 
 ## 1. Leo (owner): only the owner can do these
 
@@ -57,14 +57,14 @@ We can do S1 and S2 with LeAnn on a 30 minute screen share if she prefers.
 
 | # | Step | Who | Time |
 |---|---|---|---|
-| P1 | Correct three products in the store admin to match the website (see "Store product corrections" below). | Tobias | 10 min |
+| P1 | Correct five products in the store admin to match the website (see "Store product corrections" below). | Tobias | 15 min |
 | P2 | Finish the UpPromote setup (welcome survey, cookie length, manual approval, payout methods, sign-up form) and import the affiliates from L4. | Tobias | 45 min |
 | P3 | Place one real test order once payments and shipping are on, then refund it. | Tobias with LeAnn | 15 min |
 | P4 | Optional: delete the leftover unpublished theme "pH design v5" (#163151151209). | Tobias | 1 min |
 
 ### Store product corrections (P1)
 
-The website was corrected on 2026-10-18; the store still has the old values. Handles do not change,
+The website is corrected in PR #13 (2026-10-18); the store still has the old values. Handles do not change,
 so the Buy Now links keep working.
 
 | Store handle | Field | Store now | Correct value (from pH Prescription's own listing) |
@@ -72,7 +72,10 @@ so the Buy Now links keep working.
 | best-whole-house-water-filtration-system | Price | $2,084.50 | **$8,003.60** |
 | best-whole-house-water-filtration-system | Title | Best Whole House Water Filtration System | Total Home Premier with FREE WMS QuadVortex |
 | alkaline-water-filtration | Title | Alkaline Water Filtration | Ultimate Purified Drinking System with Lead-Free Faucet |
+| best-whole-house-water-filtration-system | Description | Comprehensive whole-house filtration with QuadVortex technology. ... | Our most doctor recommended whole home system: the twin-tank Total Home Premier filtration system for water from every tap, with the WMS QuadVortex system included free. |
 | ultimate-purified-restructured-drinking-system-filter | Title | Ultimate PurifiedRestructured Drinking System Filter | Ultimate Purified Restructured Drinking System Filter |
+| premium-hydration-station | Description | ... 77 lbs. Lease and finance options available for offices, gyms and corporate environments. | Premium commercial hydration station. 15x18x45 in, 77 lbs. (the lease sentence has no source for this product) |
+| hydro-clean-shower-filter, hydro-clean-handheld-shower | Description | The import file had "Chlorigone™" garbled ("Chlorigoneâ¢"); check how it shows | Chlorigone™ |
 
 The $2,084.50 price is a blocker: it is the value of the free QuadVortex add-on, not the price of
 the system. Do not remove the store password until it is fixed.
@@ -100,5 +103,7 @@ up to 48 hours).
   the affiliates are moved into UpPromote first (L4, P2), or the old WordPress site stays reachable on
   a subdomain for a transition period (needs whoever hosts WordPress).
 - **Selling outside the US.** The store sells to the US only today. Leo decides with shipping.
+- **Warranty wording.** The site and store now say what pH's current site says (five years, lifetime on parts with the Replenishment Program). Leo or Alison should confirm it is still current.
+- **Privacy policy.** Unsourced statements were removed; it still needs a legal read before launch.
 - **Old WooCommerce customer accounts** do not move automatically. Customers can be imported into
   Shopify by CSV if Leo wants them.
